@@ -1,0 +1,56 @@
+Rule
+
+--
+Sid
+133-38
+
+--
+Summary:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+The operation number specifies which function the request is calling on the bound interface. If a request is fragmented, this number should stay the same for all fragments.  The preprocessor will generate this event if the opnum changes in a fragment mid-request.
+
+This event can be controlled using the ((dce2)) configuration options.
+
+--
+Affected Systems:
+All systems using NetBIOS DCERPC or SMB file and print sharing
+
+--
+Attack Scenarios:
+ 
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

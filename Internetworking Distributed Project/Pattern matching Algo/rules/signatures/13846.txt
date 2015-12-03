@@ -1,0 +1,78 @@
+Rule
+
+--
+Sid
+13846
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Backup Exec.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Stack-based buffer overflow in VERITAS Backup Exec Remote Agent 9.0 through 10.0 for Windows, and 9.0.4019 through 9.1.307 for Netware allows remote attackers to execute arbitrary code via a CONNECT_CLIENT_AUTH request with authentication method type 3 (Windows credentials) and a long password argument.
+
+--
+Affected Systems:
+Symantec Veritas Backup Exec 9.1.1154
+Symantec Veritas Backup Exec 9.1.1152.4
+Symantec Veritas Backup Exec 9.1.1152
+Symantec Veritas Backup Exec 9.1.1151.1
+Symantec Veritas Backup Exec 9.1.1127.1
+Symantec Veritas Backup Exec 9.1.1067.3
+Symantec Veritas Backup Exec 9.1.1067.2
+Symantec Veritas Backup Exec 9.1.307
+Symantec Veritas Backup Exec 9.1.306
+Symantec Veritas Backup Exec 9.0.4202
+Symantec Veritas Backup Exec 9.0.4174
+Symantec Veritas Backup Exec 9.0.4172
+Symantec Veritas Backup Exec 9.0.4170
+Symantec Veritas Backup Exec 9.0.4019
+Symantec Veritas Backup Exec 10.0 rev.5484 SP1
+Symantec Veritas Backup Exec 10.0 rev.5484
+Symantec Veritas Backup Exec 9.1 rev.4691 SP2
+Symantec Veritas Backup Exec 9.1 rev.4691
+Symantec Veritas Backup Exec 9.0 rev.4454 SP1
+Symantec Veritas Backup Exec 9.0 rev.4454
+Symantec Veritas Backup Exec 9.0 rev.4367 SP1
+Symantec Veritas Backup Exec 9.0 rev.4367
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-0773:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2005-0773
+
+--

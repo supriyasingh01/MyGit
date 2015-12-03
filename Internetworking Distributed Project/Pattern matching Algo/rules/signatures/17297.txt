@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+17297
+
+--
+Summary:
+This event indicates the possible use of a known exploit on the monitored network.
+
+--
+Impact:
+Unkown.
+
+--
+Detailed Information:
+This activity may indicate a possible attack against assets on the protected network. This event indicates the possible use of McAfee VirusScan on-access scanner long unicode filename handling.
+
+--
+Affected Systems:
+All systems.
+
+--
+Attack Scenarios:
+An attacker may be using known exploit code against hosts on the network.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Ensure that all systems have current patches applied and are running non-vulnerable software in non-vulnerable configurations.
+
+Examine the host for signs of possible compromise.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

@@ -1,0 +1,208 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue10;}
+\margl1440\margr1440\vieww25400\viewh13160\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs36 \cf0 Q. Can node1 ping node3? Can node1 ping rtr1? \
+\
+
+\b0 So we see that node1 cannot ping node 3, but node1 can png rtr1. This is so because the nodes on one LAN can communicate with each other but both the LANs cannot communicate yet, as they are not yet connected.\
+\
+
+\b Q. Where does the default route on node1 point? Where does the default route on node3 point? 
+\b0 \
+\
+As seen from the routing table , the default destination is using 192.168.1.254 gateway, so the default route on node1 point to this gateway(forwarding gateway). Same is for node3\
+\
+
+\b Q. Routing table before the changing the route
+\b0 s, see the image named as "default route"\
+     And after the changes of default routes on nodes  see the image named as "after adding default gw of routers"\
+\
+
+\b Q. zebra config files for variour routers\
+
+\b0 \
+ !\
+   ! rtr1 zebra configuration\
+   !\
+   hostname zebrad\
+   password zebra\
+   !\
+   interface eth0\
+   ip address 10.1.0.3/24\
+   !\
+   interface eth1\
+   ip address 10.10.1.1/24\
+   !\
+   interface eth2\
+   ip address 10.10.2.2/24\
+   !\
+   interface lo\
+   ip forwarding\
+   !\
+   log stdout\
+   line vty\
+   !\
+\
+\
+\
+   !\
+   ! rtr2 zebra configuration\
+   !\
+   hostname zebrad\
+   password zebra\
+   !\
+   interface eth0\
+   ip address 10.10.3.2/24\
+   !\
+   interface eth1\
+   ip address 10.10.2.1/24\
+   !\
+   interface lo\
+   ip forwarding\
+   !\
+   log stdout\
+   line vty\
+   !\
+\
+\
+   !\
+   ! rtr3 zebra configuration\
+   !\
+   hostname zebrad\
+   password zebra\
+   !\
+   interface eth0\
+   ip address 10.1.2.1/24\
+   !\
+   interface eth1\
+   ip address 10.10.1.2/24\
+   !\
+   interface eth2\
+   ip address 10.10.3.1/24\
+   !\
+   interface lo\
+   ip forwarding\
+   !\
+   log stdout\
+   line vty\
+   !\
+\
+\
+\
+
+\b Q .To enable two LANs 
+\b0 see the image "configuring rtr1 and rtr2"\
+\
+command used on rtr1: ip route 10.1.2.3/24 10.10.1.2\
+command used on rtr3: ip route 10.1.0.1/24 10.10.1.1\
+\
+
+\b Q. Use ping to verify you can now exchange packets between the LANs. About how much RTT latency is there? Does this make sense? 
+\b0 \
+\
+The ping between LANS can be seen from the image "ping from rtr1 to try and reverse". The average RTT is 9.364 ms.\
+\
+
+\b Q.Include in your report the commands you used to configure the routes in zebra, a traceroute between node1 and node4, the routing tables in the routers, and an explanation of what you did and why it works. \
+
+\b0 \
+The commands used to configure the routes in zebra :\
+command used on rtr1: ip route 10.1.2.3/24 10.10.1.2\
+command used on rtr3: ip route 10.1.0.1/24 10.10.1.1\
+\
+The trace route between node1 and node 4 is seen in image "routing table confiured and trace route b/w node1 & node4"\
+\
+By giving above commands the rtr1 got the knowledge about the network behind the rtr3, and so now in order to send packets to the nodes in the network behind rtr3, rtr1 will forward packet to rtr3 and this how rtr1 will send that packet to the correct destination.\
+\
+Same as with rtr3. rtr3 got the knowlegede about the network behind rtr1 and now is able to ping the nodes connected to rtr1.\
+\
+\pard\pardeftab720\pardirnatural\qj
+
+\b \cf0 rtr2 cannot ping any nodes on either LANs
+\b0 . Because its routing table does not have entry for a path to forward any packets to the LANs.  \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+
+\b Q.Now let\'92s look at rtr2. Can rtr2 ping any of the nodes in the LANs? Why not? Add two routes to rtr2 such that rtr2 can ping nodes in the LANs. Include the commands you used and the routing table in rtr2 in your report. \
+\
+
+\b0 The rtr2 cannot ping any nodes in the LANS as seen in the image "rtr2 cannot ping". This is so because rtr2 does not know anything about network behind LAN0 and LAN1 yet.\
+\
+Commands used on rtr2 (as seen from image "configure rtr2")so that rtr2 can ping nodes in LANs are:\
+ip route 10.1.2.3/24 10.10.3.1\
+ip route 10.1.0.1/24 10.10.2.2\
+\
+\
+
+\b Q. Adding a secondary route 
+\b0 through rtr2 on rtr1 and rtr3, can be seen in the image "2ndry routes on rtr1 rtr3".  Before adding secondary routes , as seen in the image "routing table configured and trace route b/w node1 & node4"\
+\
+Adding secondary routes does not change the trace route from node1 to node 4.\
+\
+
+\b Q. Now set the loss ratio on link0 (the link between rtr1 and rtr3) to 1.0. Can you still ping between the LANs? What does traceroute show? 
+\b0 \
+\
+On setting loss ratio to 1.0 we still cannot ping between LANs. \
+\
+
+\b Q.Now change the metric (distance) for the routes in rtr1 and rtr3. Set the route through rtr2 to have a metric of 1 and change the other route (through rtr1 or rtr3 respectively) to have a metric of 5. \
+
+\b0 \
+Changing of metric can be seen in the image "changing on metric distance"\
+\
+
+\b Q.Can you now ping from LAN to LAN? About how much delay is there now? Does this make sense? How about traceroute? Your traceroute should have one hop that does not return (i.e. you get * * * ). Explain why changing the metric \'91fixed\'92 the network? Explain why traceroute still has an error? \
+
+\b0 \
+We can now ping from LAN0 to LAN1 a seen from the image "END trace route node1 and node4". The delay in terms of RTT is 33.704 ms.\
+By changing the metric, the router prefers the path through rtr2 because the distance metric of rtr2 is less than rtr1 and rtr3. Traceroute has an error because of the link that is not up.\
+\
+
+\b Q.What does setting the link0 loss to 1.0 simulate? \
+
+\b0 \
+\pard\pardeftab720\pardirnatural\qj
+\cf0 Setting the link loss of link0 to 1 makes the packet loss 100% on the link. So pinging does not work. .\
+\
+
+\b Q.How long do you think it would take you to change or update the routes manually if you worked at an ISP and a link between routers went down? Is this a problem? What if you had to change the routes on 5 routers, 10 routers? Does manually updating the routing tables scale well? \
+
+\b0 \
+If I were to manually have to change the routing tables for the large number of routers, it would be really difficult for me to keep changing each entry of the routing table. And if we are talking at an ISP level, it would surely be much more difficult to maintain each routing table with the increase in the number of entries. So manually updating the routers does not make sense. Rather using various existing protocols would be much helpful. \
+\
+
+\b Q.How would protocols like OSPF solve this problem? \
+\
+\pard\pardeftab720\sb96\sa120\pardirnatural\qj
+
+\b0 \cf0 OSPF is an interior gateway protocol that gathers link state information from available routers and constructs a topology map of the network. The topology determines the routing table presented to the\'a0\cf2 \ul \ulc2 Internet Layer\cf0 \ulnone \'a0which makes routing decisions based on the destination\'a0\cf2 \ul IP address\cf0 \ulnone \'a0found in IP packets. OSPF detects changes in the topology, such as link failures, very quickly and\'a0\cf2 \ul converges\cf0 \ulnone \'a0on a new loop-free routing structure within seconds. It computes the\'a0\cf2 \ul shortest path tree\cf0 \ulnone \'a0for each route using a method based on\'a0\cf2 \ul Dijkstra's algorithm\cf0 \ulnone , a\'a0\cf2 \ul shortest path first\cf0 \ulnone \'a0algorithm. \
+\pard\pardeftab720\pardirnatural\qj
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

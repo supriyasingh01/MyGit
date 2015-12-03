@@ -1,0 +1,62 @@
+Rule
+
+--
+Sid
+16091
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in flash_media_server.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+The Administration Service (FMSAdmin.exe) in Macromedia Flash Media Server 2.0 r1145 allows remote attackers to cause a denial of service (application crash) via a malformed request with a single character to port 1111.
+
+--
+Affected Systems:
+macromedia flash_media_server 2.0
+macromedia flash_media_server 2.0
+macromedia flash_media_server 2.0
+macromedia flash_media_server 2.0
+macromedia flash_media_server 2.0
+macromedia flash_media_server 2.0_r1145
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-4216:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-4216
+  
+--

@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+4650
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a vulnerability associated with a Cacti graph_image.php request.
+
+--
+Impact:
+A successful attack may allow arbitrary commands to be executed on a vulnerable server.
+
+--
+Detailed Information:
+Cacti offers software for network graphing.  A vulnerability exists due to improper sanitization of user input to certain parameters. This can permit arbitrary Unix commands to be executed on a vulnerable server.
+
+--
+Affected Systems:
+Raxnet Cacti version 0.8.6 d and prior
+
+--
+Attack Scenarios:
+An attacker can craft input to a parameter that executes an arbitrary Unix command on the vulnerable server.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+
+--
+Additional References:
+
+--

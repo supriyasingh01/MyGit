@@ -1,0 +1,57 @@
+Rule:
+
+--
+Sid:
+2049
+
+--
+Summary:
+This event indicates that an SQL ping has been detected in network traffic.
+
+--
+Impact:
+Disclosure of an instance of SQL service running on a host.
+
+--
+Detailed Information:
+Nessus may be being used to query for the existance of an SQL database running on a host. This may be the prelude to an attack against the service.
+
+This event may also indicate that other tools are in use on the network to possibly check the status of SQL servers.
+
+--
+Affected Systems:
+All systems running SQL servers.
+
+--
+Attack Scenarios:
+This is a probe, the attacker merely needs to use nessus to search the target for services.
+
+--
+Ease of Attack:
+Simple
+
+--
+False Positives:
+None Known
+
+--
+False Negatives:
+None Known
+
+--
+Corrective Action:
+Use a firewall to deny connections to SQL ports from external sources.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+Nessus:
+http://cgi.nessus.org/plugins/dump.php3?id=10674
+
+--

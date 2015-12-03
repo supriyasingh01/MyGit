@@ -1,0 +1,78 @@
+Rule
+
+--
+Sid
+15957
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Sophos anti-virus.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Sophos Anti-Virus 5.0.1, with "Scan inside archive files" enabled, allows remote attackers to cause a denial of service (CPU consumption by infinite loop) via a Bzip2 archive with a large 'Extra field length' value.
+
+--
+Affected Systems:
+Sophos Sophos anti-virus 3.4.6
+Sophos Sophos anti-virus 3.78
+Sophos Sophos anti-virus 3.78d
+Sophos Sophos anti-virus 3.79
+Sophos Sophos anti-virus 3.80
+Sophos Sophos anti-virus 3.81
+Sophos Sophos anti-virus 3.82
+Sophos Sophos anti-virus 3.83
+Sophos Sophos anti-virus 3.84
+Sophos Sophos anti-virus 3.85
+Sophos Sophos anti-virus 3.86
+Sophos Sophos anti-virus 3.90
+Sophos Sophos anti-virus 3.91
+Sophos Sophos anti-virus 5.0.1
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-1530:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-1530
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

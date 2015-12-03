@@ -1,0 +1,60 @@
+Rule:
+
+--
+Sid:
+4680
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Apple QuickTime.
+
+--
+Impact:
+Serious. Execution of arbitrary code leading to unauthorized administrative access to the target host.
+
+--
+Detailed Information:
+A programming error in certain versions of Apple QuickTime may allow an attacker to run code of their choosing on a victim host. Apple QuickTime contains a programming error that may allow a remote attacker to take advantage of an integer overflow condition. A QuickTime file containing malformed movie attributes may expose the condition for exploitation.
+
+In order to avoid potential evasion techniques, http_inspect should be configured with "flow_depth 0" so that all HTTP server response traffic is inspected.
+
+WARNING
+Setting flow_depth 0 will cause performance problems in some situations.
+WARNING
+
+--
+Affected Systems:
+Apple QuickTime 7.0.3
+
+--
+Attack Scenarios:
+An attacker would need to supply a malformed QuickTime file and entice a user to view it.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

@@ -1,0 +1,71 @@
+Rule
+
+--
+Sid
+16218
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in HTTP Server.
+
+--
+Impact:
+  Loss of integrity. 
+
+--
+Detailed Information:
+The Apache HTTP server before 1.3.34, and 2.0.x before 2.0.55, when acting as an HTTP proxy, allows remote attackers to poison the web cache, bypass web application firewall protection, and conduct XSS attacks via an HTTP request with both a "Transfer-Encoding: chunked" header and a Content-Length header, which causes Apache to incorrectly handle and forward the body of the request in a way that causes the receiving server to process it as a separate HTTP request, aka "HTTP Request Smuggling."
+
+--
+Affected Systems:
+Apache HTTP Server 1.3.29
+Apache HTTP Server 1.3.30
+Apache HTTP Server 1.3.31
+Apache HTTP Server 1.3.32
+Apache HTTP Server 1.3.33
+Apache HTTP Server 2.0.45
+Apache HTTP Server 2.0.46
+Apache HTTP Server 2.0.47
+Apache HTTP Server 2.0.48
+Apache HTTP Server 2.0.49
+Apache HTTP Server 2.0.50
+Apache HTTP Server 2.0.51
+Apache HTTP Server 2.0.52
+Apache HTTP Server 2.0.53
+Apache HTTP Server 2.0.54
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-2088:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-2088
+  
+--

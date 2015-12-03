@@ -1,0 +1,68 @@
+Rule
+
+--
+Sid
+16793
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in SAPgui.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Stack-based buffer overflow in EAI WebViewer3D ActiveX control (webviewer3d.dll) in SAP AG SAPgui before 7.10 Patch Level 9 allows remote attackers to execute arbitrary code via a long argument to the SaveViewToSessionFile method.
+
+--
+Affected Systems:
+SAP SAPgui 4.6
+SAP SAPgui 4.6
+SAP SAPgui 4.6a
+SAP SAPgui 4.6a
+SAP SAPgui 4.6b
+SAP SAPgui 4.6b
+SAP SAPgui 4.6c
+SAP SAPgui 4.6c
+SAP SAPgui 4.6d
+SAP SAPgui 4.6d
+SAP SAPgui 6.40
+SAP SAPgui 7.10
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-4475:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-4475
+  
+--

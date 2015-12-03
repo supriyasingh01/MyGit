@@ -1,0 +1,86 @@
+Rule
+
+--
+Sid
+18765
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in majordomo 2.
+
+--
+Impact:
+ Information disclosure.  
+
+--
+Detailed Information:
+Directory traversal vulnerability in the _list_file_get function in lib/Majordomo.pm in Majordomo 2 before 20110131 allows remote attackers to read arbitrary files via .. (dot dot) sequences in the help command, as demonstrated using (1) a crafted email and (2) cgi-bin/mj_wwwusr in the web interface.
+
+--
+Affected Systems:
+mj2 majordomo 2 20110101
+mj2 majordomo 2 20110102
+mj2 majordomo 2 20110103
+mj2 majordomo 2 20110104
+mj2 majordomo 2 20110105
+mj2 majordomo 2 20110106
+mj2 majordomo 2 20110107
+mj2 majordomo 2 20110108
+mj2 majordomo 2 20110109
+mj2 majordomo 2 20110110
+mj2 majordomo 2 20110111
+mj2 majordomo 2 20110112
+mj2 majordomo 2 20110113
+mj2 majordomo 2 20110114
+mj2 majordomo 2 20110115
+mj2 majordomo 2 20110116
+mj2 majordomo 2 20110117
+mj2 majordomo 2 20110118
+mj2 majordomo 2 20110119
+mj2 majordomo 2 20110120
+mj2 majordomo 2 20110121
+mj2 majordomo 2 20110122
+mj2 majordomo 2 20110123
+mj2 majordomo 2 20110124
+mj2 majordomo 2 20110125
+mj2 majordomo 2 20110126
+mj2 majordomo 2 20110127
+mj2 majordomo 2 20110128
+mj2 majordomo 2 20110129
+mj2 majordomo 2 20110130
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-0049:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0049
+  
+--

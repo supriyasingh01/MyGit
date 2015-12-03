@@ -1,0 +1,56 @@
+Rule:
+
+--
+Sid:
+8481
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a buffer overflow vulnerability associated with Microsoft Internet Information Server FTP NLST command. 
+
+--
+Impact:
+Serious. Denial of Service is possible.
+
+--
+Detailed Information:
+Microsoft IIS offers FTP servers for Windows hosts. A vulnerability exists with the NLST command that can cause a DoS and deny service to legitmate users. The DoS can be caused by supplying a filename with wildcard sequences to the NLST command.
+
+--
+Affected Systems:
+Microsoft IIS FTP service
+
+--
+Attack Scenarios:
+An attacker can supply a file argument using wildcards with the NLST command, causing a DoS.
+
+--
+Ease of Attack:
+Simple.  
+
+--
+False Positives:
+None Known.
+
+--
+False Negatives:
+None Known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Use an alternate FTP service.
+
+Deny the use of FTP services to sources external to the protected network.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com> 
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+9635
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Computer Associates Product Discovery Service .
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+A buffer overflow condition is present in the Computer Associates Product Discovery Service type 9B remote application. This event indicates that an attempt has been made to exploit that condition. It may be possible for an attacker to use this vulnerability to execute code on the target host which could lead to further compromise and loss of data integrity on the host.
+
+Agents in the CA product suite open up TCP/41523 and, in some cases, UDP/41524.  These ports are used during the product discovery and management  from central servers.  Once the server detects the clients, control messages are sent to the agent over the above ports.  The messages consist of a beginning byte of indicating the command code, and a null terminated string afterwords.  When the command codes are either 0x9B or 0x9C, then the buffer that they are copied to is unchecked.  The buffer is of size 72 bytes.
+
+--
+Affected Systems:
+Computer Associates Server Protection Suite r2
+Computer Associates Business Protection Suite Std Ed r2 and prior 
+Computer Associates BrightStor ARCServe Backup 11.5 and prior
+
+--
+Attack Scenarios:
+An attacker needs to supply excess data in a transaction using the application. The attacker may then include code of their choosing to be executed on the host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Olney <matthew.olney@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

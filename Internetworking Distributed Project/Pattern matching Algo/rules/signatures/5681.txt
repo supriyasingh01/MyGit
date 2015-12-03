@@ -1,0 +1,70 @@
+Rule:
+
+--
+Sid:
+5681
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in ISS RealSecure/BlackICE products using Server Message Block (SMB).
+
+--
+Impact:
+Serious. Execution of arbitrary code leading to unauthorized administrative access to the target host. Denial of Service (DoS) is also possible.
+
+--
+Detailed Information:
+RealSecure and BlackICE are host and network based Intrusion Detection and Prevention systems from ISS.
+
+SMB is a client - server protocol used in sharing resources such as files, printers, ports, named pipes and other things, between machines on a network.
+
+A vulnerability in the processing of SMB messages in ISS RealSecure/BlackICE exists due to a programming error which may present an attacker with the opportunity to exploit the host system and run code of their choosing on an affected system. The attacker may then cause a DoS condition in the service or possibly gain unauthorized access to the target host.
+
+A long username in an authentication request causes a heap overflow to occur when an affected system tries to process the request.
+
+--
+Affected Systems:
+RealSecure Network 7.0, XPU 20.15 through 22.9
+RealSecure Server Sensor 7.0 XPU 20.16 through 22.9
+Proventia A Series XPU 20.15 through 22.9
+Proventia G Series XPU 22.3 through 22.9
+Proventia M Series XPU 1.3 through 1.7
+RealSecure Desktop 7.0 eba through ebh
+RealSecure Desktop 3.6 ebr through ecb
+RealSecure Guard 3.6 ebr through ecb
+RealSecure Sentry 3.6 ebr through ecb
+BlackICE PC Protection 3.6 cbr through ccb
+BlackICE Server Protection 3.6 cbr through ccb
+
+--
+Attack Scenarios:
+An attacker can supply extra data in the username field of an authentication request to overflow the buffer, code of their choosing can then be run on the host system.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

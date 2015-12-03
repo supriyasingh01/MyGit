@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+15169
+
+--
+Summary:
+This event is generated when network traffic that indicates XBOX Live is being used.
+
+--
+Impact:
+Possible policy violation. The use of XBOX Live may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the XBOX Live is being used on the protected network.
+
+--
+Affected Systems:
+Not Applicable
+
+--
+Attack Scenarios:
+This is a possible policy violation.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of XBOX Live on the protected network and enforce or implement an organization wide policy on the use of XBOX Live.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

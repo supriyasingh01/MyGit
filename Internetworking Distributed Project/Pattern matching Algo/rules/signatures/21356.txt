@@ -1,0 +1,68 @@
+Rule
+
+--
+Sid
+21356
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in http server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Directory traversal vulnerability in Apache 2.0 through 2.0.39 on Windows, OS2, and Netware allows remote attackers to read arbitrary files and execute commands via .. (dot dot) sequences containing \ (backslash) characters.
+
+--
+Affected Systems:
+apache http server 2.0
+apache http server 2.0.28
+apache http server 2.0.28
+apache http server 2.0.32
+apache http server 2.0.32
+apache http server 2.0.34
+apache http server 2.0.34
+apache http server 2.0.35
+apache http server 2.0.36
+apache http server 2.0.37
+apache http server 2.0.38
+apache http server 2.0.39
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2002-0661:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2002-0661
+  
+--

@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+15451
+
+--
+Summary:
+This event indicates the possible presence of the Worm or Virus named Conficker.C on the monitored network.
+
+--
+Impact:
+Unkown.
+
+--
+Detailed Information:
+This activity may indicate a possible virus or worm infection on the protected network.
+
+--
+Affected Systems:
+All Windows systems
+
+--
+Attack Scenarios:
+Viruses may propogate in many different ways. Many arrive in the form of email attachments that an unsuspecting user may trigger by opening the attachment. Once infected, many viruses have the ability to use the infected host as a means of spreading copies of itself to other machines on the protected and external networks.
+
+This particular virus is able to spread using an exploit for MS08-067 and as such, rules that detect exploits targeting this vulnerability may also generate events.
+
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+This rule may generate false positive events.
+
+--
+False Negatives:
+This rule may not catch all instances of Conficker infected hosts.
+
+--
+Corrective Action:
+Use antivirus software on hosts to terminate infectors.
+
+Use antivirus solutions on incoming and outgoing mailservers to minimize the risk of exposure to client machines.
+
+Updated antivirus definition files are required to detect and remove worm and virus infections.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

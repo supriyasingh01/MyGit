@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11004
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Lotus Domino.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Buffer overflow in the CRAM-MD5 authentication mechanism in the IMAP server (nimap.exe) in IBM Lotus Domino before 6.5.6 and 7.x before 7.0.2 FP1 allows remote attackers to cause a denial of service via a long username.
+
+--
+Affected Systems:
+IBM Lotus Domino 6.5.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

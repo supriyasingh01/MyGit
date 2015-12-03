@@ -1,0 +1,61 @@
+Rule
+
+--
+Sid
+20748
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in messenger.
+
+--
+Impact:
+  Loss of integrity. 
+
+--
+Detailed Information:
+Yahoo! Messenger 6.0.0.1750, and possibly other versions before 6.0.0.1921, does not properly display long filenames in file dialog boxes, which could allow remote attackers to trick users into downloading and executing programs via file names containing a large number of spaces and multiple file extensions.
+
+--
+Affected Systems:
+yahoo messenger 5.5
+yahoo messenger 5.6
+yahoo messenger 5.6.0.1351
+yahoo messenger 6.0
+yahoo messenger 6.0.0.1750
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-0243:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-0243
+  
+--

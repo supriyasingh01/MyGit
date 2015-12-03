@@ -1,0 +1,61 @@
+Rule
+
+--
+Sid
+9621
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in T3COM TFTP server.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+A buffer overflow condition is present in the T3COM server transport mode application. This event indicates that an attempt has been made to exploit that condition. It may be possible for an attacker to use this vulnerability to execute code on the target host which could lead to further compromise and loss of data integrity on the host.
+
+Specifically the vulnerability occurs during error message construction. , when a TFTP packet of type 1 (Read Request) or type 2 (Write Request) is sent, it is in the following format:
+
+OPCODE /FILENAME/|00|/MODE/|00
+
+3Com supports only netascii and octet modes.  If another mode is used, an error message is generated.  The provided string in the mode section is concatenated into an error message, then the message in its entirety is copied to a static 512 byte buffer.
+
+--
+Affected Systems:
+3Com TFTP Server 2.0.1
+
+--
+Attack Scenarios:
+An attacker needs to supply excess data in a transaction using the application. The attacker may then include code of their choosing to be executed on the host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Olney <matthew.olney@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

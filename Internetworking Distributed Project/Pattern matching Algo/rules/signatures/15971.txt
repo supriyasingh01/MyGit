@@ -1,0 +1,84 @@
+Rule
+
+--
+Sid
+15971
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in cvs.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Double free vulnerability for the error_prog_name string in CVS 1.12.x through 1.12.8, and 1.11.x through 1.11.16, may allow remote attackers to execute arbitrary code.
+
+--
+Affected Systems:
+cvs cvs 1.10.7
+cvs cvs 1.10.8
+cvs cvs 1.11
+cvs cvs 1.11.1
+cvs cvs 1.11.10
+cvs cvs 1.11.11
+cvs cvs 1.11.14
+cvs cvs 1.11.15
+cvs cvs 1.11.16
+cvs cvs 1.11.1_p1
+cvs cvs 1.11.2
+cvs cvs 1.11.3
+cvs cvs 1.11.4
+cvs cvs 1.11.5
+cvs cvs 1.11.6
+cvs cvs 1.12.1
+cvs cvs 1.12.2
+cvs cvs 1.12.5
+cvs cvs 1.12.7
+cvs cvs 1.12.8
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2004-0416:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2004-0416
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12030
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Photo Digital Imaging ActiveX Control.
+
+--
+Impact:
+ Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Absolute directory traversal in a certain ActiveX control in hpqxml.dll 2.0.0.133 in Hewlett-Packard (HP) Photo Digital Imaging allows remote attackers to create or overwrite arbitrary files via the argument to the saveXMLAsFile method.
+
+--
+Affected Systems:
+HP Photo Digital Imaging ActiveX Control 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

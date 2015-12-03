@@ -1,0 +1,121 @@
+Rule
+
+--
+Sid
+18770
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in itunes.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The DOM level 2 implementation in WebKit, as used in Apple iTunes before 10.2 on Windows and Apple Safari, does not properly handle DOM manipulations associated with event listeners during processing of range objects, which allows man-in-the-middle attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via vectors related to iTunes Store browsing, a different vulnerability than other CVEs listed in APPLE-SA-2011-03-02-1.
+
+--
+Affected Systems:
+apple itunes 10.0
+apple itunes 10.0.1
+apple itunes 10.1
+apple itunes 10.1.1
+apple itunes 10.1.2
+apple itunes 4.0.0
+apple itunes 4.0.1
+apple itunes 4.1.0
+apple itunes 4.2.0
+apple itunes 4.5
+apple itunes 4.5.0
+apple itunes 4.6
+apple itunes 4.6.0
+apple itunes 4.7
+apple itunes 4.7.0
+apple itunes 4.7.1
+apple itunes 4.7.2
+apple itunes 4.8.0
+apple itunes 4.9.0
+apple itunes 5.0
+apple itunes 5.0.0
+apple itunes 5.0.1
+apple itunes 6.0.0
+apple itunes 6.0.1
+apple itunes 6.0.2
+apple itunes 6.0.3
+apple itunes 6.0.4
+apple itunes 6.0.4.2
+apple itunes 6.0.5
+apple itunes 7.0.0
+apple itunes 7.0.1
+apple itunes 7.0.2
+apple itunes 7.1.0
+apple itunes 7.1.1
+apple itunes 7.2.0
+apple itunes 7.3.0
+apple itunes 7.3.1
+apple itunes 7.3.2
+apple itunes 7.4
+apple itunes 7.4.0
+apple itunes 7.4.1
+apple itunes 7.4.2
+apple itunes 7.4.3
+apple itunes 7.5
+apple itunes 7.5.0
+apple itunes 7.6
+apple itunes 7.6.0
+apple itunes 7.6.1
+apple itunes 7.6.2
+apple itunes 7.7
+apple itunes 7.7.0
+apple itunes 7.7.1
+apple itunes 8.0.0
+apple itunes 8.0.1
+apple itunes 8.0.2
+apple itunes 8.1
+apple itunes 8.1.1
+apple itunes 8.2
+apple itunes 8.2.1
+apple itunes 9.0.0
+apple itunes 9.0.1
+apple itunes 9.0.2
+apple itunes 9.0.3
+apple itunes 9.2
+apple itunes 9.2.1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-0115:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0115
+  
+--

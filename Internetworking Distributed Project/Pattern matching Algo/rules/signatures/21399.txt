@@ -1,0 +1,129 @@
+Rule
+
+--
+Sid
+21399
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in opera.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Cross-site scripting (XSS) vulnerability in Opera.dll in Opera before 9.61 allows remote attackers to inject arbitrary web script or HTML via the anchor identifier (aka the "optional fragment"), which is not properly escaped before storage in the History Search database (aka md.dat).
+
+--
+Affected Systems:
+opera opera 5..10
+opera opera 5.0
+opera opera 5.1
+opera opera 5.11
+opera opera 5.12
+opera opera 5.2
+opera opera 5.3
+opera opera 5.4
+opera opera 5.5
+opera opera 5.6
+opera opera 5.7
+opera opera 5.8
+opera opera 5.9
+opera opera 6
+opera opera 6.0
+opera opera 6.01
+opera opera 6.02
+opera opera 6.03
+opera opera 6.04
+opera opera 6.05
+opera opera 6.06
+opera opera 7
+opera opera 7
+opera opera 7.0
+opera opera 7.01
+opera opera 7.02
+opera opera 7.03
+opera opera 7.10
+opera opera 7.11
+opera opera 7.20
+opera opera 7.21
+opera opera 7.22
+opera opera 7.23
+opera opera 7.50
+opera opera 7.51
+opera opera 7.52
+opera opera 7.53
+opera opera 7.54
+opera opera 7.54
+opera opera 8.0
+opera opera 8.0
+opera opera 8.0
+opera opera 8.01
+opera opera 8.02
+opera opera 8.50
+opera opera 8.51
+opera opera 8.52
+opera opera 8.53
+opera opera 8.54
+opera opera 9.0
+opera opera 9.0
+opera opera 9.01
+opera opera 9.02
+opera opera 9.10
+opera opera 9.20
+opera opera 9.21
+opera opera 9.22
+opera opera 9.23
+opera opera 9.24
+opera opera 9.25
+opera opera 9.26
+opera opera 9.27
+opera opera 9.50
+opera opera 9.51
+opera opera 9.6
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-4696:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-4696
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

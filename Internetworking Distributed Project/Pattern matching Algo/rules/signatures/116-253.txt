@@ -1,0 +1,56 @@
+Rule
+
+--
+Sid
+116-253
+
+--
+Summary:
+This event is generated when the snort decode preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the snort decode preprocessor detects anomalous network traffic.
+
+ICMP Original IP Payload < 64 bits!.
+
+This event can be controlled using the ((snort decode)) configuration options.
+
+--
+Affected Systems:
+
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

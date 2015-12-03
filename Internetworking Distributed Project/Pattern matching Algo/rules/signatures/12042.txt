@@ -1,0 +1,53 @@
+Rule:
+
+--
+Sid:
+12042
+
+--
+Summary:
+This event is generated when network traffic that indicates Yahoo Messenger V7 is being used.
+
+--
+Impact:
+Possible policy violation. The use of Yahoo Messenger V7 may be prohibited by corporate policy in some network environments. 
+
+This event indicates that the content of a transaction using Yahoo Messenger V7 has been replaced.
+
+--
+Detailed Information:
+This event indicates that the Yahoo Messenger V7 is being used on the protected network.
+
+--
+Affected Systems:
+All systems using Yahoo Messenger V7
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Yahoo Messenger V7 has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Yahoo Messenger V7 on the protected network and enforce or implement an organization wide policy on the use of Yahoo Messenger V7.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

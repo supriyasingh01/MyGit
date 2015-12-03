@@ -1,0 +1,56 @@
+Rule
+
+--
+Sid
+133-3
+
+--
+Summary:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+An SMB message type was specified in the header. Either a request was made by the server or a response was given by the client.
+
+This event can be controlled using the ((dce2)) configuration options.
+
+--
+Affected Systems:
+All systems using NetBIOS DCERPC or SMB file and print sharing
+
+--
+Attack Scenarios:
+An attacker would need to specify a message type of SMB in the packet header.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

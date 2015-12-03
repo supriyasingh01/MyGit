@@ -1,0 +1,72 @@
+On usRTR execute the following:
+
+
+sudo su
+
+
+apt-get update
+
+
+apt-get dist-upgrade
+
+
+apt-get install openvswitch-datapath-source bridge-utils
+
+
+module-assistant auto-install openvswitch-datapath
+
+
+apt-get install openvswitch-brcompat openvswitch-common
+
+
+ovs-vsctl show
+
+
+EDIT : /etc/default/openvswitch-switch
+
+#BRCOMPAT=no to BRCOMPAT=yes
+
+
+/etc/init.d/openvswitch-switch restart
+
+
+ovs-vsctl add-br br-int
+
+
+(add all eth* to the bridge except the 192. interface)
+
+ovs-vsctl add-port br-int eth0
+
+
+ifconfig eth0 0 // for disabling , don't do this
+
+
+ifconfig br-int <ip address of the interface zerod out> netmask 255.255.255.0
+
+
+check if the route table has changed:
+
+route
+
+
+On POX node:
+
+
+git clone https://github.com/noxrepo/pox
+
+
+cd po
+
+./pox.py forwarding.l3_learning
+
+
+On usRTR:
+
+
+ovs-vsctl set-controller br-int tcp:<ip address of the POX>:6633
+
+
+
+
+sFlow setup command:
+ovs-vsctl -- --id=@sflow create sflow agent=<interface name of the 192. that u did not zeroed out interface>  target=\"<192. ip of the collector>:6343\" header=128 sampling=64 polling=10 -- set bridge br-int sflow=@sflow

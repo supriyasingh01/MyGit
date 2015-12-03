@@ -1,0 +1,5 @@
+red:00 15 17 1c d7 64,eth2,eth2
+blue:00 15 17 1c d9 72,eth4,eth2
+green:00 15 17 1e 05 8e,eth3,eth2
+yellow:00 15 17 1e 03 02,eth5,eth2
+rtr:00 15 17 1c d8 66,eth2,eth2

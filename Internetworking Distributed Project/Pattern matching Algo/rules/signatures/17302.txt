@@ -1,0 +1,297 @@
+Rule
+
+--
+Sid
+17302
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in linux kernel.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+The sctp_new function in (1) ip_conntrack_proto_sctp.c and (2) nf_conntrack_proto_sctp.c in Netfilter in Linux kernel 2.6 before 2.6.20.13, and 2.6.21.x before 2.6.21.4, allows remote attackers to cause a denial of service by causing certain invalid states that trigger a NULL pointer dereference.
+
+--
+Affected Systems:
+linux linux kernel 2.6.0
+linux linux kernel 2.6.0
+linux linux kernel 2.6.0
+linux linux kernel 2.6.0
+linux linux kernel 2.6.0
+linux linux kernel 2.6.0
+linux linux kernel 2.6.0
+linux linux kernel 2.6.0
+linux linux kernel 2.6.0
+linux linux kernel 2.6.0
+linux linux kernel 2.6.0
+linux linux kernel 2.6.1
+linux linux kernel 2.6.1
+linux linux kernel 2.6.1
+linux linux kernel 2.6.10
+linux linux kernel 2.6.10
+linux linux kernel 2.6.10
+linux linux kernel 2.6.11
+linux linux kernel 2.6.11
+linux linux kernel 2.6.11
+linux linux kernel 2.6.11
+linux linux kernel 2.6.11
+linux linux kernel 2.6.11.1
+linux linux kernel 2.6.11.10
+linux linux kernel 2.6.11.11
+linux linux kernel 2.6.11.12
+linux linux kernel 2.6.11.2
+linux linux kernel 2.6.11.3
+linux linux kernel 2.6.11.4
+linux linux kernel 2.6.11.5
+linux linux kernel 2.6.11.6
+linux linux kernel 2.6.11.7
+linux linux kernel 2.6.11.8
+linux linux kernel 2.6.11.9
+linux linux kernel 2.6.11 rc1 bk6
+linux linux kernel 2.6.12
+linux linux kernel 2.6.12
+linux linux kernel 2.6.12
+linux linux kernel 2.6.12
+linux linux kernel 2.6.12
+linux linux kernel 2.6.12
+linux linux kernel 2.6.12.1
+linux linux kernel 2.6.12.12
+linux linux kernel 2.6.12.2
+linux linux kernel 2.6.12.22
+linux linux kernel 2.6.12.3
+linux linux kernel 2.6.12.4
+linux linux kernel 2.6.12.5
+linux linux kernel 2.6.12.6
+linux linux kernel 2.6.13
+linux linux kernel 2.6.13
+linux linux kernel 2.6.13
+linux linux kernel 2.6.13
+linux linux kernel 2.6.13
+linux linux kernel 2.6.13
+linux linux kernel 2.6.13
+linux linux kernel 2.6.13.1
+linux linux kernel 2.6.13.2
+linux linux kernel 2.6.13.3
+linux linux kernel 2.6.13.4
+linux linux kernel 2.6.13.5
+linux linux kernel 2.6.14
+linux linux kernel 2.6.14
+linux linux kernel 2.6.14
+linux linux kernel 2.6.14
+linux linux kernel 2.6.14
+linux linux kernel 2.6.14.1
+linux linux kernel 2.6.14.2
+linux linux kernel 2.6.14.3
+linux linux kernel 2.6.14.4
+linux linux kernel 2.6.14.5
+linux linux kernel 2.6.14.6
+linux linux kernel 2.6.14.7
+linux linux kernel 2.6.15
+linux linux kernel 2.6.15
+linux linux kernel 2.6.15
+linux linux kernel 2.6.15
+linux linux kernel 2.6.15
+linux linux kernel 2.6.15
+linux linux kernel 2.6.15
+linux linux kernel 2.6.15.1
+linux linux kernel 2.6.15.11
+linux linux kernel 2.6.15.2
+linux linux kernel 2.6.15.3
+linux linux kernel 2.6.15.4
+linux linux kernel 2.6.15.5
+linux linux kernel 2.6.15.6
+linux linux kernel 2.6.15.7
+linux linux kernel 2.6.16
+linux linux kernel 2.6.16
+linux linux kernel 2.6.16
+linux linux kernel 2.6.16
+linux linux kernel 2.6.16
+linux linux kernel 2.6.16
+linux linux kernel 2.6.16.1
+linux linux kernel 2.6.16.10
+linux linux kernel 2.6.16.11
+linux linux kernel 2.6.16.12
+linux linux kernel 2.6.16.13
+linux linux kernel 2.6.16.14
+linux linux kernel 2.6.16.15
+linux linux kernel 2.6.16.16
+linux linux kernel 2.6.16.17
+linux linux kernel 2.6.16.18
+linux linux kernel 2.6.16.19
+linux linux kernel 2.6.16.2
+linux linux kernel 2.6.16.20
+linux linux kernel 2.6.16.21
+linux linux kernel 2.6.16.22
+linux linux kernel 2.6.16.23
+linux linux kernel 2.6.16.24
+linux linux kernel 2.6.16.25
+linux linux kernel 2.6.16.26
+linux linux kernel 2.6.16.27
+linux linux kernel 2.6.16.28
+linux linux kernel 2.6.16.29
+linux linux kernel 2.6.16.3
+linux linux kernel 2.6.16.30
+linux linux kernel 2.6.16.31
+linux linux kernel 2.6.16.32
+linux linux kernel 2.6.16.33
+linux linux kernel 2.6.16.34
+linux linux kernel 2.6.16.35
+linux linux kernel 2.6.16.36
+linux linux kernel 2.6.16.37
+linux linux kernel 2.6.16.38
+linux linux kernel 2.6.16.39
+linux linux kernel 2.6.16.4
+linux linux kernel 2.6.16.40
+linux linux kernel 2.6.16.41
+linux linux kernel 2.6.16.5
+linux linux kernel 2.6.16.6
+linux linux kernel 2.6.16.7
+linux linux kernel 2.6.16.8
+linux linux kernel 2.6.16.9
+linux linux kernel 2.6.16 rc7
+linux linux kernel 2.6.17
+linux linux kernel 2.6.17
+linux linux kernel 2.6.17
+linux linux kernel 2.6.17
+linux linux kernel 2.6.17
+linux linux kernel 2.6.17
+linux linux kernel 2.6.17.1
+linux linux kernel 2.6.17.10
+linux linux kernel 2.6.17.11
+linux linux kernel 2.6.17.12
+linux linux kernel 2.6.17.13
+linux linux kernel 2.6.17.14
+linux linux kernel 2.6.17.2
+linux linux kernel 2.6.17.3
+linux linux kernel 2.6.17.4
+linux linux kernel 2.6.17.5
+linux linux kernel 2.6.17.6
+linux linux kernel 2.6.17.7
+linux linux kernel 2.6.17.8
+linux linux kernel 2.6.17.9
+linux linux kernel 2.6.18
+linux linux kernel 2.6.18
+linux linux kernel 2.6.18
+linux linux kernel 2.6.18
+linux linux kernel 2.6.18
+linux linux kernel 2.6.18
+linux linux kernel 2.6.18
+linux linux kernel 2.6.18.1
+linux linux kernel 2.6.18.2
+linux linux kernel 2.6.18.3
+linux linux kernel 2.6.18.4
+linux linux kernel 2.6.18.5
+linux linux kernel 2.6.18.6
+linux linux kernel 2.6.19
+linux linux kernel 2.6.19
+linux linux kernel 2.6.19
+linux linux kernel 2.6.19
+linux linux kernel 2.6.19.0
+linux linux kernel 2.6.19.1
+linux linux kernel 2.6.19.2
+linux linux kernel 2.6.19.3
+linux linux kernel 2.6.2
+linux linux kernel 2.6.2
+linux linux kernel 2.6.2
+linux linux kernel 2.6.20
+linux linux kernel 2.6.20.1
+linux linux kernel 2.6.20.10
+linux linux kernel 2.6.20.11
+linux linux kernel 2.6.20.12
+linux linux kernel 2.6.20.13
+linux linux kernel 2.6.20.14
+linux linux kernel 2.6.20.2
+linux linux kernel 2.6.20.3
+linux linux kernel 2.6.20.4
+linux linux kernel 2.6.20.5
+linux linux kernel 2.6.20.6
+linux linux kernel 2.6.20.7
+linux linux kernel 2.6.20.8
+linux linux kernel 2.6.20.9
+linux linux kernel 2.6.21
+linux linux kernel 2.6.21
+linux linux kernel 2.6.21
+linux linux kernel 2.6.21
+linux linux kernel 2.6.21
+linux linux kernel 2.6.21
+linux linux kernel 2.6.21
+linux linux kernel 2.6.21.1
+linux linux kernel 2.6.21.2
+linux linux kernel 2.6.21.3
+linux linux kernel 2.6.3
+linux linux kernel 2.6.3
+linux linux kernel 2.6.3
+linux linux kernel 2.6.3
+linux linux kernel 2.6.4
+linux linux kernel 2.6.4
+linux linux kernel 2.6.4
+linux linux kernel 2.6.5
+linux linux kernel 2.6.5
+linux linux kernel 2.6.5
+linux linux kernel 2.6.6
+linux linux kernel 2.6.6
+linux linux kernel 2.6.6
+linux linux kernel 2.6.7
+linux linux kernel 2.6.7
+linux linux kernel 2.6.7
+linux linux kernel 2.6.8
+linux linux kernel 2.6.8
+linux linux kernel 2.6.8
+linux linux kernel 2.6.8
+linux linux kernel 2.6.8.1
+linux linux kernel 2.6.8.1.5
+linux linux kernel 2.6.9
+linux linux kernel 2.6.9
+linux linux kernel 2.6.9
+linux linux kernel 2.6.9
+linux linux kernel 2.6.9
+linux linux kernel 2.6 test9 cvs
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-2876:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-2876
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

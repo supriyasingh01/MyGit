@@ -1,0 +1,106 @@
+Rule
+
+--
+Sid
+21413
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in peazip.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+PeaZIP 2.6.1, 2.5.1, and earlier on Windows allows user-assisted remote attackers to execute arbitrary commands via a .zip archive with a .txt file whose name contains | (pipe) characters and a command.
+
+--
+Affected Systems:
+giorgio tani peazip 1.0
+giorgio tani peazip 1.0
+giorgio tani peazip 1.1
+giorgio tani peazip 1.1
+giorgio tani peazip 1.10
+giorgio tani peazip 1.10
+giorgio tani peazip 1.11
+giorgio tani peazip 1.11
+giorgio tani peazip 1.2
+giorgio tani peazip 1.2
+giorgio tani peazip 1.3
+giorgio tani peazip 1.3
+giorgio tani peazip 1.4
+giorgio tani peazip 1.4
+giorgio tani peazip 1.5
+giorgio tani peazip 1.5
+giorgio tani peazip 1.6
+giorgio tani peazip 1.6
+giorgio tani peazip 1.7
+giorgio tani peazip 1.7
+giorgio tani peazip 1.8
+giorgio tani peazip 1.8
+giorgio tani peazip 1.8.1
+giorgio tani peazip 1.8.1
+giorgio tani peazip 1.8.2
+giorgio tani peazip 1.8.2
+giorgio tani peazip 1.9
+giorgio tani peazip 1.9
+giorgio tani peazip 1.9.1
+giorgio tani peazip 1.9.1
+giorgio tani peazip 1.9.2
+giorgio tani peazip 1.9.2
+giorgio tani peazip 1.9.3
+giorgio tani peazip 1.9.3
+giorgio tani peazip 2.0
+giorgio tani peazip 2.0
+giorgio tani peazip 2.1
+giorgio tani peazip 2.1
+giorgio tani peazip 2.2
+giorgio tani peazip 2.2
+giorgio tani peazip 2.3a
+giorgio tani peazip 2.3a
+giorgio tani peazip 2.4
+giorgio tani peazip 2.4
+giorgio tani peazip 2.4.1
+giorgio tani peazip 2.4.1
+giorgio tani peazip 2.5.1
+giorgio tani peazip 2.5.1
+giorgio tani peazip 2.6.1
+giorgio tani peazip 2.6.1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-2261:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2261
+  
+--

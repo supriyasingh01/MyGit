@@ -1,0 +1,54 @@
+Rule:
+
+--
+Sid:
+5706
+
+--
+Summary:
+This event is generated when network traffic that indicates Namazu web search is being used.
+
+--
+Impact:
+Possible policy violation. The use of Namazu web search may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the Namazu web search is being used on the protected network.
+
+Specifically an incoming search was observed.
+
+--
+Affected Systems:
+All systems using Namazu web search
+	
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Namazu web search has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Namazu web search on the protected network and enforce or implement an organization wide policy on the use of Namazu web search.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

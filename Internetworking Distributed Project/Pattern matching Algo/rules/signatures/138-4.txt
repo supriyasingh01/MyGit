@@ -1,0 +1,53 @@
+Rule:
+
+--
+Sid:
+138-4
+
+--
+Summary:
+This event is generated when U.S. Social Security Numbers have been observed in network traffic.
+
+--
+Impact:
+Possible policy violation. Possible sensitive data leak.
+
+--
+Detailed Information:
+This event indicates that U.S. Social Security Numbers have been observed in traffic on the protected network. This may indicate a possible leak of sensitive information.
+
+The sensitive data in question has been seen in the data portion of traffic, for email addresses for example, this may be unusual behavior. The source and if possible, the destination devices should be investigated for signs of data leakage.
+
+--
+Affected Systems:
+All systems
+
+--
+Attack Scenarios:
+This is a possible policy violation and may indicate the loss of sensitive data.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Monitor sources of sensitive data, implement strong access control measures on infrastructure that stores this information.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

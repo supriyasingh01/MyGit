@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+12089
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in NeoTrace Pro.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Stack-based buffer overflow in the NeoTraceExplorer.NeoTraceLoader ActiveX control (NeoTraceExplorer.dll) in NeoTrace Express 3.25 and NeoTrace Pro (aka McAfee Visual Trace) 3.25 allows remote attackers to execute arbitrary code via a long argument string to the TraceTarget method.
+
+--
+Affected Systems:
+McAfee NeoTrace Pro 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

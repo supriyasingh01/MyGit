@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+124-3
+
+--
+Summary:
+This event is generated when the smtp pre-processor detects an overly long response from an smtp server. For example, when an attempt is made to exploit a known vulnerability in libesmtp.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Buffer overflow in read_smtp_response of protocol.c in libesmtp before 0.8.11 allows a remote SMTP server to (1) execute arbitrary code via a certain response or (2) cause a denial of service via long server responses.
+
+--
+Affected Systems:
+libesmtp libesmtp 1
+
+--
+Attack Scenarios:
+The attacker would need to supply excess data in a response to an smtp command.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2002-1090:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2002-1090
+
+--

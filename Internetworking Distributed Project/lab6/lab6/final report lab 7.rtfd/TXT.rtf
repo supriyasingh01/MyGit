@@ -1,0 +1,239 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fmodern\fcharset0 Courier;\f2\fmodern\fcharset0 Courier-Bold;
+\f3\fnil\fcharset0 Verdana;\f4\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red46\green46\blue46;\red0\green0\blue10;\red17\green17\blue17;
+\red191\green191\blue191;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+{\info
+{\title CSCI558L  Lab7}
+{\subject CSCI499 \'96 MODELING SOFTWARE-INTENSIVE SYSTEMS}
+{\author Suela}
+{\keywords Final}}\margl1080\margr1080\margb1080\margt1080\vieww25400\viewh13500\viewkind0
+\deftab720
+\pard\pardeftab720\pardirnatural
+
+\f0\fs36 \cf0 Objective:\
+Build an IP router, capture a packet sent to that router, determine the next hop and then send the packet to that next hop.\
+Design\
+Our implementation was based on following components: \
+\
+\pard\pardeftab720\li720\pardirnatural
+\cf0 Tcpdump/libpcap(
+\fs32 Packet Capture library)
+\fs36  to capture/sniff on the interface for packets \
+\
+\pard\pardeftab720\sa320
+
+\fs32 \cf0 	
+\b \ul layout of a pcap sniffer\
+	1)
+\b0 \ulnone begin by determining which interface we want to sniff on something like eth0.We can either define this device in a string, or we can ask pcap to provide us with the name of an interface that 		will do the job. \
+	
+\f1\fs26 char *dev
+\f0\fs32 \
+	
+\f1\fs26 dev = pcap_lookupdev(errbuf);
+\f0\fs32 pcap just sets the device on its own, if pcap_lookupdev() fails, it will store an error message in errbuf\
+	2) Initialize pcap. This is where we actually tell pcap what device we are sniffing on. We can, if we want to, sniff on multiple devices. \
+		
+\f1\fs26 pcap_t *pcap_open_live(char *device, int snaplen, int promisc, int to_ms,char *ebuf)\
+		
+\f0\fs32 A note about promiscuous vs. non-promiscuous sniffing: The two techniques are very different in style. In standard, non-promiscuous sniffing, a host is sniffing only traffic that is directly 		related to it. Only traffic to, from, or routed through the host will be picked up by the sniffer. Promiscuous mode, on the other hand, sniffs all traffic on the wire.\
+		
+\f1\fs26 pcap_t *handle;\
+\pard\pardeftab720
+\cf0 	 	handle = pcap_open_live(somedev, BUFSIZ, 1, 1000, errbuf);\
+		
+\f0\fs32 At this point we have learned how to define a device, prepare it for sniffing, and apply filters a
+\f1\fs26 \
+
+\f0\fs32 \
+\pard\pardeftab720\sa320
+\cf0 	3)There are two main techniques for capturing packets. We can either capture a single packet at a time, or we can enter a loop that waits for 
+\i n
+\i0  number of packets to be sniffed before being done	
+\f1\fs26 /* Grab a packet */packet = pcap_next(handle, &header);\
+	int pcap_loop(pcap_t *p, int cnt, pcap_handler got_packet, u_char *user)     pcap_loop(handle, 100, got_packet, NULL);
+\f0\fs32 \
+	Above, we tell pcap to enter it's primary execution loop. In this state, pcap waits until it has received however many packets we want it to. Every time it gets a new packet in, it calls 			another function that we have already defined. The function(
+\f2\b\fs28 got_packet
+\f0\b0\fs32 ) that it calls can do anything we want; it can dissect the packet and print it to the user, it can save it in a file, or it can          	do nothing at all.\
+\pard\pardeftab720
+
+\f3\b\fs24 \cf2 Network packets are like Russian dolls.
+\b0  An IP-packet resides within an Ethernet-packet. {\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/TCP/IP_model"}}{\fldrslt A TCP-packet resides within an IP-packet.}} A HTTP-packet resides within a TCP-packet.\
+\
+\pard\pardeftab720
+
+\f4 \cf0 {{\NeXTGraphic ethernet-network-packet-holding-an-ip-packet.gif \width10000 \height6000 \noorient
+}¬}\pard\pardeftab720
+
+\f3 \cf2 \
+\
+The data part of an Ethernet packet can hold up to 1500 bytes. MAC-addresses (48bits) are 6 bytes wide each and the Number Of Bytes field is 2 byte wide(total ether net header is 14 bytes) . That gives the maximum size of an Ethernet frame to be 1514 bytes. IP packet header is 20 bytes\
+\
+\pard\pardeftab720\sa320
+
+\f0\fs32 \cf0 A summary of the contents of the IP internet header follows:\
+\pard\pardeftab720\sa320
+
+\f4\fs24 \cf0 {{\NeXTGraphic iphdr.gif \width12320 \height5560 \noorient
+}¬}
+\f0\fs36 \
+\pard\pardeftab720\li720\pardirnatural
+\cf0 compute ip header offset, find network address by anding mask with ip address, now lookup this network address in the routing table,find source MAC (local), create the packet,//Set the source MAC address to the MAC address of the ethernet adapter on your router that will be sending the packet\
+	//Set the destination MAC address to the MAC address of the next-hop.\
+ //forward the packet!pcap_sendpacket(reply_handle, (const u_char*)reply, header->len);\
+\
+Determine the next hop for the packet using the routing table passed by configuration file\
+Tcpdump packet injection used to send the packet to next hop \
+\pard\pardeftab720\pardirnatural
+\cf0 Functions:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\pardirnatural
+\ls1\ilvl0\cf0 {\listtext	\'95	}Following functions in our code relate to the 
+\b capturing
+\b0  process: \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\pardirnatural
+\ls2\ilvl0\cf0 {\listtext	\'95	}pcap_findalldevs():- Find interfaces on the machine to sniff on \
+{\listtext	\'95	}pthread_create():- Create an independent pthread for each interface/device \
+{\listtext	\'95	}check_packet():- Callback function for each pthread created above \
+{\listtext	\'95	}pcap_lookupnet():- Get device properties \
+{\listtext	\'95	}pcap_open_live():- Open a session on given device and return its handler \
+{\listtext	\'95	}pcap_next():- Grab a packet from the session handler \
+\pard\pardeftab720\pardirnatural
+\cf0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\pardirnatural
+\ls3\ilvl0\cf0 {\listtext	\'95	}Following functions deal with 
+\b processing
+\b0  the packet once received. \
+\pard\pardeftab720\li720\pardirnatural
+\cf0 One important task here is extracting the source and destination addresses and looping up in the routing and ARP table for the destination IP and mac in order to send it to the next hop.  \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\pardirnatural
+\ls4\ilvl0\cf0 {\listtext	\'95	}got_packet():- Process the received IP packet and send it to the appropriate destination. This functions involves below mentioned sub functions. \
+{\listtext	\'95	}pcap_open_live(): Open a session to send on the outgoing interface \
+{\listtext	\'95	}got_packet():- For the destination IP in the packet, look up in the routing table and return the next hop IP to reach that network. Compare whether the next hop address is a local IP or remote IP address. \
+{\listtext	\'95	}get_mac_addr():- Get the mac address of the next hop IP obtained above from the ARP table \
+\pard\pardeftab720\pardirnatural
+\cf0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\pardirnatural
+\ls5\ilvl0\cf0 {\listtext	\'95	}Following function deals with
+\b  sending
+\b0  the packet to the next hop \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\pardirnatural
+\ls6\ilvl0\cf0 {\listtext	\'95	}pcap_sendpacket():- Inject/send the packet to the interface    \
+\pard\pardeftab720\pardirnatural
+\cf0 Pseudo code of the each of the functions with the program flow follows:\
+\
+\pard\pardeftab720\pardirnatural\qj
+
+\b \cf0 \
+\pard\pardeftab720\pardirnatural
+
+\b0 \cf0  Pseudocode for Checksum Implementation while decrementing TTL:\
+ \
+\pard\pardeftab720\pardirnatural
+
+\b \cf0  \cf3  Set Checksum to 0\
+   Decrement TTL\
+   Calculate new Checksum\
+   Add reversed LEN\
+   Add reversed ID\
+   Add reversed Offset\
+   Add TTL+Protocol\
+   Add reversed Src Address (MSB)\
+   Add reversed Src Address (LSB)\
+   Add reversed Dst Address (MSB)\
+   Add reversed Dst Address (LSB)\
+   Complement the newsum and reverse it to add to packet\
+\pard\pardeftab720\pardirnatural
+
+\b0 \cf3  \cf0   \
+Observations\
+Only networks connected to rtr1 and rtr2 in the topology are able to ping each other before running our code. However, after running the code node0 is also able to ping other nodes.  \
+For example below is the snapshot of node0 pinging node6. \
+\uc0\u8232 \
+Routing table printed:\
+\
+Packets per second:\
+Maximum packets per second measured by the software router as measured by iperf is 
+\b 5714 packets per second
+\b0 . Below is the snapshot to support it.\
+\
+Maximum throughput\
+Maximum throughput of the software router as measured by iperf is 
+\b 76Mbps
+\b0 .\
+Below is the snapshot to support it.\
+\
+\
+The file transfer people are more interested in the size of the file transferred end to end which is mostly measured in bytes. Hence they are interested in mega=1024^2. While the network people are more interested in how many bits they transferred over the link hence they use mega=10^6. \
+\
+\pard\pardeftab720\pardirnatural
+
+\b \cf0 Stop the Linux kernel sending an ICMP \\Destination Unreachable" message:\
+\pard\pardeftab720\pardirnatural
+
+\b0 \cf0 The ICMP destination unreachable message is generated by a router to inform the source host that the destination unicast address is unreachable. These can cause a problem by the kernel because the kernel has no information related to the destination in its routing table. The routing code is on the userspace in the code. So kernel being ignorant can cause to create this misleading message being displayed \'93Destination Unreachable\'94. \
+To stop the Linux kernel on the usRTR node from sending an ICMP \\Destination Unreachable" message to the source of a packet on our network we have used the following. It\'92s a simple firewall (iptables) rule\
+\pard\pardeftab720\pardirnatural
+\cf4 iptables -A OUTPUT -p icmp --icmp-type 3 -j DROP\
+(type 3 for ICMP type \'93Destination Unreachable\'94)\
+\
+\pard\pardeftab720\pardirnatural
+\cf0 CIDR :\
+We used one CIDR route for node5 and node6. These nodes have different network address. Normally this will take one entry for each network in routing table. \
+In this case network is not so large so there is not much problem but when network grows rapidly, there could be serious issue of storage in routing table to accommodate these entries.  \
+CIDR can alleviate this problem by reducing entries in router. This way it saves memory in router and operation becomes faster.  \
+Configuration File:\
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\pardirnatural\qc
+\cf0 Router.conf\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li720\pardirnatural
+
+\b \cf0 10.1.2.0 10.99.0.2 255.255.254.0 ethX\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li720\pardirnatural
+\cf0 10.10.0.0 0.0.0.0 255.255.255.0 ethY\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li720\pardirnatural
+\cf0 10.99.0.0 0.0.0.0 255.255.255.0 ethX\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf5 \clbrdrl\brdrs\brdrw20\brdrcf5 \clbrdrb\brdrs\brdrw20\brdrcf5 \clbrdrr\brdrs\brdrw20\brdrcf5 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li720\pardirnatural
+\cf0 10.1.0.0 10.99.0.1 255.255.255.0 ethX\cell \lastrow\row
+\pard\pardeftab720\pardirnatural
+\cf0 \
+\pard\pardeftab720\pardirnatural
+
+\b0 \cf0 Above is the Configuration file we have passed in as an argument for the code in usRTR. One can notice mask for Rtr2 is not default but modified to aggregate route of node5 and node6. This will help to reduces number of entries in routing table.  \
+References\
+\pard\pardeftab720\li720\pardirnatural
+\cf0 http://www.tcpdump.org/#documentation \
+http://beej.us/guide/bgnet/ \
+http://www.cyberciti.biz/tips/linux-iptables-9-allow-icmp-ping.html\
+\pard\pardeftab720\pardirnatural
+\cf0 \
+Conclusion\
+Thus, we were successful in building a software IP router using libpcap and raw sockets. Libpcap served as a useful tool to capture the packets and dissect the headers to extract the fields. \
+\
+\
+\
+}

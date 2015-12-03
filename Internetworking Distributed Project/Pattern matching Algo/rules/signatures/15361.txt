@@ -1,0 +1,50 @@
+Rule:
+
+--
+Sid:
+15361
+
+--
+Summary:
+This event is generated when network traffic that indicates a pdf file was sent via email.
+
+--
+Impact:
+Possible policy violation. The sending pdf files via email may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that a pdf file was sent via email.
+
+--
+Affected Systems:
+All systems
+
+--
+Attack Scenarios:
+This is a possible policy violation.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the sending of pdf files via email on the protected network and enforce or implement an organization wide policy on the use of email to transmit pdf files.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

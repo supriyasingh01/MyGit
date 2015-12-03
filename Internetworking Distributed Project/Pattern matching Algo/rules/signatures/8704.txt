@@ -1,0 +1,55 @@
+Rule: 
+
+--
+Sid: 
+8704
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in YahooPOPS.
+
+-- 
+Impact: 
+Serious. Code execution is possible.
+
+--
+Detailed Information:
+YahooPOPS fails to properly sanitize user supplied input. This poor programming error may allow a remote attacker to overflow a fixed length buffer and subsequently execute code on a vulnerable system.
+
+--
+Affected Systems:
+YahooPOPS 0.6 and prior
+
+--
+Attack Scenarios: 
+An attacker would need to supply excess data to the service to cause the buffer overflow.
+
+-- 
+Ease of Attack: 
+Simple. Exploit code exists.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Disallow the use of YahooPOPS.
+
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

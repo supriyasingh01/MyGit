@@ -1,0 +1,53 @@
+Rule:
+
+--
+Sid:
+12037
+
+--
+Summary:
+This event is generated when network traffic that indicates AIM is being used.
+
+--
+Impact:
+Possible policy violation. The use of AIM may be prohibited by corporate policy in some network environments. 
+
+This event indicates that the content of a transaction using AIM has been replaced.
+
+--
+Detailed Information:
+This event indicates that the AIM is being used on the protected network.
+
+--
+Affected Systems:
+All systems using AIM
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that AIM has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of AIM on the protected network and enforce or implement an organization wide policy on the use of AIM.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

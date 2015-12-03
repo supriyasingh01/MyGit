@@ -1,0 +1,81 @@
+Rule
+
+--
+Sid
+16686
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in websphere application server.
+
+--
+Impact:
+  Loss of integrity. 
+
+--
+Detailed Information:
+Cross-site scripting (XSS) vulnerability in the administrative console in IBM WebSphere Application Server (WAS) 6.1 before 6.1.0.23 on z/OS allows remote attackers to inject arbitrary web script or HTML via unspecified vectors.
+
+--
+Affected Systems:
+IBM websphere application server 6.1
+IBM websphere application server 6.1.0
+IBM websphere application server 6.1.0.0
+IBM websphere application server 6.1.0.1
+IBM websphere application server 6.1.0.10
+IBM websphere application server 6.1.0.11
+IBM websphere application server 6.1.0.12
+IBM websphere application server 6.1.0.13
+IBM websphere application server 6.1.0.14
+IBM websphere application server 6.1.0.15
+IBM websphere application server 6.1.0.16
+IBM websphere application server 6.1.0.17
+IBM websphere application server 6.1.0.18
+IBM websphere application server 6.1.0.19
+IBM websphere application server 6.1.0.2
+IBM websphere application server 6.1.0.20
+IBM websphere application server 6.1.0.21
+IBM websphere application server 6.1.0.22
+IBM websphere application server 6.1.0.3
+IBM websphere application server 6.1.0.4
+IBM websphere application server 6.1.0.5
+IBM websphere application server 6.1.0.6
+IBM websphere application server 6.1.0.7
+IBM websphere application server 6.1.0.8
+IBM websphere application server 6.1.0.9
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0855:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0855
+  
+--

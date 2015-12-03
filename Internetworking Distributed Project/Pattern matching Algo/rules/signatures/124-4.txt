@@ -1,0 +1,62 @@
+Rule:
+
+--
+Sid:
+124-4
+
+--
+Summary:
+This event is generated when the smtp pre-processor detects an overly long argument to an smtp command.
+
+--
+Impact:
+Unkown. Execution of arbitrary code leading to full administrator access of the machine may be possible. Denial of Service (DoS).
+
+--
+Detailed Information:
+SMTP commands may be vulnerable to buffer overflows. Each command takes an argument, if this argument is too long a fixed length buffer may be overflowed allowing the attacker to execute code on an affected system.
+
+Microsoft Exchange Servers are able to use extensions to the SMTP protocol to help communicate between Exchange servers. The "X-Link2State" verb is used to share routing information between Exchange servers.
+
+A buffer overflow condition in the processing of this command may present an attacker with the opportunity to execute code of their choosing on an affected host.
+
+While some of the extended verbs can be disabled easily by an Administrator, this particular command cannot. The affected dynamic link library (DLL) must be unregistered. Refer to MS05-021 for details on how to unregister the DLL.
+
+--
+Affected Systems:
+Microsoft Exchange Server 2000 sp3
+Microsoft Exchange Server 2003
+Microsoft Exchange Server 2003 sp1
+
+--
+Attack Scenarios:
+An attacker can supply a malicious verb request using the "X-Link2State" verb to cause a buffer overflow.
+
+--
+Ease of Attack:
+Simple. Exploit code exists.
+
+--
+False Positives:
+This event will generate events in an environment where the use of extended verbs between Exchange servers is commonplace.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Disable the use of the Microsoft SMTP extensions.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

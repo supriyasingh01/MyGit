@@ -1,0 +1,12 @@
+# USC558L Lab 8 NS File. Creates a network with 4 nodes and a NetFPGA host.source tb_compat.tclset ns [new Simulator]
+set nfrouter [$ns node]tb-set-hardware $nfrouter netfpga2set control [$ns node]tb-bind-parent $nfrouter $control
+# Create end nodesset pox [$ns node]set n0 [$ns node]set n1 [$ns node]set n2 [$ns node]set n3 [$ns node]
+set lan0 [$ns make-lan "$nfrouter $n0" 1000Mb 0ms]tb-set-ip-lan $nfrouter $lan0 10.1.1.1tb-set-ip-lan $n0 $lan0 10.1.1.5
+tb-fix-interface $n0 $lan0 nf2c0
+set lan1 [$ns make-lan "$nfrouter $n1" 1000Mb 0ms]tb-set-ip-lan $nfrouter $lan1 10.1.1.2tb-set-ip-lan $n1 $lan1 10.1.1.6
+tb-fix-interface $n1 $lan1 nf2c1
+set lan2 [$ns make-lan "$nfrouter $n2" 1000Mb 0ms]tb-set-ip-lan $nfrouter $lan2 10.1.1.3tb-set-ip-lan $n2 $lan2 10.1.1.7
+tb-fix-interface $n2 $lan2 nf2c2
+set lan3 [$ns make-lan "$nfrouter $n3" 1000Mb 0ms]tb-set-ip-lan $nfrouter $lan3 10.1.1.4tb-set-ip-lan $n3 $lan3 10.1.1.8
+tb-fix-interface $n3 $lan3 nf2c3
+$ns rtproto Static$ns run

@@ -1,0 +1,73 @@
+Rule:
+
+--
+Sid:
+5134
+
+--
+Summary:
+This event is generated when the pre-cursor to an attempt is made to exploit a buffer overrun condition in Microsoft products via the Local Security Authority Subsystem Service (LSASS).
+
+--
+Impact:
+Possible remote execution of arbitrary code.
+
+--
+Detailed Information:
+A vulnerability exists in LSASS that may present an attacker with the opportunity to execute code of their choosing on an affected host.
+
+The problem lies in an unchecked buffer in the LSASS service, suscessful exploitation may present the attacker with the opportunity to gain control of the affected system.
+
+This event indicates that an attempt was made to access the DsRolerGetPrimaryDomainInformation function on a host, this may indicate that an attempt to exploit a vulnerability in the LSASS service may be iminent. This function is used in some exploits to clean the heap prior to the exploit being attempted.
+
+--
+Affected Systems:
+Microsoft Windows 2000, 2003 and XP systems.
+
+--
+Attack Scenarios:
+An attcker needs to make a specially crafted request to the LSASS service that could contain harmful code to gain further access to the system.
+
+--
+Ease of Attack:
+Simple. Exploits exist. This vulnerability may also be used as an attack vector by a number of win32 based worms.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches
+
+Use a packet filtering firewall to deny access to TCP and UDP ports 135 and 445, UDP ports 137 and 138 and TCP ports 139 and 593 from resources outside the protected network.
+
+Access should also be denied to ephemeral ports and any other ports used by RPC services from sources external to the protected network.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matt Watchinski <mwatchinski@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+Microsoft:
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Gaobot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sasser
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Korgo
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=win32/rbot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sdbot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Mytob
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Spybot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Wootbot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=win32/Bobax
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=win32/Maslan
+
+--
+

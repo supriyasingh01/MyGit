@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+3-18495
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Remote Desktop Connection Client.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Untrusted search path vulnerability in the client in Microsoft Remote Desktop Connection 5.2, 6.0, 6.1, and 7.0 allows local users to gain privileges via a Trojan horse DLL in the current working directory, as demonstrated by a directory that contains a .rdp file, aka "Remote Desktop Insecure Library Loading Vulnerability."
+
+--
+Affected Systems:
+Microsoft Remote Desktop Connection Client 5.2
+Microsoft Remote Desktop Connection Client 6.0
+Microsoft Remote Desktop Connection Client 6.1
+Microsoft Remote Desktop Connection Client 7.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-0029:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0029
+  
+--

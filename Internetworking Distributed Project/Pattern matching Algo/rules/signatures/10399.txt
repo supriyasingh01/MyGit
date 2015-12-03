@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+10399
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Index Server.
+
+--
+Impact:
+Low
+
+--
+Detailed Information:
+Microsoft Index Server allows remote attackers to determine the real path for a web directory via a request to an Internet Data Query file that does not exist.
+
+--
+Affected Systems:
+Microsoft Index Server 2.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

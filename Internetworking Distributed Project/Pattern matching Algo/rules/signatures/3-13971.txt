@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+3-13971
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Office.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+A "memory calculation error" in Microsoft Office PowerPoint 2000 SP3, 2002 SP3, 2003 SP2, and 2007 through SP1; Office Compatibility Pack for Word, Excel, and PowerPoint 2007 through SP1; and Office 2004 for Mac allows remote attackers to execute arbitrary code via a PowerPoint file with crafted list values that trigger memory corruption, aka "Parsing Overflow Vulnerability."
+
+--
+Affected Systems:
+Microsoft Office PowerPoint 2000 SP3, 2002 SP3, 2003 SP2, and 2007 through SP1
+Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 through SP1
+Microsoft Office 2004 for Mac
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-1455:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-1455
+
+--

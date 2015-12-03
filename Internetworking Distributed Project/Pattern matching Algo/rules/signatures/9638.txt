@@ -1,0 +1,51 @@
+Rule: 
+
+--
+Sid: 
+9638
+
+-- 
+Summary: 
+This event is generated when an attempt is made to overwrite a file using Microsoft Remote Installation Service (RIS) TFTP server.
+
+-- 
+Impact: 
+Unknown.
+
+--
+Detailed Information:
+Microsoft Remote Installation Services (RIS) suffers from a programming error that may allow an attacker to upload files of their choosing onto the TFTP server; these files may then be installed onto machines using the service.
+
+--
+Affected Systems:
+Microsoft Windows 2000 SP4
+
+--
+Attack Scenarios: 
+An unauthenticated remote attacker can exploit the RIS TFTP server to upload and overwrite files of their choosing on an affected system.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

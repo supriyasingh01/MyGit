@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12202
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Ingres Database Server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple heap-based buffer overflows in the (1) Communications Server (iigcc.exe) and (2) Data Access Server (iigcd.exe) components for Ingres Database Server 3.0.3, as used in CA (Computer Associates) products including eTrust Secure Content Manager r8 on Windows, allow remote attackers to execute arbitrary code via unknown vectors.
+
+--
+Affected Systems:
+Ingres Database Server 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

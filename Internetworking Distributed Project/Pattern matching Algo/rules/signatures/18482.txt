@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+18482
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Internet Explorer.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unspecified vulnerability in Microsoft Internet Explorer 5.01 SP4, 6 SP1, 6 on Windows XP SP2 and SP3, and 6 on Windows Server 2003 SP1 and SP2 allows remote attackers to execute arbitrary code via a web page that triggers presence of an object in memory that was (1) not properly initialized or (2) deleted, aka "Uninitialized Memory Corruption Vulnerability."
+
+--
+Affected Systems:
+Microsoft Internet Explorer 5.0.1
+Microsoft Internet Explorer 6
+Microsoft Internet Explorer 6.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0552:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0552
+  
+--

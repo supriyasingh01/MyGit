@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+3-17041
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in ISA server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Microsoft Internet Security and Acceleration (ISA) Server 2006 Gold and SP1, when Radius OTP is enabled, uses the HTTP-Basic authentication method, which allows remote attackers to gain the privileges of an arbitrary account, and access published web pages, via vectors involving attempted access to a network resource behind the ISA Server, aka "Radius OTP Bypass Vulnerability."
+
+--
+Affected Systems:
+Microsoft ISA server 2006
+Microsoft ISA server 2006
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-1135:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-1135
+  
+--

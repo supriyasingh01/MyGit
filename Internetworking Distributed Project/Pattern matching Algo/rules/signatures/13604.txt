@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+13604
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in RealPlayer.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The RealAudioObjects.RealAudio ActiveX control in rmoc3260.dll 6.0.10.45 in RealNetworks RealPlayer 11.0.1 build 6.0.14.794 does not properly manage memory for the Console property, which allows remote attackers to execute arbitrary code or cause a denial of service (browser crash) via a series of assignments of long string values, which triggers an overwrite of freed heap memory.  NOTE: some of these details are obtained from third party information.
+
+--
+Affected Systems:
+RealNetworks RealPlayer 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-1309:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-1309
+
+--

@@ -1,0 +1,12 @@
+
+  
+1. disable
+sudo su
+echo 0 > /proc/sys/net/ipv4/ip_forward
+exit
+
+2. enable
+sudo su
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+exit

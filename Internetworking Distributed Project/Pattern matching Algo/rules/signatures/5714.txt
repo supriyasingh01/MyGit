@@ -1,0 +1,58 @@
+Rule: 
+
+--
+Sid: 
+5714
+
+-- 
+Summary: 
+This event is generated when a possible malicious attachement is detected in mail traffic.
+
+-- 
+Impact: 
+Serious. Code execution may be possible.
+
+--
+Detailed Information:
+Apple Macintosh OS X suffers from a poorly designed use of resource forking for applications. It may be possible for an attacker to execute code of their choosing or execute system commands by exploiting the way in which OS X handles the opening of files determined to be safe.
+
+A script can be executed on an affected system by disguising it as a safe file by using a file type extension recognised by OS X as a safe file. If the script is sent as an attachment to be opened by the Terminal application, the script is executed without further checks being performed
+
+--
+Affected Systems:
+Mac OS X 10,4
+Mail.app 2.0
+
+--
+Attack Scenarios: 
+An attacker can supply an executable script as an attachment to an email message, change the file type extension to something deemed innocent (.jpg for example) and use AppleDouble format for the file so that it will be executed by the Terminal application.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Disable the Terminal.app
+
+Do not open attachements.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+
+--

@@ -1,0 +1,130 @@
+Rule
+
+--
+Sid
+17106
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in jdk.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unspecified vulnerability in the Sound component in Oracle Java SE and Java for Business 6 Update 18, 5.0 Update 23, 1.4.2_25, and 1.3.1_27 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.  NOTE: the previous information was obtained from the March 2010 CPU.  Oracle has not commented on claims from a reliable researcher that this is an uncontrolled array index that allows remote attackers to execute arbitrary code via a MIDI file with a crafted MixerSequencer object, related to the GM_Song structure.
+
+--
+Affected Systems:
+sun jdk 1.3.0
+sun jdk 1.3.0_01
+sun jdk 1.3.0_02
+sun jdk 1.3.0_03
+sun jdk 1.3.0_04
+sun jdk 1.3.0_05
+sun jdk 1.3.1
+sun jdk 1.3.1_01
+sun jdk 1.3.1_01a
+sun jdk 1.3.1_02
+sun jdk 1.3.1_03
+sun jdk 1.3.1_04
+sun jdk 1.3.1_05
+sun jdk 1.3.1_06
+sun jdk 1.3.1_07
+sun jdk 1.3.1_08
+sun jdk 1.3.1_09
+sun jdk 1.3.1_10
+sun jdk 1.3.1_11
+sun jdk 1.3.1_12
+sun jdk 1.3.1_13
+sun jdk 1.3.1_14
+sun jdk 1.3.1_15
+sun jdk 1.3.1_16
+sun jdk 1.3.1_17
+sun jdk 1.3.1_18
+sun jdk 1.3.1_19
+sun jdk 1.3.1_20
+sun jdk 1.3.1_21
+sun jdk 1.3.1_22
+sun jdk 1.3.1_23
+sun jdk 1.3.1_24
+sun jdk 1.3.1_25
+sun jdk 1.3.1_26
+sun jdk 1.3.1_27
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-0842:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0842
+  
+--

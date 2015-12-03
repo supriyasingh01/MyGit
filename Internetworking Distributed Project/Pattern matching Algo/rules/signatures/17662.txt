@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+17662
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in solaris.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unknown vulnerability in the net-svc script on Solaris 10 allows remote authenticated users to execute arbitrary code on a DHCP client via certain DHCP responses.
+
+--
+Affected Systems:
+sun solaris 10.0
+sun solaris 10.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-2870:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-2870
+  
+--

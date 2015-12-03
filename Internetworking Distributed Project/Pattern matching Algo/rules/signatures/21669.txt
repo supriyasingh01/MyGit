@@ -1,0 +1,69 @@
+Rule
+
+--
+Sid
+21669
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in asterisk.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Unspecified vulnerability in the SIP channel driver (channels/chan_sip.c) in Asterisk 1.2.x before 1.2.13 and 1.4.x before 1.4.0-beta3 allows remote attackers to cause a denial of service (resource consumption) via unspecified vectors that result in the creation of "a real pvt structure" that uses more resources than necessary.
+
+--
+Affected Systems:
+digium asterisk 1.2.0 beta1
+digium asterisk 1.2.0 beta2
+digium asterisk 1.2.10
+digium asterisk 1.2.11
+digium asterisk 1.2.12
+digium asterisk 1.2.12.1
+digium asterisk 1.2.6
+digium asterisk 1.2.7
+digium asterisk 1.2.8
+digium asterisk 1.2.9
+digium asterisk 1.4.0
+digium asterisk 1.4.0 beta1
+digium asterisk 1.4.0 beta2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2006-5445:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-5445
+  
+--

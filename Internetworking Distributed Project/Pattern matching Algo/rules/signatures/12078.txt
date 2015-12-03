@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+12078
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Desktop Protection Suite.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Multiple buffer overflows in LGSERVER.EXE in CA BrightStor ARCserve Backup for Laptops and Desktops r11.0 through r11.1 SP1, Mobile Backup r4.0, Desktop and Business Protection Suite r2, and Desktop Management Suite (DMS) r11.0 and r11.1 allow remote attackers to execute arbitrary code via crafted packets to TCP port (1) 1900 or (2) 2200.
+
+--
+Affected Systems:
+Computer Associates Desktop Protection Suite 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

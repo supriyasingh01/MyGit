@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+16481
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Opera.
+
+--
+Impact:
+Serious. Possible execution of arbitrary code of the attackers choosing.
+
+--
+Detailed Information:
+A buffer overflow condition exists in the Opera web browser that may allow a remote attacker to excute code on an affected system. The vulnerability is triggered by the presence of a long Content-Length header in a web page supplied by a server.
+
+--
+Affected Systems:
+Opera 10.5 and earlier
+
+--
+Attack Scenarios:
+An attacker can supply a long Content-Header to the client and trigger the overflow.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Ensure the system is using an up to date version of the software and has had all vendor supplied patches applied.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

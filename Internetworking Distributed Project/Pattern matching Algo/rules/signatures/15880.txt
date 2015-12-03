@@ -1,0 +1,62 @@
+Rule
+
+--
+Sid
+15880
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Internet Explorer.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Internet Explorer allows remote attackers to bypass zone restrictions to inject and execute arbitrary programs by creating a popup window and inserting ActiveX object code with a "data" tag pointing to the malicious code, which Internet Explorer treats as HTML or Javascript, but later executes as an HTA application, a different vulnerability than CVE-2003-0532, and as exploited using the QHosts Trojan horse (aka Trojan.Qhosts, QHosts-1, VBS.QHOSTS, or aolfix.exe).
+
+--
+Affected Systems:
+Microsoft Internet Explorer 5.0.1
+Microsoft Internet Explorer 5.0.1
+Microsoft Internet Explorer 5.0.1
+Microsoft Internet Explorer 5.5
+Microsoft Internet Explorer 5.5
+Microsoft Internet Explorer 6.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2003-0838:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2003-0838
+  
+--

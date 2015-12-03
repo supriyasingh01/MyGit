@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+12058
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft ASN.1 library.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Multiple integer overflows in Microsoft ASN.1 library (MSASN1.DLL), as used in LSASS.EXE, CRYPT32.DLL, and other Microsoft executables and libraries on Windows NT 4.0, 2000, and XP, allow remote attackers to execute arbitrary code via ASN.1 BER encodings with (1) very large length fields that cause arbitrary heap data to be overwritten, or (2) modified bit strings.
+
+--
+Affected Systems:
+  64-bit
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

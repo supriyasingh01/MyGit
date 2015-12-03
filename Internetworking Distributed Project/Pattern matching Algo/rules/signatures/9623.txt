@@ -1,0 +1,75 @@
+Rule
+
+--
+Sid
+9623
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Omni-NFS server.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+The Omni-NFS server, an NFS server for Windows, suffers from a stack-based buffer overflow when parsing the MachineName parameter of UNIX authentication data in RPC mount packets.
+
+These packets are laid out as such:
+
+* 4-byte fragment header (present in TCP packets, not UDP)
+* 4-byte XID
+* 4-byte message type (must be 0, or call, in our case)
+* 4-byte RPC version (must be 2 in our case)
+* 4-byte program ID (must be |00 01 86 A5|, or MOUNT, in our case)
+* 4-byte program version
+* 4-byte procedure type
+* 4-byte authentication flavor (must be 1, or AUTH_UNIX, in our case)
+* 4-byte length (does not appear relevant here)
+* 4-byte stamp
+* 4-byte length of MachineName string
+* n-byte MachineName string
+* 4-byte UID
+* 4-byte GID
+* 16-member array of 4-byte GIDs
+
+According to the RFC, the MachineName string may be no more than 255 bytes.
+
+--
+Affected Systems:
+Omni-NFS 5.2
+
+--
+Attack Scenarios:
+An attacker needs to supply excess data in a transaction using the application. The attacker may then include code of their choosing to be executed on the host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

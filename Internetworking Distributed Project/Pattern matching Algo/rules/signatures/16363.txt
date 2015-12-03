@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+16363
+
+--
+Summary:
+This event is generated when network traffic that indicates a potentially executable file upload via FTP has occurred.
+
+--
+Impact:
+Possible policy violation. Executable file upload via FTP may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that a potentially executable file upload via FTP has occurred on the protected network.
+
+--
+Affected Systems:
+All systems using FTP
+
+--
+Attack Scenarios:
+This is a possible policy violation.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of executable file uploads via FTP on the protected network and enforce or implement an organization wide policy on the use of FTP.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

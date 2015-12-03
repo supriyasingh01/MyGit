@@ -1,0 +1,53 @@
+Rule:
+
+--
+Sid:
+124-4
+
+--
+Summary:
+This event is generated when the smtp pre-processor detects an unknown smtp command.
+
+--
+Impact:
+Unkown. Execution of arbitrary code leading to full administrator access of the machine may be possible. Denial of Service (DoS). Intelligence gathering.
+
+--
+Detailed Information:
+SMTP commands are well known and documented, if a server receives a command that is not known, it may behave in an unpredictable manner.  Additionally, it may respond in a known manner and thus supply the attacker with intelligence about the software running on the machine.
+
+SMTP commands may be vulnerable to buffer overflows. Each command takes an argument, if this argument is too long a fixed length buffer may be overflowed allowing the attacker to execute code on an affected system.  In the case of an unknown command, the server may attempt to put the data into a non-existant buffer which could possibly crash the service.
+
+--
+Affected Systems:
+All SMTP servers.
+
+--
+Attack Scenarios:
+An attacker may try to compromise an smtp server by supplying it with unknown data.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

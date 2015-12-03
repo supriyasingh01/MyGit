@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+13366
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Oracle10g Database Server Release 1.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+SQL injection vulnerability in Workspace Manager for Oracle Database before OWM 10.2.0.4.1, OWM 10.1.0.8.0, and OWM 9.2.0.8.0 allows attackers to execute arbitrary SQL commands via the FINDRICSET procedure in the LT package.  NOTE: this is probably covered by CVE-2007-5510, but there are insufficient details to be certain.
+
+--
+Affected Systems:
+Oracle Oracle10g Database Server Release 1 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

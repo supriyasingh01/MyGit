@@ -1,0 +1,164 @@
+Rule
+
+--
+Sid
+15490
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the Linux kernel.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Buffer overflow in net/sctp/sm_statefuns.c in the Stream Control Transmission Protocol (sctp) implementation in the Linux kernel before 2.6.28-git8 allows remote attackers to have an unknown impact via an FWD-TSN (aka FORWARD-TSN) chunk with a large stream ID.
+
+--
+Affected Systems:
+Linux kernel 2.2.27
+Linux kernel 2.4.36
+Linux kernel 2.4.36.1
+Linux kernel 2.4.36.2
+Linux kernel 2.4.36.3
+Linux kernel 2.4.36.4
+Linux kernel 2.4.36.5
+Linux kernel 2.4.36.6
+Linux kernel 2.6
+Linux kernel 2.6.18
+Linux kernel 2.6.18
+Linux kernel 2.6.18
+Linux kernel 2.6.18
+Linux kernel 2.6.18
+Linux kernel 2.6.18
+Linux kernel 2.6.18
+Linux kernel 2.6.19.4
+Linux kernel 2.6.19.5
+Linux kernel 2.6.19.6
+Linux kernel 2.6.19.7
+Linux kernel 2.6.20.16
+Linux kernel 2.6.20.17
+Linux kernel 2.6.20.18
+Linux kernel 2.6.20.19
+Linux kernel 2.6.20.20
+Linux kernel 2.6.20.21
+Linux kernel 2.6.21.5
+Linux kernel 2.6.21.6
+Linux kernel 2.6.21.7
+Linux kernel 2.6.22
+Linux kernel 2.6.22.1
+Linux kernel 2.6.22.10
+Linux kernel 2.6.22.11
+Linux kernel 2.6.22.12
+Linux kernel 2.6.22.13
+Linux kernel 2.6.22.14
+Linux kernel 2.6.22.15
+Linux kernel 2.6.22.17
+Linux kernel 2.6.22.18
+Linux kernel 2.6.22.19
+Linux kernel 2.6.22.2
+Linux kernel 2.6.22.20
+Linux kernel 2.6.22.21
+Linux kernel 2.6.22.22
+Linux kernel 2.6.22.8
+Linux kernel 2.6.22.9
+Linux kernel 2.6.22_rc1
+Linux kernel 2.6.22_rc7
+Linux kernel 2.6.23
+Linux kernel 2.6.23.10
+Linux kernel 2.6.23.11
+Linux kernel 2.6.23.12
+Linux kernel 2.6.23.13
+Linux kernel 2.6.23.15
+Linux kernel 2.6.23.16
+Linux kernel 2.6.23.17
+Linux kernel 2.6.23.8
+Linux kernel 2.6.23.9
+Linux kernel 2.6.23_rc1
+Linux kernel 2.6.24
+Linux kernel 2.6.24.1
+Linux kernel 2.6.24.2
+Linux kernel 2.6.24.3
+Linux kernel 2.6.24.4
+Linux kernel 2.6.24.5
+Linux kernel 2.6.24.6
+Linux kernel 2.6.24.7
+Linux kernel 2.6.24_rc1
+Linux kernel 2.6.24_rc4
+Linux kernel 2.6.24_rc5
+Linux kernel 2.6.25
+Linux kernel 2.6.25
+Linux kernel 2.6.25.1
+Linux kernel 2.6.25.1
+Linux kernel 2.6.25.10
+Linux kernel 2.6.25.10
+Linux kernel 2.6.25.11
+Linux kernel 2.6.25.11
+Linux kernel 2.6.25.12
+Linux kernel 2.6.25.12
+Linux kernel 2.6.25.13
+Linux kernel 2.6.25.14
+Linux kernel 2.6.25.15
+Linux kernel 2.6.25.16
+Linux kernel 2.6.25.17
+Linux kernel 2.6.25.2
+Linux kernel 2.6.25.2
+Linux kernel 2.6.25.3
+Linux kernel 2.6.25.3
+Linux kernel 2.6.25.4
+Linux kernel 2.6.25.4
+Linux kernel 2.6.25.5
+Linux kernel 2.6.25.5
+Linux kernel 2.6.25.6
+Linux kernel 2.6.25.6
+Linux kernel 2.6.25.7
+Linux kernel 2.6.25.7
+Linux kernel 2.6.25.8
+Linux kernel 2.6.25.8
+Linux kernel 2.6.25.9
+Linux kernel 2.6.25.9
+Linux kernel 2.6.26
+Linux kernel 2.6.26.1
+Linux kernel 2.6.26.2
+Linux kernel 2.6.26.3
+Linux kernel 2.6.26.4
+Linux kernel 2.6.26.5
+Linux kernel 2.6.27
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0065:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0065
+  
+--

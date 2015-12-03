@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+7030
+
+--
+Summary: 
+SILC is an internet conferencing protocol. 
+
+--
+Impact: 
+Potential policy violation or data leakage. All data transmitted after client setup is encrypted so their is potential for subversion of data leakage detection.
+
+--
+Detailed Information: 
+SILC (Simple Internet Live Conferencing) is similar in some ways to jabber or IRC, but all messages, including channel changes are encrypted. As soon as the client connects, a key is generated between the server and the client and all susbsequent transmissions are encrypted. This rule is designed to detect the initial server response to the client connection request prior to the session going all encrypted.
+
+--
+Attack Scenarios: 
+Connect with a silc client.
+
+--
+Ease of Attack: 
+Clients are readily available on the Internet.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives: 
+Connections could be made on ports other than port 706.
+
+--
+Corrective Action: 
+Block outbound connection requests on TCP port 706.
+
+--
+Contributors:
+Dan Ramaswami (danr@sourcefire.com)
+
+-- 
+Additional References:
+
+SilcNet documentation
+http://silcnet.org/docs/silc_protocol.pdf,
+http://silcnet.org/docs/draft-riikonen-silc-pp-08.txt,
+http://silcnet.org/docs/draft-riikonen-silc-spec-08.txt
+
+--

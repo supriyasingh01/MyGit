@@ -1,0 +1,116 @@
+Rule
+
+--
+Sid
+15445
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in application_server.
+
+--
+Impact:
+ Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unspecified vulnerability in the Oracle BPEL Process Manager component in Oracle Application Server allows remote authenticated users to affect confidentiality and integrity via unknown vectors.
+
+--
+Affected Systems:
+oracle application_server 1.0
+oracle application_server 1.0.2
+oracle application_server 1.0.2.0
+oracle application_server 1.0.2.1
+oracle application_server 1.0.2.1s
+oracle application_server 1.0.2.2
+oracle application_server 1.0.2.2
+oracle application_server 1.0.2.2.2
+oracle application_server 10.1.0.2
+oracle application_server 10.1.0.3
+oracle application_server 10.1.0.3.1
+oracle application_server 10.1.0.4
+oracle application_server 10.1.2
+oracle application_server 10.1.2.0
+oracle application_server 10.1.2.0.0
+oracle application_server 10.1.2.0.1
+oracle application_server 10.1.2.0.2
+oracle application_server 10.1.2.1
+oracle application_server 10.1.2.1.0
+oracle application_server 10.1.2.2
+oracle application_server 10.1.2.2.0
+oracle application_server 10.1.2.3
+oracle application_server 10.1.2_.0.1
+oracle application_server 10.1.3
+oracle application_server 10.1.3.0
+oracle application_server 10.1.3.0.0
+oracle application_server 10.1.3.1
+oracle application_server 10.1.3.1.0
+oracle application_server 10.1.3.2.0
+oracle application_server 10.1.3.3
+oracle application_server 10.1.3.3.0
+oracle application_server 10.1.4.0
+oracle application_server 10.1.4.0.1
+oracle application_server 10.1.4.1
+oracle application_server 10.1.4.1.0
+oracle application_server 10.2.0.0
+oracle application_server 11i
+oracle application_server 3.0.7
+oracle application_server 4.0
+oracle application_server 4.0.8
+oracle application_server 4.0.8.2
+oracle application_server 6.0.8.26_ps17
+oracle application_server 7.0.4.4
+oracle application_server 8.1.7
+oracle application_server 9.0
+oracle application_server 9.0.2
+oracle application_server 9.0.2.0.0
+oracle application_server 9.0.2.0.1
+oracle application_server 9.0.2.1
+oracle application_server 9.0.2.2
+oracle application_server 9.0.2.3
+oracle application_server 9.0.3
+oracle application_server 9.0.3.1
+oracle application_server 9.0.4
+oracle application_server 9.0.4.0
+oracle application_server 9.0.4.1
+oracle application_server 9.0.4.2
+oracle application_server 9.0.4.3
+oracle application_server 9.2.0.6
+oracle application_server 9.2.0.7
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-4014:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-4014
+  
+--

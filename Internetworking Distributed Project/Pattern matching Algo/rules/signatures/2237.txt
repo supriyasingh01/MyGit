@@ -1,0 +1,52 @@
+Rule:  
+
+--
+Sid:
+2237
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the cgi application cgiWebupdate used by Trend Micro OfficeScan.
+
+--
+Impact:
+Information disclosure.
+
+--
+Detailed Information:
+Trend Micro OfficeScan suffers from poor coding techniques which may permit an unauthorized user to view system files using the cgi application cgiWebUpdate.
+
+--
+Affected Systems:
+Trend Micro Virus Buster/OfficeScan Corporate Edition versions 3.5x
+
+--
+Attack Scenarios:
+An attacker needs to make a request to the cgi application combined with the path to a file on the system.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

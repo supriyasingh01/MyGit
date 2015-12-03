@@ -1,0 +1,86 @@
+Rule
+
+--
+Sid
+16321
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in acrobat.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Integer overflow in Adobe Acrobat 7.x before 7.1.4, 8.x before 8.1.7, and 9.x before 9.2 allows attackers to cause a denial of service via unspecified vectors.
+
+--
+Affected Systems:
+adobe acrobat 7.0
+adobe acrobat 7.0.1
+adobe acrobat 7.0.2
+adobe acrobat 7.0.3
+adobe acrobat 7.0.4
+adobe acrobat 7.0.5
+adobe acrobat 7.0.6
+adobe acrobat 7.0.7
+adobe acrobat 7.0.8
+adobe acrobat 7.0.9
+adobe acrobat 7.1.0
+adobe acrobat 7.1.1
+adobe acrobat 7.1.3
+adobe acrobat 8.0.0
+adobe acrobat 8.1
+adobe acrobat 8.1.1
+adobe acrobat 8.1.2
+adobe acrobat 8.1.3
+adobe acrobat 8.1.4
+adobe acrobat 8.1.6
+adobe acrobat 9.0
+adobe acrobat 9.1.1
+adobe acrobat 9.1.2
+adobe acrobat 9.1.3
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-2995:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2995
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

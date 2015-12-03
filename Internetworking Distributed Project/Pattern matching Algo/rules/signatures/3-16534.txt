@@ -1,0 +1,61 @@
+Rule
+
+--
+Sid
+3-16534
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Windows systems.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+The SMTP component in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP2, and Server 2008 Gold, SP2, and R2, and Exchange Server 2003 SP2, does not properly parse MX records, which allows remote DNS servers to cause a denial of service (service outage) via a crafted response to a DNS MX record query, aka "SMTP Server MX Record Vulnerability."
+
+--
+Affected Systems:
+Microsoft Windows 2000 SP4
+Microsoft Windows XP SP2 and SP3
+Microsoft Windows Server 2003 SP2
+Microsoft Windows Server 2008 Gold, SP2 and R2
+Microsoft Exchange Server 2003 SP2    
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-0024:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0024
+  
+--

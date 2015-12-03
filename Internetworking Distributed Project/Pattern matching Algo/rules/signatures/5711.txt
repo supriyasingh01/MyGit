@@ -1,0 +1,56 @@
+Rule:
+
+--
+Sid:
+5711
+
+--
+Summary:
+This event is generated when an attempt has been made to exploit a known vulnerability in Windows Media Player. 
+
+--
+Impact:
+Serious. Possible remote code execution.
+
+--
+Detailed Information:
+This event indicates that an attempt has been made to exploit a known vulnerability in Windows Media Player. 
+
+Windows Media Player suffers from a programming error that may enable an attacker to run code of their choosing on a vulnerable system. The error occurs when processing malformed bitmap files with the application. A bitmap file with length zero is not correctly checked for actual length, and it may be possible for an attacker to create a malicious image with size 0 but with actual data in the image that can be copied into memory for execution.
+
+--
+Affected Systems:
+All Microsoft Windows systems using Media Player
+	
+--
+Attack Scenarios:
+An attacker can craft the special bitmap image and execute code of their choosing when processed with Media Player.
+
+--
+Ease of Attack:
+Simple. Exploit code exists.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches
+
+Do not use media player as the default application for viewing media types
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matt Watchinski <matthew.watchinski@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

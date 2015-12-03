@@ -1,0 +1,63 @@
+Rule
+
+--
+Sid
+18648
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in igss.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Multiple stack-based buffer overflows in IGSSdataServer.exe 9.00.00.11063 and earlier in 7-Technologies Interactive Graphical SCADA System (IGSS) allow remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via crafted (1) ListAll, (2) Write File, (3) ReadFile, (4) Delete, (5) RenameFile, and (6) FileInfo commands in an 0xd opcode; (7) the Add, (8) ReadFile, (9) Write File, (10) Rename, (11) Delete, and (12) Add commands in an RMS report templates (0x7) opcode; and (13) 0x4 command in an STDREP request (0x8) opcode to TCP port 12401.
+
+--
+Affected Systems:
+7t igss 
+
+--
+Attack Scenarios:
+In an SQL injection attack, the attacker is able to coerce the application into running SQL queries of the attackers choosing. This can lead to a complete compromise of the data stored in the system as well as the attacker being able to gain administrative access to the application.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-1567:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-1567
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/89.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/66.html
+
+--

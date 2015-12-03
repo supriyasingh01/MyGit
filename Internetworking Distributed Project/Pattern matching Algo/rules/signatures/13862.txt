@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+13862
+
+--
+Summary:
+This event is generated when network traffic that indicates the Habbo chat client is being used.
+
+--
+Impact:
+Possible policy violation. The use of the Habbo chat client may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the the Habbo chat client is being used on the protected network.
+
+--
+Affected Systems:
+All systems using the Habbo chat client
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that the Habbo chat client has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of the Habbo chat client on the protected network and enforce or implement an organization wide policy on the use of the Habbo chat client.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

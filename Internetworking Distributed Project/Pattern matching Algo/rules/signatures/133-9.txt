@@ -1,0 +1,56 @@
+Rule
+
+--
+Sid
+133-9
+
+--
+Summary:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+Some SMB commands, such as Transaction, have a field containing the total amount of data to be transmitted. If this field is zero, the preprocessor will generate this event.
+
+This event can be controlled using the ((dce2)) configuration options.
+
+--
+Affected Systems:
+All systems using NetBIOS DCERPC or SMB file and print sharing
+
+--
+Attack Scenarios:
+An attacker would need to supply a specially crafted SMB header that indicates zero bytes of data.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

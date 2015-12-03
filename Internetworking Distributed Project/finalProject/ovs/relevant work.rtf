@@ -1,0 +1,96 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 TimesNewRomanPSMT;
+\f3\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red17\green91\blue187;\red9\green47\blue157;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs28 \cf0 Relevant work: 
+\b0 We read a couple of research papers:\
+\
+Lightweight DDoS Flooding Attack Detection Using NOX/OpenFlow - that talks about a lightweight method to DdoS attack detection based on traffic flow features. It uses NOX based network, where OF switches keep flow tables with statistics about all the active flows.\
+\
+Another paper "Online classification of Network Flows" talks about a mechanism that \
+uses signature based method at first level, and then take the advantage of a learning algorithm to classify the remaining unknown traffic using statistical features.\
+\
+\
+We are using 
+\b Naive Baysean Classifier 
+\b0 instead of SOM approach for the following reasons:\
+\
+1)In SOM its difficult to determine what inputs weights to use.\
+2)Mapping can result in divided clusters.\
+3)Reuires that nearby points behave similarly.\
+\
+\
+\
+\pard\pardeftab720\pardirnatural
+
+\f1\b \cf0 Network based intrusion detection systems 
+\b0 are systems that monitor the network for packets and detect malicious behaviour and take actions or responses to prevent an attack.\
+
+\b Host based Desktop Security
+\b0  suites are typically software running on host machines that are responsible for host protection. They perform packet filtering on host machines(typically host based firewalls) and  detect malicious activities on the host.\
+\
+\pard\pardeftab720\pardirnatural
+
+\f2 \cf0 \ul \ulc0 The network IDS is more suited for following attacks\
+\pard\pardeftab720\pardirnatural
+\cf0 \ulnone 1)port scanning attacks\
+2)Denial of service attacks(DOS)\
+3)malicious attacks on well known ports\
+4)IP spoofing attacks\
+5)worms flooding the network\
+\
+\pard\pardeftab720\sa500
+
+\f3 \cf2 A 
+\b computer virus
+\b0  replicates itself\'a0 in computer memory when initiated by the user. Not only they replicate themselves but may also contain some malicious codes which can affect your files, your operating system or even your master boot records thereby making your {\field{\*\fldinst{HYPERLINK "http://www.guidingtech.com/7279/reduce-windows-boot-time-with-quick-startup/"}}{\fldrslt \cf3 computer start slow}} or not boot at all.\
+
+\fs30 As a virus always needs a human action to initiate itself, in a computer most of them attach themselves to an executable .exe file because it knows eventually the user will double click on it to run it \
+Like virus, 
+\b worms t
+\b0 oo replicate and spread themselves but it happens on a bit larger scale. Also, unlike virus, a worm does not need a human action to replicate and spread and that\'92s what makes it more dangerous.\
+A worm always seeks for network loopholes to replicate from computer to computer and thus most common way of intrusion are emails and IM attachments.\'a0
+\fs28 \
+
+\b\fs30 Trojan horse 
+\b0 is a program that appears useful by pretending to do certain things in foreground, but in reality they are working silently in background with the only objective of harming your computer and/or stealing valuable information.
+\f1\fs28 \cf0 \
+\pard\pardeftab720\pardirnatural
+
+\f2\b \cf0 The signature based IDS 
+\b0 consists of a knowledge base where all the known signatures are stored. These signatures are matched with any malicious signature the Intrusion detection system detects.\
+\
+
+\b Anomaly based a
+\b0 pproach is a very important network intrusion based detection methodology which detects some abnormal behaviour and reports it. This approach has specific rule sets like 'if the outbound 
+\b packet rate suddenly increases report the intrusio
+\b0 n'. This approach however may generate false positives. \
+\
+\pard\pardeftab720\sa400
+
+\f0 \cf0 A 
+\b honey pot 
+\b0 is a computer system on the Internet that is expressly set up to attract and "trap" people who attempt to penetrate other people's computer systems\
+\pard\pardeftab720
+
+\f3\b \cf0 ???Neural networks 
+\b0 -It is believed that a user leaves a `print' when using the system; a neural network can be used to learn this print and identify each user much like detectives use thumbprints to place people at crime scenes. If a user's behavior does not match his/her print, the system administrator can be alerted of a possible security breech. 
+\f0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+\pard\pardeftab720\sa120
+
+\b\fs26 \cf0 denial-of-service attack
+\b0  (
+\b DoS attack
+\b0 ) or 
+\b distributed denial-of-service attack
+\b0  (
+\b DDoS attack
+\b0 ) is an attempt to make a machine or network resource unavailable to its intended {\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/User_(computing)"}}{\fldrslt \cf4 users}}. The aim is to indefinitely interrupt or suspend {\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Web_service"}}{\fldrslt \cf4 services}} of a {\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Host_(network)"}}{\fldrslt \cf4 host}} connected to the {\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/Internet"}}{\fldrslt \cf4 Internet}}.
+\fs28 \
+}

@@ -1,0 +1,57 @@
+Rule:
+
+--
+Sid:
+2126
+
+--
+Summary:
+This event is generated when a remote attacker attempts to overflow Microsoft's PPTP RAS service.  
+
+--
+Impact:
+Administrative Compromise.  This attack may permit executation of arbitrary commands with the privileges of the NT SYSTEM account.
+
+--
+Detailed Information:
+A buffer overflow exists when a malformed SCR (Start Control Request) PPTP  packet is received by the PPTP RAS service.  This may permit executation of arbitrary commands with the privileges of the administrator account.
+
+--
+Affected Systems:
+Windows 2000 Professional
+Windows 2000 Server
+Windows 2000 Advanced Server
+
+--
+Attack Scenarios:
+Exploit code can be used to attack vulnerable PPTP RAS services to obtain SYSTEM level access to the remote host.
+
+--
+Ease of Attack:
+Difficult.  Currently Sourcefire is unaware of any publicly available exploits for this vulnerability.
+
+--
+False Positives:
+PPTP clients that violate RFC2637 by generating overly long Host Name and Vendor Strings could potentially trigger this rule inadvertently.
+
+--
+False Negatives:
+None Known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Watchinski (matt.watchinski@sourcefire.com)
+
+--
+
+Additional References:
+
+CVE:
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1214
+
+--

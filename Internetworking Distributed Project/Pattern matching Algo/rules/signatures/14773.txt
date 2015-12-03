@@ -1,0 +1,61 @@
+Rule
+
+--
+Sid
+14773
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in arcserve_backup_for_laptops_and_desktops.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Integer underflow in rxRPC.dll in the LGServer service in the server in CA ARCserve Backup for Laptops and Desktops 11.0 through 11.5 allows remote attackers to execute arbitrary code or cause a denial of service via a crafted message that triggers a buffer overflow.
+
+--
+Affected Systems:
+ca arcserve_backup_for_laptops_and_desktops 11.0
+ca arcserve_backup_for_laptops_and_desktops 11.1
+ca arcserve_backup_for_laptops_and_desktops 11.1
+ca arcserve_backup_for_laptops_and_desktops 11.1
+ca arcserve_backup_for_laptops_and_desktops 11.5
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-3175:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-3175
+
+--

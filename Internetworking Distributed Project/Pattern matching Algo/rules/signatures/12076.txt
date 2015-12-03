@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+12076
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in WS_FTP.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+The Logging Server (Logsrv.exe) in IPSwitch WS_FTP 7.5.29.0 allows remote attackers to cause a denial of service (daemon crash) by sending a crafted packet containing a long string to port 5151/udp.
+
+--
+Affected Systems:
+Ipswitch WS_FTP 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

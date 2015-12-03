@@ -1,0 +1,63 @@
+Rule
+
+--
+Sid
+17217
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Safari.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Apple Safari 2.0.3 allows remote attackers to cause a denial of service and possibly execute code via an invalid FRAME tag, possibly due to (1) multiple SCROLLING attributes with no values, or (2) a SRC attribute with no value.  NOTE: due to lack of diagnosis by the researcher, it is unclear which vector is responsible.
+
+--
+Affected Systems:
+Apple Safari 2.0
+Apple Safari 2.0.1
+Apple Safari 2.0.2
+Apple Safari 2.0.3
+
+--
+Attack Scenarios:
+Format string vulnerabilities can be very simple to attack. Any program that reads a format string as an input parameter can be exploited if the argument can be controlled by the attacker.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2006-1987:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-1987
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/134.html
+ 
+--

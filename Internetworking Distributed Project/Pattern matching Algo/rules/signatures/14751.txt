@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+14751
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in design_review.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+The UpdateEngine class in the LiveUpdate ActiveX control (LiveUpdate16.DLL 17.2.56), as used in Revit Architecture 2009 SP2 and Autodesk Design Review 2009, allows remote attackers to execute arbitrary programs via the second argument to the ApplyPatch method.
+
+--
+Affected Systems:
+autodesk design_review 2009
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-4472:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-4472
+
+--

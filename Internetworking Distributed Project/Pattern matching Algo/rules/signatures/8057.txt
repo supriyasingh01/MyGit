@@ -1,0 +1,54 @@
+Rule: 
+
+--
+Sid: 
+8057
+
+-- 
+Summary: 
+This event is generated when an attempt is made to cause a Denial of Service on a MySQL server.
+
+-- 
+Impact: 
+Serious. Denial of Service (DoS) is possible.
+
+--
+Detailed Information:
+MySQL server does not correctly sanitize user supplied input which may lead to a DoS condition for the server. The vulnerability lies in the date_format function, which when supplied with a format string instead of a date as a parameter, passes that data to the error handling routine. This may then cause the DoS.
+
+--
+Affected Systems:
+MySQL Server 4.1.20 and prior
+MySQL Server 5.0 and prior
+
+--
+Attack Scenarios: 
+An attacker need only supply a format string where a date is expected to the date_format function to cause the DoS.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

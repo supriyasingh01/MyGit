@@ -1,0 +1,138 @@
+Rule
+
+--
+Sid
+19100
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in jdk.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unspecified vulnerability in the Sound component in Oracle Java SE and Java for Business 6 Update 18, 5.0 Update 23, 1.4.2_25, and 1.3.1_27 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.
+
+--
+Affected Systems:
+sun jdk 1.3.0
+sun jdk 1.3.0 01
+sun jdk 1.3.0 02
+sun jdk 1.3.0 03
+sun jdk 1.3.0 04
+sun jdk 1.3.0 05
+sun jdk 1.3.1
+sun jdk 1.3.1 01
+sun jdk 1.3.1 01a
+sun jdk 1.3.1 02
+sun jdk 1.3.1 03
+sun jdk 1.3.1 04
+sun jdk 1.3.1 05
+sun jdk 1.3.1 06
+sun jdk 1.3.1 07
+sun jdk 1.3.1 08
+sun jdk 1.3.1 09
+sun jdk 1.3.1 10
+sun jdk 1.3.1 11
+sun jdk 1.3.1 12
+sun jdk 1.3.1 13
+sun jdk 1.3.1 14
+sun jdk 1.3.1 15
+sun jdk 1.3.1 16
+sun jdk 1.3.1 17
+sun jdk 1.3.1 18
+sun jdk 1.3.1 19
+sun jdk 1.3.1 20
+sun jdk 1.3.1 21
+sun jdk 1.3.1 22
+sun jdk 1.3.1 23
+sun jdk 1.3.1 24
+sun jdk 1.3.1 25
+sun jdk 1.3.1 26
+sun jdk 1.3.1 27
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+sun jdk 1.6.0
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-0839:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0839
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

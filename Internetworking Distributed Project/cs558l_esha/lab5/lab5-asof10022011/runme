@@ -1,0 +1,36 @@
+#!/bin/bash
+
+
+echo name of script is $0
+echo Port Number is $1
+echo Number of hosts is $2
+echo File to split is $3
+
+rm server
+rm client
+
+touch server
+touch client
+
+port=$1
+numhosts=$2
+file=$3
+us='-'
+d=0
+#echo "./splitjoin.py $file $numhosts &">>server
+
+for (( c=0; c < $numhosts; c++))
+  do
+	 echo "./server.py $port $numhosts $c & ">>server
+	 let "d=c+1"
+	 newfile=$file$us$d
+	 echo "./client.py nodea $newfile $port $numhosts $c & ">>client
+	 let "port+=1"	
+  done
+#echo "./client.py nodea $newfile $port $numhosts $c  ">>client
+#echo "./splitjoin.py $file $numhosts &">>server
+
+chmod 774 server
+chmod 774 client
+
+

@@ -1,0 +1,71 @@
+Rule
+
+--
+Sid
+21419
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in checkmark payroll.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Buffer overflow in InnerMedia DynaZip DUNZIP32.dll file version 5.00.03 and earlier allows remote attackers to execute arbitrary code via a ZIP file containing a file with a long filename, as demonstrated using (1) a .rjs (skin) file in RealPlayer 10 through RealPlayer 10.5 (6.0.12.1053), RealOne Player 1 and 2, (2) the Restore Backup function in CheckMark Software Payroll 2004/2005 3.9.6 and earlier, (3) CheckMark MultiLedger before 7.0.2, (4) dtSearch 6.x and 7.x, (5) mcupdmgr.exe and mghtml.exe in McAfee VirusScan 10 Build 10.0.21 and earlier, (6) IBM Lotus Notes before 6.5.5, and other products.  NOTE: it is unclear whether this is the same vulnerability as CVE-2004-0575, although the data manipulations are the same.
+
+--
+Affected Systems:
+checkmark checkmark payroll 3.7.5
+checkmark checkmark payroll 3.9.1
+checkmark checkmark payroll 3.9.2
+checkmark checkmark payroll 3.9.3
+checkmark checkmark payroll 3.9.4
+checkmark checkmark payroll 3.9.5
+checkmark checkmark payroll 3.9.6
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2004-1094:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2004-1094
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

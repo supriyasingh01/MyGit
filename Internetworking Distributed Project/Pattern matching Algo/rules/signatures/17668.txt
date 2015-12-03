@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+17668
+
+--
+Summary:
+This event is generated when network traffic that indicates an attempted download of a PDF document with embedded JavaScript has been detected in network traffic.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+This event indicates that network traffic indicating that an attempted download of a PDF with embedded JavaScript has been detected.
+
+--
+Affected Systems:
+All systems.
+
+--
+Attack Scenarios:
+Attackers may exploit systems by embedding certain filetypes within other files.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Ensure that all systems and applications are kept up-to-date and are patched with the highest patch level available from the vendor.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

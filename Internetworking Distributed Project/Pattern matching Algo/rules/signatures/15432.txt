@@ -1,0 +1,126 @@
+Rule
+
+--
+Sid
+15432
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in wordpress.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Directory traversal vulnerability in the get_category_template function in wp-includes/theme.php in WordPress 2.3.3 and earlier, and 2.5, allows remote attackers to include and possibly execute arbitrary PHP files via the cat parameter in index.php.  NOTE: some of these details are obtained from third party information.
+
+--
+Affected Systems:
+wordpress wordpress 0.6.2
+wordpress wordpress 0.6.2.1
+wordpress wordpress 0.7
+wordpress wordpress 0.71
+wordpress wordpress 0.71-gold
+wordpress wordpress 0.711
+wordpress wordpress 0.72
+wordpress wordpress 0.72
+wordpress wordpress 0.72
+wordpress wordpress 1.0
+wordpress wordpress 1.0-platinum
+wordpress wordpress 1.0.1
+wordpress wordpress 1.0.1-miles
+wordpress wordpress 1.0.2
+wordpress wordpress 1.0.2-blakey
+wordpress wordpress 1.2
+wordpress wordpress 1.2-delta
+wordpress wordpress 1.2-mingus
+wordpress wordpress 1.2.1
+wordpress wordpress 1.2.2
+wordpress wordpress 1.3.1
+wordpress wordpress 1.4
+wordpress wordpress 1.5
+wordpress wordpress 1.5-strayhorn
+wordpress wordpress 1.5.1
+wordpress wordpress 1.5.1.1
+wordpress wordpress 1.5.1.2
+wordpress wordpress 1.5.1.3
+wordpress wordpress 1.5.2
+wordpress wordpress 1.6
+wordpress wordpress 2.0
+wordpress wordpress 2.0.1
+wordpress wordpress 2.0.10
+wordpress wordpress 2.0.10_rc1
+wordpress wordpress 2.0.10_rc2
+wordpress wordpress 2.0.11
+wordpress wordpress 2.0.2
+wordpress wordpress 2.0.3
+wordpress wordpress 2.0.4
+wordpress wordpress 2.0.5
+wordpress wordpress 2.0.6
+wordpress wordpress 2.0.7
+wordpress wordpress 2.0.8
+wordpress wordpress 2.0.9
+wordpress wordpress 2.1
+wordpress wordpress 2.1.1
+wordpress wordpress 2.1.2
+wordpress wordpress 2.1.3
+wordpress wordpress 2.1.3_rc1
+wordpress wordpress 2.1.3_rc2
+wordpress wordpress 2.2
+wordpress wordpress 2.2.0
+wordpress wordpress 2.2.1
+wordpress wordpress 2.2.2
+wordpress wordpress 2.2.3
+wordpress wordpress 2.2_revision5002
+wordpress wordpress 2.2_revision5003
+wordpress wordpress 2.3
+wordpress wordpress 2.3.1
+wordpress wordpress 2.3.2
+wordpress wordpress 2.3.3
+wordpress wordpress 2.5
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-4769:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-4769
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

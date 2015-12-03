@@ -1,0 +1,77 @@
+Rule
+
+--
+Sid
+16209
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in FreeRadius.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+The rad_decode function in FreeRadius before 1.1.8 allows remote attackers to cause a denial of service (radiusd crash) via zero-length Tunnel-Password attributes.  NOTE: this is a regression error related to CVE-2003-0967.
+
+--
+Affected Systems:
+FreeRadius 0.2
+FreeRadius 0.3
+FreeRadius 0.4
+FreeRadius 0.5
+FreeRadius 0.8
+FreeRadius 0.8.1
+FreeRadius 0.9
+FreeRadius 0.9.1
+FreeRadius 0.9.2
+FreeRadius 0.9.3
+FreeRadius 1.0.0
+FreeRadius 1.0.1
+FreeRadius 1.0.2
+FreeRadius 1.0.3
+FreeRadius 1.0.4
+FreeRadius 1.0.5
+FreeRadius 1.1.0
+FreeRadius 1.1.3
+FreeRadius 1.1.5
+FreeRadius 1.1.6
+FreeRadius 1.1.7
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-3111:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-3111
+  
+--

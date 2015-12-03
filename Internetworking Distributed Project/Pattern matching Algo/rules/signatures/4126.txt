@@ -1,0 +1,75 @@
+Rule:
+
+--
+Sid:
+4126
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a
+vulnerability associated with Veritas Backup Exec Agent for Windows
+authentication.
+
+--
+Impact:
+Serious. Arbitrary file downloads are possible after authentication.
+
+--
+Detailed Information:
+A vulnerability exists in Veritas Backup Exec Agent for Windows. This
+software uses Network Data Management Protocol (NDMP) to communicate
+between clients and servers.  Authentication is required to successfully
+connect. A default user and MD-5 password hash can be used when MD-5
+authentication is selected for a NDPM CONNECT_CLIENT_AUTH command to the
+server.
+
+--
+Affected Systems:
+	VERITAS Backup Exec for Windows Servers 9.0 (all builds)
+	VERITAS Backup Exec for Windows Servers 9.1 (all builds)
+	VERITAS Backup Exec for Windows Servers 10.0 (all builds)
+	VERITAS Backup Exec Remote Agent for Windows Servers
+	VERITAS Backup Exec Remote Agent for Unix or Linux Servers
+	VERITAS Backup Exec for NetWare Servers 9.1 (all builds)
+	VERITAS Backup Exec Remote Agent for NetWare Servers
+	VERITAS NetBackup for NetWare Media Server Option 4.5 (all builds)
+	VERITAS NetBackup for NetWare Media Server Option 4.5 FP (all builds)
+	VERITAS NetBackup for NetWare Media Server Option 5.0 (all builds)
+	VERITAS NetBackup for NetWare Media Server Option 5.1 (all builds)
+
+--
+Attack Scenarios:
+An attacker can send an authentication request using a default username
+and password hash. This may permit subsequent file downloads.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current nonaffected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+
+--
+Additional References:
+
+Symantec:
+http://securityresponse.symantec.com/avcenter/security/Content/2005.08.12b.html
+
+FrSIRT:
+http://www.frsirt.com/english/advisories/2005/1387
+
+--

@@ -1,0 +1,126 @@
+Rule
+
+--
+Sid
+3-16636
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in websphere application server.
+
+--
+Impact:
+  Loss of integrity. 
+
+--
+Detailed Information:
+The design of the W3C XML Signature Syntax and Processing (XMLDsig) recommendation, as implemented in products including (1) the Oracle Security Developer Tools component in Oracle Application Server 10.1.2.3, 10.1.3.4, and 10.1.4.3IM; (2) the WebLogic Server component in BEA Product Suite 10.3, 10.0 MP1, 9.2 MP3, 9.1, 9.0, and 8.1 SP6; (3) Mono before 2.4.2.2; (4) XML Security Library before 1.2.12; (5) IBM WebSphere Application Server Versions 6.0 through 6.0.2.33, 6.1 through 6.1.0.23, and 7.0 through 7.0.0.1; (6) Sun JDK and JRE Update 14 and earlier; and other products uses a parameter that defines an HMAC truncation length (HMACOutputLength) but does not require a minimum for this length, which allows attackers to spoof HMAC-based signatures and bypass authentication by specifying a truncation length with a small number of bits.
+
+--
+Affected Systems:
+IBM websphere application server 6.0
+IBM websphere application server 6.0.0.1
+IBM websphere application server 6.0.0.2
+IBM websphere application server 6.0.0.3
+IBM websphere application server 6.0.1
+IBM websphere application server 6.0.1.1
+IBM websphere application server 6.0.1.11
+IBM websphere application server 6.0.1.13
+IBM websphere application server 6.0.1.15
+IBM websphere application server 6.0.1.17
+IBM websphere application server 6.0.1.2
+IBM websphere application server 6.0.1.3
+IBM websphere application server 6.0.1.5
+IBM websphere application server 6.0.1.7
+IBM websphere application server 6.0.1.9
+IBM websphere application server 6.0.2
+IBM websphere application server 6.0.2
+IBM websphere application server 6.0.2.1
+IBM websphere application server 6.0.2.10
+IBM websphere application server 6.0.2.11
+IBM websphere application server 6.0.2.12
+IBM websphere application server 6.0.2.13
+IBM websphere application server 6.0.2.14
+IBM websphere application server 6.0.2.15
+IBM websphere application server 6.0.2.16
+IBM websphere application server 6.0.2.17
+IBM websphere application server 6.0.2.18
+IBM websphere application server 6.0.2.19
+IBM websphere application server 6.0.2.2
+IBM websphere application server 6.0.2.20
+IBM websphere application server 6.0.2.21
+IBM websphere application server 6.0.2.22
+IBM websphere application server 6.0.2.23
+IBM websphere application server 6.0.2.24
+IBM websphere application server 6.0.2.25
+IBM websphere application server 6.0.2.28
+IBM websphere application server 6.0.2.29
+IBM websphere application server 6.0.2.3
+IBM websphere application server 6.0.2.30
+IBM websphere application server 6.0.2.31
+IBM websphere application server 6.0.2.32
+IBM websphere application server 6.0.2.33
+IBM websphere application server 6.1
+IBM websphere application server 6.1.0
+IBM websphere application server 6.1.0.0
+IBM websphere application server 6.1.0.1
+IBM websphere application server 6.1.0.10
+IBM websphere application server 6.1.0.11
+IBM websphere application server 6.1.0.12
+IBM websphere application server 6.1.0.13
+IBM websphere application server 6.1.0.14
+IBM websphere application server 6.1.0.15
+IBM websphere application server 6.1.0.16
+IBM websphere application server 6.1.0.17
+IBM websphere application server 6.1.0.18
+IBM websphere application server 6.1.0.19
+IBM websphere application server 6.1.0.2
+IBM websphere application server 6.1.0.20
+IBM websphere application server 6.1.0.21
+IBM websphere application server 6.1.0.22
+IBM websphere application server 6.1.0.23
+IBM websphere application server 6.1.0.3
+IBM websphere application server 6.1.0.4
+IBM websphere application server 6.1.0.5
+IBM websphere application server 6.1.0.6
+IBM websphere application server 6.1.0.7
+IBM websphere application server 6.1.0.8
+IBM websphere application server 6.1.0.9
+IBM websphere application server 7.0
+IBM websphere application server 7.0.0.1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0217:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0217
+  
+--

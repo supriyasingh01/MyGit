@@ -1,0 +1,55 @@
+Rule: 
+
+--
+Sid: 
+7021
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in the Netfilter module on Linux systems.
+
+-- 
+Impact: 
+Serious. Denial of Service (DoS)
+
+--
+Detailed Information:
+The Linux kernel netfilter module is prone to a DoS condition that is manifest when it attempts to process SCTP packets that do not contain chunks.
+
+--
+Affected Systems:
+Linux 2.6 kernels including and prior to 2.6.17 using Netfilter modules
+
+--
+Attack Scenarios: 
+An attacker need only send an SCTP packet that contains no data.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the kernel.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+
+--

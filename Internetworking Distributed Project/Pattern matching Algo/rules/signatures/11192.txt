@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+11192
+
+--
+Summary:
+This event is generated when network traffic that indicates download of executable content is being used.
+
+--
+Impact:
+Possible policy violation. The downloading of executable content may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the downloading of executable content is happening on the protected network.
+
+--
+Affected Systems:
+All systems downloading executable content
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that download of executable content has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of download of executable content on the protected network and enforce or implement an organization wide policy on the use of download of executable content.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

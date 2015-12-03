@@ -1,0 +1,68 @@
+Rule
+
+--
+Sid
+19191
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in windows 7.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The SMB server in Microsoft Windows Vista SP1 and SP2, Windows Server 2008 Gold, SP2, R2, and R2 SP1, and Windows 7 Gold and SP1 allows remote attackers to cause a denial of service (system hang) via a crafted (1) SMBv1 or (2) SMBv2 request, aka "SMB Request Parsing Vulnerability."
+
+--
+Affected Systems:
+microsoft windows 7 -
+microsoft windows 7 -
+microsoft windows 7 -
+microsoft windows 7 -
+microsoft windows 7 -
+microsoft windows 7 -
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-1267:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-1267
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

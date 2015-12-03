@@ -1,0 +1,56 @@
+Rule: 
+
+--
+Sid: 
+7024
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Excel.
+
+-- 
+Impact: 
+Serious. Code execution is possible.
+
+--
+Detailed Information:
+Microsoft Excel with the Multilingual User Interface with Asian Languages option installed is vulnerable to a buffer overflow.  The flaw is due to insufficient checks when handling the Style section of the document.  An attacker can leverage this vulnerability by enticing a user to open a crafted Excel document and execute arbitrary code.
+
+This rule generates an event when an attempt is made to exploit this vulnerability.
+
+--
+Affected Systems:
+Microsoft Office 2003
+
+--
+Attack Scenarios: 
+An attacker would need to supply a specially crafted document to be opened by the user.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+THIS RULE IS LIKELY TO GENERATE FALSE POSITIVE EVENTS AND SHOULD NOT BE USED TO BLOCK IN INLINE MODE
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the product.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

@@ -1,0 +1,76 @@
+Rule
+
+--
+Sid
+16293
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in shockwave player.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Array index error in Adobe Shockwave Player before 11.5.2.602 allows remote attackers to execute arbitrary code via crafted Shockwave content on a web site.  NOTE: some of these details are obtained from third party information.
+
+--
+Affected Systems:
+Adobe shockwave player 1.0
+Adobe shockwave player 10.1.0.11
+Adobe shockwave player 11.0.0.456
+Adobe shockwave player 11.5.0.595
+Adobe shockwave player 11.5.0.596
+Adobe shockwave player 11.5.1.601
+Adobe shockwave player 2.0
+Adobe shockwave player 3.0
+Adobe shockwave player 4.0
+Adobe shockwave player 5.0
+Adobe shockwave player 6.0
+Adobe shockwave player 8.0
+Adobe shockwave player 8.5.1
+Adobe shockwave player 9
+
+--
+Attack Scenarios:
+In an SQL injection attack, the attacker is able to coerce the application into running SQL queries of the attackers choosing. This can lead to a complete compromise of the data stored in the system as well as the attacker being able to gain administrative access to the application.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-3463:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-3463
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/89.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/66.html
+
+--

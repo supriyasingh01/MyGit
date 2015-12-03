@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+17618
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in windows 2000.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Multiple integer overflows in the Graphics Rendering Engine (GDI32.DLL) in Windows 2000 SP4, XP SP1 and SP2, and Server 2003 SP1 allow remote attackers to execute arbitrary code via crafted Windows Metafile (WMF) and Enhanced Metafile (EMF) format images that lead to heap-based buffer overflows, as demonstrated using MRBP16::bCheckRecord.
+
+--
+Affected Systems:
+microsoft windows 2000 
+microsoft windows 2000 
+microsoft windows 2000 
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-2123:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-2123
+  
+--

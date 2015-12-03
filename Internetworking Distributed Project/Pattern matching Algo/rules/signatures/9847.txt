@@ -1,0 +1,55 @@
+Rule
+
+--
+Sid
+9847
+
+--
+Summary:
+This event is generated when a saved search file is detected in a file download attempt.
+
+--
+Impact:
+Serious. Code execution may be possible.
+
+--
+Detailed Information:
+Microsoft Outlook suffers from a programming error that may allow an attacker to execute arbitrary code. This problem arises when Outlook tries to process a malformed saved search file (.oss).
+
+--
+Affected Systems:
+Microsoft Outlook 2000
+Microsoft Outlook 2002
+Microsoft Outlook 2003
+
+--
+Attack Scenarios:
+An attacker would need to supply a malformed saved search file to be used by Microsoft Outlook.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Olney <matthew.olney@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

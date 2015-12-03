@@ -1,0 +1,173 @@
+Rule
+
+--
+Sid
+19708
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in postfix.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The SMTP server in Postfix before 2.5.13, 2.6.x before 2.6.10, 2.7.x before 2.7.4, and 2.8.x before 2.8.3, when certain Cyrus SASL authentication methods are enabled, does not create a new server handle after client authentication fails, which allows remote attackers to cause a denial of service (heap memory corruption and daemon crash) or possibly execute arbitrary code via an invalid AUTH command with one method followed by an AUTH command with a different method.
+
+--
+Affected Systems:
+postfix postfix 2.0.0
+postfix postfix 2.0.1
+postfix postfix 2.0.10
+postfix postfix 2.0.11
+postfix postfix 2.0.12
+postfix postfix 2.0.13
+postfix postfix 2.0.14
+postfix postfix 2.0.15
+postfix postfix 2.0.16
+postfix postfix 2.0.17
+postfix postfix 2.0.18
+postfix postfix 2.0.19
+postfix postfix 2.0.2
+postfix postfix 2.0.3
+postfix postfix 2.0.4
+postfix postfix 2.0.5
+postfix postfix 2.0.6
+postfix postfix 2.0.7
+postfix postfix 2.0.8
+postfix postfix 2.0.9
+postfix postfix 2.1.0
+postfix postfix 2.1.1
+postfix postfix 2.1.2
+postfix postfix 2.1.3
+postfix postfix 2.1.4
+postfix postfix 2.1.5
+postfix postfix 2.1.6
+postfix postfix 2.2.0
+postfix postfix 2.2.1
+postfix postfix 2.2.10
+postfix postfix 2.2.11
+postfix postfix 2.2.12
+postfix postfix 2.2.2
+postfix postfix 2.2.3
+postfix postfix 2.2.4
+postfix postfix 2.2.5
+postfix postfix 2.2.6
+postfix postfix 2.2.7
+postfix postfix 2.2.8
+postfix postfix 2.2.9
+postfix postfix 2.3
+postfix postfix 2.3.0
+postfix postfix 2.3.1
+postfix postfix 2.3.10
+postfix postfix 2.3.11
+postfix postfix 2.3.12
+postfix postfix 2.3.13
+postfix postfix 2.3.14
+postfix postfix 2.3.15
+postfix postfix 2.3.16
+postfix postfix 2.3.17
+postfix postfix 2.3.18
+postfix postfix 2.3.19
+postfix postfix 2.3.2
+postfix postfix 2.3.3
+postfix postfix 2.3.4
+postfix postfix 2.3.5
+postfix postfix 2.3.6
+postfix postfix 2.3.7
+postfix postfix 2.3.8
+postfix postfix 2.3.9
+postfix postfix 2.4
+postfix postfix 2.4.0
+postfix postfix 2.4.1
+postfix postfix 2.4.10
+postfix postfix 2.4.11
+postfix postfix 2.4.12
+postfix postfix 2.4.13
+postfix postfix 2.4.14
+postfix postfix 2.4.15
+postfix postfix 2.4.2
+postfix postfix 2.4.3
+postfix postfix 2.4.4
+postfix postfix 2.4.5
+postfix postfix 2.4.6
+postfix postfix 2.4.7
+postfix postfix 2.4.8
+postfix postfix 2.4.9
+postfix postfix 2.5.0
+postfix postfix 2.5.1
+postfix postfix 2.5.10
+postfix postfix 2.5.11
+postfix postfix 2.5.12
+postfix postfix 2.5.2
+postfix postfix 2.5.3
+postfix postfix 2.5.4
+postfix postfix 2.5.5
+postfix postfix 2.5.6
+postfix postfix 2.5.7
+postfix postfix 2.5.8
+postfix postfix 2.5.9
+postfix postfix 2.6
+postfix postfix 2.6.0
+postfix postfix 2.6.1
+postfix postfix 2.6.2
+postfix postfix 2.6.3
+postfix postfix 2.6.4
+postfix postfix 2.6.5
+postfix postfix 2.6.6
+postfix postfix 2.6.7
+postfix postfix 2.6.8
+postfix postfix 2.6.9
+postfix postfix 2.7.0
+postfix postfix 2.7.1
+postfix postfix 2.7.2
+postfix postfix 2.7.3
+postfix postfix 2.8.0
+postfix postfix 2.8.1
+postfix postfix 2.8.2
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-1720:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-1720
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

@@ -1,0 +1,10 @@
+./client.py nodea input.in-1 5000 10 0 & 
+./client.py nodea input.in-2 5001 10 1 & 
+./client.py nodea input.in-3 5002 10 2 & 
+./client.py nodea input.in-4 5003 10 3 & 
+./client.py nodea input.in-5 5004 10 4 & 
+./client.py nodea input.in-6 5005 10 5 & 
+./client.py nodea input.in-7 5006 10 6 & 
+./client.py nodea input.in-8 5007 10 7 & 
+./client.py nodea input.in-9 5008 10 8 & 
+./client.py nodea input.in-10 5009 10 9 & 

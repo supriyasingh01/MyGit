@@ -1,0 +1,64 @@
+Rule
+
+--
+Sid
+16445
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Asterisk appliance developer kit.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+The IAX2 channel driver (chan iax2) in Asterisk Open Source 1.0.x, 1.2.x before 1.2.28, and 1.4.x before 1.4.19.1; Business Edition A.x.x, B.x.x before B.2.5.2, and C.x.x before C.1.8.1; AsteriskNOW before 1.0.3; Appliance Developer Kit 0.x.x; and s800i before 1.1.0.3, when configured to allow unauthenticated calls, does not verify that an ACK response contains a call number matching the server's reply to a NEW message, which allows remote attackers to cause a denial of service (traffic amplification) via a spoofed ACK response that does not complete a 3-way handshake.  NOTE: this issue exists because of an incomplete fix for CVE-2008-1923.
+
+--
+Affected Systems:
+Asterisk Asterisk appliance developer kit 0.2
+Asterisk Asterisk appliance developer kit 0.3
+Asterisk Asterisk appliance developer kit 0.4
+Asterisk Asterisk appliance developer kit 0.5
+Asterisk Asterisk appliance developer kit 0.6
+Asterisk Asterisk appliance developer kit 0.6.0
+Asterisk Asterisk appliance developer kit 0.7
+Asterisk Asterisk appliance developer kit 0.8
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-1897:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-1897
+  
+--

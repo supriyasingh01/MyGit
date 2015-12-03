@@ -1,0 +1,60 @@
+Rule:
+
+--
+Sid:
+5997
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a vulnerability in Blue Coat WinProxy or ProxyAV.
+
+--
+Impact:
+Serious. Code execution in the context of the user running the service is possible.
+
+--
+Detailed Information:
+Blue Coat WinProxy and ProxyAV are prone to a buffer overflow condition when processing overly-long host header information. This is due to poor validation of user supplied input to the service.
+
+An attacker can supply a long Host header to overflow a static buffer and then execute code of their choosing on an affected host.
+
+--
+Affected Systems:
+Blue Coat WinProxy 6.1a and prior
+Blue Coat ProxyAV 2.4.2.3 and prior
+
+--
+Attack Scenarios:
+An attacker could supply a host header containing an abnormally long port value in the form www.foo.bar:12312312312312312 to cause the overflow condition to occur. The attacker could then possibly execute code of their choosing on the affected host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None Known.
+
+--
+False Negatives:
+None Known.
+
+--
+Corrective Action:
+Check the host for signs of compromise.
+
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

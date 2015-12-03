@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11817
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Ipswitch WhatsUp Gold.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Buffer overflow in the _maincfgret.cgi script for Ipswitch WhatsUp Gold before 8.03 Hotfix 1 allows remote attackers to execute arbitrary code via a long instancename parameter.
+
+--
+Affected Systems:
+  7.04
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

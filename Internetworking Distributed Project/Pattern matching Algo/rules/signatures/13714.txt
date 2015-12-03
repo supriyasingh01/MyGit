@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+13714
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in yaSSL.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple buffer overflows in yaSSL 1.7.5 and earlier, as used in MySQL and possibly other products, allow remote attackers to execute arbitrary code via (1) the ProcessOldClientHello function in handshake.cpp or (2) "input_buffer& operator>>" in yassl_imp.cpp.
+
+--
+Affected Systems:
+yaSSL yaSSL 1.7.5
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-0226:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-0226
+
+--

@@ -1,0 +1,82 @@
+Rule
+
+--
+Sid
+20832
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in im manager.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+SQL injection vulnerability in the management console in Symantec IM Manager before 8.4.18 allows remote attackers to execute arbitrary SQL commands via unspecified vectors.
+
+--
+Affected Systems:
+symantec im manager 6.0
+symantec im manager 6.5
+symantec im manager 7.0
+symantec im manager 7.5
+symantec im manager 8.3
+symantec im manager 8.4.0
+symantec im manager 8.4.1
+symantec im manager 8.4.10
+symantec im manager 8.4.11
+symantec im manager 8.4.12
+symantec im manager 8.4.13
+symantec im manager 8.4.15
+symantec im manager 8.4.16
+symantec im manager 8.4.17
+symantec im manager 8.4.2
+symantec im manager 8.4.5
+symantec im manager 8.4.6
+symantec im manager 8.4.7
+symantec im manager 8.4.8
+symantec im manager 8.4.9
+
+--
+Attack Scenarios:
+In an SQL injection attack, the attacker is able to coerce the application into running SQL queries of the attackers choosing. This can lead to a complete compromise of the data stored in the system as well as the attacker being able to gain administrative access to the application.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-0553:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0553
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/89.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/66.html
+
+--

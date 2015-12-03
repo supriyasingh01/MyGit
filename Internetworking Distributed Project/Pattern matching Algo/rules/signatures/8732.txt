@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+8732
+
+--
+Summary:
+This event is generated when the security (SEC) option is set in an IP packet.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+The security option may used in normal circumstances by hosts communicating over a network connection. This event indicates that the security option is set in a packet.
+
+--
+Affected Systems:
+All.
+
+--
+Attack Scenarios:
+None.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

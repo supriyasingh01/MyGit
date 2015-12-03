@@ -1,0 +1,56 @@
+Rule
+
+--
+Sid
+133-17
+
+--
+Summary:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+Some of the Core Protocol commands (from the initial SMB implementation) require that the byte count be some value greater than the exact data size. The preprocessor will generate this event if the byte count minus a predetermined amount based on the SMB command is not equal to the data size.
+
+This event can be controlled using the ((dce2)) configuration options.
+
+--
+Affected Systems:
+All systems using NetBIOS DCERPC or SMB file and print sharing
+
+--
+Attack Scenarios:
+ 
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

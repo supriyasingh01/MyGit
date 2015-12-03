@@ -1,0 +1,62 @@
+Rule
+
+--
+Sid
+23105
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in openoffice.org.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Integer overflow in OpenOffice.org before 2.4 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via an EMF file with a crafted EMR_STRETCHBLT record, which triggers a heap-based buffer overflow.
+
+--
+Affected Systems:
+openoffice openoffice.org 2.0.3
+openoffice openoffice.org 2.1
+openoffice openoffice.org 2.2
+openoffice openoffice.org 2.2.1
+openoffice openoffice.org 2.3
+openoffice openoffice.org 2.3.1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-5746:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-5746
+  
+--

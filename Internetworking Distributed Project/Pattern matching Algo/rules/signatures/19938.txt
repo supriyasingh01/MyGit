@@ -1,0 +1,148 @@
+Rule
+
+--
+Sid
+19938
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in tivoli directory server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Stack-based buffer overflow in the server process in ibmslapd.exe in IBM Tivoli Directory Server (TDS) 5.2 before 5.2.0.5-TIV-ITDS-IF0010, 6.0 before 6.0.0.67 (aka 6.0.0.8-TIV-ITDS-IF0009), 6.1 before 6.1.0.40 (aka 6.1.0.5-TIV-ITDS-IF0003), 6.2 before 6.2.0.16 (aka 6.2.0.3-TIV-ITDS-IF0002), and 6.3 before 6.3.0.3 (aka 6.3.0.0-TIV-ITDS-IF0003) allows remote attackers to execute arbitrary code via a crafted LDAP request.  NOTE: some of these details are obtained from third party information.
+
+--
+Affected Systems:
+ibm tivoli directory server 5.2.0
+ibm tivoli directory server 5.2.0.4
+ibm tivoli directory server 6.0
+ibm tivoli directory server 6.0.0.0
+ibm tivoli directory server 6.0.0.1
+ibm tivoli directory server 6.0.0.14
+ibm tivoli directory server 6.0.0.19
+ibm tivoli directory server 6.0.0.33
+ibm tivoli directory server 6.0.0.41
+ibm tivoli directory server 6.0.0.45
+ibm tivoli directory server 6.0.0.52
+ibm tivoli directory server 6.0.0.53
+ibm tivoli directory server 6.0.0.54
+ibm tivoli directory server 6.0.0.55
+ibm tivoli directory server 6.0.0.56
+ibm tivoli directory server 6.0.0.57
+ibm tivoli directory server 6.0.0.58
+ibm tivoli directory server 6.0.0.59
+ibm tivoli directory server 6.0.0.60
+ibm tivoli directory server 6.0.0.61
+ibm tivoli directory server 6.0.0.62
+ibm tivoli directory server 6.0.0.63
+ibm tivoli directory server 6.0.0.64
+ibm tivoli directory server 6.0.0.65
+ibm tivoli directory server 6.0.0.66
+ibm tivoli directory server 6.0.0.7
+ibm tivoli directory server 6.0.0.8
+ibm tivoli directory server 6.1.0.0
+ibm tivoli directory server 6.1.0.1
+ibm tivoli directory server 6.1.0.10
+ibm tivoli directory server 6.1.0.11
+ibm tivoli directory server 6.1.0.12
+ibm tivoli directory server 6.1.0.13
+ibm tivoli directory server 6.1.0.14
+ibm tivoli directory server 6.1.0.15
+ibm tivoli directory server 6.1.0.17
+ibm tivoli directory server 6.1.0.18
+ibm tivoli directory server 6.1.0.19
+ibm tivoli directory server 6.1.0.2
+ibm tivoli directory server 6.1.0.20
+ibm tivoli directory server 6.1.0.21
+ibm tivoli directory server 6.1.0.22
+ibm tivoli directory server 6.1.0.23
+ibm tivoli directory server 6.1.0.24
+ibm tivoli directory server 6.1.0.25
+ibm tivoli directory server 6.1.0.26
+ibm tivoli directory server 6.1.0.27
+ibm tivoli directory server 6.1.0.28
+ibm tivoli directory server 6.1.0.29
+ibm tivoli directory server 6.1.0.3
+ibm tivoli directory server 6.1.0.30
+ibm tivoli directory server 6.1.0.31
+ibm tivoli directory server 6.1.0.32
+ibm tivoli directory server 6.1.0.33
+ibm tivoli directory server 6.1.0.34
+ibm tivoli directory server 6.1.0.35
+ibm tivoli directory server 6.1.0.36
+ibm tivoli directory server 6.1.0.37
+ibm tivoli directory server 6.1.0.38
+ibm tivoli directory server 6.1.0.39
+ibm tivoli directory server 6.1.0.4
+ibm tivoli directory server 6.1.0.5
+ibm tivoli directory server 6.1.0.6
+ibm tivoli directory server 6.1.0.7
+ibm tivoli directory server 6.1.0.8
+ibm tivoli directory server 6.1.0.9
+ibm tivoli directory server 6.2.0.0
+ibm tivoli directory server 6.2.0.1
+ibm tivoli directory server 6.2.0.10
+ibm tivoli directory server 6.2.0.11
+ibm tivoli directory server 6.2.0.12
+ibm tivoli directory server 6.2.0.13
+ibm tivoli directory server 6.2.0.14
+ibm tivoli directory server 6.2.0.15
+ibm tivoli directory server 6.2.0.2
+ibm tivoli directory server 6.2.0.3
+ibm tivoli directory server 6.2.0.4
+ibm tivoli directory server 6.2.0.5
+ibm tivoli directory server 6.2.0.6
+ibm tivoli directory server 6.2.0.7
+ibm tivoli directory server 6.2.0.8
+ibm tivoli directory server 6.3.0.0
+ibm tivoli directory server 6.3.0.1
+ibm tivoli directory server 6.3.0.2
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-1206:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-1206
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

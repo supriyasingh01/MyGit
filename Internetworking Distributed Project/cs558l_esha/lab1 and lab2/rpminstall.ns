@@ -1,0 +1,14 @@
+
+source tb_compat.tcl
+set ns [new Simulator]
+set node1 [$ns node]
+set router [$ns node]
+set node2 [$ns node]
+tb-set-node-os $node1 RHL-STD
+tb-set-node-os $node2 RHL-STD
+set linkA [$ns duplex-link $node1 $router 100Mb 0ms DropTail]
+set linkB [$ns duplex-link $router $node2 1Mb 10ms DropTail]
+$ns rtproto Static
+tb-set-node-rpms $node1 /proj/USC558L/edesai/gcc.rpm
+tb-set-node-rpms $node2 /proj/USC558L/edesai/gcc.rpm
+$ns run

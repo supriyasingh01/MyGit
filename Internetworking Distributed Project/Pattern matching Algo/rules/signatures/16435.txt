@@ -1,0 +1,53 @@
+Rule:
+
+--
+Sid:
+16435
+
+--
+Summary:
+This event is generated when network traffic that indicates Ultimate Packer for Executables/UPX v0.62-v1.22 is being used.
+
+--
+Impact:
+This is a packer that is commonly used by malware authors and may indicate a possible malware transfer to the target host.
+
+--
+Detailed Information:
+This event indicates that Ultimate Packer for Executables/UPX v0.62-v1.22 has been detected in network traffic. This may indicate the presence of malware.
+
+This type of packer is commonly, but not exclusively used by malware authors. Packers such as this can be used to reduce the size of binary files or to make it more difficult to reverse engineer the binary.
+
+--
+Affected Systems:
+All systems
+
+--
+Attack Scenarios:
+Malware authors commonly use packers to reduce the size of the binary files they produce.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+While it is strictly not a false positive, the presence of this packer does not positively identify a piece of malware. Some legitimate software authors may also use this packer and as such, this event may be generated on benign binary files that use it.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Investigate the target host for possible signs of malware.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+16523
+
+--
+Summary:
+This event is generated when network traffic that indicates a PDF document with a click-to-launch executable command has been detected on the protected network.
+
+--
+Impact:
+Possible policy violation. The use of PDF documents with a click-to-launch executable command may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that a PDF with a click-to-launch executable command has been detected on the protected network.
+
+--
+Affected Systems:
+All Microsoft Windows systems using PDF reader software
+
+--
+Attack Scenarios:
+This is a possible policy violation.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of PDF documents with click-to-launch executable commands embedded in the document.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

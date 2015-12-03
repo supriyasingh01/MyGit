@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+20286
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in barcode sdk.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The BIDIB.BIDIBCtrl.1 ActiveX control in BIDIB.ocx 10.9.3.0 in Black Ice Barcode SDK 5.01 allows remote attackers to force the download and storage of arbitrary files by specifying the origin URL in the first argument to the DownloadImageFileURL method, and the local filename in the second argument.  NOTE: some of these details are obtained from third party information.
+
+--
+Affected Systems:
+black ice barcode sdk 5.01
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-2683:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-2683
+  
+--

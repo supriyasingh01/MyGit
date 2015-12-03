@@ -1,0 +1,54 @@
+Rule: 
+
+--
+Sid: 
+8444
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Trend Micro OfficeScan.
+
+-- 
+Impact: 
+Serious. Execution of code may be possible.
+
+--
+Detailed Information:
+The Trend Micro OfficeScan suite of products can be configured for automatic remote installation that uses an ActiveX control as part of the process. The client does not properly handle the server error responses and is prone to a format string vulnerablity because of this.
+
+If the installation cannot find the client to install and error message is returned to the ActiveX control that looks like -99 Cannot+find+client. This error message is not properly processed and can lead to exploitation of the format string vulnerability and subsequent execution of code.
+
+--
+Affected Systems:
+
+--
+Attack Scenarios: 
+An attacker would need to supply a malformed server response message to a vulnerable client.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Olney <matthew.olney@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+
+--

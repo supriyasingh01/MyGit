@@ -1,0 +1,50 @@
+Rule:
+
+--
+Sid:
+18758
+
+--
+Summary:
+This event is generated when network traffic that indicates a visual basic script has been downloaded.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+Visual Basic is a scripting language in use on Microsoft Windows systems. Running a script can have unknown consequences.
+
+--
+Affected Systems:
+Microsoft Windows Systems.
+
+--
+Attack Scenarios:
+A victim downloads a script and the script is run on the target machine.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Check the machine for signs of compromise.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

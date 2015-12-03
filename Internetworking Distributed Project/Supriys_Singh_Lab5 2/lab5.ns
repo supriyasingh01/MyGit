@@ -1,0 +1,22 @@
+set ns [new Simulator]source tb_compat.tcl
+# Nodesset rtr1 [$ns node]tb-set-node-os $rtr1 Ubuntu1004-STDset rtr2 [$ns node]tb-set-node-os $rtr2 Ubuntu1004-STDset rtr3 [$ns node]tb-set-node-os $rtr3 Ubuntu1004-STDset node1 [$ns node]tb-set-node-os $node1 Ubuntu1004-STD 
+set node2 [$ns node]tb-set-node-os $node2 Ubuntu1004-STD 
+set node3 [$ns node]tb-set-node-os $node3 Ubuntu1004-STD 
+set node4 [$ns node]tb-set-node-os $node4 Ubuntu1004-STD
+# Links 
+set link0 [$ns duplex-link $rtr1 $rtr3 1000000.0kb 5.0ms DropTail] 
+tb-set-ip-link $rtr1 $link0 10.10.1.1tb-set-ip-link $rtr3 $link0 10.10.1.2set link1 [$ns duplex-link $rtr2 $rtr3 1000000.0kb 5.0ms DropTail] 
+tb-set-ip-link $rtr3 $link1 10.10.3.1tb-set-ip-link $rtr2 $link1 10.10.3.2
+set link2 [$ns duplex-link $rtr1 $rtr2 1000000.0kb 5.0ms DropTail] 
+tb-set-ip-link $rtr2 $link2 10.10.2.1tb-set-ip-link $rtr1 $link2 10.10.2.2
+# Lans 
+set lan0 [$ns make-lan "$node1 $rtr1 $node2" 1000000.0kb 0.0ms] 
+tb-set-ip-lan $node1 $lan0 10.1.0.1tb-set-node-lan-bandwidth $node1 $lan0 1000000.0kb
+tb-set-ip-lan $rtr1 $lan0 10.1.0.3tb-set-node-lan-bandwidth $rtr1 $lan0 1000000.0kb
+tb-set-ip-lan $node2 $lan0 10.1.0.2tb-set-node-lan-bandwidth $node2 $lan0 1000000.0kb
+set lan1 [$ns make-lan "$rtr3 $node3 $node4" 1000000.0kb 0.0ms] 
+tb-set-ip-lan $rtr3 $lan1 10.1.2.1tb-set-node-lan-bandwidth $rtr3 $lan1 1000000.0kb 
+tb-set-ip-lan $node3 $lan1 10.1.2.3 
+tb-set-node-lan-bandwidth $node3 $lan1 1000000.0kb 
+tb-set-ip-lan $node4 $lan1 10.1.2.4 
+tb-set-node-lan-bandwidth $node4 $lan1 1000000.0kb$ns rtproto Manual$ns run

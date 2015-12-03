@@ -1,0 +1,61 @@
+Rule
+
+--
+Sid
+3-18402
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Windows.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The OpenType Compact Font Format (CFF) driver in Microsoft Windows XP SP2 and SP3, Windows Server 2003 SP2, Windows Vista SP1 and SP2, Windows Server 2008 Gold, SP2, and R2, and Windows 7 does not properly validate parameter values in OpenType fonts, which allows remote attackers to execute arbitrary code via a crafted font, aka "OpenType Font Encoded Character Vulnerability."
+
+--
+Affected Systems:
+Microsoft Windows XP SP2 and SP3
+Microsoft Windows Server 2003 SP2
+Microsoft Windows Vista SP1 and SP2
+Microsoft Windows Server 2008 Gold, SP2, and R2
+Microsoft Windows 7
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-0033:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0033
+  
+--

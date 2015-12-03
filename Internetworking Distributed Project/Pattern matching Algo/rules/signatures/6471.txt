@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+6471
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in RealVNC.
+
+--
+Impact:
+Serious. Unauthorized administrative control of the target host is possible.
+
+--
+Detailed Information:
+RealVNC is a multiplatform remote administration tool that allows networked hosts to connect to other hosts or mobile devices. It has a client-server architecture that requires the remote user to authenticate on connection to a RealVNC server.
+
+RealVNC can be used to remotely administer a host. A programming error in the authentication mechanism for RealVNC may allow an attacker to gain access to the host without supplying the correct credentials.
+This event is generated when an attempt is made to bypass the authentication mechanism.
+
+--
+Affected Systems:
+RealVNC Personal Edition
+RealVNC Enterprise Edition
+RealVNC 4.1.1
+
+--
+Attack Scenarios:
+An attacker can supply a malformed set of credentials to the RealVNC server and gain access to the target host.
+
+--
+Ease of Attack:
+Simple, exploit code exists
+
+--
+False Positives:
+None known
+
+--
+False Negatives:
+None known
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers.com>
+Nigel Houghton <nigel.houghton.com>
+
+--
+Additional References:
+
+
+--

@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+9849
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Internet Explorer via the Vector Markup Language recolorinfo tag numfills parameter.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+A buffer overflow condition is present in Microsoft Internet Explorer. This event indicates that an attempt has been made to exploit that condition. It may be possible for an attacker to use this vulnerability to execute code on the target host which could lead to further compromise and loss of data integrity on the host.
+
+Microsoft Internet Explorer contains a programming error that may lead to an integer overflow condition. A remote attacker may be able to execute code on an affected machine by hosting a web page which has properties that could cause the overflow to occur.
+
+--
+Affected Systems:
+Microsoft Internet Explorer 7
+Microsoft Internet Explorer 6
+Microsoft Internet Explorer 5.01
+
+--
+Attack Scenarios:
+An attacker needs to supply excess data in a transaction using the application. The attacker may then include code of their choosing to be executed on the host.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Lurene Grenier <lurene.grenier@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

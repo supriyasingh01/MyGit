@@ -1,0 +1,56 @@
+Rule
+
+--
+Sid
+133-19
+
+--
+Summary:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+After a client is done writing data using the Write commands, it issues a Read command to the server to tell it to send a response to the data it has written. In this case the preprocessor is concerned with the server response. The Read request contains the file id associated with a named pipe instance that the preprocessor will ultimately send the data to. The server response, however, does not contain this file id, so it needs to be queued with the request and de-queued with the response. If multiple Read requests are sent to the server, they are responded to in the order they were sent. There should be under normal circumstances no more than a few pending Read requests at a time and the preprocessor will generate this event if this number is excessive.
+
+This event can be controlled using the ((dce2)) configuration options.
+
+--
+Affected Systems:
+All systems using NetBIOS DCERPC or SMB file and print sharing
+
+--
+Attack Scenarios:
+ 
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

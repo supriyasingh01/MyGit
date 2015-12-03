@@ -1,0 +1,61 @@
+Rule
+
+--
+Sid
+3-16183
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in .Net Framework.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Microsoft .NET Framework 2.0, 2.0 SP1, and 3.5 does not properly enforce a certain type-equality constraint in .NET verifiable code, which allows remote attackers to execute arbitrary code via (1) a crafted XAML browser application (XBAP), (2) a crafted ASP.NET application, or (3) a crafted .NET Framework application, aka "Microsoft .NET Framework Type Verification Vulnerability."
+
+--
+Affected Systems:
+Microsoft .Net Framework 1.0
+Microsoft .Net Framework 1.1
+Microsoft .Net Framework 2.0
+Microsoft .Net Framework 2.0
+Microsoft .Net Framework 3.5
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0091:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0091
+  
+--

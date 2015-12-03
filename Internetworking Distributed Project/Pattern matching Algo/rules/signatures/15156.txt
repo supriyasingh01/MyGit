@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+15156
+
+--
+Summary:
+Openfire Jabber Server is prone to multiple input validation vulnerabilities.
+
+--
+Impact:
+Serious. Complete loss of application integrity. Administrative access.
+
+--
+Detailed Information:
+Openfire Jabber Server is vulnerable to several serious issues. These include SQL Injection, Cross-site scripting and authentication bypass.
+
+--
+Affected Systems:
+Ignite Realtime Openfire 3.6.0a
+
+--
+Attack Scenarios:
+If an application does not correctly enforce access control, a remote attacker may be able to view resources and data that should be protected. Additionally, in the case of administrative user interfaces, the attacker may be able to elevate privileges and generate accounts by accessing functions that should be controllled by ACLs.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

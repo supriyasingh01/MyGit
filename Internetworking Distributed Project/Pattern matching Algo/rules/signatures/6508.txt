@@ -1,0 +1,49 @@
+Rule: 
+
+--
+Sid: 
+6508
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in EMC Retrospect Client. 
+
+-- 
+Impact: 
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+
+--
+Affected Systems:
+
+--
+Attack Scenarios: 
+
+-- 
+Ease of Attack: 
+Simple
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

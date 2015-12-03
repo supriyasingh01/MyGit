@@ -1,0 +1,56 @@
+Rule:
+
+--
+Sid:
+7037
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft systems using the mailslot service.
+
+--
+Impact:
+Serious. Execution of arbitrary code leading to unauthorized administrative access to the target host. Denial of Service (DoS) is also possible.
+
+--
+Detailed Information:
+A mailslot is used for messaging within domains between hosts using Microsoft Windows.
+
+An unchecked buffer in the mailslot server service may allow an attacker to overflow a fixed length buffer and execute code of their choosing on an affected host.
+
+--
+Affected Systems:
+Microsoft Windows 2003
+Microsoft Windows XP
+Microsoft Windows 2000
+
+--
+Attack Scenarios:
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

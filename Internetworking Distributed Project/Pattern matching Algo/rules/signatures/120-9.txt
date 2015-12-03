@@ -1,0 +1,56 @@
+Rule
+
+--
+Sid
+120-9
+
+--
+Summary:
+This event is generated when the http_inspect preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the http_inspect preprocessor detects anomalous network traffic.
+
+The preprocessor has detected "Javascript obfuscation levels exceeds 1".
+
+This event can be controlled using the (()) configuration options.
+
+--
+Affected Systems:
+
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

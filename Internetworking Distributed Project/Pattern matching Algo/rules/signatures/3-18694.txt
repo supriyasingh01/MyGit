@@ -1,0 +1,56 @@
+Rule
+
+--
+Sid
+18694
+
+--
+Summary:
+This event is generated when an attack against a vulnerable system is attempted.
+
+--
+Impact:
+unknown.
+
+--
+Detailed Information:
+Contact the Sourcefire Vulnerability Research Team at research.com with details of the event.
+
+Include packet captures of the traffic that caused the event, the applicable configuration options used and details (if available) of the target system for the attack.
+
+The Sourcefire VRT pgp key can be found at http://labs.snort.org/contact.html should encryted communications be necessary.
+
+--
+Affected Systems:
+
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

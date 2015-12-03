@@ -1,0 +1,56 @@
+Rule:
+
+--
+Sid:
+5710
+
+--
+Summary:
+This event is generated when an attempt has been made to exploit a known vulnerability in Windows Media Player plugin component. 
+
+--
+Impact:
+Serious. Possible remote code execution.
+
+--
+Detailed Information:
+This event indicates that an attempt has been made to exploit a known vulnerability in Windows Media Player plugin component. 
+
+A value of more than 2081 bytes in the src tag of an embedded component handled by Windows media player may present an attacker with the opportunity to overflow a fixed length buffer and execute code of their choosing on a vulnerable host.
+
+--
+Affected Systems:
+All Microsoft Windows systems using Media Player plugin
+	
+--
+Attack Scenarios:
+An attacker can use the <embed> tag combined with a src value of more than 2081 bytes to cause the overflow to occur.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+Some exploits use extremely large values in the src parameter. Since stream reassembly in Snort uses byte counts to determine when to flush a stream, in cases where the src parameter's value is large enough that the end of the parameter does not fit within the same flushpoint at the remainder of the exploit, Snort will not detect the attack. In Snort 2.4.0 and above, this evasion can be mitigated by setting flush_behavior to large_window in the stream4_reassemble directive. 
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches
+
+Do not use media player as the default application for viewing media types in web  browsers
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

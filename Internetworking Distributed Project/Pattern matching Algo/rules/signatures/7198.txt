@@ -1,0 +1,55 @@
+Rule
+
+--
+Sid
+7198
+
+--
+Summary:
+Multiple vulnerabilities exist in the Microsoft Office suite of programs that may allow a remote attacker to execute code of their choosing on an affected host. This event is generated when an attempt is made to exploit one of these vulnerablilites.
+
+--
+Impact:
+Serious. Possible remote execution of code of the attackers choosing.
+
+--
+Detailed Information:
+The vulnerabilities lie in the processing of malformed strings or properties in a document. An attacker may be able to run code of their choosing on a host by crafting a malformed file that, when opened will overflow a fixed length buffer.
+
+--
+Affected Systems:
+Microsoft Office
+
+--
+Attack Scenarios:
+An attacker would need to craft a malicious office document and have the user open it.
+
+--
+Ease of Attack:
+Moderate.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Olney <matthew.olney.com>
+Nigel Hougton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

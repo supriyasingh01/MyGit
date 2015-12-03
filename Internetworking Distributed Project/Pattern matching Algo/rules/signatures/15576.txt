@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+15576
+
+--
+Summary:
+This event is generated when network traffic that indicates MSN Messenger web client is being used.
+
+--
+Impact:
+Possible policy violation. The use of MSN Messenger web client may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the MSN Messenger web client is being used on the protected network. This application is a chat client and as such, it's use may violate corporate policy.
+
+--
+Affected Systems:
+All systems using MSN Messenger web client
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that MSN Messenger web client has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of MSN Messenger web client on the protected network and enforce or implement an organization wide policy on the use of MSN Messenger web client.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

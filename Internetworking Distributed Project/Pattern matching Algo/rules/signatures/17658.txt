@@ -1,0 +1,64 @@
+Rule
+
+--
+Sid
+17658
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in flash player.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Macromedia Flash 6 and 7 (Flash.ocx) allows remote attackers to execute arbitrary code via a SWF file with a modified frame type identifier that is used as an out-of-bounds array index to a function pointer.
+
+--
+Affected Systems:
+macromedia flash player 6.0
+macromedia flash player 6.0.29.0
+macromedia flash player 6.0.40.0
+macromedia flash player 6.0.47.0
+macromedia flash player 6.0.65.0
+macromedia flash player 6.0.79.0
+macromedia flash player 7.0.19.0
+macromedia flash player 7.0 r19
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-2628:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-2628
+  
+--

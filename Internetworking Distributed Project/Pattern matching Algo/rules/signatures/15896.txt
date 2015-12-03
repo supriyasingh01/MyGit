@@ -1,0 +1,69 @@
+Rule
+
+--
+Sid
+15896
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Firebird.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+src/remote/server.cpp in fbserver.exe in Firebird SQL 1.5 before 1.5.6, 2.0 before 2.0.6, 2.1 before 2.1.3, and 2.5 before 2.5 Beta 2 allows remote attackers to cause a denial of service (daemon crash) via a malformed op_connect_request message that triggers an infinite loop or NULL pointer dereference.
+
+--
+Affected Systems:
+Firebirdsql Firebird 1.5
+Firebirdsql Firebird 1.5.1
+Firebirdsql Firebird 1.5.2
+Firebirdsql Firebird 1.5.2.4731
+Firebirdsql Firebird 1.5.3.4870
+Firebirdsql Firebird 1.5.4.4910
+Firebirdsql Firebird 1.5.5
+Firebirdsql Firebird 2.0.0
+Firebirdsql Firebird 2.0.0.12748
+Firebirdsql Firebird 2.0.1
+Firebirdsql Firebird 2.0.2
+Firebirdsql Firebird 2.0.3
+Firebirdsql Firebird 2.5
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-2620:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2620
+  
+--

@@ -1,0 +1,51 @@
+Rule
+
+--
+Sid
+23179
+
+--
+Summary:
+This event is generated when a malformed sequence of HTML is detected that is associated to compromised web pages.
+
+--
+Impact:
+Likely malicious content hosted on the web page being downloaded.
+
+--
+Detailed Information:
+This rule looks for a <script> tag before a <!DOCTYPE> tag. As HTML standards dictate that the <!DOCTYPE> tag, where present, be the first element in the page, this is a violation of appropriate standards. This behavior has been seen in compromised web sites in the wild.
+
+--
+Affected Systems:
+All web browsers are potentially vulnerable to malicious content hosted on sites like this.
+
+--
+Attack Scenarios:
+Attackers typically inject malicious scripts into the top of vulnerable pages, producing this tag sequence mismatch.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Examine the packet for signs that the <script> tag contained maliciou data. Check for other IDS or other tool events related to the TCP stream in question. Verify patch levels and antimalware solutions, such as FireAMP, on the endpoint host. If exploitation appears to have occurred, consider rebuilding the impacted machine.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+None. 
+--

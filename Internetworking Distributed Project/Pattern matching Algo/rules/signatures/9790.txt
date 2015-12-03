@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+9790
+
+--
+Summary:
+This event is generated when an attempt is made to execute a system command.
+
+--
+Impact:
+Unkown.
+
+--
+Detailed Information:
+This event is generated when an attempt is made to execute system commands via a vulnerability in HP-UX lpd.
+
+The line print daemon (lpd) on certain HP-UX systems fails to correctly handle shell metacharacters in a print request. A remote attacker may be able to execute commands on the system by using these characters.
+
+--
+Affected Systems:
+HP HP-UX 10.20
+HP HP-UX B.11.11
+HP HP-UX B.11.00
+
+--
+Attack Scenarios:
+An attacker can use a shell metacharacter to execute commands in a request to the lpd service.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

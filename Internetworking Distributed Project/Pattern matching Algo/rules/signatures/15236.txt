@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+15236
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in acdsee.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Stack-based buffer overflow in the ID_X.apl plugin in ACDSee 9.0 Build 108, Pro 8.1 Build 99, and Photo Editor 4.0 Build 195 allows user-assisted remote attackers to execute arbitrary code via a crafted XPM file with a long section string.  NOTE: some of these details are obtained from third party information.
+
+--
+Affected Systems:
+acd_systems acdsee 8.1_build_99
+acd_systems acdsee 8.1_build_99
+acd_systems acdsee 9.0_build_108
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-2193:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-2193
+  
+--

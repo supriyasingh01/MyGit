@@ -1,0 +1,55 @@
+Rule: 
+
+--
+Sid: 
+8084
+
+-- 
+Summary: 
+This event is generated when an attempt is made to access the filediff function via CVSTrac.
+
+-- 
+Impact: 
+Unkown. Execution of system commands may be possible.
+
+--
+Detailed Information:
+CVSTrac is a web based tracking system for CVS repositories.
+
+CVSTrac does not properly check user supplied input which may allow a remote attacker to execute system commands on a vulnerable system.
+
+--
+Affected Systems:
+CVSTrac 1.1.3 and prior
+
+--
+Attack Scenarios: 
+An attacker can supply a system command via the filediff function by appending the command to the end of the http request.
+
+-- 
+Ease of Attack: 
+Simple, exploit code is not required.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the product.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

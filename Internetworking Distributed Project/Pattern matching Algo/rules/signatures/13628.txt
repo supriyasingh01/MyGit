@@ -1,0 +1,53 @@
+Rule:
+
+--
+Sid:
+13628
+
+--
+Summary:
+This event is generated when an attempt is made to download a Microsoft Access file.
+
+--
+Impact:
+Unkown..
+
+--
+Detailed Information:
+This rule generates an event when an attempt is made to download a Microsoft Access file. This file may contain code to be processed on the target system.
+
+A buffer overflow vulnerability exists in Microsoft Jet Database Engine that may allow an attacker to execute code of their choosing on a vulnerable system by supplying a malicious file to be opened on the target machine.
+
+--
+Affected Systems:
+Microsoft Access
+Microsoft Office
+
+--
+Attack Scenarios:
+An attacker needs to supply a malformed file containing code to be executed on the target system as the file is opened.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

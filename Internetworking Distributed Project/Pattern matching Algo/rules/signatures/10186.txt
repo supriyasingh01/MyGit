@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+10186
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in .
+
+--
+Impact:
+Medium
+
+--
+Detailed Information:
+Directory traversal vulnerability in clamd in Clam AntiVirus ClamAV before 0.90 allows remote attackers to overwrite arbitrary files via a .. (dot dot) in the id MIME header parameter in a multi-part message.
+
+--
+Affected Systems:
+  0.15
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

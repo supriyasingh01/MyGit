@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+9425
+
+--
+Summary:
+This event indicates the possible presence of the Worm or Virus named netsky on the monitored network.
+
+--
+Impact:
+Unkown.
+
+--
+Detailed Information:
+This activity may indicate a possible virus or worm infection on the protected network.
+
+--
+Affected Systems:
+All Windows systems
+
+--
+Attack Scenarios:
+Viruses may propogate in many different ways. Many arrive in the form of email attachments that an unsuspecting user may trigger by opening the attachment. Once infected, many viruses have the ability to use the infected host as a means of spreading copies of itself to other machines on the protected and external networks.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Use antivirus software on hosts to terminate infectors.
+
+Use antivirus solutions on incoming and outgoing mailservers to minimize the risk of exposure to client machines.
+
+Updated antivirus definition files are required to detect and remove worm and virus infections.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

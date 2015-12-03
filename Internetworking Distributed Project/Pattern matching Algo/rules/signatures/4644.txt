@@ -1,0 +1,54 @@
+Rule:
+
+--
+Sid: 
+4644
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in the Microsoft Windows shell environment. In particular an attempt has been made to exploit the vulnerability via a Windows shortcut file.
+
+-- 
+Impact: 
+Serious. Remote execution of code is possible.
+
+--
+Detailed Information:
+A vulnerability in the way that the Windows shell handles the file properties of a shortcut file may allow an attacker to overflow a fixed length buffer and execute code of their choosing on the target system.
+
+--
+Affected Systems:
+Microsoft Windows XP
+Microsoft Windows Server 2000 and 2003
+Embedded systems using the above platforms.
+
+--
+Attack Scenarios: 
+An attacker would need to craft a special .lnk file and entice a user to view the file either by hosting on a web server or by sending the file as an attachment to an email message.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None Known
+
+--
+False Negatives:
+None Known
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patch
+
+--
+Contributors: 
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

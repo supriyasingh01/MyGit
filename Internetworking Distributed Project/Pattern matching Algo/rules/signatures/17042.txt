@@ -1,0 +1,61 @@
+Rule
+
+--
+Sid
+17042
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Windows.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+Windows Shell in Microsoft Windows XP SP3, Server 2003 SP2, Vista SP1 and SP2, Server 2008 SP2 and R2, and Windows 7 allows local users or remote attackers to execute arbitrary code via a crafted (1) .LNK or (2) .PIF shortcut file, which is not properly handled during icon display in Windows Explorer, as demonstrated in the wild in July 2010, and originally reported for malware that leverages CVE-2010-2772 in Siemens WinCC SCADA systems.
+
+--
+Affected Systems:
+Microsoft Windows XP SP3
+Microsoft Windows  Server 2003 SP2
+Microsoft Windows  Vista SP1 and SP2
+Microsoft Windows  Server 2008 SP2 and R2
+Microsoft Windows  Windows 7
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-2568:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-2568
+  
+--

@@ -1,0 +1,57 @@
+Rule:
+
+--
+Sid:
+6468
+
+--
+Summary:
+This event is generated when network traffic that indicates an instant messaging client is being used.
+
+--
+Impact:
+Possible policy violation.  Instant Messenger programs may not be appropriate in certain network environments.
+
+--
+Detailed Information:
+This event indicates that the Jabber IM client is being used on the protected network.
+
+Specifically a file transfer was observed.
+
+--
+Affected Systems:
+All systems using Jabber IM client
+	
+--
+Attack Scenarios:
+It is possible to transfer files between hosts using instant messaging applications. This may lead to the loss of proprietory and confidential material.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of IM clients on the protected network and enforce or implement an organization wide policy on the use of IM clients.
+
+Employ firewall rule policies that disallow traffic on all ports for all protocols and allow only traffic that is needed.
+
+--
+Contributors:
+Ken Schar <ken.schar.com>
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers.com>
+Nigel Houghton <nigel.houghton.com>
+
+--
+Additional References:
+
+--

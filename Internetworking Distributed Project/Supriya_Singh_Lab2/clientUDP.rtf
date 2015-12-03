@@ -1,0 +1,78 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 #include <stdio.h>\
+#include <stdlib.h>\
+#include <unistd.h>\
+#include <string.h>\
+#include <sys/types.h> /*Contains datatypes used in system calls*/\
+#include <sys/socket.h>/* contains structures needed for sockets*/\
+#include <netinet/in.h> /* ile in.h contains constants and structures needed for internet domain addresses. */\
+#include <netdb.h> /*defines the structure hostent*/\
+\
+void error(const char *msg)\
+\{\
+    perror(msg);\
+    exit(0);\
+\}\
+\
+int main(int argc, char *argv[])\
+\{\
+    int sockfd, portno, n;\
+    struct sockaddr_in serv_addr;/*contain the address of the server to which we want to connect*/\
+    struct hostent *server;\
+    int fromlen = sizeof(struct sockaddr_in);\
+      \
+    struct sockaddr_in cli, serv;\
+\
+    char buffer[256];\
+    if (argc < 3) \
+    \{\
+       fprintf(stderr,"usage %s hostname port\\n", argv[0]);\
+       exit(0);\
+    \}\
+    \
+    portno = atoi(argv[2]);\
+    sockfd = socket(AF_INET, SOCK_DGRAM, 0);\
+    \
+    if (sockfd < 0) \
+        error("ERROR opening socket");\
+        \
+    server = gethostbyname(argv[1]);/*Takes such a name as an argument and returns a pointer to a hostent containing information*/\
+    								/* about that host. The field char *h_addr contains the IP address*/\
+    \
+    if (server == NULL) \
+    \{\
+        fprintf(stderr,"ERROR, no such host\\n");\
+        exit(0);\
+    \}\
+    \
+    bzero((char *) &serv_addr, sizeof(serv_addr));\
+    serv_addr.sin_family = AF_INET;\
+    bcopy((char *)server->h_addr,  (char *)&serv_addr.sin_addr.s_addr,server->h_length);\
+    serv_addr.sin_port = htons(portno);\
+    \
+    \
+        \
+    printf("Please enter the message: ");\
+    bzero(buffer,256);\
+    fgets(buffer,255,stdin);\
+    n = sendto(sockfd,buffer,strlen(buffer),0,(struct sockaddr *)&serv_addr,fromlen);\
+    \
+    if (n < 0) \
+         error("ERROR writing to socket");\
+         \
+    bzero(buffer,256);\
+    n = recvfrom(sockfd,buffer,255,0,(struct sockaddr *)&serv_addr,&fromlen); \
+    \
+    if (n < 0) \
+         error("ERROR reading from socket");\
+         \
+    printf("%s\\n",buffer);\
+    close(sockfd);\
+    return 0;\
+\}\
+}

@@ -1,0 +1,69 @@
+Rule
+
+--
+Sid
+19095
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in safari.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+WebKit in Apple Safari before 5.0 on Mac OS X 10.5 through 10.6 and Windows, Apple Safari before 4.1 on Mac OS X 10.4, and Google Chrome before 5.0.375.70 does not properly handle a transformation of a text node that has the IBM1147 character set, which allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted HTML document containing a BR element, related to a "type checking issue."
+
+--
+Affected Systems:
+apple safari 4.0
+apple safari 4.0.0b
+apple safari 4.0.1
+apple safari 4.0.2
+apple safari 4.0.3
+apple safari 4.0.4
+apple safari 4.0.5
+
+--
+Attack Scenarios:
+Format string vulnerabilities can be very simple to attack. Any program that reads a format string as an input parameter can be exploited if the argument can be controlled by the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-1770:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-1770
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/134.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

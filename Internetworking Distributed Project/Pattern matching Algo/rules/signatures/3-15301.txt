@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+3-15301
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Exchange.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+Microsoft Exchange 2000 Server SP3, Exchange Server 2003 SP2, and Exchange Server 2007 SP1 do not properly interpret Transport Neutral Encapsulation (TNEF) properties, which allows remote attackers to execute arbitrary code via a crafted TNEF message, aka "Memory Corruption Vulnerability."
+
+--
+Affected Systems:
+Microsoft Exchange Server 2000 SP3  
+Microsoft Exchange Server 2003 SP2  
+Microsoft Exchange Server 2007 SP1  
+
+--
+Attack Scenarios:
+The attacker needs to send a specially crafted TNEF packet to the server.
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0098:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0098
+  
+--

@@ -1,0 +1,55 @@
+Rule:
+
+--
+Sid:
+5999
+
+--
+Summary:
+This event is generated when network traffic that indicates Skype is being used. This is a Peer-to-Peer (P2P) application.
+
+--
+Impact:
+Possible policy violation. The use of Skype may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the Skype is being used on the protected network.
+
+Peer-to-Peer applications may also be used as a vector to transfer worms and viruses past Anti-Virus defenses onto a protected network.
+
+--
+Affected Systems:
+All systems using Skype
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Skype has been installated on a client host.
+
+Peer-to-Peer clients can be used to transmit confidential corporate information out of the protected network.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Skype on the protected network and enforce or implement an organization wide policy on the use of Skype.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

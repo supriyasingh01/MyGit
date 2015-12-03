@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+3-13962
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in .
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+The MHTML protocol handler in a component of Microsoft Outlook Express 5.5 SP2 and 6 through SP1, and Windows Mail, does not properly handle MHTML URL redirections, which allows remote attackers to bypass Internet Explorer domain restrictions via crafted HTTP headers, aka "URL Parsing Cross-Domain Information Disclosure Vulnerability."
+
+--
+Affected Systems:
+  
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-1448:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-1448
+
+--

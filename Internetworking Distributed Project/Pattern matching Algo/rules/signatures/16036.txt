@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+16036
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in firefox.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Mozilla Firefox 1.5, Thunderbird 1.5 if Javascript is enabled in mail, and SeaMonkey before 1.0 might allow remote attackers to execute arbitrary code via the QueryInterface method of the built-in Location and Navigator objects, which leads to memory corruption.
+
+--
+Affected Systems:
+Mozilla firefox 1.5
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2006-0295:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-0295
+  
+--

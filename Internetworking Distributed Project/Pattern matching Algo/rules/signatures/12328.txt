@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12328
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in ServerProtect.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple buffer overflows in the ServerProtect service (SpntSvc.exe) in Trend Micro ServerProtect for Windows before Security Patch 4 allow remote attackers to execute arbitrary code via certain RPC requests to certain TCP ports that are processed by the (1) RPCFN_ENG_NewManualScan, (2) RPCFN_ENG_TimedNewManualScan, and (3) RPCFN_SetComputerName functions in (a) StRpcSrv.dll; the (4) RPCFN_CMON_SetSvcImpersonateUser and (5) RPCFN_OldCMON_SetSvcImpersonateUser functions in (b) Stcommon.dll; the (6) RPCFN_ENG_TakeActionOnAFile and (7) RPCFN_ENG_AddTaskExportLogItem functions in (c) Eng50.dll; the (8) NTF_SetPagerNotifyConfig function in (d) Notification.dll; or the (9) RPCFN_CopyAUSrc function in the (e) ServerProtect Agent service.
+
+--
+Affected Systems:
+Trend Micro ServerProtect 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

@@ -1,0 +1,54 @@
+Rule: 
+
+--
+Sid: 
+7034
+
+-- 
+Summary: 
+This event is generated when a local machine is running the GoToMyPC service and attempts to establish a connection back the central GoToMyPC broker servers, as result of connection request from a remote machine. In effect, the remote machine has connected to the local machine. The GoToMyPC service provides access to a local machine from remote locations which may violate a corporate security policy.
+
+-- 
+Impact: 
+This may be a violation of corporate policy since some applications can be used to bypass security measures designed to restrict the flow of corporate information to destinations external to the corporation. In some instances this event may indicate behavior contrary to best security practices.
+
+--
+Detailed Information:
+When the GoToMyPC service is started on a (local) machine, it polls the central GoToMyPC broker servers at port 8200, looking to fulfill any requests to connect to it.  This rule looks for one of the steps in this communication setup, in particular, the local machine establishes a connection to the central GoToMyPC servers, over which the remote machine can then control the local machine.   GoToMyPC is a product of Citrix.
+
+--
+Affected Systems:
+All systems
+
+--
+Attack Scenarios: 
+Violation of corporate security policy can manifest serious risk to company assets.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Ensure adherence to best security practices and strict adherence to corporate policy
+
+--
+Contributors:
+Scott Austin <scott.austin@sourcefire.com>
+
+-- 
+Additional References:
+
+GoToMyPC
+http://www.gotomypc.com/howItWorks.tmpl
+
+--
+

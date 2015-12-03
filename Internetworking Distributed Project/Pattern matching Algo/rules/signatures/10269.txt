@@ -1,0 +1,63 @@
+Rule:
+
+--
+Sid:
+10269
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft systems using the Microsoft Windows Server Service Controller (svcctl).
+
+--
+Impact:
+Serious. Remote execution of code of the attackers choosing is possible.
+
+--
+Detailed Information:
+The Microsoft Windows Server Service Controller is used to manage services on a host.
+
+The Server Service Controller is prone to a buffer overflow vulnerability that may allow an attacker to take complete control of the target host. Insufficient checks are made on user supplied input to calls made to the svcctl function. This may allow an attacker to excute code of their choosing with system level privileges on an affected host.
+
+--
+Affected Systems:
+Microsoft Windows Server 2003 SP1 and prior
+Microsoft Windows XP SP2
+Microsoft Windows XP SP1 and prior
+Microsoft Windows 2000 SP4 and prior
+Microsoft Windows XP Professional
+
+--
+Attack Scenarios:
+An attacker can supply extra data in a malformed message to the server service controller to cause the overflow condition to occur. 
+
+--
+Ease of Attack:
+Simple. Exploit code is available.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Disallow access to services from untrusted sources.
+
+Use a packet filtering firewall to disallow access to ports 139 and 445 from sources external to the protected network.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Lurene Grenier <lurene.grenier@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

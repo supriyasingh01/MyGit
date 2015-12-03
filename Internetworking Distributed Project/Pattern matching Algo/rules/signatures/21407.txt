@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+21407
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in backup exec continuous protection server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+VRTSweb.exe in VRTSweb in Symantec Backup Exec Continuous Protection Server (CPS) 11d, 12.0, and 12.5; Veritas NetBackup Operations Manager (NOM) 6.0 GA through 6.5.5; Veritas Backup Reporter (VBR) 6.0 GA through 6.6; Veritas Storage Foundation (SF) 3.5; Veritas Storage Foundation for Windows High Availability (SFWHA) 4.3MP2, 5.0, 5.0RP1a, 5.0RP2, 5.1, and 5.1AP1; Veritas Storage Foundation for High Availability (SFHA) 3.5; Veritas Storage Foundation for Oracle (SFO) 4.1, 5.0, and 5.0.1; Veritas Storage Foundation for DB2 4.1 and 5.0; Veritas Storage Foundation for Sybase 4.1 and 5.0; Veritas Storage Foundation for Oracle Real Application Cluster (SFRAC) 3.5, 4.0, 4.1, and 5.0; Veritas Storage Foundation Manager (SFM) 1.0, 1.0 MP1, 1.1, 1.1.1Ux, 1.1.1Win, and 2.0; Veritas Cluster Server (VCS) 3.5, 4.0, 4.1, and 5.0; Veritas Cluster Server One (VCSOne) 2.0, 2.0.1, and 2.0.2; Veritas Application Director (VAD) 1.1 and 1.1 Platform Expansion; Veritas Cluster Server Management Console (VCSMC) 5.1, 5.5, and 5.5.1; Veritas Storage Foundation Cluster File System (SFCFS) 3.5, 4.0, 4.1, and 5.0; Veritas Storage Foundation Cluster File System for Oracle RAC (SFCFS RAC) 5.0; Veritas Command Central Storage (CCS) 4.x, 5.0, and 5.1; Veritas Command Central Enterprise Reporter (CC-ER) 5.0 GA, 5.0 MP1, 5.0 MP1RP1, and 5.1; Veritas Command Central Storage Change Manager (CC-SCM) 5.0 and 5.1; and Veritas MicroMeasure 5.0 does not properly validate authentication requests, which allows remote attackers to trigger the unpacking of a WAR archive, and execute arbitrary code in the contained files, via crafted data to TCP port 14300.
+
+--
+Affected Systems:
+symantec backup exec continuous protection server 11d
+symantec backup exec continuous protection server 12.0
+symantec backup exec continuous protection server 12.5
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-3027:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-3027
+  
+--

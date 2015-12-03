@@ -1,0 +1,81 @@
+Rule
+
+--
+Sid
+17804
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in firefox.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Mozilla Firefox 3.5.x through 3.5.14 and 3.6.x through 3.6.11, when JavaScript is enabled, allows remote attackers to execute arbitrary code via vectors related to nsCSSFrameConstructor::ContentAppended, the appendChild method, incorrect index tracking, and the creation of multiple frames, which triggers memory corruption, as exploited in the wild in October 2010 by the Belmoo malware.
+
+--
+Affected Systems:
+mozilla firefox 3.5
+mozilla firefox 3.5.1
+mozilla firefox 3.5.10
+mozilla firefox 3.5.11
+mozilla firefox 3.5.12
+mozilla firefox 3.5.13
+mozilla firefox 3.5.14
+mozilla firefox 3.5.2
+mozilla firefox 3.5.3
+mozilla firefox 3.5.4
+mozilla firefox 3.5.5
+mozilla firefox 3.5.6
+mozilla firefox 3.5.7
+mozilla firefox 3.5.8
+mozilla firefox 3.5.9
+mozilla firefox 3.6
+mozilla firefox 3.6.10
+mozilla firefox 3.6.11
+mozilla firefox 3.6.2
+mozilla firefox 3.6.3
+mozilla firefox 3.6.4
+mozilla firefox 3.6.6
+mozilla firefox 3.6.7
+mozilla firefox 3.6.8
+mozilla firefox 3.6.9
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-3765:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-3765
+  
+--

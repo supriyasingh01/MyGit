@@ -1,0 +1,62 @@
+Rule
+
+--
+Sid
+19099
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in safari.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The Cascading Style Sheets (CSS) implementation in WebKit in Apple Safari before 4.0.5 allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via crafted format arguments.
+
+--
+Affected Systems:
+apple safari 4.0
+apple safari 4.0.0b
+apple safari 4.0.1
+apple safari 4.0.2
+apple safari 4.0.3
+apple safari 4.0.4
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-0046:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0046
+  
+--

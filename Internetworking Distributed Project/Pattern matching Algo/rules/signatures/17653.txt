@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+17653
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in internet information server.
+
+--
+Impact:
+ Information disclosure.  
+
+--
+Detailed Information:
+Microsoft IIS 5.1 and 6 allows remote attackers to spoof the SERVER_NAME variable to bypass security checks and conduct various attacks via a GET request with an http://localhost URI, which makes it appear as if the request is coming from localhost.
+
+--
+Affected Systems:
+microsoft internet information server 5.0
+microsoft internet information server 5.1
+microsoft internet information server 6.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-2678:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-2678
+  
+--

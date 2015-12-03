@@ -1,0 +1,56 @@
+Rule:
+
+--
+Sid: 
+
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Ethereal. In particular, this event indicates that the exploit was attempted via the "DISTCC dissector" function.
+
+-- 
+Impact: 
+Serious. Denial of Service (DoS).
+
+--
+Detailed Information:
+Ethereal is a multi-platform network protocol analyser capable of displaying network data to the user in a graphical user interface.
+
+An error in the processing of the payload length in a DISTCC packet may prevent an attacker with the opportunity to overflow a fixed length buffer and execute code of their choosing in the context of the user running Ethereal. This is normally the super-user or administrator when Ethereal is used to sniff data directly from a network interface.
+
+--
+Affected Systems:
+	Ethereal 0.9.13 through 0.10.10
+
+--
+Attack Scenarios: 
+An attacker need to craft a DISTCC packet with a packet payload length of -1 to cause the overflow to manifest itself.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None Known
+
+--
+False Negatives:
+None Known
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patch
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors: 
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

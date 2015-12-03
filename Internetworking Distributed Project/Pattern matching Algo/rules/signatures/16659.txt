@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+16659
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in data access components.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Microsoft Data Access Components (MDAC) 2.8 SP1 and SP2, and Windows Data Access Components (WDAC) 6.0, does not properly validate memory allocation for internal data structures, which allows remote attackers to execute arbitrary code, possibly via a large CacheSize property that triggers an integer wrap and a buffer overflow, aka "ADO Record Memory Vulnerability."  NOTE: this might be a duplicate of CVE-2010-1117 or CVE-2010-1118.
+
+--
+Affected Systems:
+microsoft data access components 2.8
+microsoft data access components 2.8
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-0027:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0027
+  
+--

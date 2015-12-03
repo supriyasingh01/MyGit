@@ -1,0 +1,61 @@
+Rule:
+
+--
+Sid:
+6936
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft systems using the Microsoft Windows Routing and Remote Access service (RRAS). In particular this rule generates an event when an attempt is made to exploit the function "dcerpc_request" via the "RasRpcSetUserPreferences" component.
+
+--
+Impact:
+Serious. Remote execution of code of the attackers choosing is possible.
+
+--
+Detailed Information:
+The Microsoft Routing and Remote Access Service (RRAS) combines remote access support with network routing. RRAS can be used to connect LAN or WAN network segments.
+
+A vulnerability in the implementation of RRAS exists due to a programming error which may present an attacker with the opportunity to execute code of their choosing. The RRAS component fails to properly check the length of data supplied to the service before passing it along to a fixed length buffer.
+
+In particular this rule generates an event when an attempt is made to exploit the function "dcerpc_request" via the "RasRpcSetUserPreferences" component.
+
+--
+Affected Systems:
+Microsoft Windows Server 2003 (authentication needed)
+Microsoft Windows XP SP2 (authentication needed)
+Microsoft Windows XP SP1 and prior (authentication not needed)
+Microsoft Windows 2000 (authentication not needed)
+
+--
+Attack Scenarios:
+An attacker can supply extra data in the message to the server to cause the overflow condition to occur. 
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Use hardware specifically designed for routing and/or remote access.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

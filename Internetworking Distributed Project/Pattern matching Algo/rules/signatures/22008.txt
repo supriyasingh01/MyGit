@@ -1,0 +1,198 @@
+Rule
+
+--
+Sid
+22008
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in samba.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The RPC code generator in Samba 3.x before 3.4.16, 3.5.x before 3.5.14, and 3.6.x before 3.6.4 does not implement validation of an array length in a manner consistent with validation of array memory allocation, which allows remote attackers to execute arbitrary code via a crafted RPC call.
+
+--
+Affected Systems:
+samba samba 3.0.0
+samba samba 3.0.1
+samba samba 3.0.10
+samba samba 3.0.11
+samba samba 3.0.12
+samba samba 3.0.13
+samba samba 3.0.14
+samba samba 3.0.14a
+samba samba 3.0.15
+samba samba 3.0.16
+samba samba 3.0.17
+samba samba 3.0.18
+samba samba 3.0.19
+samba samba 3.0.2
+samba samba 3.0.20
+samba samba 3.0.20
+samba samba 3.0.20a
+samba samba 3.0.20b
+samba samba 3.0.21
+samba samba 3.0.21
+samba samba 3.0.21
+samba samba 3.0.21a
+samba samba 3.0.21b
+samba samba 3.0.21c
+samba samba 3.0.22
+samba samba 3.0.23
+samba samba 3.0.23
+samba samba 3.0.23
+samba samba 3.0.23
+samba samba 3.0.23a
+samba samba 3.0.23b
+samba samba 3.0.23c
+samba samba 3.0.23d
+samba samba 3.0.24
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.25a
+samba samba 3.0.25b
+samba samba 3.0.25c
+samba samba 3.0.26
+samba samba 3.0.26a
+samba samba 3.0.27
+samba samba 3.0.28
+samba samba 3.0.29
+samba samba 3.0.2a
+samba samba 3.0.3
+samba samba 3.0.30
+samba samba 3.0.31
+samba samba 3.0.32
+samba samba 3.0.33
+samba samba 3.0.34
+samba samba 3.0.35
+samba samba 3.0.36
+samba samba 3.0.37
+samba samba 3.0.4
+samba samba 3.0.5
+samba samba 3.0.6
+samba samba 3.0.7
+samba samba 3.0.8
+samba samba 3.0.9
+samba samba 3.1
+samba samba 3.2.0
+samba samba 3.2.1
+samba samba 3.2.10
+samba samba 3.2.11
+samba samba 3.2.12
+samba samba 3.2.13
+samba samba 3.2.14
+samba samba 3.2.15
+samba samba 3.2.2
+samba samba 3.2.3
+samba samba 3.2.4
+samba samba 3.2.5
+samba samba 3.2.6
+samba samba 3.2.7
+samba samba 3.2.8
+samba samba 3.2.9
+samba samba 3.3.0
+samba samba 3.3.1
+samba samba 3.3.10
+samba samba 3.3.11
+samba samba 3.3.12
+samba samba 3.3.13
+samba samba 3.3.14
+samba samba 3.3.15
+samba samba 3.3.16
+samba samba 3.3.2
+samba samba 3.3.3
+samba samba 3.3.4
+samba samba 3.3.5
+samba samba 3.3.6
+samba samba 3.3.7
+samba samba 3.3.8
+samba samba 3.3.9
+samba samba 3.4.0
+samba samba 3.4.1
+samba samba 3.4.10
+samba samba 3.4.11
+samba samba 3.4.12
+samba samba 3.4.13
+samba samba 3.4.14
+samba samba 3.4.15
+samba samba 3.4.2
+samba samba 3.4.3
+samba samba 3.4.4
+samba samba 3.4.5
+samba samba 3.4.6
+samba samba 3.4.7
+samba samba 3.4.8
+samba samba 3.4.9
+samba samba 3.5.0
+samba samba 3.5.1
+samba samba 3.5.10
+samba samba 3.5.11
+samba samba 3.5.12
+samba samba 3.5.13
+samba samba 3.5.2
+samba samba 3.5.3
+samba samba 3.5.4
+samba samba 3.5.5
+samba samba 3.5.6
+samba samba 3.5.7
+samba samba 3.5.8
+samba samba 3.5.9
+samba samba 3.6.0
+samba samba 3.6.1
+samba samba 3.6.2
+samba samba 3.6.3
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2012-1182:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-1182
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

@@ -1,0 +1,64 @@
+Rule
+
+--
+Sid
+15867
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Acrobat.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Adobe Reader and Acrobat 8.1.2 and earlier, and before 7.1.1, allow remote attackers to execute arbitrary code via a crafted PDF document that (1) performs unspecified actions on a Collab object that trigger memory corruption, related to a GetCosObj method; or (2) contains a malformed PDF object that triggers memory corruption during parsing.
+
+--
+Affected Systems:
+Adobe Acrobat 8.1.1
+Adobe Acrobat 8.1.1
+Adobe Acrobat 8.1.1
+Adobe Acrobat 8.1.1
+Adobe Acrobat 8.1.2
+Adobe Acrobat 8.1.2
+Adobe Acrobat 8.1.2
+Adobe Acrobat 8.1.2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-4813:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-4813
+  
+--

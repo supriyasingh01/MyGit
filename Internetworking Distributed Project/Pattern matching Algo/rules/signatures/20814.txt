@@ -1,0 +1,66 @@
+Rule
+
+--
+Sid
+20814
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in firefox.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The favicon functionality in Firefox before 1.0.3 and Mozilla Suite before 1.7.7 allows remote attackers to execute arbitrary code via a <LINK rel="icon"> tag with a javascript: URL in the href attribute, aka "Firelinking."
+
+--
+Affected Systems:
+mozilla firefox 0.10
+mozilla firefox 0.10.1
+mozilla firefox 0.8
+mozilla firefox 0.9
+mozilla firefox 0.9.1
+mozilla firefox 0.9.2
+mozilla firefox 0.9.3
+mozilla firefox 1.0
+mozilla firefox 1.0.1
+mozilla firefox 1.0.2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-1155:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-1155
+  
+--

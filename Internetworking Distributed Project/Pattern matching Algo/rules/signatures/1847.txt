@@ -1,0 +1,62 @@
+Rule
+
+--
+Sid
+1847
+
+--
+Summary:
+This event is generated when an attempt is made to connect to the  Webalizer web log analysis system. The connection could be benign, or  an attempt to enumerate applications offered by the target web server.  More information about Webalizer is available at http://www.mrunix.net/webalizer/
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Webalizer is an apache log analysis system, it provides high level  information about the usage of a web site that is of use to a  webmaster. Access to this data should not be made available to  untrusted users because of the threat of an information leak.
+
+Cross-site scripting vulnerability in Webalizer 2.01-06, and possibly other versions, allows remote attackers to inject arbitrary HTML tags by specifying them in (1) search keywords embedded in HTTP referrer information, or (2) host names that are retrieved via a reverse DNS lookup.
+
+--
+Affected Systems:
+Bradford Barrett Webalizer 2.0.6
+
+--
+Attack Scenarios:
+Many attack vectors are possible from simple directory traversal to exploitation of buffer overflow conditions.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+Webalizer may not be installed on the target server.
+
+--
+False Negatives:
+Webalizer may be installed in a directory installed other than "/webalizer/"
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+Leon Ward <lward@sourcefire.com>
+Portions of this document were generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2001-0835:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2001-0835
+
+--

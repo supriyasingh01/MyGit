@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12709
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Windows XP.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Heap-based buffer overflow in the BERDecBitString function in Microsoft ASN.1 library (MSASN1.DLL) allows remote attackers to execute arbitrary code via nested constructed bit strings, which leads to a realloc of a non-null pointer and causes the function to overwrite previously freed memory, as demonstrated using a SPNEGO token with a constructed bit string during HTTP authentication, and a different vulnerability than CVE-2003-0818.  NOTE: the researcher has claimed that MS:MS04-007 fixes this issue.
+
+--
+Affected Systems:
+Microsoft Windows XP 5
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

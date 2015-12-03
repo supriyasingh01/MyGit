@@ -1,0 +1,65 @@
+Rule:
+
+--
+Sid:
+8835
+
+--
+Summary:
+This event is generated when an attempt is made to return to a web client a file with a Class ID (CLSID) embedded in the file.
+
+--
+Impact:
+A successful attack may result in the execution of code of the attackers choosing possibly leading to control of the target machine.
+
+--
+Detailed Information:
+Internet Explorer does not correctly handle ActiveX controls. Certain COM objects can be called by Internet Explorer and executed as ActiveX controls. When this is achieved, it may be possible for an attacker to overwrite portions of memory and execute code of their choosing.
+
+There are multiple CLSIDs associated with a COM component that could be used for malicious purposes. This event is generated when the CLSID for DirectAnimation.DABoolean.1 is detected in data being returned to a client system from a server.
+
+These access rules alert on attempts to access certian CLSIDs that could potentially be used to exploit ActiveX based vulnerabilities.  These CLSIDS fall into one of the following categories.
+
+1. Microsoft has deprecated the CSLID and has suggested to all web developers that this CLSID no longer be used.
+2. Microsoft has disabled the CLSID and it can no longer be used to actually execute an ActiveX object.
+3. The CLSID is a known bad CLSID and has been removed from updated versions of the application that use this ActiveX object.
+4. The ActiveX object is not safe for scripting and could be vulnerable to a security issue that may result in a buffer overflow or loss of system functionality.
+
+This event indicates that the identifier for the component DirectAnimation.DABoolean.1 was detected.
+
+--
+Affected Systems:
+Microsoft Internet Explorer 6 and prior 
+
+--
+Attack Scenarios:
+An attacker can entice a user to visit a web server that will return a malicious file with a file name that contains a CLSID, perhaps enabling the execution of the malicious code when the file is opened.
+
+--
+Ease of Attack:
+Simple. Exploit code is publicly available.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

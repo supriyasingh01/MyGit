@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12477
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Messenger.
+
+--
+Impact:
+  Loss of integrity. 
+
+--
+Detailed Information:
+Absolute path traversal vulnerability in a certain ActiveX control in the CYFT object in ft60.dll in Yahoo! Messenger 8.1.0.421 allows remote attackers to force a download, and create or overwrite arbitrary files via a full pathname in the second argument to the GetFile method.
+
+--
+Affected Systems:
+Yahoo Messenger 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

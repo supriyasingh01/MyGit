@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+17498
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in http server.
+
+--
+Impact:
+ Information disclosure.  
+
+--
+Detailed Information:
+Directory traversal vulnerability in Apache HTTP Server and Tomcat 5.x before 5.5.22 and 6.x before 6.0.10, when using certain proxy modules (mod_proxy, mod_rewrite, mod_jk), allows remote attackers to read arbitrary files via a .. (dot dot) sequence with combinations of (1) "/" (slash), (2) "\" (backslash), and (3) URL-encoded backslash (%5C) characters in the URL, which are valid separators in Tomcat but not in Apache.
+
+--
+Affected Systems:
+apache http server 
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-0450:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-0450
+  
+--

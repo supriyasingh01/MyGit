@@ -1,0 +1,63 @@
+Rule:
+
+--
+Sid:
+4060
+
+--
+Summary:
+This event is generated when at attempt is made to connect via the
+Remote Desktop Protocol (RDP) as an Administrator.
+
+--
+Impact:
+Policy Violation. Remote RDP access as the Administrator user is not
+recommended and may indicate malicious activity.
+
+--
+Detailed Information:
+Remote Desktop Protocol provides remote terminal service access. 
+Connecting as the user Administrator is not recommended from outside of
+the network.  Other more secure protocols such as secure shell are
+preferable for connecting inside the network and then using RDP within
+the network.
+
+An exploit for RDP attempts to connect to the internal network with the
+Administrator user.
+
+--
+Attack Scenarios:
+An attacker may exploit a vulnerability in RDP using the Administrator
+user.
+
+--
+Ease of Attack:
+Simple. Exploit code is available.
+
+--
+False Positives:
+If policy allows remote RDP traffic with the Administrator user, a false
+positive event will be generated.
+
+--
+False Negatives:
+Exploit traffic that does not use the Administrator user may not be
+detected.
+
+--
+Corrective Action:
+Disallow the use of RDP or disallow access by Administrator
+
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+
+--
+Additional References:
+
+--

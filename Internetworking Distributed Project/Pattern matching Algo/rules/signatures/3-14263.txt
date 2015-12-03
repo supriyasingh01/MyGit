@@ -1,0 +1,69 @@
+Rule
+
+--
+Sid
+3-14263
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Pidgin.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple integer overflows in the msn_slplink_process_msg functions in the MSN protocol handler in (1) libpurple/protocols/msn/slplink.c and (2) libpurple/protocols/msnp9/slplink.c in Pidgin before 2.4.3 allow remote attackers to execute arbitrary code via a malformed SLP message, a different vulnerability than CVE-2008-2955.
+
+--
+Affected Systems:
+Pidgin Pidgin 2.0.0
+Pidgin Pidgin 2.0.1
+Pidgin Pidgin 2.0.2
+Pidgin Pidgin 2.1.0
+Pidgin Pidgin 2.1.1
+Pidgin Pidgin 2.2.0
+Pidgin Pidgin 2.2.1
+Pidgin Pidgin 2.2.2
+Pidgin Pidgin 2.3.0
+Pidgin Pidgin 2.3.1
+Pidgin Pidgin 2.4.0
+Pidgin Pidgin 2.4.1
+Pidgin Pidgin 2.4.2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-2927:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-2927
+
+--

@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+15575
+
+--
+Summary:
+This event is generated when an attempt is made to download a WordPerfect file.
+
+--
+Impact:
+Unkown.
+
+--
+Detailed Information:
+This event is generated when an attempt is made to download a WordPerfect file.
+
+Buffer overflow conditions exist in many file converters. WordPerfect files are old and it may be that the use of such an old file format is an indication of nefarious activity.
+
+--
+Affected Systems:
+All
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

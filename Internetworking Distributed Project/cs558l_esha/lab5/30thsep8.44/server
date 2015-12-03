@@ -1,0 +1,11 @@
+./server.py 5000 10 0 & 
+./server.py 5001 10 1 & 
+./server.py 5002 10 2 & 
+./server.py 5003 10 3 & 
+./server.py 5004 10 4 & 
+./server.py 5005 10 5 & 
+./server.py 5006 10 6 & 
+./server.py 5007 10 7 & 
+./server.py 5008 10 8 & 
+./server.py 5009 10 9 & 
+./splitjoin.py input.in 10 &

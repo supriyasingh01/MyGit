@@ -1,0 +1,63 @@
+Rule
+
+--
+Sid
+15263
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in bea_product_suite.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Unspecified vulnerability in the Oracle BEA WebLogic Server Plugins for Apache, Sun and IIS web servers component in BEA Product Suite 10.3, 10.0 MP1, 9.2 MP3, 9.1, 9.0, 8.1 SP6, and 7.0 SP7 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.
+
+--
+Affected Systems:
+oracle bea_product_suite 10.0
+oracle bea_product_suite 10.3
+oracle bea_product_suite 7.0
+oracle bea_product_suite 8.1
+oracle bea_product_suite 9.0
+oracle bea_product_suite 9.1
+oracle bea_product_suite 9.2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-5457:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-5457
+  
+--

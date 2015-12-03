@@ -1,0 +1,129 @@
+sudo route add -host 192.168.253.1 gw 192.168.1.254
+
+
+sudo route add default gw 10.10.0.2
+
+sudo route add default gw 10.1.0.1
+
+#sudo route add default gw 10.1.0.1
+
+#sudo route add default gw 10.1.2.2
+
+sudo route add default gw 10.1.3.2
+
+
+
+sudo route del -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.1.254
+
+
+(On routers)
+
+sudo route add -host 192.168.253.1 gw 192.168.1.254
+sudo route del -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.1.254
+
+(go to root directory)
+cd
+
+sudo cp quagga-0.99.20.tar.gz /mnt
+
+cd /mnt
+sudo  tar xvzf quagga-0.99.20.tar.gz
+cd quagga-0.99.20
+sudo ./configure
+
+(go everywhere and change permissions(mnt,q(tab) and zebra)
+
+cd quagga-0.99.20
+sudo make
+
+(make configuration file in /mnt)
+(go to /mnt)
+
+sudo vim zebra.conf 
+
+
+(with interfaces and their ip addresses)
+!
+! Example zebra configuration
+!
+hostname zebrad
+password zebra
+!
+interface eth5
+ip address 10.10.1.1/24
+!
+interface eth7
+ip address 10.1.0.3/24
+!
+interface eth9
+ip address 10.10.2.2/24
+!
+interface lo
+ip forwarding
+!
+log stdout
+line vty
+!
+
+
+Configuration file for usrtr
+
+interface eth X (open a new window of usrtr and see routing table)
+ip address 10.99.0.3/24
+
+interface eth X (open a new window of usrtr and see routing table)
+ip address 10.10.0.2/24
+
+
+Configuration file for rtr1
+
+interface eth X (open a new window of rtr1 and see routing table)
+ip address 10.99.0.1/24
+
+interface eth X (open a new window of rtr1 and see routing table)
+ip address 10.1.0.1/24
+
+
+Configuration file for rtr2
+
+interface eth X (open a new window of rtr2 and see routing table)
+ip address 10.99.0.2/24
+
+interface eth X (open a new window of rtr2 and see routing table)
+ip address 10.1.2.2/24
+
+interface eth X (open a new window of rtr2 and see routing table)
+ip address 10.1.3.2/24
+
+
+
+---go to zebra directory : 
+sudo ./zebra -d -u root -g root -f /mnt/zebra.conf
+
+
+
+
+Now go to zebra directory of each router and start zebra :
+
+telnet localhost 2601
+password=zebra
+enable
+configure terminal
+
+FOR USRTR
+ip route 10.1.0.0/24 10.99.0.1
+ip route 10.1.2.0/23 10.99.0.2
+
+FOR RTR1
+ip route 10.1.2.0/23 10.99.0.2
+ip route 10.10.0.0/24 10.99.0.3
+
+FOR RTR2
+ip route 10.1.0.0/24 10.99.0.1
+ip route 10.10.0.0/24 10.99.0.3
+
+
+(after each ip route is added check by)
+show running config
+quit
+copy running-config startup-config

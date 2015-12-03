@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11185
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in eTrust Intrusion Detection.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Heap-based buffer overflow in SW3eng.exe in the eID Engine service in CA (formerly Computer Associates) eTrust Intrusion Detection 3.0.5.57 and earlier allows remote attackers to cause a denial of service (application crash) via a long key length value to the remote administration port (9191/tcp).
+
+--
+Affected Systems:
+CA eTrust Intrusion Detection 2.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

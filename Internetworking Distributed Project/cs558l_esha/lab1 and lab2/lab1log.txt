@@ -1,0 +1,86 @@
+Experiment: USC558L/labesha
+State: active
+
+Virtual Node Info:
+ID              Type         OS              Qualified Name
+--------------- ------------ --------------- --------------------
+nodeA           pc           FBSD-STD        nodeA.labesha.USC558L.isi.deterlab.net
+nodeB           pc                           nodeB.labesha.USC558L.isi.deterlab.net
+nodeC           pc           RHL-STD         nodeC.labesha.USC558L.isi.deterlab.net
+nodeD           pc                           nodeD.labesha.USC558L.isi.deterlab.net
+
+Physical Node Mapping:
+ID              Type         OS              Physical
+--------------- ------------ --------------- ------------
+nodeA           pc3000       FBSD410-STD     pc083
+nodeB           pc3000       Ubuntu1004-STD  pc086
+nodeC           pc3000       FBSD410-STD     pc109
+nodeD           pc3000       Ubuntu1004-STD  pc112
+tbdelay0        pc3000       FBSD62-STD      pc108
+
+Virtual Lan/Link Info:
+ID              Member/Proto    IP/Mask         Delay     BW (Kbs)  Loss Rate
+--------------- --------------- --------------- --------- --------- ---------
+lan0            nodeB:1         10.1.2.4        0.00      100000    0.00000000
+                ethernet        255.255.255.0   0.00      100000    0.00000000
+lan0            nodeC:0         10.1.2.3        0.00      100000    0.00000000
+                ethernet        255.255.255.0   0.00      100000    0.00000000
+lan0            nodeD:0         10.1.2.2        0.00      100000    0.00000000
+                ethernet        255.255.255.0   0.00      100000    0.00000000
+link0           nodeA:0         10.1.1.3        25.00     30000     0.00501256
+                ethernet        255.255.255.0   25.00     30000     0.00501256
+link0           nodeB:0         10.1.1.2        25.00     30000     0.00501256
+                ethernet        255.255.255.0   25.00     30000     0.00501256
+
+Physical Lan/Link Mapping:
+ID              Member          IP              MAC                  NodeID
+--------------- --------------- --------------- -------------------- ---------
+lan0            nodeB:1         10.1.2.4        00:04:23:ae:cc:32    pc086
+                                                0/1 <-> 5/33         Nortel10
+lan0            nodeC:0         10.1.2.3        00:04:23:ae:ce:ca    pc109
+                                                0/1 <-> 7/33         Nortel10
+lan0            nodeD:0         10.1.2.2        00:0e:0c:65:df:16    pc112
+                                                0/1 <-> 7/45         Nortel10
+link0           nodeA:0         10.1.1.3        00:0e:0c:66:83:a8    pc083
+                                                0/1 <-> 4/45         Nortel10
+link0           nodeB:0         10.1.1.2        00:04:23:ae:cc:33    pc086
+                                                1/1 <-> 5/34         Nortel10
+
+Virtual Queue Info:
+ID              Member          Q Limit    Type    weight/min_th/max_th/linterm
+--------------- --------------- ---------- ------- ----------------------------
+lan0            nodeB:1         100 slots  Tail    0/0/0/0
+lan0            nodeC:0         100 slots  Tail    0/0/0/0
+lan0            nodeD:0         100 slots  Tail    0/0/0/0
+link0           nodeA:0         100 slots  Tail    0/0/0/0
+link0           nodeB:0         100 slots  Tail    0/0/0/0
+
+Physical Delay Info:
+ID              Member          Delay Node   Delay    BW (Kbs) PLR    Pipe
+--------------- --------------- ------------ -------- -------- ------ ---------
+link0           nodeA           tbdelay0     50.00    30000    0.00999999 110
+link0           nodeB           tbdelay0     50.00    30000    0.00999999 120
+
+Physical Queue Info:
+ID              Member          Q Limit         Type    weight/min_th/max_th/linterm
+--------------- --------------- ---------- ------- ----------------------------
+link0           nodeA           100 slots       Tail    0/0/0/0
+link0           nodeB           100 slots       Tail    0/0/0/0
+link0           nodeA           100 slots       Tail    0/0/0/0
+link0           nodeB           100 slots       Tail    0/0/0/0
+
+Delay Node Switch Info:
+ID              Member          Delay Node   Card/Port Switch    Card/Port
+--------------- --------------- ------------ --------- --------- --------
+link0           nodeA           tbdelay0     0/1 eth0  Nortel10  5/9
+link0           nodeB           tbdelay0     1/1 eth1  Nortel10  5/10
+
+Event Groups:
+Group Name      Members
+--------------- ---------------------------------------------------------------
+link0-tracemon  link0-nodeB-tracemon,link0-nodeA-tracemon
+__all_lans      lan0,link0
+__all_tracemon  link0-nodeB-tracemon,link0-nodeA-tracemon,lan0-nodeD-tracemon,lan0-nodeC-tracemon,lan0-nodeB-tracemon
+lan0-tracemon   lan0-nodeB-tracemon,lan0-nodeC-tracemon,lan0-nodeD-tracemon
+
+

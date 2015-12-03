@@ -1,0 +1,67 @@
+Rule
+
+--
+Sid
+9813
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Symantec NetBackup.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+A buffer overflow condition is present in the Symantec NetBackup application. This event indicates that an attempt has been made to exploit that condition. It may be possible for an attacker to use this vulnerability to execute code on the target host which could lead to further compromise and loss of data integrity on the host.
+
+The Symantec VERITAS NetBackup Server manages backup activities via communications with client software. Communication to the client software is typically over TCP port 13782. During the initial communications, connection options are passed in the following format.
+
+ CONNECTION_OPTIONS=hostname x y z
+
+Where x, y and z denote different port setup configuration flags. Overly long hostnames can trigger a buffer overflow condition during the creation of log entries. Logs are formatted as follows.
+
+ String too long on line %d.  Truncating "%s"
+
+A static buffer of size 0x3E8 is created, and the string is moved onto it. A 100 byte concatonated version of the string is then appended to the buffer. Therefore, any string of greater than 0x3BF will overwrite critical stack values.
+
+--
+Affected Systems:
+Symantec NetBackup Enterprise Server 6.0 and prior
+Symantec NetBackup Server 6.0 and prior
+Symantec NetBackup Client 6.0 and prior
+
+--
+Attack Scenarios:
+An attacker needs to supply excess data in a transaction using the application. The attacker may then include code of their choosing to be executed on the host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Olney <matthew.olney@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

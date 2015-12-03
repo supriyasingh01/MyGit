@@ -1,0 +1,57 @@
+Rule:
+
+--
+Sid:
+7423
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a cross site scripting vulnerability in Microsoft Management Console (MMC).
+
+--
+Impact:
+Information gathering and system integrity compromise. Possible unauthorized administrative access to the host. Possible execution of arbitrary code of the attackers choosing.
+
+--
+Detailed Information:
+This event indicates that an attempt has been made to exploit a cross site scripting vulnerability affecting Microsoft Management Console (MMC). MMC is used to perform administrative tasks on a host or server.
+
+Files in the library used by MMC could be accessed by a malicious attacker who could use the cross site scripting attack to trick the application into treating the files as being in the trusted zone. The attacker would then be able to execute code of their choosing on the host.
+
+--
+Affected Systems:
+Microsoft Windows XP SP2 and prior
+Microsoft Windows 2003 SP1 and prior
+
+--
+Attack Scenarios:
+An attacker can supply a malicious link designed to access a file on the system by having a user click on that link.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Ensure the system is using an up to date version of the software and has had all vendor supplied patches applied.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+The Cross Site Scripting (XSS) FAQ
+http://www.cgisecurity.com/articles/xss-faq.shtml
+
+--

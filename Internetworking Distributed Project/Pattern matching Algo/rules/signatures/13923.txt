@@ -1,0 +1,64 @@
+Rule
+
+--
+Sid
+13923
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in MailEnable Enterprise.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+The SMTP service of MailEnable Standard 1.92 and earlier, Professional 2.0 and earlier, and Enterprise 2.0 and earlier before the MESMTPC hotfix, allows remote attackers to cause a denial of service (application crash) via a HELO command with a null byte in the argument, possibly triggering a length inconsistency or a missing argument.
+
+--
+Affected Systems:
+MailEnable MailEnable Enterprise 1.00
+MailEnable MailEnable Enterprise 1.01
+MailEnable MailEnable Enterprise 1.02
+MailEnable MailEnable Enterprise 1.03
+MailEnable MailEnable Enterprise 1.04
+MailEnable MailEnable Enterprise 1.1
+MailEnable MailEnable Enterprise 1.2
+MailEnable MailEnable Enterprise 1.21
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2006-3277:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2006-3277
+
+--

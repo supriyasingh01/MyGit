@@ -1,0 +1,90 @@
+Rule
+
+--
+Sid
+16332
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Symantec antivirus.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The Intel LANDesk Common Base Agent (CBA) in Symantec Alert Management System 2 (AMS2), as used in Symantec System Center (SSS); Symantec AntiVirus Server; Symantec AntiVirus Central Quarantine Server; Symantec AntiVirus (SAV) Corporate Edition 9 before 9.0 MR7, 10.0 and 10.1 before 10.1 MR8, and 10.2 before 10.2 MR2; Symantec Client Security (SCS) 2 before 2.0 MR7 and 3 before 3.1 MR8; and Symantec Endpoint Protection (SEP) before 11.0 MR3, allows remote attackers to execute arbitrary commands via a crafted packet whose contents are interpreted as a command to be launched in a new process by the CreateProcessA function.
+
+--
+Affected Systems:
+Symantec antivirus -
+Symantec antivirus -
+Symantec antivirus 10.0
+Symantec antivirus 10.0
+Symantec antivirus 10.0.1
+Symantec antivirus 10.0.1
+Symantec antivirus 10.0.1.1
+Symantec antivirus 10.0.1.1
+Symantec antivirus 10.0.2
+Symantec antivirus 10.0.2
+Symantec antivirus 10.0.2.1
+Symantec antivirus 10.0.2.1
+Symantec antivirus 10.0.2.2
+Symantec antivirus 10.0.2.2
+Symantec antivirus 10.0.3
+Symantec antivirus 10.0.3
+Symantec antivirus 10.0.4
+Symantec antivirus 10.0.4
+Symantec antivirus 10.0.5
+Symantec antivirus 10.0.5
+Symantec antivirus 10.0.6
+Symantec antivirus 10.0.6
+Symantec antivirus 10.0.7
+Symantec antivirus 10.0.7
+Symantec antivirus 10.0.8
+Symantec antivirus 10.0.8
+Symantec antivirus 10.0.9
+Symantec antivirus 10.0.9
+Symantec antivirus 10.1
+Symantec antivirus 10.1
+Symantec antivirus 10.2
+Symantec antivirus 10.2
+Symantec antivirus 9.0
+Symantec antivirus 9.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-1429:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-1429
+  
+--

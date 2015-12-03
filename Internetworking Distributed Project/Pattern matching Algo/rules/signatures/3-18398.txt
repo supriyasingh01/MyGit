@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+3-18398
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Windows.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Stack-based buffer overflow in the CreateSizedDIBSECTION function in shimgvw.dll in the Microsoft Graphics Rendering Engine in Windows XP SP3, Server 2003 SP2, Vista SP1 and SP2, and Server 2008 SP2 allows remote attackers to execute arbitrary code via a crafted .MIC or unsplecified Office document containing a thumbnail bitmap with a negative biClrUsed value, as reported by Moti and Xu Hao.
+
+--
+Affected Systems:
+Microsoft Windows XP SP3
+Microsoft Windows Server 2003 SP2
+Microsoft Windows Vista SP1 and SP2
+Microsoft Windows Server 2008 SP2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-3970:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-3970
+  
+--

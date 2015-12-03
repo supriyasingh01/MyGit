@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12496
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Windows 2000.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+The Workstation service in Microsoft Windows 2000 SP4 and XP SP2 allows remote attackers to cause a denial of service (memory consumption) via a large maxlen value in an NetrWkstaUserEnum RPC request.
+
+--
+Affected Systems:
+Microsoft Windows 2000 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

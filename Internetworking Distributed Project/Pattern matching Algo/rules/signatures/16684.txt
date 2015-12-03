@@ -1,0 +1,159 @@
+Rule
+
+--
+Sid
+16684
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Samba.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+The reply_sesssetup_and_X_spnego function in sesssetup.c in smbd in Samba before 3.4.8 and 3.5.x before 3.5.2 allows remote attackers to trigger an out-of-bounds read, and cause a denial of service (process crash), via a \xff\xff security blob length in a Session Setup AndX request.
+
+--
+Affected Systems:
+Samba 3.0
+Samba 3.0.0
+Samba 3.0.1
+Samba 3.0.10
+Samba 3.0.11
+Samba 3.0.12
+Samba 3.0.13
+Samba 3.0.14
+Samba 3.0.14a
+Samba 3.0.15
+Samba 3.0.16
+Samba 3.0.17
+Samba 3.0.18
+Samba 3.0.19
+Samba 3.0.2
+Samba 3.0.20
+Samba 3.0.20a
+Samba 3.0.20b
+Samba 3.0.21
+Samba 3.0.21a
+Samba 3.0.21b
+Samba 3.0.21c
+Samba 3.0.22
+Samba 3.0.23
+Samba 3.0.23a
+Samba 3.0.23b
+Samba 3.0.23c
+Samba 3.0.23d
+Samba 3.0.24
+Samba 3.0.25
+Samba 3.0.25
+Samba 3.0.25
+Samba 3.0.25
+Samba 3.0.25
+Samba 3.0.25a
+Samba 3.0.25b
+Samba 3.0.25c
+Samba 3.0.26
+Samba 3.0.26a
+Samba 3.0.27
+Samba 3.0.27a
+Samba 3.0.28
+Samba 3.0.28a
+Samba 3.0.29
+Samba 3.0.2a
+Samba 3.0.3
+Samba 3.0.30
+Samba 3.0.31
+Samba 3.0.32
+Samba 3.0.33
+Samba 3.0.34
+Samba 3.0.35
+Samba 3.0.36
+Samba 3.0.37
+Samba 3.0.4
+Samba 3.0.5
+Samba 3.0.6
+Samba 3.0.7
+Samba 3.0.8
+Samba 3.0.9
+Samba 3.1
+Samba 3.2
+Samba 3.2.0
+Samba 3.2.1
+Samba 3.2.10
+Samba 3.2.11
+Samba 3.2.12
+Samba 3.2.13
+Samba 3.2.14
+Samba 3.2.15
+Samba 3.2.2
+Samba 3.2.3
+Samba 3.2.4
+Samba 3.2.5
+Samba 3.2.6
+Samba 3.2.7
+Samba 3.2.8
+Samba 3.2.9
+Samba 3.3
+Samba 3.3.0
+Samba 3.3.1
+Samba 3.3.10
+Samba 3.3.11
+Samba 3.3.2
+Samba 3.3.3
+Samba 3.3.4
+Samba 3.3.5
+Samba 3.3.6
+Samba 3.3.7
+Samba 3.3.8
+Samba 3.3.9
+Samba 3.4
+Samba 3.4.0
+Samba 3.4.1
+Samba 3.4.2
+Samba 3.4.3
+Samba 3.4.4
+Samba 3.4.5
+Samba 3.4.6
+Samba 3.4.7
+Samba 3.5
+Samba 3.5.0
+Samba 3.5.1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-1642:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-1642
+  
+--

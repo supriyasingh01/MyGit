@@ -1,0 +1,60 @@
+Rule:
+
+--
+Sid:
+15855
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in an ActiveX control.
+
+--
+Impact:
+A successful attack can cause a buffer overflow and the subsequent execution of arbitrary code with system level privileges on a vulnerable host.
+
+--
+Detailed Information:
+A vulnerability exists in the way that Internet Explorer handles ActiveX controls that may present an attacker with the opportunity to run code of their choosing on a host.
+
+In particular, this event is generated when a call to the isa_server is made. This may indicate an attempt to exploit known vulnerabilities in that ActiveX control which may lead to a system compromise.
+
+The Microsoft Office Web Components Spreadsheet ActiveX control (aka OWC10 or OWC11), as distributed in Office XP SP3 and Office 2003 SP3, Office XP Web Components SP3, Office 2003 Web Components SP3, Office 2003 Web Components SP1 for the 2007 Microsoft Office System, Internet Security and Acceleration (ISA) Server 2004 SP3 and 2006 Gold and SP1, and Office Small Business Accounting 2006, when used in Internet Explorer, allows remote attackers to execute arbitrary code via a crafted call to the msDataSourceObject method, as exploited in the wild in July and August 2009, aka "Office Web Components HTML Script Vulnerability."
+
+NOTE: For this detection to work comprehensively, the flow depth setting in the HTTP Inspect preprocessor must be set to 0
+
+--
+Affected Systems:
+Microsoft Windows systems using the isa_server ActiveX control
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

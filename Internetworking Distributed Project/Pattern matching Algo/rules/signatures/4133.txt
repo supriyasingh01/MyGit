@@ -1,0 +1,68 @@
+Rule:
+
+--
+Sid:
+4133
+
+--
+Summary:
+This event is generated when an attempt is made to return to
+a web client a file with a Class ID (CLSID) embedded in the file.
+
+--
+Impact:
+A successful attack may result in the execution of code of the attackers
+choosing possibly leading to control of the target machine.
+
+--
+Detailed Information:
+Internet Explorer does not correctly handle ActiveX controls. Certain
+COM objects can be called by Internet Explorer and executed as ActiveX
+controls. When this is achieved, it may be possible for an attacker to
+overwrite portions of memory and execute code of their choosing.
+
+There are multiple CLSIDs associated with a COM component that could be
+used for malicious purposes.
+
+--
+Affected Systems:
+	Microsoft Internet Explorer 6 for Microsoft Windows XP SP2
+	Microsoft Internet Explorer 6 for Microsoft Windows XP SP1
+	Microsoft Office 2002
+	Microsoft Visual Studio .NET 2002
+
+--
+Attack Scenarios:
+An attacker can entice a user to visit a web server that will return a
+malicious file with a file name that contains a CLSID, perhaps enabling
+the execution of the malicious code when the file is opened.
+
+--
+Ease of Attack:
+Simple. Exploit code is publicly available.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches as they become available.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Judy Novak <judy.novak@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

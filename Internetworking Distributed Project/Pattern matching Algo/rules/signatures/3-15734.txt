@@ -1,0 +1,104 @@
+Rule
+
+--
+Sid
+3-15734
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in bind.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+The dns_db_findrdataset function in db.c in named in ISC Bind 9.4 before 9.4.3-P3, 9.5 before 9.5.1-P3, and 9.6 before 9.6.1-P1, when configured as a master server, allows remote attackers to cause a denial of service (assertion failure and daemon exit) via an ANY record in the prerequisite section of a crafted dynamic update message, as exploited in the wild in July 2009.
+
+--
+Affected Systems:
+ISC Bind 9.4
+ISC Bind 9.4.0
+ISC Bind 9.4.0a1
+ISC Bind 9.4.0a2
+ISC Bind 9.4.0a3
+ISC Bind 9.4.0a4
+ISC Bind 9.4.0a5
+ISC Bind 9.4.0a6
+ISC Bind 9.4.0b1
+ISC Bind 9.4.0b2
+ISC Bind 9.4.0b3
+ISC Bind 9.4.0b4
+ISC Bind 9.4.1
+ISC Bind 9.4.2
+ISC Bind 9.4.2-p2-w1
+ISC Bind 9.4.3
+ISC Bind 9.4.3
+ISC Bind 9.4.3b1
+ISC Bind 9.4.3b2
+ISC Bind 9.4.3b3
+ISC Bind 9.5
+ISC Bind 9.5.0
+ISC Bind 9.5.0-p1
+ISC Bind 9.5.0-p2
+ISC Bind 9.5.0-p2-w1
+ISC Bind 9.5.0-p2-w2
+ISC Bind 9.5.0a1
+ISC Bind 9.5.0a1
+ISC Bind 9.5.0a2
+ISC Bind 9.5.0a3
+ISC Bind 9.5.0a4
+ISC Bind 9.5.0a5
+ISC Bind 9.5.0a6
+ISC Bind 9.5.0a7
+ISC Bind 9.5.0b1
+ISC Bind 9.5.0b2
+ISC Bind 9.5.0b3
+ISC Bind 9.5.1
+ISC Bind 9.5.1
+ISC Bind 9.5.1b1
+ISC Bind 9.5.1b2
+ISC Bind 9.5.1b3
+ISC Bind 9.6.0
+ISC Bind 9.6.0
+ISC Bind 9.6.0
+ISC Bind 9.6.0a1
+ISC Bind 9.6.0b1
+ISC Bind 9.6.1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0696:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0696
+  
+--

@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+17625
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in database server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unspecified vulnerability in the Database Control component in Oracle Database 10.1.0.5 and 10.2.0.3, and Enterprise Manager, has unknown impact and remote attack vectors, aka EM01.
+
+--
+Affected Systems:
+oracle database server 10.1.0.5
+oracle database server 10.2.0.3
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-5530:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-5530
+  
+--

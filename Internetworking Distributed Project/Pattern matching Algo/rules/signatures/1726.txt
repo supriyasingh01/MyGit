@@ -1,0 +1,70 @@
+Rule:
+
+--
+Sid:
+1726
+
+
+--
+Summary:
+This event is generated when an attempt is made to access the file Doctodep.btr on a host running Microsoft Internet Information Server (IIS) with Frontpage Extensions. 
+
+--
+Impact:
+Information gathering possible administrator access.
+
+--
+Detailed Information:
+This event is generated when an attempt is made to access the file Doctodep.btr on a host running Microsoft Internet Information Server (IIS) with Frontpage Extensions. 
+
+The attacker may be trying to gain information on the IIS implementation on the host, this may be the prelude to an attack against that host using that information.
+
+Some applications may store sensitive information such as database connections, user information, passwords and customer information in files accessible via a web interface. Care should be taken to ensure these files are not accessible to external sources.
+
+The file Doctodep.btr is a dependancy database for applications using the FrontPage Extensions on the server and may contain sensitive information.
+
+--
+Affected Systems:
+Any host using IIS with FrontPage Extensions.
+
+--
+Attack Scenarios:
+An attacker can retrieve a sensitive file containing information on the IIS implementation. The attacker might then gain administrator access to the site, deface the content or gain access to a database.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None Known.
+
+--
+False Negatives:
+None Known.
+
+--
+Corrective Action:
+Check the IIS implementation on the host. Ensure all measures have been taken to deny access to sensitive files.
+
+Ensure that the IIS implementation is fully patched.
+
+Ensure that the underlying operating system is fully patched.
+
+Employ strategies to harden the IIS implementation and operating system.
+
+Check the host for signs of compromise.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+Ready To Run:
+http://www.rtr.com/fpsupport/serk4.0/apndx05.htm
+
+--

@@ -1,0 +1,95 @@
+Rule
+
+--
+Sid
+16550
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in jdk.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unspecified vulnerability in the Java Runtime Environment component in Oracle Java SE and Java for Business 6 Update 18, 5.0 Update 23, and 1.4.2_25 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.  NOTE: the previous information was obtained from the March 2010 CPU.  Oracle has not commented on claims from a reliable researcher that this is related to improper checks when executing privileged methods in the Java Runtime Environment (JRE), which allows attackers to execute arbitrary code via (1) an untrusted object that extends the trusted class but has not modified a certain method, or (2) "a similar trust issue with interfaces," aka "Trusted Methods Chaining Remote Code Execution Vulnerability."
+
+--
+Affected Systems:
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.5.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+Sun jdk 1.6.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-0840:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0840
+  
+--

@@ -1,0 +1,66 @@
+Rule
+
+--
+Sid
+20631
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in social bookmarking engine.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+PHP remote file inclusion vulnerability in akarru.gui/main_content.php in Akarru Social BookMarking Engine 0.4.3.34 and earlier, and possibly 0.4.4.120, allows remote attackers to execute arbitrary PHP code via a URL in the bm_content parameter.
+
+--
+Affected Systems:
+akarru social bookmarking engine 0.4.3.2
+akarru social bookmarking engine 0.4.3.3
+akarru social bookmarking engine 0.4.3.34
+akarru social bookmarking engine 0.4.4.120
+
+--
+Attack Scenarios:
+In an SQL injection attack, the attacker is able to coerce the application into running SQL queries of the attackers choosing. This can lead to a complete compromise of the data stored in the system as well as the attacker being able to gain administrative access to the application.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2006-4645:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-4645
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/89.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/66.html
+
+--

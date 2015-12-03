@@ -1,0 +1,61 @@
+Rule:
+
+--
+Sid:
+8499
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft systems using Microsoft SQL Server.
+
+--
+Impact:
+Serious. Denial of Service. Code execution may be possible.
+
+--
+Detailed Information:
+Microsoft SQL Server is a database platform for use on hosts using the Microsoft Windows operating system.
+
+A vulnerability in the handling of functions available through the Extended Stored Procedures API may allow an attacker to overflow a fixed length buffer and execute code of their choosing on an affected host. A DoS condition may also result due to the server failing to handle a memory copy routine properly which may cause the server to crash.
+
+In particular this rule generates an event when an attempt is made to exploit the function "xp_displayparamstmt".
+
+--
+Affected Systems:
+Microsoft Windows SQL Server 2000
+
+--
+Attack Scenarios:
+An attacker can supply extra data in the message to the server via the function xp_displayparamstmt to cause the overflow condition to occur. 
+
+--
+Ease of Attack:
+Simple. Exploit code exists.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Use MySQL, Oracle or PostGRES as alternative database engines.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+Microsoft 10 Steps to Help Secure SQL Server 2000
+https://www.microsoft.com/sql/prodinfo/previousversions/securingsqlserver.mspx
+
+--

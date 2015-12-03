@@ -1,0 +1,54 @@
+Rule:
+
+--
+Sid:
+17238
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in an application acting as a client in a web related transaction.
+
+--
+Impact:
+Serious. Possible execution of arbitrary code of the attackers choosing.
+
+--
+Detailed Information:
+Many applications have a web enabled component, which allows them to access data on the Internet. This event indicates that an application with the ability to make requests to resources on the Internet has made such a request and may be vulnerable to an attack.
+
+In this case, the application ACD Systems ACDSee is the one in question.
+
+--
+Affected Systems:
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Ensure the system is using an up to date version of the software and has had all vendor supplied patches applied.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

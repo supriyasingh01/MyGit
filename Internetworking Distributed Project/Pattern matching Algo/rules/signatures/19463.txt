@@ -1,0 +1,63 @@
+Rule
+
+--
+Sid
+19463
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in windows 2003 server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Integer overflow in the Client/Server Run-time Subsystem (aka CSRSS) in the Win32 subsystem in Microsoft Windows XP SP2 and SP3, Windows Server 2003 SP2, Windows Vista SP1 and SP2, Windows Server 2008 Gold, SP2, R2, and R2 SP1, and Windows 7 Gold and SP1 allows local users to gain privileges or cause a denial of service (memory corruption) via a crafted application that triggers an incorrect memory assignment for a user transaction, aka "CSRSS Local EOP SrvWriteConsoleOutput Vulnerability."
+
+--
+Affected Systems:
+microsoft windows 2003 server 
+
+--
+Attack Scenarios:
+In an SQL injection attack, the attacker is able to coerce the application into running SQL queries of the attackers choosing. This can lead to a complete compromise of the data stored in the system as well as the attacker being able to gain administrative access to the application.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-1284:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-1284
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/89.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/66.html
+
+--

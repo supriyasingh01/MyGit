@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+8730
+
+--
+Summary:
+This event is generated when an attempt is made to cause a Denial of Service (DoS) using a packet with the Record Route option set.
+
+--
+Impact:
+Denial of Service (DoS)
+
+--
+Detailed Information:
+Some operating systems, versions of Cisco IOS included, do not properly process packets with the IP option for Record Route (RR) set. This may lead to a Denial of Service (DoS) in the operating system being used on the host.
+
+--
+Affected Systems:
+Cisco CBOS 2.3.8 and prior
+Linux kernel 2.2.10 with ipchains and prior
+Linux kernel 2.0.38 and prior
+FreeBSD kernel 3.2 with ipfw
+
+--
+Attack Scenarios:
+An attacker need only send an icmp echo request with the RR option set.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

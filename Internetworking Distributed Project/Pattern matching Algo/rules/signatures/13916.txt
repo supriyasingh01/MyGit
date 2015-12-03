@@ -1,0 +1,53 @@
+Rule
+
+--
+Sid
+13916
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Alt-N SecurityGateway.
+
+--
+Impact:
+Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Alt-N SecurityGateway is prone to a buffer overflow condition that may allow a remote attacker to execute code on a vulnerable system. The problem occurs when the application processes an overly long username.
+
+--
+Affected Systems:
+Alt-N SecurityGateway 1.0.1 and prior
+
+--
+Attack Scenarios:
+An attacker would need to send a long username to be processed by
+SecurityGateway.dll
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

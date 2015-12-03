@@ -1,0 +1,54 @@
+Rule: 
+
+--
+Sid: 
+8091
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in RealNetworks RealPlayer.
+
+-- 
+Impact: 
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+RealNetworks RealPlayer is a streaming media player for Microsoft Windows, Apple Macintosh and UNIX/Linux based operating systems.
+
+The RealPlayer and Helix player are prone to a format string vulnerability that may allow a remote attacker to execute code of their choosing on an affected system. The applications do not correctly sanitize user supplied input which may allow an attacker to supply code of their choosing to be executed on the remote system.
+
+--
+Affected Systems:
+RealNetworks RealPlayer 10.0.5 and prior for Linux
+RealNetworks HelixPlayer 1.0.5 and prior
+
+--
+Attack Scenarios: 
+An attacker needs to supply a malformed file for processing by one of the vulnerable players containing code to be executed.
+
+-- 
+Ease of Attack: 
+Simple, exploit code is available.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

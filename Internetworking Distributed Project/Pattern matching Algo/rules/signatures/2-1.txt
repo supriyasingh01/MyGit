@@ -1,0 +1,50 @@
+Rule:
+
+--
+Sid:
+2-1
+
+--
+Summary:
+This event is generated when Snort has logged a tagged packet.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+This event is generated when Snort has logged a tagged packet.
+
+--
+Affected Systems:
+All networked systems.
+
+--
+Attack Scenarios:
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None Known.
+
+--
+False Negatives:
+None Known.
+
+--
+Corrective Action:
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

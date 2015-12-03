@@ -1,0 +1,58 @@
+Rule:
+
+--
+Sid:
+3-15105
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in an ActiveX control.
+
+--
+Impact:
+A successful attack can cause a buffer overflow and the subsequent execution of arbitrary code with system level privileges on a vulnerable host.
+
+--
+Detailed Information:
+A vulnerability exists in the way that Internet Explorer handles ActiveX controls that may present an attacker with the opportunity to run code of their choosing on a host.
+
+In particular, this event is generated when a call to the windows_2000 is made. This may indicate an attempt to exploit known vulnerabilities in that ActiveX control which may lead to a system compromise.
+
+Integer overflow in GDI in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, Vista Gold and SP1, and Server 2008 allows remote attackers to execute arbitrary code via a malformed header in a crafted WMF file, which triggers a buffer overflow, aka "GDI Integer Overflow Vulnerability."
+
+--
+Affected Systems:
+Microsoft Windows systems using the windows_2000 ActiveX control
+
+--
+Attack Scenarios:
+In an integer overflow attack, the attacker is able to control an integer value that can be made to be too large to store appropriately. The value may then wrap to become a small or negative value. At best this may cause a Denial of Service to occur, at worst this could lead to a buffer overflow which then allows the attacker to execute code on the system.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

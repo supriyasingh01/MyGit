@@ -1,0 +1,55 @@
+Rule
+
+--
+Sid
+9823
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Apple QuickTime.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+Apple QuickTime suffers from a programming error that may allow a remote attacker to overflow a fixed length buffer and execute code of their choosing on a vulnerable system. The condition is present in the processing of rtsp uri parameters.
+
+--
+Affected Systems:
+QuickTime RTSP URI
+
+--
+Attack Scenarios:
+A URI of the form rtsp://<random foo>;<299 bytes of NOP/payload space> will cause QuickTime 7.1.3 to crash with an exploitable buffer overflow.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

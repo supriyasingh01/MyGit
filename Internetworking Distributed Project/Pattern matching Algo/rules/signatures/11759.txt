@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11759
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Windows NT.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Network Dynamic Data Exchange (NetDDE) services for Microsoft Windows 98, Windows NT 4.0, Windows 2000, Windows XP, and Windows Server 2003 allows attackers to remotely execute arbitrary code or locally gain privileges via a malicious message or application that involves an "unchecked buffer," possibly a buffer overflow.
+
+--
+Affected Systems:
+Microsoft Windows NT 4.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

@@ -1,0 +1,51 @@
+Rule: 
+
+--
+Sid: 
+6414
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Novell GroupWise Messenger.
+
+-- 
+Impact: 
+Serious. Execution of code may be possible.
+
+--
+Detailed Information:
+Novell GroupWise Messenger contains a programming error in the way that it handles the Accept-Language header from a client. The software does not properly check user supplied data in the header, an attacker may be able to supply extra data in the header and overflow a fixed length buffer to execute code on the vulnerable system.
+
+--
+Affected Systems:
+Novell GroupWise Messenger prior to 2.0 Public Beta
+
+--
+Attack Scenarios: 
+An attacker needs to supply extra data in the Accept-Language header to cause the overflow to occur.
+
+-- 
+Ease of Attack: 
+Simple. Exploit code exists.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

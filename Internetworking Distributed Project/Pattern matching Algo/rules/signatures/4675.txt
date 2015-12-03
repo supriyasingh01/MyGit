@@ -1,0 +1,60 @@
+Rule:
+
+--
+Sid:
+4675
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Macromedia Flash Player.
+
+--
+Impact:
+Serious. Execution of arbitrary code leading to unauthorized administrative access to the target host.
+
+--
+Detailed Information:
+A programming error in certain versions of the Macromedia Flash Player may allow an attacker to run code of their choosing on a victim host. The Player does not perform stringent bounds checking when processing flash movies, which may permit an attacker to include code of their choosing into a malicious flash format file.
+
+In order to avoid potential evasion techniques, http_inspect should be configured with "flow_depth 0" so that all HTTP server response traffic is inspected.
+
+WARNING
+Setting flow_depth 0 will cause performance problems in some situations.
+WARNING
+
+--
+Affected Systems:
+Macromedia Flash Player 7 and prior
+
+--
+Attack Scenarios:
+An attacker would need to supply a malformed flash format file and entice a user to view it.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+Flash movie files can be compressed, this rule will not generate events in that instance.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

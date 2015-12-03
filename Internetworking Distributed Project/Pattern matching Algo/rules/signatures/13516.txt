@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+13516
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Quicktime.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Buffer overflow in Apple Quicktime Player 7.3.1.70 and other versions before 7.4.1, when RTSP tunneling is enabled, allows remote attackers to execute arbitrary code via a long Reason-Phrase response to an rtsp:// request, as demonstrated using a 404 error message.
+
+--
+Affected Systems:
+Apple Quicktime 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-0234:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-0234
+
+--

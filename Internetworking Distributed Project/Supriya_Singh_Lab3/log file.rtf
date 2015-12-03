@@ -1,0 +1,125 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs26 \cf0 Doing a preswapmod on the experiment archive ...\
+Backing up old experiment state ... 17:42:45:458984\
+Running 'tbprerun  -e 29399 LabThree-modify.ns'\
+Beginning pre run for USC558L/LabThree. 17:42:45:934351\
+Running parser ... 17:42:46:521395\
+Parser done! 17:42:50:390979\
+Setting up static routes (if requested) ... \
+Generating topomap ...\
+Verifying parse ...\
+Doing a pre-assign: '/usr/testbed/bin/vtopgen -p USC558L LabThree' ...\
+Minimum nodes   = 2\
+Maximum nodes   = 2\
+Writing environment strings ...\
+Setting up additional program agent support ...\
+Setting up additional network agent support ...\
+Writing program agent info ...\
+Pre run finished. 17:42:55:516961\
+Running 'tbswap modify -reboot -eventsys_restart USC558L LabThree'\
+Beginning swap-modify for USC558L/LabThree (29399). 09/08/2012 17:42:56\
+TIMESTAMP: 17:42:56:240169 tbswap modify started\
+Checking with Admission Control ...\
+Backing up physical state...\
+TIMESTAMP: 17:42:56:287161 statscheck started\
+TIMESTAMP: 17:42:58:105447 statscheck finished\
+TIMESTAMP: 17:42:58:106996 portal_setup (teardown) started\
+TIMESTAMP: 17:42:58:719129 portal_setup (teardown) finished\
+Stopping the event system\
+Mapping to physical reality ...\
+TIMESTAMP: 17:43:00:420179 mapper wrapper started\
+Starting the new and improved mapper wrapper.\
+Clearing physical state before updating.\
+*** WARNING: mapper: GenFixNodes: No vnode for tbdelay0\
+Minimum nodes   = 2\
+Maximum nodes   = 2\
+Reserved pnodes   = 3\
+Assign run 1\
+ptopargs: '-p USC558L -e LabThree '\
+assign command: 'assign -P USC558L-LabThree-25553.ptop USC558L-LabThree-25553.vtop'\
+Reading assign results.\
+[Node: bpc223] already reserved in holding reservation.\
+[Node: bpc198] already reserved in holding reservation.\
+[Node: bpc206] already reserved in holding reservation.\
+Succeeded\
+VLAN creation succeeded.\
+Successfully reserved all physical nodes we needed. \
+TIMESTAMP: 17:43:13:929127 mapper wrapper finished\
+Mapped to physical reality!\
+Removing obsolete vlans 442126 442125\
+Deleting VLAN(s) 442126,442125 ...\
+  Removing VLAN # 75 ... Removed VLAN 75 on switch Bhp4.\
+  Removing VLAN # 159 ... Removed VLAN 159 on switch Bhp4.\
+VLAN deletion succeeded.\
+Tearing down and releasing unused nodes\
+Moving [Node: bpc223] to [Experiment: emulab-ops/reloadpending]\
+Succeeded\
+VLAN creation succeeded.\
+Fetching tarballs and RPMs (if any) ...\
+TIMESTAMP: 17:43:37:411045 tarfiles_setup started\
+TIMESTAMP: 17:43:38:86984 tarfiles_setup finished\
+TIMESTAMP: 17:43:38:89238 extra_nodes started\
+TIMESTAMP: 17:43:38:146326 extra_nodes finished\
+Setting up mountpoints.\
+TIMESTAMP: 17:43:38:147601 mountpoints started\
+TIMESTAMP: 17:43:45:156904 mountpoints finished\
+TIMESTAMP: 17:43:45:158598 portal_setup started\
+TIMESTAMP: 17:43:45:761714 portal_setup finished\
+TIMESTAMP: 17:43:45:763358 named started\
+Setting up named maps.\
+TIMESTAMP: 17:43:46:909463 named finished\
+Marking nodes for reboot.\
+TIMESTAMP: 17:43:46:913733 gentopofile started\
+Generating ltmap (again) ...\
+TIMESTAMP: 17:43:47:644122 gentopofile finished\
+Resetting OS and rebooting.\
+TIMESTAMP: 17:43:47:646381 launching os_setup\
+Setting up VLANs.\
+TIMESTAMP: 17:43:47:653177 snmpit started\
+TIMESTAMP: 17:43:48:159046 os_setup started\
+TIMESTAMP: 17:43:48:165367 rebooting/reloading nodes started\
+reboot (bpc198): Attempting to reboot ...\
+reboot (bpc206): Attempting to reboot ...\
+Connection to bpc206.isi.deterlab.net closed by remote host.\
+Connection to bpc198.isi.deterlab.net closed by remote host.\
+  Creating VLAN 442200 as VLAN #48 on Bhp4 ...\
+TIMESTAMP: 17:43:54:165031 snmpit finished\
+Clearing port counters.\
+TIMESTAMP: 17:43:54:167699 portstats started\
+TIMESTAMP: 17:43:55:283414 portstats finished\
+reboot (bpc198): Successful!\
+reboot (bpc206): Successful!\
+reboot: Done. There were 0 failures.\
+reboot (bpc198): child returned 0 status.\
+reboot (bpc206): child returned 0 status.\
+TIMESTAMP: 17:44:09:164094 rebooting/reloading finished\
+Waiting for local testbed nodes to finish rebooting ...\
+TIMESTAMP: 17:44:09:165973 Local node waiting started\
+Still waiting for bpc198 - it's been 1 minute(s).\
+bpc198 is alive and well\
+Still waiting for bpc206 - it's been 1 minute(s).\
+bpc206 is alive and well\
+TIMESTAMP: 17:45:59:553774 Local node waiting finished\
+OS Setup Done. \
+TIMESTAMP: 17:45:59:559670 os_setup finished\
+Starting the event system.\
+TIMESTAMP: 17:45:59:779933 eventsys_control started\
+TIMESTAMP: 17:46:03:449194 eventsys_control finished\
+TIMESTAMP: 17:46:03:451449 setup_commercial_routers started  modify\
+TIMESTAMP: 17:46:03:933166 setup_commercial_routers: The experiment USC558L/LabThree has no commercial routers allocated.\
+\
+TIMESTAMP: 17:46:04:148124 setup_commercial_routers ended  modify\
+TIMESTAMP: 17:46:04:149565 Starting event time\
+Successfully finished swap-modify for USC558L/LabThree. 17:46:04:193411\
+TIMESTAMP: 17:46:04:194562 tbswap modify finished (succeeded)\
+Image rendering proceeding in background mode ...\
+Running 'tbreport -b USC558L LabThree'\
+Doing a commit on the previous experiment archive ...\
+Doing a savepoint on the experiment archive ...\
+Swap Success!}

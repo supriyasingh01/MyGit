@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+116-401
+
+--
+Summary:
+This event is generated when an attempt is made to perform an Xmas scan using Nmap.
+
+--
+Impact:
+Information disclosure.  
+
+--
+Detailed Information:
+This event is generated when "Christmas Tree" packets are detected in network traffic. That is, packets with the FIN, URG and PSH flags set. This is indicative of scanning behavior intended to determine the operating system of the target host.
+
+Privacyware Privatefirewall 3.0 does not block certain incoming packets when in "Filter Internet Traffic" or Deny Internet Traffic" modes, which allows remote attackers to identify running services via FIN scans or Xmas scans.
+
+--
+Affected Systems:
+Privacyware Privatefirewall 3.0
+
+--
+Attack Scenarios:
+An attacker need only send Xmas packets to the target host and observe the responses from that host to determine the operating system in use.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2003-0393:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2003-0393
+  
+--

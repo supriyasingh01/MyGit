@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+13552
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Veritas Storage Foundation.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Heap-based buffer overflow in the Veritas Enterprise Administrator (VEA) service (aka vxsvc.exe) in Symantec Veritas Storage Foundation 5.0 allows remote attackers to execute arbitrary code via a packet with a crafted value of a certain size field, which is not checked for consistency with the actual buffer size.
+
+--
+Affected Systems:
+Symantec Veritas Storage Foundation 7
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-0638:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-0638
+
+--

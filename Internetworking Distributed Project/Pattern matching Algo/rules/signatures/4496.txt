@@ -1,0 +1,58 @@
+Rule:
+
+--
+Sid:
+4496
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft systems using the Print Spooler Service. In particular this rule generates an event when an attempt is made to exploit the function "AddPrinterEx" via the "spoolss" component.
+
+--
+Impact:
+Serious. Execution of arbitrary code leading to unauthorized administrative access to the target host.
+
+--
+Detailed Information:
+A vulnerability in the implementation of the Print Spooler Service exists due to a programming error which may present an attacker with the opportunity to exploit the service and run code of their choosing on an affected system.
+
+In particular this rule generates an event when an attempt is made to exploit the function "AddPrinterEx" via the "spoolss" component.
+
+--
+Affected Systems:
+	Microsoft systems using SMB.
+
+--
+Attack Scenarios:
+An attacker can supply extra data in the message from the server containing code of their choosing to be run on the client.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Turn off windows file and print services.
+
+Use Samba as an alternative file and print service.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ "$1" = "master" ]; then
+   /usr/testbed/bin/emulab-sync -i 1
+else
+   /usr/testbed/bin/emulab-sync 
+fi

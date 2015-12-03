@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+13357
+
+--
+Summary:
+This event is generated when network traffic that indicates a failed mysql login attempt has occurred.
+
+--
+Impact:
+Possible policy violation.
+
+--
+Detailed Information:
+This event indicates that indicates a failed mysql login attempt has occured.
+
+--
+Affected Systems:
+All systems using failed mysql
+
+--
+Attack Scenarios:
+This is a possible policy violation
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Refer to the security policy in use to determine if the login is allowed.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

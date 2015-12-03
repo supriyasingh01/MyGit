@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+3-13830
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Windows Vista.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+** DISPUTED **  The Speech Recognition feature of Windows Vista allows user-assisted remote attackers to delete arbitrary files, and conduct other unauthorized activities, via a web page with an embedded sound object that contains voice commands to an enabled microphone, allowing for interaction with Windows Explorer.  NOTE: the vendor disputes the severity of this issue, stating that "there is little if any need to worry about the effects of this issue on your new Windows Vista installation."  Since little user interaction is required, and the relevant operating environment is common, CVE considers this a vulnerability.
+
+--
+Affected Systems:
+Microsoft Windows Vista Ultimate
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-0675:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2007-0675
+
+--

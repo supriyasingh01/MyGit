@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+16354
+
+--
+Summary:
+This event is generated when network traffic that indicates an Adobe PDF with an alternate header for obfuscation purposes has been observed.
+
+--
+Impact:
+Possible detection evasion attempt.
+
+--
+Detailed Information:
+This event indicates that an Adobe PDF with an alternate header for obfuscation purposes has been observed.
+
+--
+Affected Systems:
+All systems
+
+--
+Attack Scenarios:
+This may be an attempt to avoid detection by IPS/IDS and AV solutions.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Examine the host involoved for signs of compromise.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

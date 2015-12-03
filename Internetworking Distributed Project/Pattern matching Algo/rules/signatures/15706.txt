@@ -1,0 +1,295 @@
+Rule
+
+--
+Sid
+15706
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in iTunes.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Stack-based buffer overflow in Apple iTunes before 8.2 allows remote attackers to execute arbitrary code or cause a denial of service (application crash) via an itms: URL with a long URL component after a colon.
+
+--
+Affected Systems:
+Apple iTunes 1.0
+Apple iTunes 1.0
+Apple iTunes 1.0
+Apple iTunes 1.0
+Apple iTunes 1.0
+Apple iTunes 1.1
+Apple iTunes 1.1.1
+Apple iTunes 1.1.1
+Apple iTunes 1.1.1
+Apple iTunes 1.1.1
+Apple iTunes 1.1.1
+Apple iTunes 1.1.2
+Apple iTunes 1.1.2
+Apple iTunes 1.1.2
+Apple iTunes 1.1.2
+Apple iTunes 1.1.2
+Apple iTunes 2.0
+Apple iTunes 2.0
+Apple iTunes 2.0
+Apple iTunes 2.0
+Apple iTunes 2.0
+Apple iTunes 2.0.1
+Apple iTunes 2.0.1
+Apple iTunes 2.0.1
+Apple iTunes 2.0.1
+Apple iTunes 2.0.1
+Apple iTunes 2.0.2
+Apple iTunes 2.0.2
+Apple iTunes 2.0.2
+Apple iTunes 2.0.2
+Apple iTunes 2.0.2
+Apple iTunes 2.0.3
+Apple iTunes 2.0.3
+Apple iTunes 2.0.3
+Apple iTunes 2.0.3
+Apple iTunes 2.0.3
+Apple iTunes 2.0.4
+Apple iTunes 2.0.4
+Apple iTunes 2.0.4
+Apple iTunes 2.0.4
+Apple iTunes 2.0.4
+Apple iTunes 3.0
+Apple iTunes 3.0
+Apple iTunes 3.0.1
+Apple iTunes 3.0.1
+Apple iTunes 4.0
+Apple iTunes 4.0
+Apple iTunes 4.0.0
+Apple iTunes 4.0.0
+Apple iTunes 4.0.0
+Apple iTunes 4.0.1
+Apple iTunes 4.0.1
+Apple iTunes 4.0.1
+Apple iTunes 4.0.1
+Apple iTunes 4.0.1
+Apple iTunes 4.1
+Apple iTunes 4.1
+Apple iTunes 4.1.0
+Apple iTunes 4.1.0
+Apple iTunes 4.1.0
+Apple iTunes 4.2
+Apple iTunes 4.2
+Apple iTunes 4.2.0
+Apple iTunes 4.2.0
+Apple iTunes 4.2.0
+Apple iTunes 4.2.72
+Apple iTunes 4.2.72
+Apple iTunes 4.5
+Apple iTunes 4.5
+Apple iTunes 4.5.0
+Apple iTunes 4.5.0
+Apple iTunes 4.5.0
+Apple iTunes 4.6
+Apple iTunes 4.6
+Apple iTunes 4.6.0
+Apple iTunes 4.6.0
+Apple iTunes 4.6.0
+Apple iTunes 4.7
+Apple iTunes 4.7
+Apple iTunes 4.7.0
+Apple iTunes 4.7.0
+Apple iTunes 4.7.0
+Apple iTunes 4.7.1
+Apple iTunes 4.7.1
+Apple iTunes 4.7.1
+Apple iTunes 4.7.1
+Apple iTunes 4.7.1
+Apple iTunes 4.7.1.30
+Apple iTunes 4.7.1.30
+Apple iTunes 4.7.2
+Apple iTunes 4.8
+Apple iTunes 4.8
+Apple iTunes 4.8.0
+Apple iTunes 4.8.0
+Apple iTunes 4.8.0
+Apple iTunes 4.9
+Apple iTunes 4.9
+Apple iTunes 4.9.0
+Apple iTunes 4.9.0
+Apple iTunes 4.9.0
+Apple iTunes 5.0
+Apple iTunes 5.0
+Apple iTunes 5.0.0
+Apple iTunes 5.0.0
+Apple iTunes 5.0.0
+Apple iTunes 5.0.1
+Apple iTunes 5.0.1
+Apple iTunes 5.0.1
+Apple iTunes 5.0.1
+Apple iTunes 5.0.1
+Apple iTunes 6.0
+Apple iTunes 6.0
+Apple iTunes 6.0.0
+Apple iTunes 6.0.0
+Apple iTunes 6.0.0
+Apple iTunes 6.0.1
+Apple iTunes 6.0.1
+Apple iTunes 6.0.1
+Apple iTunes 6.0.1
+Apple iTunes 6.0.1
+Apple iTunes 6.0.2
+Apple iTunes 6.0.2
+Apple iTunes 6.0.2
+Apple iTunes 6.0.2
+Apple iTunes 6.0.2
+Apple iTunes 6.0.3
+Apple iTunes 6.0.3
+Apple iTunes 6.0.3
+Apple iTunes 6.0.3
+Apple iTunes 6.0.3
+Apple iTunes 6.0.4
+Apple iTunes 6.0.4
+Apple iTunes 6.0.4
+Apple iTunes 6.0.4
+Apple iTunes 6.0.4
+Apple iTunes 6.0.4.2
+Apple iTunes 6.0.4.2
+Apple iTunes 6.0.5
+Apple iTunes 6.0.5
+Apple iTunes 6.0.5
+Apple iTunes 6.0.5
+Apple iTunes 6.0.5
+Apple iTunes 7.0.0
+Apple iTunes 7.0.0
+Apple iTunes 7.0.0
+Apple iTunes 7.0.1
+Apple iTunes 7.0.1
+Apple iTunes 7.0.1
+Apple iTunes 7.0.2
+Apple iTunes 7.0.2
+Apple iTunes 7.0.2
+Apple iTunes 7.0.2
+Apple iTunes 7.0.2
+Apple iTunes 7.1.0
+Apple iTunes 7.1.0
+Apple iTunes 7.1.0
+Apple iTunes 7.1.1
+Apple iTunes 7.1.1
+Apple iTunes 7.1.1
+Apple iTunes 7.2.0
+Apple iTunes 7.2.0
+Apple iTunes 7.2.0
+Apple iTunes 7.3.0
+Apple iTunes 7.3.0
+Apple iTunes 7.3.0
+Apple iTunes 7.3.1
+Apple iTunes 7.3.1
+Apple iTunes 7.3.1
+Apple iTunes 7.3.2
+Apple iTunes 7.3.2
+Apple iTunes 7.3.2
+Apple iTunes 7.3.2
+Apple iTunes 7.3.2
+Apple iTunes 7.4
+Apple iTunes 7.4
+Apple iTunes 7.4.0
+Apple iTunes 7.4.0
+Apple iTunes 7.4.0
+Apple iTunes 7.4.1
+Apple iTunes 7.4.1
+Apple iTunes 7.4.1
+Apple iTunes 7.4.1
+Apple iTunes 7.4.1
+Apple iTunes 7.4.2
+Apple iTunes 7.4.2
+Apple iTunes 7.4.2
+Apple iTunes 7.4.2
+Apple iTunes 7.4.2
+Apple iTunes 7.4.3
+Apple iTunes 7.4.3
+Apple iTunes 7.5
+Apple iTunes 7.5
+Apple iTunes 7.5.0
+Apple iTunes 7.5.0
+Apple iTunes 7.5.0
+Apple iTunes 7.6
+Apple iTunes 7.6
+Apple iTunes 7.6.0
+Apple iTunes 7.6.0
+Apple iTunes 7.6.0
+Apple iTunes 7.6.1
+Apple iTunes 7.6.1
+Apple iTunes 7.6.1
+Apple iTunes 7.6.1
+Apple iTunes 7.6.1
+Apple iTunes 7.6.2
+Apple iTunes 7.6.2
+Apple iTunes 7.6.2
+Apple iTunes 7.6.2
+Apple iTunes 7.6.2
+Apple iTunes 7.7
+Apple iTunes 7.7
+Apple iTunes 7.7.0
+Apple iTunes 7.7.0
+Apple iTunes 7.7.0
+Apple iTunes 7.7.1
+Apple iTunes 7.7.1
+Apple iTunes 7.7.1
+Apple iTunes 7.7.1
+Apple iTunes 7.7.1
+Apple iTunes 8.0
+Apple iTunes 8.0
+Apple iTunes 8.0
+Apple iTunes 8.0
+Apple iTunes 8.0.0
+Apple iTunes 8.0.0
+Apple iTunes 8.0.0
+Apple iTunes 8.0.1
+Apple iTunes 8.0.1
+Apple iTunes 8.0.1
+Apple iTunes 8.0.2.20
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0950:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0950
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

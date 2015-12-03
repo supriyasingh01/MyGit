@@ -1,0 +1,56 @@
+Rule:
+
+--
+Sid:
+4649
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a buffer overflow vulnerability associated with the MySQL CREATE FUNCTION.
+
+--       
+Impact:
+A successful attack can allow an authenticated user with INSERT privileges for the administrative database to cause a buffer overflow and execute arbitrary code.
+
+--       
+Detailed Information:
+The MySQL CREATE FUNCTION allows a user to create a user-defined function (UDF) that is stored in a system shared library.  
+
+If a function name is created that is longer than 50 characters, a buffer overflow may occur upon UDF initialization.
+
+--
+Affected Systems:
+MySQL AB MySQL 4.0.x - 4.0.25
+MySQL AB MySQL 4.1.x - 4.1.13
+MySQL AB MySQL 5.0.x - 5.0.7-beta
+
+--
+Attack Scenarios:
+An authenticated user with necessary privileges can use the CREATE FUNCTION with an overly long function name, causing a buffer overflow. Alternatively, an attacker may utilize an SQL injection vulnerability in an application using an affected MySQL database.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:   
+None known.
+
+--       
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:      
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

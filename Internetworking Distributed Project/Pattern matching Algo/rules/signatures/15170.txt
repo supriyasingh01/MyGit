@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+15170
+
+--
+Summary:
+This event is generated when network traffic that indicates an XBOX is being used.
+
+--
+Impact:
+Possible policy violation. The use of an XBOX may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the an XBOX is being used on the protected network.
+
+--
+Affected Systems:
+Not Applicable
+
+--
+Attack Scenarios:
+This is a possible policy violation.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of an XBOX on the protected network and enforce or implement an organization wide policy on the use of an XBOX.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

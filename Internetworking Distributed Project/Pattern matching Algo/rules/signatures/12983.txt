@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12983
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft DirectX.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+Unspecified vulnerability in Microsoft DirectShow in Microsoft DirectX 7.0 through 10.0 allows remote attackers to execute arbitrary code via a crafted Synchronized Accessible Media Interchange (SAMI) file.
+
+--
+Affected Systems:
+  Microsoft DirectX 7.0 through 10.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

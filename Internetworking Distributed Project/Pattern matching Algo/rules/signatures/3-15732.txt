@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+3-15732
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Internet Explorer.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Microsoft Internet Explorer 5.01 SP4 and 6 SP1; Internet Explorer 6 for Windows XP SP2 and SP3 and Server 2003 SP2; and Internet Explorer 7 and 8 for Windows XP SP2 and SP3, Server 2003 SP2, Vista Gold, SP1, and SP2, and Server 2008 Gold and SP2 do not properly handle attempts to access deleted objects in memory, which allows remote attackers to execute arbitrary code via a crafted HTML document that triggers memory corruption, aka "Uninitialized Memory Corruption Vulnerability."
+
+--
+Affected Systems:
+Microsoft Internet Explorer 5.0.1
+Microsoft Internet Explorer 6
+Microsoft Internet Explorer 7
+Microsoft Internet Explorer 8
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-1919:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-1919
+  
+--

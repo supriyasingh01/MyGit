@@ -1,0 +1,57 @@
+Rule:
+
+--
+Sid:
+5317
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a buffer overflow condition in a PC running pcAnywhere
+
+--
+Impact:
+Serious. Denial of Service (DoS) is possible.
+
+--
+Detailed Information:
+pcAnywhere is a remote control administrative software package produced by Symantec (http://www.symantec.com/pcanywhere/Consumer/features.html) it allows control of a system via network or RAS connection.
+
+A buffer overflow condition exists in pcAnywhere that may allow an attacker to cause a DoS to occur in the application before any authentication takes place.
+
+--
+Affected Systems:
+ pcAnywhere prior to 11.0.1 and 11.5.1
+
+--
+Attack Scenarios:
+An unauthenticated attacker can send too much data during the connection with pcAnywhere to cause the DoS to occur.
+
+--
+Ease of Attack:
+Simple. Exploit code exists.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None Known
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+Symantec PC Anywhere Home Page
+http://www.symantec.com/pcanywhere/Consumer/
+
+--

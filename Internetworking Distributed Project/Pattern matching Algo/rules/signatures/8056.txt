@@ -1,0 +1,53 @@
+Rule: 
+
+--
+Sid: 
+8056
+
+-- 
+Summary: 
+This event is generated when an attempt is made to cause a Denial of Service (DoS) in the ISC DHCP Server.
+
+-- 
+Impact: 
+Denial of Service.
+
+--
+Detailed Information:
+The ISC DHCP Server is prone to a Denial of Service attack that can be triggered by a DHCPDISCOVER packet. A programming error in the way that the server handles the client identifier in the packet may cause the server to incorrectly interpret the field and cause the server to exit.
+
+The programming error is contained in the function "supersede_lease".
+
+--
+Affected Systems:
+ISC DHCP Server 2.0p15 and possibly prior
+
+--
+Attack Scenarios: 
+An attacker can supply a 32 byte client-identifier field to a vulnerable server which causes the server to interpret the value as a corrupt uid.  This in turn cause the server to exit.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None Known
+
+--
+False Negatives:
+None Known
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

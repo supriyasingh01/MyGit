@@ -1,0 +1,50 @@
+Rule: 
+
+--
+Sid: 
+8446
+
+-- 
+Summary: 
+This event is generated when ipv6 traffic is found to be encapsulated withing ipv4 data.
+
+-- 
+Impact: 
+Unknown. This may be a violation of corporate policy.
+
+--
+Detailed Information:
+This event indicates that ipv6 traffic was found to be encapsulated within ipv4 traffic. This may be a violation of corporate policy.
+
+--
+Affected Systems:
+All systems.
+
+--
+Attack Scenarios: 
+An attacker may utilize this encapsulation technique to avoid detection by an IDS.
+
+-- 
+Ease of Attack: 
+Simple,
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

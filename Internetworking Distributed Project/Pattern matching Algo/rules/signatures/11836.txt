@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11836
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Visio.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Unspecified vulnerability in Microsoft Visio 2002 allows remote user-assisted attackers to execute arbitrary code via a Visio (.VSD, VSS, .VST) file with a crafted version number that triggers memory corruption.
+
+--
+Affected Systems:
+Microsoft Visio 2002
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

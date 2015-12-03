@@ -1,0 +1,56 @@
+Rule: 
+
+--
+Sid: 
+8442
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in the Mozilla suite of products.
+
+-- 
+Impact: 
+Serious. Code execution may be possible.
+
+--
+Detailed Information:
+Multiple vulnerabilities exist in the Mozilla suite of products that may allow a remote attacker to execute code of their choosing on an affected system. The vulnerability may also cause a Denial of Service (DoS) on the affected application.
+
+The issue lies in the way that the Mozilla products process Javascript regular expressions. Any Javascript regex that ends with a backslash in an unterminated character class will cause the condition to be manifest.
+
+--
+Affected Systems:
+Multiple products from the Mozilla Suite:
+  Firefox 1.5.0.6 and prior
+  Thunderbird 1.5.0.6 and prior
+  SeaMonkey 1.0.4 and prior
+
+--
+Attack Scenarios: 
+An attacker would need to supply a Javascript regular expression that ends in the following manner [\\ to cause the exception to occur.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+Some webmail sites may cause this event to occur under normal circumstances.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

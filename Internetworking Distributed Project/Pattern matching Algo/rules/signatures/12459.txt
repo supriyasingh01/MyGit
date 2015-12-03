@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12459
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Visual Studio.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+A certain ActiveX control in PDWizard.ocx 6.0.0.9782 and earlier in Microsoft Visual Studio 6.0 exposes dangerous (1) StartProcess, (2) SyncShell, (3) SaveAs, (4) CABDefaultURL, (5) CABFileName, and (6) CABRunFile methods, which allows remote attackers to execute arbitrary programs and have other impacts, as demonstrated using absolute pathnames in arguments to StartProcess and SyncShell.
+
+--
+Affected Systems:
+Microsoft Visual Studio 2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

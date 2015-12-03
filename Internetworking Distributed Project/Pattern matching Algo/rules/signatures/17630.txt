@@ -1,0 +1,73 @@
+Rule
+
+--
+Sid
+17630
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in firefox.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Mozilla Firefox before 2.0.0.16 and 3.x before 3.0.1, Thunderbird before 2.0.0.16, and SeaMonkey before 1.1.11 use an incorrect integer data type as a CSS object reference counter in the CSSValue array (aka nsCSSValue:Array) data structure, which allows remote attackers to execute arbitrary code via a large number of references to a common CSS object, leading to a counter overflow and a free of in-use memory, aka ZDI-CAN-349.
+
+--
+Affected Systems:
+mozilla firefox 2.0
+mozilla firefox 2.0.0.1
+mozilla firefox 2.0.0.10
+mozilla firefox 2.0.0.11
+mozilla firefox 2.0.0.12
+mozilla firefox 2.0.0.13
+mozilla firefox 2.0.0.14
+mozilla firefox 2.0.0.15
+mozilla firefox 2.0.0.2
+mozilla firefox 2.0.0.3
+mozilla firefox 2.0.0.4
+mozilla firefox 2.0.0.5
+mozilla firefox 2.0.0.6
+mozilla firefox 2.0.0.7
+mozilla firefox 2.0.0.8
+mozilla firefox 2.0.0.9
+mozilla firefox 3.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-2785:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-2785
+  
+--

@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+13664
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in 7960.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+Unspecified vulnerability in the Cisco IP Phone 7940 and 7960 running firmware before POS8-6-0 allows remote attackers to cause a denial of service via the Remote-Party-ID sipURI field in a SIP INVITE request. NOTE: the provenance of this information is unknown; the details are obtained solely from third party information.
+
+--
+Affected Systems:
+Cisco 7960 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-1542:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2007-1542
+
+--

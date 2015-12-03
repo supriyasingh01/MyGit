@@ -1,0 +1,67 @@
+Rule
+
+--
+Sid
+9632
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Tivoli Storage Manager.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+The Tivoli Storage Manager performs backup operations over TCP/1500 on host computers. When it connects, and authentication process occurs to gain access to the target system.  During this process, information regarding the language desired for interaction.  Normally, this information is transmitted as "dscenu.txt".  This string is not NULL terminated.
+
+The layout for the communication is as follows:
+
+Offset         Size            Description
+0x0000         2               Message size
+0x0002         2               Command
+0x0014         2               String offset, relative to offset 0x002a
+0x0016         2               String length
+0x002a+offset  x               String
+
+There is a vulnerability in the way this string is processed. When the command is of type 0x1aa5, and the string begins with 0x18, the length of the string is not verified to be less than 0x100.  The string is then copied to a heap construct 256 bytes in size, leading to the possibility of an overflow condition.
+
+--
+Affected Systems:
+Tivoli Storage Manager 5.3.4
+Tivoli Storage Manager 5.2.9
+
+--
+Attack Scenarios:
+An attacker needs to supply excess data in a transaction using the application. The attacker may then include code of their choosing to be executed on the host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Olney <matthew.olney@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

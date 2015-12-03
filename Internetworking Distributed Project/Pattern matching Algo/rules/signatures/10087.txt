@@ -1,0 +1,56 @@
+Rule: 
+
+--
+Sid: 
+10087
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in RealVNC and/or UltraVNC.
+
+-- 
+Impact: 
+Serious. Code execution may be possible.
+
+--
+Detailed Information:
+A buffer overflow condition exists that appears during the password request phase of both the RealVNC and the UltraVNC clients when 1030 or more bytes are included after the preamble. Successful exploitation results in the execution of arbitrary code.
+
+--
+Affected Systems:
+UltraVNC 1.0.1 and prior
+AT&T WinVNC Client 3.3.3 r7 and prior
+
+--
+Attack Scenarios: 
+An attacker would need to supply the requisite 1030 bytes to a vulnerable client during a connection transaction.
+
+-- 
+Ease of Attack: 
+Simple. Exploit code exists.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Patrick Mullen <patrick.mullen@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+
+--

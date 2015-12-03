@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+13602
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Interstage Application Server Enterprise.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+Multiple unspecified vulnerabilities in Fujitsu Interstage Smart Repository, as used in multiple Fujitsu Interstage products, allow remote attackers to cause a denial of service (daemon crash) via (1) an invalid request or (2) a large amount of data sent to the registered attribute value.
+
+--
+Affected Systems:
+Fujitsu Interstage Application Server Enterprise 5
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-1207:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-1207
+
+--

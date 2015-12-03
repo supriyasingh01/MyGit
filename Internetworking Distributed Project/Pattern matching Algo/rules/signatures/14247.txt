@@ -1,0 +1,58 @@
+Rule:
+
+--
+Sid:
+14247
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in an ActiveX control.
+
+--
+Impact:
+A successful attack can cause a buffer overflow and the subsequent execution of arbitrary code with system level privileges on a vulnerable host.
+
+--
+Detailed Information:
+A vulnerability exists in the way that Internet Explorer handles ActiveX controls that may present an attacker with the opportunity to run code of their choosing on a host.
+
+In particular, this event is generated when a call to the Eyeball Messenger SDK is made. This may indicate an attempt to exploit known vulnerabilities in that ActiveX control which may lead to a system compromise.
+
+Buffer overflow in the CoVideoWindow.ocx ActiveX control 5.0.907.1 in Eyeball MessengerSDK, as used in products such as SiOL Komunikator 1.3, allows remote attackers to execute arbitrary code via a large argument supplied to the BGColor method.  NOTE: this might only be a vulnerability in certain insecure configurations of Internet Explorer.
+
+--
+Affected Systems:
+Microsoft Windows systems using the Eyeball Messenger SDK ActiveX control
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

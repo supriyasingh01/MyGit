@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+15488
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Database 11g.
+
+--
+Impact:
+ Information disclosure.  
+
+--
+Detailed Information:
+Unspecified vulnerability in the Application Express component in Oracle Database 11.1.0.7 allows remote authenticated users to affect confidentiality, related to APEX.  NOTE: the previous information was obtained from the April 2009 CPU.  Oracle has not commented on reliable researcher claims that this issue allows remote authenticated users to obtain APEX password hashes from the WWV_FLOW_USER table.
+
+--
+Affected Systems:
+Oracle Database 11g 11.1.0.7
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0981:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0981
+  
+--

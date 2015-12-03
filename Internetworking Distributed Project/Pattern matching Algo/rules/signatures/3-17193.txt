@@ -1,0 +1,96 @@
+Rule
+
+--
+Sid
+3-17193
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in shockwave player.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unspecified vulnerability in Adobe Shockwave Player before 11.5.8.612 allows remote attackers to execute arbitrary code via unknown vectors that trigger memory corruption.  NOTE: due to conflicting information and use of the same CVE identifier by the vendor, ZDI, and TippingPoint, it is not clear whether this issue is related to use of an uninitialized pointer, an incorrect pointer offset calculation, or both.
+
+--
+Affected Systems:
+adobe shockwave player 1.0
+adobe shockwave player 10.0.0.210
+adobe shockwave player 10.0.1.004
+adobe shockwave player 10.1.0.011
+adobe shockwave player 10.1.0.11
+adobe shockwave player 10.1.1.016
+adobe shockwave player 10.1.4.020
+adobe shockwave player 10.2.0.021
+adobe shockwave player 10.2.0.022
+adobe shockwave player 10.2.0.023
+adobe shockwave player 11.0.0.456
+adobe shockwave player 11.0.3.471
+adobe shockwave player 11.5.0.595
+adobe shockwave player 11.5.0.596
+adobe shockwave player 11.5.1.601
+adobe shockwave player 11.5.2.602
+adobe shockwave player 11.5.6.606
+adobe shockwave player 11.5.7.609
+adobe shockwave player 2.0
+adobe shockwave player 3.0
+adobe shockwave player 4.0
+adobe shockwave player 5.0
+adobe shockwave player 6.0
+adobe shockwave player 8.0
+adobe shockwave player 8.0.196
+adobe shockwave player 8.0.196a
+adobe shockwave player 8.0.204
+adobe shockwave player 8.0.205
+adobe shockwave player 8.5.1
+adobe shockwave player 8.5.1.100
+adobe shockwave player 8.5.1.103
+adobe shockwave player 8.5.1.105
+adobe shockwave player 8.5.1.106
+adobe shockwave player 8.5.321
+adobe shockwave player 8.5.323
+adobe shockwave player 8.5.324
+adobe shockwave player 8.5.325
+adobe shockwave player 9
+adobe shockwave player 9.0.383
+adobe shockwave player 9.0.432
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-2874:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-2874
+  
+--

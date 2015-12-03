@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+18609
+
+--
+Summary:
+This event is generated when network traffic that indicates Dropbox Desktop Software in use is being used.
+
+--
+Impact:
+Possible policy violation. The use of Dropbox Desktop Software in use may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the Dropbox Desktop Software in use is being used on the protected network.
+
+--
+Affected Systems:
+All systems using Dropbox Desktop Software in use
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Dropbox Desktop Software in use has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Dropbox Desktop Software in use on the protected network and enforce or implement an organization wide policy on the use of Dropbox Desktop Software in use.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

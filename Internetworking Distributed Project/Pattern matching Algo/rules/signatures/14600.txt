@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+14600
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the SAP Message Server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Heap-based buffer overflow in the Message HTTP Server in SAP Message Server allows remote attackers to execute arbitrary code via a long string in the group parameter to /msgserver/html/group.
+
+--
+Affected Systems:
+SAP Message Server 
+
+--
+Attack Scenarios:
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-3624:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-3624
+
+--

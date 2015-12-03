@@ -1,0 +1,80 @@
+Rule
+
+--
+Sid
+20785
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in acrobat.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Adobe Flash Player before 10.2.154.27 on Windows, Mac OS X, Linux, and Solaris and 10.2.156.12 and earlier on Android; Adobe AIR before 2.6.19140; and Authplay.dll (aka AuthPlayLib.bundle) in Adobe Reader 9.x before 9.4.4 and 10.x through 10.0.1 on Windows, Adobe Reader 9.x before 9.4.4 and 10.x before 10.0.3 on Mac OS X, and Adobe Acrobat 9.x before 9.4.4 and 10.x before 10.0.3 on Windows and Mac OS X allow remote attackers to execute arbitrary code or cause a denial of service (application crash) via crafted Flash content; as demonstrated by a Microsoft Office document with an embedded .swf file that has a size inconsistency in a "group of included constants," object type confusion, ActionScript that adds custom functions to prototypes, and Date objects; and as exploited in the wild in April 2011.
+
+--
+Affected Systems:
+adobe acrobat 10.0
+adobe acrobat 10.0.1
+adobe acrobat 10.0.2
+adobe acrobat 9.0
+adobe acrobat 9.1
+adobe acrobat 9.1.1
+adobe acrobat 9.1.2
+adobe acrobat 9.1.3
+adobe acrobat 9.2
+adobe acrobat 9.3
+adobe acrobat 9.3.1
+adobe acrobat 9.3.2
+adobe acrobat 9.3.3
+adobe acrobat 9.3.4
+adobe acrobat 9.4
+adobe acrobat 9.4.1
+adobe acrobat 9.4.2
+adobe acrobat 9.4.3
+
+--
+Attack Scenarios:
+In an SQL injection attack, the attacker is able to coerce the application into running SQL queries of the attackers choosing. This can lead to a complete compromise of the data stored in the system as well as the attacker being able to gain administrative access to the application.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-0611:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0611
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/89.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/66.html
+
+--

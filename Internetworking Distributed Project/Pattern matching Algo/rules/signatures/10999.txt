@@ -1,0 +1,55 @@
+Rule
+
+--
+Sid
+10999
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in chetcpasswd.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Pedro Lineu Orso chetcpasswd before 2.4 relies on the X-Forwarded-For HTTP header when verifying a client's status on an IP address ACL, which allows remote attackers to gain unauthorized access by spoofing this header.
+
+Buffer overflow in Pedro Lineu Orso chetcpasswd before 1.12, when configured for access from 0.0.0.0, allows local users to gain privileges via unspecified vectors.
+
+--
+Affected Systems:
+chetcpasswd chetcpasswd 1
+chetcpasswd chetcpasswd 2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

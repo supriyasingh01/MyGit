@@ -1,0 +1,68 @@
+Rule
+
+--
+Sid
+128-2
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in SSHv1.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+This event is generated when an attack targeting SSHv1 is detected. This attack targets an integer overflow in the CRC32 compensation attack detection implementation. Many vendor implementations using SSHv1 are vulnerable to this attack.
+
+Comodo Firewall Pro (formerly Comodo Personal Firewall) 2.4.17.183 and earlier uses a weak cryptographic hashing function (CRC32) to identify trusted modules, which allows local users to bypass security protections by substituting modified modules that have the same CRC32 value.
+
+Unspecified vulnerability in SSHield 1.6.1 with OpenSSH 3.0.2p1 on Cisco WebNS 8.20.0.1 on Cisco Content Services Switch (CSS) series 11000 devices allows remote attackers to cause a denial of service (connection slot exhaustion and device crash) via a series of large packets designed to exploit the SSH CRC32 attack detection overflow (CVE-2001-0144), possibly a related issue to CVE-2002-1024.
+
+This event can be controlled using the ((ssh)) configuration options.
+
+--
+Affected Systems:
+Cisco webns 8.20.0.1
+Comodo firewall pro 2.4.17.183
+Other vendor implementations using SSHv1
+
+--
+Attack Scenarios:
+The attacker needs to supply a specially crafted packet to the listening service.
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-1051:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-1051
+
+NIST CVE-2007-4654:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-4654
+  
+--

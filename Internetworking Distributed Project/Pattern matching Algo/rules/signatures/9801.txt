@@ -1,0 +1,64 @@
+Rule
+
+--
+Sid
+9801
+
+--
+Summary:
+This event is generated when an attempt is made to cause a Denial of Service (DoS) in Windows Media Player.
+
+--
+Impact:
+Denial of Service (DoS)
+
+--
+Detailed Information:
+Windows Media Player is prone to a Denial of Service (Dos) attack which is present when the application attempts to process malformed MIDI files.
+
+MIDI files are composed of chunks, which follow the format:
+
+* 4-byte chunk ID
+* 4-byte length of data to follow (N)
+* N-byte data
+
+All MIDI files start with a chunk ID of "MThd". If a number of NULL bytes (0x00's) equal to the length specified after this first length is present in the file, a DoS occurs.
+
+--
+Affected Systems:
+Microsoft Windows Media Player 10.0
+Microsoft Windows Media Player 6.4
+
+--
+Attack Scenarios:
+An attacker needs to supply a malformed file to the application to cause the DoS to occur.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

@@ -1,0 +1,56 @@
+Rule: 
+
+--
+Sid: 
+6510
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Internet Explorer.
+
+-- 
+Impact: 
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+Microsoft Internet Explorer contains a programming error in the way that it processes MIME HTML links (mhtml) which are commonly embedded in HTML email.  The error in processing the links may allow a remote attacker to overflow a fixed length buffer and execute code of their choosing on the target system.
+
+--
+Affected Systems:
+Microsoft Internet Explorer 6.0 SP2
+Microsoft Internet Explorer 6.0 SP1
+Microsoft Internet Explorer 6.0
+Microsoft Internet Explorer 7.0 Beta 2
+Microsoft Internet Explorer 7.0 Beta 1
+ 
+--
+Attack Scenarios: 
+An attacker needs to supply a vulnerable client with a malformed mthml link in either a web page or email. If this link is too long, it may be possible to overflow a fixed length buffer and execute code.
+
+-- 
+Ease of Attack: 
+Simple
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

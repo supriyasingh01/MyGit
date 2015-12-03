@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+15959
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in asp.net.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The __VIEWSTATE functionality in Microsoft ASP.NET 1.x, when not cryptographically signed, allows remote attackers to cause a denial of service (CPU consumption) via deeply nested markup.
+
+--
+Affected Systems:
+Microsoft asp.net 1.0
+Microsoft asp.net 1.1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-1665:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-1665
+  
+--

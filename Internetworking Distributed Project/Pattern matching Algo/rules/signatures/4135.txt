@@ -1,0 +1,62 @@
+Rule:
+
+--
+Sid:
+4135
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known
+vulnerability in Internet Explorer using a JPEG (Joint Photographic
+Experts Group) format image.
+
+--
+Impact:
+A successful attack may result in the execution of code of the attackers
+choosing possibly leading to control of the target machine.
+
+--
+Detailed Information:
+Internet Explorer does not correctly handle JPEG images. Proper bounds
+checking of input data is not carried out by the application when
+processing JPEG images. This can lead to a buffer overflow condition and
+an opportunity for an attacker to execute code of their choosing.
+
+--
+Affected Systems:
+	 Microsoft Internet Explorer 6.0 SP2 and prior
+
+--
+Attack Scenarios:
+An attacker can entice a user to visit a web server that will return a
+malicious JPEG file, perhaps enabling the execution of the malicious
+code when the file is opened.
+
+--
+Ease of Attack:
+Simple. Exploit code is publicly available.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches as they become available.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

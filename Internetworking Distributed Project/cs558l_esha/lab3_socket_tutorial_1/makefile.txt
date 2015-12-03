@@ -1,0 +1,16 @@
+   # This is a makefile
+  
+   all:    lab3s lab3c
+   lab3s: lab3s.o
+       gcc -o lab3s lab3s.o
+  
+   lab3s.o: lab3s.c
+       gcc -c lab3s.c
+   lab3c: lab3c.o
+      gcc -o lab3c lab3c.o
+ 
+  lab3c.o: lab3c.c
+      gcc -c lab3c.c
+ 
+  clean:
+     rm -rf *.o lab3s lab3c

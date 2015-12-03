@@ -1,0 +1,70 @@
+Rule
+
+--
+Sid
+20820
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in j2se.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Argument injection vulnerability in Java Web Start for J2SE 1.4.2 up to 1.4.2_06, on Mac OS X, allows untrusted applications to gain privileges via the value parameter of a property tag in a JNLP file. NOTE: it is highly likely that this item will be MERGED with CVE-2005-0836.
+
+--
+Affected Systems:
+sun j2se 1.4.2
+sun j2se 1.4.2
+sun j2se 1.4.2 01
+sun j2se 1.4.2 01
+sun j2se 1.4.2 02
+sun j2se 1.4.2 02
+sun j2se 1.4.2 03
+sun j2se 1.4.2 03
+sun j2se 1.4.2 04
+sun j2se 1.4.2 04
+sun j2se 1.4.2 05
+sun j2se 1.4.2 05
+sun j2se 1.4.2 06
+sun j2se 1.4.2 06
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-0418:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-0418
+  
+--

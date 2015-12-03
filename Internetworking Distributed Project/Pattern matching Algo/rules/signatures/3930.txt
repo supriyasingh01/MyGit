@@ -1,0 +1,60 @@
+
+Rule:
+
+--
+Sid:
+3930
+
+--
+Summary:
+THIS RULE DOES NOT GENERATE AN EVENT IT IS USED TO SET A FLOWBIT
+PARAMETER FOR USE BY OTHER RULES.
+
+--
+Impact:
+NA
+
+--
+Detailed Information:
+THIS RULE DOES NOT GENERATE AN EVENT IT IS USED TO SET A FLOWBIT
+PARAMETER FOR USE BY OTHER RULES.
+
+This rule is used in a set of rules that may indicate an attempt is
+being made to exploit a vulnerability in the Microsoft Plug and Play
+subsystem on a host.
+
+--
+Affected Systems:
+  NA
+
+--
+Attack Scenarios:
+NA
+
+--
+Ease of Attack:
+NA
+
+--
+False Positives:
+NA
+
+--
+False Negatives:
+NA
+
+--
+Corrective Action:
+NA
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matt Watchinski <matthew.watchinski@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

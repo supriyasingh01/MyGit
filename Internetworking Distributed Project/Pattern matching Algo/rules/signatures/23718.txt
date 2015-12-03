@@ -1,0 +1,62 @@
+Rule
+
+--
+Sid
+23718
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in word.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Buffer overflow in msjet40.dll before 4.0.9505.0 in Microsoft Jet Database Engine allows remote attackers to execute arbitrary code via a crafted Word file, as exploited in the wild in March 2008.  NOTE: as of 20080513, Microsoft has stated that this is the same issue as CVE-2007-6026.
+
+--
+Affected Systems:
+microsoft word 2000
+microsoft word 2002
+microsoft word 2003
+microsoft word 2003 sp3
+microsoft word 2007
+microsoft word 2007 sp1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-1092:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-1092
+  
+--

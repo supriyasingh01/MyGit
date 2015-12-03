@@ -1,0 +1,62 @@
+Rule:
+
+--
+Sid:
+4142
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known
+vulnerability in an Oracle database application implementation.
+
+--
+Impact:
+A successful attack can present an unauthorized attacker with the
+opportunity to run commands on an affected system.
+
+--
+Detailed Information:
+A vulnerability exists in the way that Oracle executes reports. It is
+possible for an attacker to run any executable report that exists in any
+location on the affected host.
+
+The Oracle reports application does not properly sanitize user input, an
+attacker can supply a full path to an executable report on the system
+and execute the file in the context of the user running the application.
+In the case of Microsoft systems, this is the administrator account.
+
+--
+Affected Systems:
+  Oracle 6.0, 6i, 9i, 10g
+
+--
+Attack Scenarios:
+An attacker would need to upload a report file of their choosing on to
+the affected victim server and then use the vulnerability to execute
+that report and run any command on the system.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

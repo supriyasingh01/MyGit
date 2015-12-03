@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+10645
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft DNS services over DCERPC.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+A buffer overflow condition is present in the way that Microsoft operating systems handle DNS messages over DCERPC. This event indicates that an attempt has been made to exploit that condition. It may be possible for an attacker to use this vulnerability to execute code on the target host which could lead to further compromise and loss of data integrity on the host.
+
+NOTE In order to provide full detection capabilities the decrpc preprocessor must be configured to autodetect, this is default behavior.
+
+--
+Affected Systems:
+Microsoft Windows 2000 SP4 and prior
+Microsoft Windows Server 2003 SP2 and prior
+
+--
+Attack Scenarios:
+An attacker needs to supply excess data in a transaction using the application. The attacker may then include code of their choosing to be executed on the host.
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

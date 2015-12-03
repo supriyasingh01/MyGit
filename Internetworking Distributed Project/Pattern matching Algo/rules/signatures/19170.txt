@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+19170
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in .net framework.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The x86 JIT compiler in Microsoft .NET Framework 2.0 SP2, 3.5 SP1, 3.5.1, and 4.0 does not properly compile function calls, which allows remote attackers to execute arbitrary code via (1) a crafted XAML browser application (aka XBAP), (2) a crafted ASP.NET application, or (3) a crafted .NET Framework application, aka ".NET Framework Stack Corruption Vulnerability."
+
+--
+Affected Systems:
+microsoft .net framework 2.0
+microsoft .net framework 3.5
+microsoft .net framework 3.5.1
+microsoft .net framework 4.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-3958:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-3958
+  
+--

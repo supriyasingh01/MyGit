@@ -1,0 +1,53 @@
+Rule
+
+--
+Sid
+23156
+
+--
+Summary:
+This event is generated when a specific URI is requested that is associated with the Nuclear Pack exploit kit.
+
+--
+Impact:
+Potential compromise of the machine fetching the file, depending on whether it was patched against the vulnerabilities used by this exploit kit.
+
+--
+Detailed Information:
+This rule looks for a specific URI format associated with redirection to the Nuclear Pack exploit kit. If the system successfully completed the redirect, and was vulnerable to any of the attacks used by the exploit kit, it is likely compromised.
+
+--
+Affected Systems:
+Windows systems vulnerable to CVE-2012-0507 and other attacks.
+
+--
+Attack Scenarios:
+Attackers will implant links to the Nuclear Exploit kit in malicious HTML IFrame tags, phishing links, etc. to send users to their kit.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Examine any full-stream packet capture tools for evidence that the redirect completed successfully. Check for other IDS or other tool events related to the TCP stream in question. Verify patch levels and antimalware solutions, such as FireAMP, on the endpoint host. If exploitation appears to have occurred, consider rebuilding the impacted machine.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+http://blog.eset.com/2012/04/05/blackhole-exploit-kit-plays-with-smart-redirection
+http://blog.fox-it.com/2012/03/16/post-mortem-report-on-the-sinowallnu-nl-incident/
+ 
+--

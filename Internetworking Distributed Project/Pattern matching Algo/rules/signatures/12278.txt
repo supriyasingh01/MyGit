@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+12278
+
+--
+Summary:
+This event is generated when network traffic that indicates Microsoft Media Player is being used.
+
+--
+Impact:
+Possible policy violation. The use of Microsoft Media Player may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the Microsoft Media Player is being used on the protected network.
+
+--
+Affected Systems:
+All systems using Microsoft Media Player
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Microsoft Media Player is downloading a compressed skin file.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Microsoft Media Player on the protected network and enforce or implement an organization wide policy on the use of Microsoft Media Player compressed skin download.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

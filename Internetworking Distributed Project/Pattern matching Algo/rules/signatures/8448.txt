@@ -1,0 +1,51 @@
+Rule: 
+
+--
+Sid: 
+8448
+
+-- 
+Summary: 
+This event is generated when a malicious Excel file is detected transitioning the network.
+
+-- 
+Impact: 
+Unknown. Execution of code may be possible.
+
+--
+Detailed Information:
+Versions of Microsoft Office are vulnerable to a buffer overflow condition when processing malformed XLS files.
+
+--
+Affected Systems:
+Microsoft Office
+
+--
+Attack Scenarios: 
+An attacker needs to supply a malformed .xls file to be opened on a vulnerable system.
+
+-- 
+Ease of Attack: 
+Simple. Exploit code exists.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

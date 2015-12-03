@@ -1,0 +1,49 @@
+Rule
+
+--
+Sid
+9324
+
+--
+Summary:
+TOR encrypted network tunnel server request has been made.
+
+--
+Impact:
+Organizational Policy Violation, Unauthorized use of available network bandwidth.
+
+--
+Detailed Information:
+Tor is a distributed, annonymous network of virtual tunnels that allow people and groups to maintain privacy from network monitoring. Additional tools, allow for anonymization so that websites are not able to track individuals.
+
+--
+Attack Scenarios:
+While not an attack, TOR gives users the ability to set-up their own workstations as anonymizing servers, hide their own usage of Internet and network resources, as well as allow others to use their system, as a pass through for more malicious activity, without the user being aware of it.
+
+--
+Ease of Attack:
+Very simple. Free pre-compiled code is available.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Enforce policy, by either blocking server startup requests and proxy requests, through an IPS or firewall and removing offending software from the user workstation.
+
+--
+Contributors:
+William Young (william.young@sourcefire.com)
+
+-- 
+Additional References:
+
+Tor:
+http://tor.eff.org/
+
+--

@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12402
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Quickbooks.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Multiple unspecified vulnerabilities in the Intuit QuickBooks Online Edition ActiveX control before 10 allow remote attackers to create or overwrite arbitrary files via unspecified arguments to the (1) httpGETToFile, (2) httpPOSTFromFile, and possibly other methods, probably involving path traversal vulnerabilities in exposed dangerous methods.  NOTE: this can be leveraged for code execution by writing to a Startup folder.
+
+--
+Affected Systems:
+Intuit Quickbooks 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+125-1
+
+--
+Summary:
+This event is generated when the ftp-telnet preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the ftp-telnet preprocessor detects anomalous network traffic.
+
+In particular, the preprocessor has detected a Telnet command on an FTP command channel.
+
+This preprocessor event will detect attacks targeting CVE 2010-3972. However, the following changes need to be made to the preprocessor configuration as follows:
+
+ preprocessor ftp_telnet: global inspection_type stateful encrypted_traffic yes check_encrypted
+
+--
+Affected Systems:
+All networked systems.
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

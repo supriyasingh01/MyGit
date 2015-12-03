@@ -1,0 +1,73 @@
+Rule:
+
+--
+Sid:
+5318
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Windows systems via the graphics rendering engine.
+
+--
+Impact:
+A successful attack may result in the execution of code of the attackers choosing possibly leading to control of the target machine.
+
+--
+Detailed Information:
+The Microsoft Windows graphics rendering engine does not correctly parse windows metafile (wmf) format files. As a result, viewing a corrupted file may present an attacker with the opportunity to execute code of their choosing. This vulnerability is associated with the SetAbortProc function that can be called from a WMF.
+
+NOTE
+This rule is disabled by default due to the possiblity of false positives.
+
+In order to avoid potential evasion techniques, http_inspect should be configured with "flow_depth 0" so that all HTTP server response traffic is inspected.
+NOTE
+
+WARNING
+Setting flow_depth 0 will cause performance problems in some situations.
+WARNING
+
+
+--
+Affected Systems:
+Microsoft Windows 98
+Microsoft Windows ME
+Microsoft Windows 2000
+Microsoft Windows XP
+Microsoft Windows Server 2003
+
+--
+Attack Scenarios:
+An attacker can craft a malicious wmf file and cause the target host user to view the file.
+
+--
+Ease of Attack:
+Simple. Exploit code is publicly available.
+
+--
+False Positives:
+This rule will generate false positives since it is very generic in nature. For this reason the normal state of this rule is disabled.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches as they become available.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Judy Novak <judy.novak@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+Microsoft Windows Metafiles:
+http://msdn.microsoft.com/library/default.asp?url=/library/en-us/gdi/metafile_7ulv.asp
+
+--

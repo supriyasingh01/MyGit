@@ -1,0 +1,92 @@
+Rule
+
+--
+Sid
+13950
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in JRE.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple buffer overflows in Sun Java Web Start in JDK and JRE 6 before Update 4, JDK and JRE 5.0 before Update 16, and SDK and JRE 1.4.x before 1.4.2_18 allow context-dependent attackers to gain privileges via an untrusted application, as demonstrated by an application that grants itself privileges to (1) read local files, (2) write to local files, or (3) execute local programs, aka CR 6557220.
+
+--
+Affected Systems:
+Sun JRE 6
+Sun JRE 6
+Sun JRE 6
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 5.0
+Sun JRE 1.4
+Sun JRE 1.4.2_01
+Sun JRE 1.4.2_02
+Sun JRE 1.4.2_03
+Sun JRE 1.4.2_04
+Sun JRE 1.4.2_05
+Sun JRE 1.4.2_06
+Sun JRE 1.4.2_07
+Sun JRE 1.4.2_08
+Sun JRE 1.4.2_09
+Sun JRE 1.4.2_10
+Sun JRE 1.4.2_11
+Sun JRE 1.4.2_12
+Sun JRE 1.4.2_13
+Sun JRE 1.4.2_14
+Sun JRE 1.4.2_15
+Sun JRE 1.4.2_16
+Sun JRE 1.4.2_17
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-3111:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-3111
+
+--

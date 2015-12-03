@@ -1,0 +1,60 @@
+Rule:
+
+--
+Sid:
+116-5
+
+--
+Summary:
+This event is generated when the pre-processor snort_decoder detects network traffic that may constitute an attack. Specifically a truncated ipv4 options was detected.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+This event is generated when the snort_decoder pre-processor detects network traffic that may consititute an attack.
+
+Exploitation attempts against hosts using the Microsoft Windows operating system will cause this event to be generated. See MS05-019 for details regarding this issue.
+
+This event indicates that the preprocessor has detected truncated IPv4 Options.
+
+This event can be controlled using the ((snort decode)) configuration options.
+
+--
+Affected Systems:
+All.
+
+--
+Attack Scenarios:
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None Known.
+
+--
+False Negatives:
+None Known.
+
+--
+Corrective Action:
+Check the target host for signs of compromise.
+
+Apply any appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+MS05-019
+http://www.microsoft.com/technet/security/bulletin/MS05-019.mspx
+
+--

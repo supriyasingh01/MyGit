@@ -1,0 +1,64 @@
+Rule
+
+--
+Sid
+3-17699
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in session and resource control.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+SNMPv3 HMAC verification in (1) Net-SNMP 5.2.x before 5.2.4.1, 5.3.x before 5.3.2.1, and 5.4.x before 5.4.1.1; (2) UCD-SNMP; (3) eCos; (4) Juniper Session and Resource Control (SRC) C-series 1.0.0 through 2.0.0; (5) NetApp (aka Network Appliance) Data ONTAP 7.3RC1 and 7.3RC2; (6) SNMP Research before 16.2; (7) multiple Cisco IOS, CatOS, ACE, and Nexus products; and (8) Ingate Firewall 3.1.0 and later and SIParator 3.1.0 and later relies on the client to specify the HMAC length, which makes it easier for remote attackers to bypass SNMP authentication via a length value of 1, which only checks the first byte.
+
+--
+Affected Systems:
+juniper session and resource control 1.0
+juniper session and resource control 2.0
+
+--
+Attack Scenarios:
+If an application does not correctly enforce access control, a remote attacker may be able to view resources and data that should be protected. Additionally, in the case of administrative user interfaces, the attacker may be able to elevate privileges and generate accounts by accessing functions that should be controllled by ACLs.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-0960:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-0960
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/285.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/1.html
+
+--

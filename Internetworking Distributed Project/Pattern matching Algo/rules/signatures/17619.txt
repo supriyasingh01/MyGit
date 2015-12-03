@@ -1,0 +1,74 @@
+Rule
+
+--
+Sid
+17619
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in oracle10g.
+
+--
+Impact:
+  Loss of integrity. 
+
+--
+Detailed Information:
+Oracle Database 9.2.0.0 to 10.2.0.3 allows local users with "SELECT" privileges for a base table to insert, update, or delete data by creating a crafted view then performing the operations on that view.
+
+--
+Affected Systems:
+oracle oracle10g Enterprise 10.1.0.2
+oracle oracle10g Enterprise 10.1.0.3
+oracle oracle10g Enterprise 10.1.0.3.1
+oracle oracle10g Enterprise 10.1.0.4
+oracle oracle10g Enterprise 10.2.3
+oracle oracle10g Personal 10.1.0.2
+oracle oracle10g Personal 10.1.0.3
+oracle oracle10g Personal 10.1.0.3.1
+oracle oracle10g Personal 10.1.0.4
+oracle oracle10g Personal 10.2.3
+oracle oracle10g Standard 10.1.0.2
+oracle oracle10g Standard 10.1.0.3
+oracle oracle10g Standard 10.1.0.3.1
+oracle oracle10g Standard 10.1.0.4
+oracle oracle10g Standard 10.1.0.4.2
+oracle oracle10g Standard 10.1.0.5
+oracle oracle10g Standard 10.2.0.1
+oracle oracle10g Standard 10.2.3
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2006-1705:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-1705
+  
+--

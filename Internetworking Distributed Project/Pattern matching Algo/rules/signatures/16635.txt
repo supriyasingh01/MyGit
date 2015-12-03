@@ -1,0 +1,63 @@
+Rule
+
+--
+Sid
+16635
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Internet Explorer.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+Unspecified vulnerability in the Microsoft Internet Explorer 8 Developer Tools ActiveX control in Microsoft Windows 2000 SP4, Windows XP SP2 and SP3, Windows Server 2003 SP2, Windows Vista SP1 and SP2, Windows Server 2008 and R2, and Windows 7 allows remote attackers to execute arbitrary code via unknown vectors that "corrupt the system state."
+
+--
+Affected Systems:
+Microsoft Internet Explorer 8 Developer Tools ActiveX control in:
+Microsoft Windows 2000 SP4
+Microsoft Windows XP SP2 and SP3
+Microsoft Windows Server 2003 SP2
+Microsoft Windows Vista SP1 and SP2
+Microsoft Windows Server 2008 and R2
+Microsoft Windows 7
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-0811:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0811
+  
+--

@@ -1,0 +1,56 @@
+Rule:
+
+--
+Sid:
+3-7196
+
+--
+Summary:
+Hosts using the Microsoft Windows Operating System may be prone to a buffer overflow condition when processing DHCP options.
+
+--
+Impact:
+Serious. Execution of code may be possible.
+
+--
+Detailed Information:
+Versions of the Microsoft Windows operating system are vulnerable to a buffer overflow  condition when processing malformed DHCP responses. An unauthenticated attacker may be able to take advantage of this vulnerability to execute code of their choosing on an affected host.
+
+The Microsoft Windows DHCP Client Service fails to properly process server responses before copying to memory. This may allow an attacker to overflow a fixed length buffer and execute code with system level privileges.
+
+--
+Affected Systems:
+Microsoft Windows XP SP2 and prior
+Microsoft Windows Server 2003 SP1 and prior
+Microsoft Windows 2000 SP4 and prior
+
+--
+Attack Scenarios:
+An attacker need only supply a malformed DHCP message to the DHCP Client Service to trigger the overflow.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Lurene Grenier <lurene.grenier@sourcefire.com>
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

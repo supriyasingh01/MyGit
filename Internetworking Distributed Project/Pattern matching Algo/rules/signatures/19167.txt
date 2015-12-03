@@ -1,0 +1,244 @@
+Rule
+
+--
+Sid
+19167
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in asterisk.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Multiple stack-based and heap-based buffer overflows in the (1) decode_open_type and (2) udptl_rx_packet functions in main/udptl.c in Asterisk Open Source 1.4.x before 1.4.39.2, 1.6.1.x before 1.6.1.22, 1.6.2.x before 1.6.2.16.2, and 1.8 before 1.8.2.4; Business Edition C.x.x before C.3.6.3; AsteriskNOW 1.5; and s800i (Asterisk Appliance), when T.38 support is enabled, allow remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a crafted UDPTL packet.
+
+--
+Affected Systems:
+digium asterisk 1.4.0
+digium asterisk 1.4.0
+digium asterisk 1.4.0
+digium asterisk 1.4.0
+digium asterisk 1.4.1
+digium asterisk 1.4.10
+digium asterisk 1.4.10.1
+digium asterisk 1.4.11
+digium asterisk 1.4.12
+digium asterisk 1.4.12.1
+digium asterisk 1.4.13
+digium asterisk 1.4.14
+digium asterisk 1.4.15
+digium asterisk 1.4.16
+digium asterisk 1.4.16.1
+digium asterisk 1.4.16.2
+digium asterisk 1.4.17
+digium asterisk 1.4.18
+digium asterisk 1.4.19
+digium asterisk 1.4.19
+digium asterisk 1.4.19
+digium asterisk 1.4.19
+digium asterisk 1.4.19.1
+digium asterisk 1.4.19.2
+digium asterisk 1.4.2
+digium asterisk 1.4.20
+digium asterisk 1.4.20
+digium asterisk 1.4.20
+digium asterisk 1.4.20.1
+digium asterisk 1.4.21
+digium asterisk 1.4.21
+digium asterisk 1.4.21.1
+digium asterisk 1.4.21.2
+digium asterisk 1.4.22
+digium asterisk 1.4.22
+digium asterisk 1.4.22
+digium asterisk 1.4.22
+digium asterisk 1.4.22
+digium asterisk 1.4.22.1
+digium asterisk 1.4.22.2
+digium asterisk 1.4.23
+digium asterisk 1.4.23
+digium asterisk 1.4.23
+digium asterisk 1.4.23
+digium asterisk 1.4.23.1
+digium asterisk 1.4.23.2
+digium asterisk 1.4.24
+digium asterisk 1.4.24.1
+digium asterisk 1.4.25
+digium asterisk 1.4.25.1
+digium asterisk 1.4.26
+digium asterisk 1.4.26
+digium asterisk 1.4.26
+digium asterisk 1.4.26
+digium asterisk 1.4.26
+digium asterisk 1.4.26
+digium asterisk 1.4.26.1
+digium asterisk 1.4.26.2
+digium asterisk 1.4.26.3
+digium asterisk 1.4.27
+digium asterisk 1.4.27
+digium asterisk 1.4.27
+digium asterisk 1.4.27
+digium asterisk 1.4.27
+digium asterisk 1.4.27.1
+digium asterisk 1.4.28
+digium asterisk 1.4.29
+digium asterisk 1.4.29.1
+digium asterisk 1.4.3
+digium asterisk 1.4.30
+digium asterisk 1.4.30
+digium asterisk 1.4.31
+digium asterisk 1.4.31
+digium asterisk 1.4.32
+digium asterisk 1.4.33
+digium asterisk 1.4.33
+digium asterisk 1.4.33.1
+digium asterisk 1.4.34
+digium asterisk 1.4.34
+digium asterisk 1.4.35
+digium asterisk 1.4.36
+digium asterisk 1.4.37
+digium asterisk 1.4.38
+digium asterisk 1.4.39
+digium asterisk 1.4.39.1
+digium asterisk 1.6.1.0
+digium asterisk 1.6.1.0
+digium asterisk 1.6.1.0
+digium asterisk 1.6.1.0
+digium asterisk 1.6.1.1
+digium asterisk 1.6.1.10
+digium asterisk 1.6.1.10
+digium asterisk 1.6.1.10
+digium asterisk 1.6.1.11
+digium asterisk 1.6.1.12
+digium asterisk 1.6.1.13
+digium asterisk 1.6.1.14
+digium asterisk 1.6.1.15
+digium asterisk 1.6.1.16
+digium asterisk 1.6.1.17
+digium asterisk 1.6.1.18
+digium asterisk 1.6.1.18
+digium asterisk 1.6.1.19
+digium asterisk 1.6.1.19
+digium asterisk 1.6.1.19
+digium asterisk 1.6.1.2
+digium asterisk 1.6.1.20
+digium asterisk 1.6.1.20
+digium asterisk 1.6.1.21
+digium asterisk 1.6.1.3
+digium asterisk 1.6.1.4
+digium asterisk 1.6.1.5
+digium asterisk 1.6.1.6
+digium asterisk 1.6.1.7
+digium asterisk 1.6.1.7
+digium asterisk 1.6.1.8
+digium asterisk 1.6.1.9
+digium asterisk 1.6.2.0
+digium asterisk 1.6.2.0
+digium asterisk 1.6.2.0
+digium asterisk 1.6.2.0
+digium asterisk 1.6.2.0
+digium asterisk 1.6.2.0
+digium asterisk 1.6.2.0
+digium asterisk 1.6.2.1
+digium asterisk 1.6.2.15
+digium asterisk 1.6.2.16
+digium asterisk 1.6.2.16.1
+digium asterisk 1.6.2.2
+digium asterisk 1.6.2.3
+digium asterisk 1.6.2.4
+digium asterisk 1.6.2.5
+digium asterisk 1.6.2.6
+digium asterisk 1.6.2.6
+digium asterisk 1.8.0
+digium asterisk 1.8.0
+digium asterisk 1.8.0
+digium asterisk 1.8.0
+digium asterisk 1.8.0
+digium asterisk 1.8.0
+digium asterisk 1.8.0
+digium asterisk 1.8.0
+digium asterisk 1.8.0
+digium asterisk 1.8.1
+digium asterisk 1.8.1.1
+digium asterisk 1.8.1.2
+digium asterisk 1.8.2
+digium asterisk 1.8.2.1
+digium asterisk 1.8.2.2
+digium asterisk 1.8.2.3
+digium asterisk C.1.0
+digium asterisk C.1.0
+digium asterisk C.1.0
+digium asterisk C.1.0
+digium asterisk C.1.6
+digium asterisk C.1.6
+digium asterisk C.1.6.1
+digium asterisk C.1.6.1
+digium asterisk C.1.6.2
+digium asterisk C.1.6.2
+digium asterisk C.1.8.0
+digium asterisk C.1.8.0
+digium asterisk C.1.8.1
+digium asterisk C.1.8.1
+digium asterisk C.2.3
+digium asterisk C.2.3
+digium asterisk C.3.0
+digium asterisk C.3.0
+digium asterisk C.3.1.0
+digium asterisk C.3.1.0
+digium asterisk C.3.1.1
+digium asterisk C.3.1.1
+digium asterisk C.3.2.2
+digium asterisk C.3.2.2
+digium asterisk C.3.2.3
+digium asterisk C.3.2.3
+digium asterisk C.3.3.2
+digium asterisk C.3.3.2
+digium asterisk C.3.6.2
+digium asterisk C.3.6.2
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-1147:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-1147
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

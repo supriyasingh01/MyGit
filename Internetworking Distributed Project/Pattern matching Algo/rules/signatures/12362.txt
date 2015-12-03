@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12362
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Squid Web Proxy Cache.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Buffer overflow in the ntlm_check_auth (NTLM authentication) function for Squid Web Proxy Cache 2.5.x and 3.x, when compiled with NTLM handlers enabled, allows remote attackers to execute arbitrary code via a long password ("pass" variable).
+
+--
+Affected Systems:
+National Science Foundation Squid Web Proxy Cache 2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

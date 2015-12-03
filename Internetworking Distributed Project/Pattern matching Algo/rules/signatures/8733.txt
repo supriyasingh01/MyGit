@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+8733
+
+--
+Summary:
+This event is generated when the stream ID (SID) option is set in an IP packet.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+The stream ID option is used in normal circumstances by hosts communicating over a network connection that does not support stream data. This event indicates that the SID option is set in a packet.
+
+Note, this option should not be set in packet fragments and a host should discard any packet fragments with this option set.
+
+--
+Affected Systems:
+All.
+
+--
+Attack Scenarios:
+None.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

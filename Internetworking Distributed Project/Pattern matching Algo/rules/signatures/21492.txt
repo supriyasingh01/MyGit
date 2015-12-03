@@ -1,0 +1,64 @@
+Rule: 
+
+--
+Sid: 
+21492
+
+-- 
+Summary: 
+This event is generated when a user is guided to a malicioius page that is
+being used by the commonly known exploit kit known as Blackhole.
+
+-- 
+Impact: 
+This rule indicates that one of the clients in HOME_NET was enticed to click
+on a link that eventually lead to the Blackhole exploit kit.  The VRT has
+observed this code embedded in normal pages that have been compromised all the
+way to .html email attachments.
+
+--
+Detailed Information:
+The Blackhole exploit kit uses many exploits to try and compromise the user's
+system.  This alert simply looks for the initial landing page where the
+javascript heap spray is loaded.  By using the IPS to block this initial
+landing page, the client can be protected against further attack traffic such
+as malicious PDF, Java downloads and Flash files.
+
+--
+Affected Systems:
+The Blackhole exploit kit has been observed to be used against Windows and OSX
+systems.
+
+--
+Attack Scenarios: 
+This rule indicates that one of the clients in HOME_NET was enticed to click 
+on a link that eventually lead to the Blackhole exploit kit.  The VRT has 
+observed this code embedded in normal pages that have been compromised all the
+way to .html email attachments.  
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None Known
+
+--
+False Negatives:
+None known
+
+-- 
+Corrective Action: 
+Little can be done to defend against this since it's so prevalent on the
+Internet.  Ensure client is fully patched (to include flash, reader, java,
+etc)  We recommend you move this rule to the "drop" state.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Joel Esler
+
+-- 
+Additional References:
+--

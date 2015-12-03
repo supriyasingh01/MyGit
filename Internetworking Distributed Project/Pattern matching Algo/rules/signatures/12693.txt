@@ -1,0 +1,60 @@
+Rule:
+
+--
+Sid:
+12693
+
+--
+Summary:
+This event is generated when activity relating to the spyware application "personalweb" is detected.
+
+--
+Impact:
+Unkown. Possible information disclosure, violation of privacy, possible violation of policy.
+
+--
+Detailed Information:
+Spyware is malicious software running on a host that may intercept or take information from the host system without a users consent or knowledge. Spyware is also capable of using a hosts Internet connection without the knowlege or consent of the user, in order to deliver that information to an unauthorized third party.
+
+This software not only uses available bandwidth on a network connection but also consumes system resources to the point of making the host unusable in some cases.
+
+Spyware can be classified into multiple categories depending on the behavior of the software.
+
+In particular, this event indicates that the software detected is a hijacker. Hijacker programs take control of browser settings and are able to redirect information intended for one web site to another without the consent and knowledge of the user.
+
+--
+Affected Systems:
+Windows operating system. All versions.
+
+--
+Attack Scenarios:
+Spyware is often installed as a byproduct of the installation of another piece of software without the users knowledge. It may also be installed without the users consent via a vulnerability in software on the host machine, for example, by visiting a malicious website that utilizes a vulnerability in a browser application to install the spyware.
+
+--
+Ease of Attack:
+Simple. This is spyware activity.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the installation of software by unprivileged users.
+
+Make use of anti-spyware products to remove the spyware from the affected system.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

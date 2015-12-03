@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+10135
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Squid.
+
+--
+Impact:
+Medium
+
+--
+Detailed Information:
+squid/src/ftp.c in Squid before 2.6.STABLE7 allows remote FTP servers to cause a denial of service (core dump) via crafted FTP directory listing responses, possibly related to the (1) ftpListingFinish and (2) ftpHtmlifyListEntry functions.
+
+--
+Affected Systems:
+Squid Squid 2.6.STABLE6
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

@@ -1,0 +1,61 @@
+Rule:
+
+--
+Sid:
+
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Samba. In particular this rule generates an event when an attempt is made to exploit the function "".
+
+--
+Impact:
+Serious. Execution of arbitrary code leading to unauthorized administrative access to the target host. Denial of Service (DoS) is also possible.
+
+--
+Detailed Information:
+Samba is a file and print service for Linux and UNIX style systems. It is normally used to provide networked file and print services for Windows and other operating systems.
+
+A vulnerability in Samba exists due to a programming error which may present an attacker with the opportunity to exploit the service and run code of their choosing on an affected system. The attacker may also cause a DoS condition in the service or possibly gain unauthorized access to the target host.
+
+A malicious attacker can exploit the vulnerability by sending a malicious request to a server via SMB/CIFS. This may result in the overflow of a static buffer which can lead to the attacker having the opportunity to execute code of their choosing.
+
+In particular this rule generates an event when an attempt is made to exploit the function "".
+
+--
+Affected Systems:
+Samba 2.2.7 and prior.
+
+--
+Attack Scenarios:
+An attacker can supply a large number of parameters in a connection to the Samba daemon.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+US-CERT
+http://www.kb.cert.org/vuls/id/298233
+
+--

@@ -1,0 +1,89 @@
+Rule
+
+--
+Sid
+20295
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in libtiff.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Multiple stack-based buffer overflows in the TIFF library (libtiff) before 3.8.2, as used in Adobe Reader 9.3.0 and other products, allow context-dependent attackers to execute arbitrary code or cause a denial of service via unspecified vectors, including a large tdir_count value in the TIFFFetchShortPair function in tif_dirread.c.
+
+--
+Affected Systems:
+libtiff libtiff 3.4
+libtiff libtiff 3.4
+libtiff libtiff 3.4
+libtiff libtiff 3.4
+libtiff libtiff 3.4
+libtiff libtiff 3.4
+libtiff libtiff 3.4
+libtiff libtiff 3.4
+libtiff libtiff 3.4
+libtiff libtiff 3.4
+libtiff libtiff 3.5.1
+libtiff libtiff 3.5.2
+libtiff libtiff 3.5.3
+libtiff libtiff 3.5.4
+libtiff libtiff 3.5.5
+libtiff libtiff 3.5.6
+libtiff libtiff 3.5.7
+libtiff libtiff 3.5.7
+libtiff libtiff 3.5.7
+libtiff libtiff 3.5.7
+libtiff libtiff 3.5.7
+libtiff libtiff 3.6.0
+libtiff libtiff 3.6.0
+libtiff libtiff 3.6.1
+libtiff libtiff 3.7.0
+libtiff libtiff 3.7.0
+libtiff libtiff 3.7.0
+libtiff libtiff 3.7.1
+libtiff libtiff 3.7.2
+libtiff libtiff 3.7.3
+libtiff libtiff 3.7.4
+libtiff libtiff 3.8.0
+libtiff libtiff 3.8.1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2006-3459:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2006-3459
+  
+--

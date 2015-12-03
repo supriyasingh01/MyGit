@@ -1,0 +1,92 @@
+Rule
+
+--
+Sid
+24051
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in winamp.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Winamp before 5.0.4 allows remote attackers to execute arbitrary script in the Local computer zone via script in HTML files that are referenced from XML files contained in a .wsz skin file.
+
+--
+Affected Systems:
+nullsoft winamp 2.10
+nullsoft winamp 2.24
+nullsoft winamp 2.4
+nullsoft winamp 2.50
+nullsoft winamp 2.5e
+nullsoft winamp 2.60
+nullsoft winamp 2.60
+nullsoft winamp 2.60
+nullsoft winamp 2.61
+nullsoft winamp 2.61
+nullsoft winamp 2.62
+nullsoft winamp 2.62
+nullsoft winamp 2.64
+nullsoft winamp 2.64
+nullsoft winamp 2.65
+nullsoft winamp 2.70
+nullsoft winamp 2.70
+nullsoft winamp 2.71
+nullsoft winamp 2.72
+nullsoft winamp 2.73
+nullsoft winamp 2.73
+nullsoft winamp 2.74
+nullsoft winamp 2.75
+nullsoft winamp 2.76
+nullsoft winamp 2.77
+nullsoft winamp 2.78
+nullsoft winamp 2.79
+nullsoft winamp 2.80
+nullsoft winamp 2.81
+nullsoft winamp 2.91
+nullsoft winamp 3.0
+nullsoft winamp 3.1
+nullsoft winamp 5.01
+nullsoft winamp 5.02
+nullsoft winamp 5.03
+nullsoft winamp 5.04
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2004-0820:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2004-0820
+  
+--

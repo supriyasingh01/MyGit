@@ -1,0 +1,54 @@
+Rule: 
+
+--
+Sid: 
+8060
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in UltraVNC.
+
+-- 
+Impact: 
+Serious. Code execution may be possible.
+
+--
+Detailed Information:
+UltraVNC can be used to control remote machines over a network connection. Versions of UltraVNC are vulnerable to a buffer overflow related to error logging functions in the server.
+
+The server does not correctly check user supplied data before copying to a fixed length buffer. A remote attacker could utilize this vulnerability to execute code of their choosing on an affected server.
+
+--
+Affected Systems:
+UltraVNC 1.0.1 and prior
+
+--
+Attack Scenarios: 
+An attacker can supply excess data to the server to overflow the buffer and execute code of their choosing on the host.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+--

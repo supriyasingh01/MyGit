@@ -1,0 +1,55 @@
+Rule
+
+--
+Sid
+9619
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Gnu gv.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+The Gnu GV library, which allows viewing and navigation of PostScript and PDF files in X, is vulnerable to a buffer overflow when processing PostScript files. Specifically, if the DocumentMedia property is longer than 257 bytes, a stack-based overflow occurs, allowing for easy exploitation.
+
+--
+Affected Systems:
+Gnu gv 3.6.2 and prior
+
+--
+Attack Scenarios:
+An attacker needs to supply excess data in a transaction using the application. The attacker may then include code of their choosing to be executed on the host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

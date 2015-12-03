@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12112
+
+--
+Summary:
+This event is generated when an attempt is made to send a malformed communication to a Voice over Internet Protocol (VoIP) device.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+This event indicates that "Sivus Scanner Detected" has occurred.
+
+Some events may indicate that a VoIP device is in use on the protected network. This may be a policy violation.
+
+--
+Affected Systems:
+Devices using VoIP.
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that a VoIP application has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Check the device for signs of compromise.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

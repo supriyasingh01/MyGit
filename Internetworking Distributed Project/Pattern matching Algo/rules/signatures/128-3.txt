@@ -1,0 +1,82 @@
+Rule
+
+--
+Sid
+128-3
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in SecureCRT.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Buffer overflow in VanDyke SecureCRT before 3.4.2, when using the SSH-1 protocol, allows remote attackers to execute arbitrary code via a long (1) username or (2) password.
+
+Buffer overflow in Van Dyke SecureCRT SSH client before 3.4.6, and 4.x before 4.0 beta 3, allows an SSH server to execute arbitrary code via a long SSH1 protocol version string.
+
+This event can be controlled using the ((ssh)) configuration options.
+
+--
+Affected Systems:
+Van Dyke Technologies SecureCRT 2.4
+Van Dyke Technologies SecureCRT 3.0
+Van Dyke Technologies SecureCRT 3.1
+Van Dyke Technologies SecureCRT 3.1.1
+Van Dyke Technologies SecureCRT 3.1.2
+Van Dyke Technologies SecureCRT 3.2
+Van Dyke Technologies SecureCRT 3.2.1
+Van Dyke Technologies SecureCRT 3.3
+Van Dyke Technologies SecureCRT 3.3.1
+Van Dyke Technologies SecureCRT 3.3.2
+Van Dyke Technologies SecureCRT 3.3.3
+Van Dyke Technologies SecureCRT 3.4
+Van Dyke Technologies SecureCRT 3.4.1
+Van Dyke Technologies SecureCRT 3.4.2
+Van Dyke Technologies SecureCRT 3.4.3
+Van Dyke Technologies SecureCRT 3.4.4
+Van Dyke Technologies SecureCRT 3.4.5
+Van Dyke Technologies SecureCRT 4.0 beta 1
+Van Dyke Technologies SecureCRT 4.0 beta 2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2001-1466:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2001-1466
+  
+NIST CVE-2001-1059:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2001-1059
+
+--

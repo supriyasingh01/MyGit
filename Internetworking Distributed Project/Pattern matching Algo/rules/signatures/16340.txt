@@ -1,0 +1,60 @@
+Rule:
+
+--
+Sid:
+16340
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in an ActiveX control.
+
+--
+Impact:
+A successful attack can cause a buffer overflow and the subsequent execution of arbitrary code with system level privileges on a vulnerable host.
+
+--
+Detailed Information:
+A vulnerability exists in the way that Internet Explorer handles ActiveX controls that may present an attacker with the opportunity to run code of their choosing on a host.
+
+In particular, this event is generated when a call to the windows media player is made. This may indicate an attempt to exploit known vulnerabilities in that ActiveX control which may lead to a system compromise.
+
+Directory traversal vulnerability in Microsoft Windows Media Player 7.1 and Windows Media Player for Windows XP allows remote attackers to execute arbitrary code via a skins file with a URL containing hex-encoded backslash characters (%5C) that causes an executable to be placed in an arbitrary location.
+
+NOTE: For this detection to work comprehensively, the flow depth setting in the HTTP Inspect preprocessor must be set to 0
+
+--
+Affected Systems:
+Microsoft Windows systems using the windows media player ActiveX control
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

@@ -1,0 +1,57 @@
+Rule:
+
+--
+Sid:
+4143
+
+--
+Summary:
+THIS RULE DOES NOT GENERATE AN EVENT
+
+--
+Impact:
+N/A
+
+--
+Detailed Information:
+This rule is used to detect a valid connection to a remote system using
+lpd.
+
+A vulnerability exists in the Solaris operating system that may allow an
+unprivileged use to remove any file on a system using the line printer
+daemon. This can be done via the Unlink command which can be used to
+unlink any file on a local or remote sytem accepting connections to lpd.
+
+--
+Affected Systems:
+  Solaris LPD
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

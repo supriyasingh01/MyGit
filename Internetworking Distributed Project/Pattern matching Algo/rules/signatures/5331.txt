@@ -1,0 +1,59 @@
+Rule:
+
+--
+Sid:
+
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the Microsoft Windows implementation of RPC. In particular this rule generates an event when an attempt is made to exploit the function "irot" via the "IrotRevoke" command.
+
+--
+Impact:
+Serious. Denial of Service (DoS).
+
+--
+Detailed Information:
+Arguments from a remote RPC call are copied to a local memory buffer without sufficient checks being made on the user supplied data. An attacker can supply code of their choosing by using these arguments to overflow a static buffer causing a possible DoS on the service.
+
+In particular this rule generates an event when an attempt is made to exploit the function "irot" via the "IrotRevoke" command.
+
+--
+Affected Systems:
+Microsoft Windows XP SP1 and prior
+Microsoft Windows NT Workstation SP6a and prior
+Microsoft Windows NT Server SP6a and prior
+Microsoft Windows 2000 Server SP3 and prior
+Microsoft Windows 2000 Professional SP3 and prior
+
+--
+Attack Scenarios:
+An attacker can supply data of their choosing as arguments to the RPC call to cause the overflow to occur, prior authentication is not required.
+
+--
+Ease of Attack:
+Simple. Exploit code exists.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matt Watchinski <matthew.watchinski@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

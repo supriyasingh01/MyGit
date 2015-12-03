@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12255
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in csGuestbook.
+
+--
+Impact:
+  Loss of integrity. 
+
+--
+Detailed Information:
+csGuestbook.cgi in CGISCRIPT.NET csGuestbook 1.0 allows remote attackers to execute arbitrary Perl code via the setup parameter, which is processed by the Perl eval function.
+
+--
+Affected Systems:
+CGISCRIPT.NET csGuestbook 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

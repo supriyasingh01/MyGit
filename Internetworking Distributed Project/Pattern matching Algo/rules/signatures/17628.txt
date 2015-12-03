@@ -1,0 +1,62 @@
+Rule
+
+--
+Sid
+17628
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in jdk.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Buffer overflow in Sun JDK and Java Runtime Environment (JRE) 5.0 Update 9 and earlier, SDK and JRE 1.4.2_12 and earlier, and SDK and JRE 1.3.1_18 and earlier allows applets to gain privileges via a GIF image with a block with a 0 width field, which triggers memory corruption.
+
+--
+Affected Systems:
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+sun jdk 1.5.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-0243:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-0243
+  
+--

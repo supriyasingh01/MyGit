@@ -1,0 +1,90 @@
+Rule
+
+--
+Sid
+11609
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in samba.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple heap-based buffer overflows in the NDR parsing in smbd in Samba 3.0.0 through 3.0.25rc3 allow remote attackers to execute arbitrary code via crafted MS-RPC requests involving (1) DFSEnum (netdfs_io_dfs_EnumInfo_d), (2) RFNPCNEX (smb_io_notify_option_type_data), (3) LsarAddPrivilegesToAccount (lsa_io_privilege_set), (4) NetSetFileSecurity (sec_io_acl), or (5) LsarLookupSids/LsarLookupSids2 (lsa_io_trans_names).
+
+--
+Affected Systems:
+samba samba 3.0.0
+samba samba 3.0.1
+samba samba 3.0.10
+samba samba 3.0.11
+samba samba 3.0.12
+samba samba 3.0.13
+samba samba 3.0.14
+samba samba 3.0.14a
+samba samba 3.0.15
+samba samba 3.0.16
+samba samba 3.0.17
+samba samba 3.0.18
+samba samba 3.0.19
+samba samba 3.0.2
+samba samba 3.0.20
+samba samba 3.0.20a
+samba samba 3.0.20b
+samba samba 3.0.21
+samba samba 3.0.21a
+samba samba 3.0.21b
+samba samba 3.0.21c
+samba samba 3.0.22
+samba samba 3.0.23
+samba samba 3.0.23a
+samba samba 3.0.23b
+samba samba 3.0.23c
+samba samba 3.0.23d
+samba samba 3.0.24
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.25
+samba samba 3.0.2a
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-2446:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-2446
+
+--

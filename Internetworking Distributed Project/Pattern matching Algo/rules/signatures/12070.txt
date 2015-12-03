@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+12070
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Office.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Microsoft Excel 2000 SP3, 2002 SP3, 2003 SP2, 2003 Viewer, and Office Excel 2007 does not properly validate version information, which allows user-assisted remote attackers to execute arbitrary code via a crafted Excel file, aka "Calculation Error Vulnerability".
+
+--
+Affected Systems:
+Microsoft Office 2000 SP3
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

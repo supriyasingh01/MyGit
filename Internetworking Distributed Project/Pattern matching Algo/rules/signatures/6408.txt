@@ -1,0 +1,54 @@
+Rule:
+
+--
+Sid:
+6408
+
+--
+Summary:
+This event is generated when network traffic that indicates Webshots desktop is being used.
+
+--
+Impact:
+Possible policy violation. The use of Webshots desktop may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the Webshots desktop is being used on the protected network.
+
+Specifically Webshots desktop traffic was observed.
+
+--
+Affected Systems:
+All systems using Webshots desktop
+	
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Webshots desktop has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Webshots desktop on the protected network and enforce or implement an organization wide policy on the use of Webshots desktop.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

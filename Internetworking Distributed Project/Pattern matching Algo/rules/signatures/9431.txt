@@ -1,0 +1,57 @@
+Rule: 
+
+--
+Sid: 
+9431
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Outlook Express.
+
+-- 
+Impact: 
+Serious.
+
+--
+Detailed Information:
+Microsoft Outlook Express suffers from a buffer overflow vulnerability that is manifest when using it to read news groups from an NNTP server.
+
+A long field in a LIST response from a server may allow an attacker to overflow a fixed length buffer and execute code of their choosing on an affected system.
+
+--
+Affected Systems:
+Microsoft Outlook Express 5.5 SP2
+Microsoft Outlook Express 6
+Microsoft Outlook Express 6 SP1
+
+--
+Attack Scenarios: 
+An attacker would need to craft a long response to a client that makes a LIST request for news group messages on a server.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

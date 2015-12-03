@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+22077
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in excel.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Microsoft Excel 2003 SP3, 2007 SP2 and SP3, and 2010 Gold and SP1; Office 2008 for Mac; Excel Viewer; and Office Compatibility Pack SP2 and SP3 do not properly handle memory during the opening of files, which allows remote attackers to execute arbitrary code via a crafted spreadsheet, aka "Excel File Format Memory Corruption in OBJECTLINK Record Vulnerability."
+
+--
+Affected Systems:
+microsoft excel 2003
+microsoft excel 2007
+microsoft excel 2007
+microsoft excel 2010
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2012-0142:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-0142
+  
+--

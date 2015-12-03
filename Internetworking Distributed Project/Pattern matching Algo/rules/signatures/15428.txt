@@ -1,0 +1,106 @@
+Rule
+
+--
+Sid
+15428
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in firefox.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+The layout engine in Mozilla Firefox before 3.0.7, Thunderbird before 2.0.0.21, and SeaMonkey 1.1.15 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via certain vectors that trigger memory corruption and assertion failures.
+
+--
+Affected Systems:
+mozilla firefox 1.0
+mozilla firefox 1.0.1
+mozilla firefox 1.0.2
+mozilla firefox 1.0.3
+mozilla firefox 1.0.4
+mozilla firefox 1.0.5
+mozilla firefox 1.0.6
+mozilla firefox 1.0.7
+mozilla firefox 1.0.8
+mozilla firefox 1.5
+mozilla firefox 1.5.0.1
+mozilla firefox 1.5.0.10
+mozilla firefox 1.5.0.11
+mozilla firefox 1.5.0.12
+mozilla firefox 1.5.0.2
+mozilla firefox 1.5.0.3
+mozilla firefox 1.5.0.4
+mozilla firefox 1.5.0.5
+mozilla firefox 1.5.0.6
+mozilla firefox 1.5.0.7
+mozilla firefox 1.5.0.8
+mozilla firefox 1.5.0.9
+mozilla firefox 2.0
+mozilla firefox 2.0.0.1
+mozilla firefox 2.0.0.10
+mozilla firefox 2.0.0.11
+mozilla firefox 2.0.0.12
+mozilla firefox 2.0.0.13
+mozilla firefox 2.0.0.14
+mozilla firefox 2.0.0.15
+mozilla firefox 2.0.0.16
+mozilla firefox 2.0.0.17
+mozilla firefox 2.0.0.18
+mozilla firefox 2.0.0.19
+mozilla firefox 2.0.0.2
+mozilla firefox 2.0.0.20
+mozilla firefox 2.0.0.3
+mozilla firefox 2.0.0.4
+mozilla firefox 2.0.0.5
+mozilla firefox 2.0.0.6
+mozilla firefox 2.0.0.7
+mozilla firefox 2.0.0.8
+mozilla firefox 2.0.0.9
+mozilla firefox 3.0
+mozilla firefox 3.0.1
+mozilla firefox 3.0.2
+mozilla firefox 3.0.3
+mozilla firefox 3.0.4
+mozilla firefox 3.0.5
+mozilla firefox 3.0.6
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0771:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0771
+  
+--

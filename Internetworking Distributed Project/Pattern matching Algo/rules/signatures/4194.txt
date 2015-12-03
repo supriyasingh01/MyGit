@@ -1,0 +1,63 @@
+
+Rule:
+
+--
+Sid:
+4194
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a
+vulnerability associated with Microsoft Step-by-Step Interactive
+Training.
+
+--
+Impact:
+Serious. A successful attack may allow an unauthorized user to cause
+buffer overflow with the subsequent execution of arbitrary code.
+
+--
+Detailed Information:
+Microsoft Step-by-Step Interactive Training contains a programming
+error in the orun32.exe application that may allow a remote user to
+execute code of their choosing on an affected system. This can be
+achieved via a malformed bookmark link file.
+
+The malformed file may be supplied via a webserver or via an email
+attachment.
+
+--
+Affected Systems:
+  Microsoft Windows XP with IE 6
+
+--
+Attack Scenarios:
+An attacker can create a malformed bookmark in a file containing code
+to be executed on the system.
+
+--
+Ease of Attack:
+Simple. 
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

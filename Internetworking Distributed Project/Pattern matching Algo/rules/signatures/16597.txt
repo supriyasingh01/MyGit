@@ -1,0 +1,75 @@
+Rule
+
+--
+Sid
+16597
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Groupwise.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple buffer overflows in the Internet Agent (aka GWIA) component in Novell Groupwise 7.x before 7.03 HP3 and 8.x before 8.0 HP2 allow remote attackers to execute arbitrary code via (1) a crafted e-mail address in an SMTP session or (2) an SMTP command.
+
+--
+Affected Systems:
+Novell Groupwise 7.0
+Novell Groupwise 7.0
+Novell Groupwise 7.0
+Novell Groupwise 7.0.0
+Novell Groupwise 7.0.0
+Novell Groupwise 7.0.2
+Novell Groupwise 7.0.3
+Novell Groupwise 7.01
+Novell Groupwise 7.03
+Novell Groupwise 7.03
+Novell Groupwise 8.0
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-1636:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-1636
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

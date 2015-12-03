@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+15183
+
+--
+Summary:
+This event is generated when network traffic that indicates Yahoo messenger is being used.
+
+--
+Impact:
+Possible policy violation. The use of Yahoo messenger may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the Yahoo messenger is being used on the protected network.
+
+--
+Affected Systems:
+All systems using Yahoo messenger
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Yahoo messenger has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Yahoo messenger on the protected network and enforce or implement an organization wide policy on the use of Yahoo messenger.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

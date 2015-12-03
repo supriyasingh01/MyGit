@@ -1,0 +1,187 @@
+Rule
+
+--
+Sid
+16707
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in MySQL.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple format string vulnerabilities in the dispatch_command function in libMySQLd/sql_parse.cc in MySQLd in MySQL 4.0.0 through 5.0.83 allow remote authenticated users to cause a denial of service (daemon crash) and possibly have unspecified other impact via format string specifiers in a database name in a (1) COM_CREATE_DB or (2) COM_DROP_DB request.  NOTE: some of these details are obtained from third party information.
+
+--
+Affected Systems:
+MySQL MySQL 4.0.0
+MySQL MySQL 4.0.1
+MySQL MySQL 4.0.10
+MySQL MySQL 4.0.11
+MySQL MySQL 4.0.12
+MySQL MySQL 4.0.13
+MySQL MySQL 4.0.14
+MySQL MySQL 4.0.15
+MySQL MySQL 4.0.16
+MySQL MySQL 4.0.17
+MySQL MySQL 4.0.18
+MySQL MySQL 4.0.19
+MySQL MySQL 4.0.2
+MySQL MySQL 4.0.20
+MySQL MySQL 4.0.21
+MySQL MySQL 4.0.23
+MySQL MySQL 4.0.24
+MySQL MySQL 4.0.25
+MySQL MySQL 4.0.26
+MySQL MySQL 4.0.27
+MySQL MySQL 4.0.3
+MySQL MySQL 4.0.4
+MySQL MySQL 4.0.5
+MySQL MySQL 4.0.5a
+MySQL MySQL 4.0.6
+MySQL MySQL 4.0.7
+MySQL MySQL 4.0.8
+MySQL MySQL 4.0.9
+MySQL MySQL 4.1
+MySQL MySQL 4.1.0
+MySQL MySQL 4.1.0.0
+MySQL MySQL 4.1.1
+MySQL MySQL 4.1.10
+MySQL MySQL 4.1.10a
+MySQL MySQL 4.1.11
+MySQL MySQL 4.1.12
+MySQL MySQL 4.1.12a
+MySQL MySQL 4.1.13
+MySQL MySQL 4.1.13a
+MySQL MySQL 4.1.14
+MySQL MySQL 4.1.14a
+MySQL MySQL 4.1.15
+MySQL MySQL 4.1.15a
+MySQL MySQL 4.1.16
+MySQL MySQL 4.1.17
+MySQL MySQL 4.1.18
+MySQL MySQL 4.1.19
+MySQL MySQL 4.1.2
+MySQL MySQL 4.1.20
+MySQL MySQL 4.1.21
+MySQL MySQL 4.1.22
+MySQL MySQL 4.1.23
+MySQL MySQL 4.1.3
+MySQL MySQL 4.1.4
+MySQL MySQL 4.1.5
+MySQL MySQL 4.1.6
+MySQL MySQL 4.1.7
+MySQL MySQL 4.1.8
+MySQL MySQL 4.1.8a
+MySQL MySQL 4.1.9
+MySQL MySQL 5.0
+MySQL MySQL 5.0.0
+MySQL MySQL 5.0.0.0
+MySQL MySQL 5.0.1
+MySQL MySQL 5.0.10
+MySQL MySQL 5.0.10a
+MySQL MySQL 5.0.11
+MySQL MySQL 5.0.12
+MySQL MySQL 5.0.13
+MySQL MySQL 5.0.14
+MySQL MySQL 5.0.15
+MySQL MySQL 5.0.15a
+MySQL MySQL 5.0.16
+MySQL MySQL 5.0.16a
+MySQL MySQL 5.0.17
+MySQL MySQL 5.0.17a
+MySQL MySQL 5.0.18
+MySQL MySQL 5.0.19
+MySQL MySQL 5.0.1a
+MySQL MySQL 5.0.2
+MySQL MySQL 5.0.20
+MySQL MySQL 5.0.20a
+MySQL MySQL 5.0.21
+MySQL MySQL 5.0.22
+MySQL MySQL 5.0.22.1.0.1
+MySQL MySQL 5.0.23
+MySQL MySQL 5.0.24
+MySQL MySQL 5.0.24a
+MySQL MySQL 5.0.25
+MySQL MySQL 5.0.26
+MySQL MySQL 5.0.27
+MySQL MySQL 5.0.3
+MySQL MySQL 5.0.30
+MySQL MySQL 5.0.32
+MySQL MySQL 5.0.33
+MySQL MySQL 5.0.36
+MySQL MySQL 5.0.37
+MySQL MySQL 5.0.38
+MySQL MySQL 5.0.3a
+MySQL MySQL 5.0.4
+MySQL MySQL 5.0.41
+MySQL MySQL 5.0.42
+MySQL MySQL 5.0.44
+MySQL MySQL 5.0.45
+MySQL MySQL 5.0.4a
+MySQL MySQL 5.0.5
+MySQL MySQL 5.0.5.0.21
+MySQL MySQL 5.0.50
+MySQL MySQL 5.0.51
+MySQL MySQL 5.0.51a
+MySQL MySQL 5.0.51b
+MySQL MySQL 5.0.52
+MySQL MySQL 5.0.54
+MySQL MySQL 5.0.56
+MySQL MySQL 5.0.6
+MySQL MySQL 5.0.60
+MySQL MySQL 5.0.66
+MySQL MySQL 5.0.7
+MySQL MySQL 5.0.75
+MySQL MySQL 5.0.77
+MySQL MySQL 5.0.8
+MySQL MySQL 5.0.81
+MySQL MySQL 5.0.82
+MySQL MySQL 5.0.83
+MySQL MySQL 5.0.9
+
+--
+Attack Scenarios:
+Format string vulnerabilities can be very simple to attack. Any program that reads a format string as an input parameter can be exploited if the argument can be controlled by the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-2446:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2446
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/134.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

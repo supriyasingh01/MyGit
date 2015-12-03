@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+130-1
+
+--
+Summary:
+This event is generated when the dcerpc preprocessor encounters a situation where the maximum amount of memory it is allowed to use has been reached.
+
+--
+Impact:
+The preprocessor may discard data. The inspection of traffic may be impaired.
+
+--
+Detailed Information:
+This event is generated when the dcerpc preprocessor encounters a situation where the maximum amount of memory it is allowed to use has been reached.
+
+--
+Affected Systems:
+All networked systems.
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

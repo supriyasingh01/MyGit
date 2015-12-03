@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+17791
+
+--
+Summary:
+This event is generated when unusual SCADA traffic is observed on a network.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+This event is generated when unusual SCADA traffic is observed on a network. In particular a Modbus read/write multiple registers from an external source has been observed.
+
+--
+Affected Systems:
+SCADA systems
+
+--
+Attack Scenarios:
+This may indicate an attack or the after effects of an attack on a SCADA system.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Investigate the hosts involved and look for signs of compromise.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

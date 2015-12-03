@@ -1,0 +1,53 @@
+Rule: 
+
+--
+Sid: 
+6504
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Sophos Anti-Virus products. 
+
+-- 
+Impact: 
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+Sophos Anti-Virus fails to properly process Microsoft CAB files. A remote attacker may be able to leverage this vulnerability to execute code of their choosing on the target host or cause a denial of service (DoS) against the Sophos Anti-Virus process.
+
+This is a heap overflow vulnerability and is caused by the mishandling of CAB files. If a CAB file contains an excessive amount of folder descriptions a static buffer could be overflowed giving an attacker the opportunity to execute code of their choosing on an affected host.
+
+--
+Affected Systems:
+
+--
+Attack Scenarios: 
+An attacker can supply a malformed CAB file to be processed by Sophos Anti-Virus causing the overflow to occur.
+
+-- 
+Ease of Attack: 
+Simple
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

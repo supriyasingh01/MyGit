@@ -1,0 +1,53 @@
+Rule:
+
+--
+Sid:
+15421
+
+--
+Summary:
+This event is generated when network traffic that indicates AIM or ICQ is being used and that the transaction has been negated.
+
+--
+Impact:
+Possible policy violation. The use of AIM or ICQ may be prohibited by corporate policy in some network environments. 
+
+This event indicates that the content of a transaction using AIM or ICQ has been replaced.
+
+--
+Detailed Information:
+This event indicates that the AIM or ICQ is being used on the protected network.
+
+--
+Affected Systems:
+All systems using AIM or ICQ
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that AIM or ICQ has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of AIM or ICQ on the protected network and enforce or implement an organization wide policy on the use of AIM or ICQ.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

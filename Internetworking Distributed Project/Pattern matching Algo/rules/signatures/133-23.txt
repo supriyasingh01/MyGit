@@ -1,0 +1,56 @@
+Rule
+
+--
+Sid
+133-23
+
+--
+Summary:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the dcerpc2 preprocessor detects anomalous network traffic.
+
+When a Session Setup AndX request is sent to the server, the server responds (if the client successfully authenticates) which a user id or login handle. This is used by the client in subsequent requests to indicate that it has authenticated. A Logoff AndX request is sent by the client to indicate it wants to end the session and invalidate the login handle. With commands that are chained after a Session Setup AndX request, the login handle returned by the server is used for the subsequent chained commands. The combination of a Session Setup AndX command with a chained Logoff AndX command, essentially logins in and logs off in the same request and is anomalous behavior. The preprocessor will generate this event if it sees this.
+
+This event can be controlled using the ((dce2)) configuration options.
+
+--
+Affected Systems:
+All systems using NetBIOS DCERPC or SMB file and print sharing
+
+--
+Attack Scenarios:
+ 
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12266
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Internet Explorer.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unspecified vulnerability in the tblinf32.dll (aka vstlbinf.dll) ActiveX control for Internet Explorer 5.01, 6 SP1, and 7 allows remote attackers to execute arbitrary code via unknown vectors related to an incorrect IObjectsafety implementation and Microsoft Visual Basic 6 objects, aka "ActiveX Object Vulnerability."
+
+--
+Affected Systems:
+Microsoft Internet Explorer 3
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

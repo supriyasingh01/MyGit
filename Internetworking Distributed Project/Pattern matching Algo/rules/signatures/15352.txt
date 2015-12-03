@@ -1,0 +1,58 @@
+Rule:
+
+--
+Sid:
+15352
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in an ActiveX control.
+
+--
+Impact:
+A successful attack can cause a buffer overflow and the subsequent execution of arbitrary code with system level privileges on a vulnerable host.
+
+--
+Detailed Information:
+A vulnerability exists in the way that Internet Explorer handles ActiveX controls that may present an attacker with the opportunity to run code of their choosing on a host.
+
+In particular, this event is generated when a call to the web_on_windows_activex is made. This may indicate an attempt to exploit known vulnerabilities in that ActiveX control which may lead to a system compromise.
+
+Multiple insecure method vulnerabilities in the Web On Windows (WOW) ActiveX control in WOW ActiveX 2 allow remote attackers to (1) create and overwrite arbitrary files via the WriteIniFileString method, (2) execute arbitrary programs via the ShellExecute method, (3) read from the registry via unspecified vectors, and (4) write to the registry via unspecified vectors.  NOTE: vectors 1 and 2 can be used together to execute arbitrary code.
+
+--
+Affected Systems:
+Microsoft Windows systems using the web_on_windows_activex ActiveX control
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

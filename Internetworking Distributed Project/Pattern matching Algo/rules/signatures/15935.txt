@@ -1,0 +1,50 @@
+Rule: 
+
+--
+Sid: 
+13249
+
+-- 
+Summary: 
+This event is generated when an RFC 1918 non-routable address is seen in a DNS response to an external query.
+
+-- 
+Impact: 
+Intelligence gathering activity
+
+--
+Detailed Information:
+RFC 1918 address space is non-routable address space meant to be used on internal networks. These addresses are non-routable across the Internet. An address of this type should never be seen in a DNS response to a query originating from sources external to the protected network.
+
+--
+Affected Systems:
+All systems using RFC 1918 address space
+
+--
+Attack Scenarios: 
+An attacker may be attempting to map out the internal structure of a network as an intelligence gathering activity. This may be indicative of an impeding attack.
+
+-- 
+Ease of Attack: 
+Simple
+
+-- 
+False Positives:
+If the EXTERNAL_NET variable is not set to be outside the protected internal network space or if the sensor is being used on an internal segment inside RFC 1918 address space this rule will generate events. Otherwise there are no known false positive situations.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Ensure that DNS is correctly setup for the network and that all routers and switches are configured correctly so as to not route this address space to external sources.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+--

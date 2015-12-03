@@ -1,0 +1,59 @@
+Rule:
+
+--
+Sid:
+4990
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a vulnerability in Microsoft SQL Server 2000.
+
+--
+Impact:
+Serious. A successful attack may allow an unauthorized user access, cause a  denial of service or buffer overrun with the subsequent execution of arbitrary code.
+
+--
+Detailed Information:
+Versions of Microsofts implementation of SQL server running the  resolution service are subject to multiple buffer overflows.
+
+It is possible to overwrite memory with data of the attackers choosing, resulting in a denial of service or possible code execution. This is done by sending carefully crafted packets to the resolution service running on the server.
+
+It is also possible for the attacker to cause a denial of service by sending a spoofed packet purporting to be from one SQL server to another. The resulting exchange between the two servers could result in a denial of service.
+
+
+--
+Affected Systems:
+Microsoft SQL Server 2000
+
+--
+Attack Scenarios:
+The SQL Slammer (Sapphire) worm exploited the vulnerabilities in this service.
+
+--
+Ease of Attack:
+Simple. 
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+3-16633
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Adobe Flash Player, Adobe Reader and Adobe Acrobat.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Unspecified vulnerability in Adobe Flash Player 9.0.x through 9.0.262 and 10.x through 10.0.45.2, and authplay.dll in Adobe Reader and Acrobat 9.x through 9.3.2, allows remote attackers to execute arbitrary code via crafted SWF content, as exploited in the wild in June 2010.
+
+--
+Affected Systems:
+Adobe Flash Player 9.0.x through 9.0.262 and 10.x through 10.0.45.2
+Adobe Reader and Acrobat 9.x through 9.3.2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-1297:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-1297
+  
+--

@@ -1,0 +1,54 @@
+Rule:
+
+-- 
+Sid: 
+8415 
+
+-- 
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the WFTPD FTP server.
+
+--
+Impact:
+Serious. Denial of service is possible; when combined with shellcode, arbitrary code can be remotely executed with SYSTEM privileges.
+
+-- 
+Detailed Information:
+The vulnerability in question is a buffer overflow present in the handling of the SIZE command in the WFTPD FTP server for Windows. 
+
+The rule searches for a SIZE command which is not correctly terminated. 
+
+--
+Affected Systems:
+All versions of WFTPD 3.23 and possibly earlier.
+
+--
+Attack Scenarios:
+Several scripts exist to exploit this flaw, and shellcode is publicly available.  An attacker could either use one of these scripts, craft their own, or simply manually enter a SIZE command which triggers the overflow after having logged into a vulnerable server.
+
+--
+Ease of Attack:
+Simple. Exploit code exists.
+
+--
+False Positives:
+None Known
+
+-- 
+False Negatives:
+None Known
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+-- 
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com> 
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- Additional References:
+
+
+--

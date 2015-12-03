@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+12426
+
+--
+Summary:
+This event is generated when network traffic that indicates Ruckus P2P broadcast domain probe is being used.
+
+--
+Impact:
+Possible policy violation. The use of Ruckus P2P client may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the Ruckus P2P client is being used on the protected network.
+
+--
+Affected Systems:
+All systems using Ruckus P2P broadcast domain probe
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Ruckus P2P broadcast domain probe has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Ruckus P2P broadcast domain probe on the protected network and enforce or implement an organization wide policy on the use of Ruckus P2P broadcast domain probe.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

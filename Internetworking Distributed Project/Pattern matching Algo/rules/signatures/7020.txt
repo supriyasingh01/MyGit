@@ -1,0 +1,57 @@
+Rule: 
+
+--
+Sid: 
+7020
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Internet Explorer.
+
+-- 
+Impact: 
+Serious. Execution of code is possible, Denial of Service (DoS).
+
+--
+Detailed Information:
+Microsoft Internet Explorer suffers from a programming error that can allow a remote attacker to exploit a buffer overflow condition by crafting a web page that checks for installed components.
+
+By supplying sufficiently large amounts of data to the isComponentInstalled() method, an attacker might cause the overflow to occur and execute code.
+
+--
+Affected Systems:
+Microsoft Internet Explorer 6 and prior
+
+--
+Attack Scenarios: 
+An attacker would need to create a web page and embed script in the page that calls on the isComponentInstalled() method, in this manner isComponentInstalled('a lot of data', 'component id')
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+
+--

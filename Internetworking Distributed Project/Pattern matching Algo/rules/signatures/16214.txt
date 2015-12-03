@@ -1,0 +1,87 @@
+Rule
+
+--
+Sid
+16214
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Squid.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+Squid 3.0 through 3.0.STABLE16 and 3.1 through 3.1.0.11 allows remote attackers to cause a denial of service via malformed requests including (1) "missing or mismatched protocol identifier," (2) missing or negative status value," (3) "missing version," or (4) "missing or invalid status number," related to (a) HttpMsg.cc and (b) HttpReply.cc.
+
+--
+Affected Systems:
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.0
+Squid-cache Squid 3.1
+Squid-cache Squid 3.1.0.1
+Squid-cache Squid 3.1.0.2
+Squid-cache Squid 3.1.0.3
+Squid-cache Squid 3.1.0.4
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-2622:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2622
+  
+--

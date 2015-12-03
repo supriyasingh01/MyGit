@@ -1,0 +1,56 @@
+Rule:
+
+--
+Sid:
+9898
+
+--
+Summary:
+This rule generates an event when an attempt is made to exploit a known vulnerability in the Microsoft TAPI service.
+
+--
+Impact:
+Execution of arbitrary code leading to full administrator access of the machine. Denial of Service (DoS).
+
+--
+Detailed Information:
+The Microsoft Telephony Application Programming Interface (TAPI) provides the operating system with the interface needed for network communications. A buffer overflow condition exists in the service that may allow a remote attacker to execute code of their choosing on an affected host.
+
+The issue lies in the LSetAppPriority function and may be exploited by accessing this function using DCERPC over SMB.
+
+--
+Affected Systems:
+Windows 2000
+Windows Server 2003
+
+--
+Attack Scenarios:
+An attacker can supply excess data in communications with the TAPI service to overflow a fixed length buffer and execute code of their choosing on the affected system.
+
+--
+Ease of Attack:
+Simple. Expoit code exists.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--
+

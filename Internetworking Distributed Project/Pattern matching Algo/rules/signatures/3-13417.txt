@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+3-13417
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Citrix MetaFrame Presentation Server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Heap-based buffer overflow in the IMA_SECURE_DecryptData1 function in ImaSystem.dll for Citrix MetaFrame XP 1.0 and 2.0, and Presentation Server 3.0 and 4.0, allows remote attackers to execute arbitrary code via requests to the Independent Management Architecture (IMA) service (ImaSrv.exe) with invalid size values that trigger the overflow during decryption.
+
+--
+Affected Systems:
+Citrix Citrix MetaFrame Presentation Server 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2006-5821:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2006-5821
+
+--

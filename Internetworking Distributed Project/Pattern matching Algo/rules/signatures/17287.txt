@@ -1,0 +1,289 @@
+Rule
+
+--
+Sid
+17287
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in ios.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Cross-site scripting (XSS) vulnerability in Cisco IOS Web Server for IOS 12.0(2a) allows remote attackers to inject arbitrary web script or HTML by (1) packets containing HTML that an administrator views via an HTTP interface to the contents of memory buffers, as demonstrated by the URI /level/15/exec/-/buffers/assigned/dump; or (2) sending the router Cisco Discovery Protocol (CDP) packets with HTML payload that an administrator views via the CDP status pages.  NOTE: these vectors were originally reported as being associated with the dump and packet options in /level/15/exec/-/show/buffers.
+
+--
+Affected Systems:
+cisco ios 12.3
+cisco ios 12.3(10)
+cisco ios 12.3(10c)
+cisco ios 12.3(10d)
+cisco ios 12.3(10e)
+cisco ios 12.3(11)
+cisco ios 12.3(11)t
+cisco ios 12.3(11)t4
+cisco ios 12.3(11)t5
+cisco ios 12.3(11)t6
+cisco ios 12.3(11)t8
+cisco ios 12.3(11)t9
+cisco ios 12.3(11)xl
+cisco ios 12.3(11)xl3
+cisco ios 12.3(11)yf
+cisco ios 12.3(11)yf2
+cisco ios 12.3(11)yf3
+cisco ios 12.3(11)yf4
+cisco ios 12.3(11)yj
+cisco ios 12.3(11)yk
+cisco ios 12.3(11)yk1
+cisco ios 12.3(11)yk2
+cisco ios 12.3(11)yl
+cisco ios 12.3(11)yn
+cisco ios 12.3(11)yr
+cisco ios 12.3(11)ys
+cisco ios 12.3(11)ys1
+cisco ios 12.3(11)yw
+cisco ios 12.3(12)
+cisco ios 12.3(12b)
+cisco ios 12.3(12e)
+cisco ios 12.3(13)
+cisco ios 12.3(13a)
+cisco ios 12.3(13a)bc
+cisco ios 12.3(13a)bc1
+cisco ios 12.3(13b)
+cisco ios 12.3(14)t
+cisco ios 12.3(14)t2
+cisco ios 12.3(14)t4
+cisco ios 12.3(14)t5
+cisco ios 12.3(14)ym4
+cisco ios 12.3(14)yq
+cisco ios 12.3(14)yq1
+cisco ios 12.3(14)yq3
+cisco ios 12.3(14)yq4
+cisco ios 12.3(14)yt
+cisco ios 12.3(14)yt1
+cisco ios 12.3(14)yu
+cisco ios 12.3(14)yu1
+cisco ios 12.3(15)
+cisco ios 12.3(15b)
+cisco ios 12.3(16)
+cisco ios 12.3(1a)
+cisco ios 12.3(2)ja
+cisco ios 12.3(2)ja5
+cisco ios 12.3(2)jk
+cisco ios 12.3(2)jk1
+cisco ios 12.3(2)t3
+cisco ios 12.3(2)t8
+cisco ios 12.3(2)xa4
+cisco ios 12.3(2)xa5
+cisco ios 12.3(2)xc1
+cisco ios 12.3(2)xc2
+cisco ios 12.3(2)xc3
+cisco ios 12.3(2)xc4
+cisco ios 12.3(2)xe3
+cisco ios 12.3(2)xe4
+cisco ios 12.3(3e)
+cisco ios 12.3(3h)
+cisco ios 12.3(3i)
+cisco ios 12.3(4)eo1
+cisco ios 12.3(4)ja
+cisco ios 12.3(4)ja1
+cisco ios 12.3(4)t
+cisco ios 12.3(4)t1
+cisco ios 12.3(4)t2
+cisco ios 12.3(4)t3
+cisco ios 12.3(4)t4
+cisco ios 12.3(4)t8
+cisco ios 12.3(4)tpc11a
+cisco ios 12.3(4)xd
+cisco ios 12.3(4)xd1
+cisco ios 12.3(4)xd2
+cisco ios 12.3(4)xe4
+cisco ios 12.3(4)xg1
+cisco ios 12.3(4)xg2
+cisco ios 12.3(4)xg4
+cisco ios 12.3(4)xg5
+cisco ios 12.3(4)xh
+cisco ios 12.3(4)xk
+cisco ios 12.3(4)xk1
+cisco ios 12.3(4)xk3
+cisco ios 12.3(4)xk4
+cisco ios 12.3(4)xq
+cisco ios 12.3(4)xq1
+cisco ios 12.3(5)
+cisco ios 12.3(5)b1
+cisco ios 12.3(5a)
+cisco ios 12.3(5a)b
+cisco ios 12.3(5a)b2
+cisco ios 12.3(5a)b5
+cisco ios 12.3(5b)
+cisco ios 12.3(5c)
+cisco ios 12.3(5e)
+cisco ios 12.3(5f)
+cisco ios 12.3(6)
+cisco ios 12.3(6a)
+cisco ios 12.3(6d)
+cisco ios 12.3(6e)
+cisco ios 12.3(6f)
+cisco ios 12.3(7)ja
+cisco ios 12.3(7)ja1
+cisco ios 12.3(7)jx
+cisco ios 12.3(7)t
+cisco ios 12.3(7)t10
+cisco ios 12.3(7)t12
+cisco ios 12.3(7)t4
+cisco ios 12.3(7)t8
+cisco ios 12.3(7)t9
+cisco ios 12.3(7)xi3
+cisco ios 12.3(7)xi4
+cisco ios 12.3(7)xi7
+cisco ios 12.3(7)xr3
+cisco ios 12.3(7)xr4
+cisco ios 12.3(7)xr6
+cisco ios 12.3(7.7)
+cisco ios 12.3(8)t11
+cisco ios 12.3(8)t4
+cisco ios 12.3(8)t7
+cisco ios 12.3(8)t8
+cisco ios 12.3(8)t9
+cisco ios 12.3(8)xu2
+cisco ios 12.3(8)xy4
+cisco ios 12.3(8)xy5
+cisco ios 12.3(8)xy6
+cisco ios 12.3(8)ya1
+cisco ios 12.3(8)yd
+cisco ios 12.3(8)yf
+cisco ios 12.3(8)yg
+cisco ios 12.3(8)yg1
+cisco ios 12.3(8)yg2
+cisco ios 12.3(8)yg3
+cisco ios 12.3(8)yh
+cisco ios 12.3(8)yi
+cisco ios 12.3(8)yi1
+cisco ios 12.3(8)yi3
+cisco ios 12.3(9)
+cisco ios 12.3(9a)bc
+cisco ios 12.3(9a)bc2
+cisco ios 12.3(9a)bc6
+cisco ios 12.3(9a)bc7
+cisco ios 12.3(9d)
+cisco ios 12.3(9e)
+cisco ios 12.3b
+cisco ios 12.3bc
+cisco ios 12.3bw
+cisco ios 12.3ja
+cisco ios 12.3jk
+cisco ios 12.3jx
+cisco ios 12.3t
+cisco ios 12.3tpc
+cisco ios 12.3xa
+cisco ios 12.3xb
+cisco ios 12.3xc
+cisco ios 12.3xd
+cisco ios 12.3xe
+cisco ios 12.3xf
+cisco ios 12.3xg
+cisco ios 12.3xh
+cisco ios 12.3xi
+cisco ios 12.3xj
+cisco ios 12.3xk
+cisco ios 12.3xl
+cisco ios 12.3xm
+cisco ios 12.3xn
+cisco ios 12.3xq
+cisco ios 12.3xr
+cisco ios 12.3xs
+cisco ios 12.3xt
+cisco ios 12.3xu
+cisco ios 12.3xv
+cisco ios 12.3xw
+cisco ios 12.3xx
+cisco ios 12.3xy
+cisco ios 12.3xz
+cisco ios 12.3ya
+cisco ios 12.3yb
+cisco ios 12.3yc
+cisco ios 12.3yd
+cisco ios 12.3ye
+cisco ios 12.3yf
+cisco ios 12.3yg
+cisco ios 12.3yh
+cisco ios 12.3yi
+cisco ios 12.3yj
+cisco ios 12.3yk
+cisco ios 12.3yl
+cisco ios 12.3ym
+cisco ios 12.3yn
+cisco ios 12.3yq
+cisco ios 12.3yr
+cisco ios 12.3ys
+cisco ios 12.3yt
+cisco ios 12.3yu
+cisco ios 12.3yw
+cisco ios 12.3yx
+cisco ios 12.4
+cisco ios 12.4(1)
+cisco ios 12.4(1b)
+cisco ios 12.4(1c)
+cisco ios 12.4(2)mr
+cisco ios 12.4(2)mr1
+cisco ios 12.4(2)t
+cisco ios 12.4(2)t1
+cisco ios 12.4(2)t2
+cisco ios 12.4(2)xa
+cisco ios 12.4(2)xb
+cisco ios 12.4(3a)
+cisco ios 12.4(3b)
+cisco ios 12.4(4)t
+cisco ios 12.4(5)
+cisco ios 12.4mr
+cisco ios 12.4t
+cisco ios 12.4xa
+cisco ios 12.4xb
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2005-3921:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2005-3921
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

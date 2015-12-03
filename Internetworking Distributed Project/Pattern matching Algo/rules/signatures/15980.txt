@@ -1,0 +1,102 @@
+Rule
+
+--
+Sid
+15980
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in mod ssl.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Format string vulnerability in the mod proxy hook functions function in ssl engine log.c in mod ssl before 2.8.19 for Apache before 1.3.31 may allow remote attackers to execute arbitrary messages via format string specifiers in certain log messages for HTTPS that are handled by the ssl log function.
+
+--
+Affected Systems:
+mod ssl 2.3.11
+mod ssl 2.4.0
+mod ssl 2.4.1
+mod ssl 2.4.10
+mod ssl 2.4.2
+mod ssl 2.4.3
+mod ssl 2.4.4
+mod ssl 2.4.5
+mod ssl 2.4.6
+mod ssl 2.4.7
+mod ssl 2.4.8
+mod ssl 2.4.9
+mod ssl 2.5.0
+mod ssl 2.5.1
+mod ssl 2.6.0
+mod ssl 2.6.1
+mod ssl 2.6.2
+mod ssl 2.6.3
+mod ssl 2.6.4
+mod ssl 2.6.5
+mod ssl 2.6.6
+mod ssl 2.7.0
+mod ssl 2.7.1
+mod ssl 2.8.0
+mod ssl 2.8.1
+mod ssl 2.8.1.2
+mod ssl 2.8.10
+mod ssl 2.8.12
+mod ssl 2.8.14
+mod ssl 2.8.15
+mod ssl 2.8.16
+mod ssl 2.8.17
+mod ssl 2.8.18
+mod ssl 2.8.2
+mod ssl 2.8.3
+mod ssl 2.8.4
+mod ssl 2.8.5
+mod ssl 2.8.5.1
+mod ssl 2.8.5.2
+mod ssl 2.8.6
+mod ssl 2.8.7
+mod ssl 2.8.8
+mod ssl 2.8.9
+
+--
+Attack Scenarios:
+Format string vulnerabilities can be very simple to attack. Any program that reads a format string as an input parameter can be exploited if the argument can be controlled by the attacker.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2004-0700:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2004-0700
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/134.html
+ 
+--

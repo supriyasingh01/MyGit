@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+11835
+
+--
+Summary:
+This event is generated when network traffic that indicates a Visio file download is being used.
+
+--
+Impact:
+Possible policy violation. Downloading Visio files may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that downloading Visio files is happening on the protected network.
+
+--
+Affected Systems:
+All systems using downloading Visio files
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Visio file download has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Visio file download on the protected network and enforce or implement an organization wide policy on the use of Visio file download.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

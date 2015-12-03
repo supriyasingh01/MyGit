@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+21299
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in .net framework.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Microsoft .NET Framework 2.0 SP2, 3.5.1, and 4, and Silverlight 4 before 4.1.10111, does not properly restrict access to memory associated with unmanaged objects, which allows remote attackers to execute arbitrary code via (1) a crafted XAML browser application (aka XBAP), (2) a crafted ASP.NET application, (3) a crafted .NET Framework application, or (4) a crafted Silverlight application, aka ".NET Framework Unmanaged Objects Vulnerability."
+
+--
+Affected Systems:
+microsoft .net framework 2.0
+microsoft .net framework 3.5.1
+microsoft .net framework 4.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2012-0014:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-0014
+  
+--

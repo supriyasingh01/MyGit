@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+15698
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability using obfuscated JavaScript code.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+This event is generated when obfuscated JavaScript heap spray code is used against a client application.
+
+The Just-in-time (JIT) JavaScript compiler in Mozilla Firefox 3.5 allows remote attackers to execute arbitrary code via a crafted document containing P and FONT elements.
+
+--
+Affected Systems:
+mozilla firefox 3.5
+
+--
+Attack Scenarios:
+An attacker would need to supply exploit code to the client application and obfuscate that JavaScript in doing so.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-2477:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2477
+  
+--

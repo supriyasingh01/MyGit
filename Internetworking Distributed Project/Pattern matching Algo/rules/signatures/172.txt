@@ -1,0 +1,54 @@
+
+Rule:
+
+--
+Sid:
+172
+
+--
+Summary:
+This rule has been deprecated and placed into deleted.rules.
+
+--
+Impact:
+
+--
+Detailed Information:
+This rule has been deprecated and placed into deleted.rules. This may
+have been done for one of several reasons as listed below:
+
+  The rule has been superceded by a pre-processor
+  The rule is a duplicate of another rule
+  The rule has been superceded by another rule that more accurately
+detects attacks against a vulnerability
+  The rule generates too many false positives
+
+The rule may still exist in the deleted.rules file and is kept there
+for historical purposes.
+
+--
+Affected Systems:
+
+--
+Attack Scenarios:
+
+--
+Ease of Attack:
+
+--
+False Positives:
+
+--
+False Negatives:
+
+--
+Corrective Action:
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

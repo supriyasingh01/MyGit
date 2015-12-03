@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11618
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in ServerProtect.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Multiple stack-based buffer overflows in Trend Micro ServerProtect 5.58 before Security Patch 2 Build 1174 allow remote attackers to execute arbitrary code via crafted data to (1) TCP port 5168, which triggers an overflow in the CAgRpcClient::CreateBinding function in the AgRpcCln.dll library in SpntSvc.exe; or (2) TCP port 3628, which triggers an overflow in EarthAgent.exe.  NOTE: both issues are reachable via TmRpcSrv.dll.
+
+--
+Affected Systems:
+Trend Micro ServerProtect 5.58
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

@@ -1,0 +1,53 @@
+Rule
+
+--
+Sid
+9622
+
+--
+Summary:
+This event is generated when an attempt is made to cause a Denial of Service (DoS) using Spiffit.
+
+--
+Impact:
+Denial of Service (DoS)
+
+--
+Detailed Information:
+The comsat daemon can be used on Linux/UNIX based machines to notify users of new mail in their mailboxes (commonly utilized with the biff utility). A DoS attack is possible against the comsat daemon which could be used by a remote attacker to flood the user with mail notification.
+
+--
+Affected Systems:
+Older Linux/UNIX based distributions using comsat and biff.
+
+--
+Attack Scenarios:
+An attacker could use the spiffit tool to flood the user with new mail notifications causing the DoS.
+
+--
+Ease of Attack:
+Simple. Exploit code exists.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disable the use of comsat for new mail notification.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Watchinski <matthew.watchinski@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

@@ -1,0 +1,55 @@
+Rule:
+
+--
+Sid:
+6011
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Veritas NetBackup Server.
+
+--
+Impact:
+A successful attack can allow an attacker to overflow a buffer and possibly run code of their choosing on the target host.
+
+--
+Detailed Information:
+A vulnerability exists in the way that the Veritas NetBackup Server validates input passed to various daemon processes. It may be possible for an attacker to supply a large amount of data to the vnet daemon and subsequently overflow a fixed length buffer and run code of their choosing.
+
+--
+Affected Systems:
+Veritas Software NetBackup Enterprise Server 6.0 and prior
+Veritas Software NetBackup DataCenter 4.5 MP and FP
+Veritas Software NetBackup BusinesServer 4.5 MP and FP
+
+--
+Attack Scenarios:
+An attacker can craft a message to the server and supply an excess amount of data to overflow the fixed length buffer.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+
+--

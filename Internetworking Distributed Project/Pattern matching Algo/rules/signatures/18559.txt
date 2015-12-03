@@ -1,0 +1,61 @@
+Rule
+
+--
+Sid
+18559
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in openview performance insight.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+HP OpenView Performance Insight Server 5.2, 5.3, 5.31, 5.4, and 5.41 contains a "hidden account" in the com.trinagy.security.XMLUserManager Java class, which allows remote attackers to execute arbitrary code via the doPost method in the com.trinagy.servlet.HelpManagerServlet class.
+
+--
+Affected Systems:
+hp openview performance insight 5.2
+hp openview performance insight 5.3
+hp openview performance insight 5.31
+hp openview performance insight 5.4
+hp openview performance insight 5.41
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-0276:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0276
+  
+--

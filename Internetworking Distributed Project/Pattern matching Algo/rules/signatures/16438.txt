@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+16438
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Oracle database systems.
+
+--
+Impact:
+Serious.
+
+--
+Detailed Information:
+This event is generated when an attempt is made to exploit the WebLogic Server Node Manager on a host.
+
+--
+Affected Systems:
+All Oracle WebLogic installations, check vendor advisories for all products and solutions.
+
+--
+Attack Scenarios:
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+12065
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in .
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+The Teredo interface in Microsoft Windows Vista and Vista x64 Edition does not properly handle certain network traffic, which allows remote attackers to bypass firewall blocking rules and obtain sensitive information via crafted IPv6 traffic, aka "Windows Vista Firewall Blocking Rule Information Disclosure Vulnerability."
+
+--
+Affected Systems:
+  vista
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

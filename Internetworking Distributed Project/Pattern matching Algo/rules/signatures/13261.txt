@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+13261
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Domino Web Access.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple stack-based buffer overflows in the IBM Lotus Domino Web Access ActiveX control, as provided by inotes6.dll, inotes6w.dll, dwa7.dll, and dwa7w.dll, in Domino 6.x and 7.x allow remote attackers to execute arbitrary code, as demonstrated by an overflow from a long General_ServerName property value when calling the InstallBrowserHelperDll function in the Upload Module in the dwa7.dwa7.1 control in dwa7w.dll 7.0.34.1.
+
+--
+Affected Systems:
+IBM Domino Web Access 15
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

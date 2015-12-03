@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+8709
+
+--
+Summary:
+This event is generated when an attempt is made to cause a Denial of Service (DoS) in Microsoft Windows NAT helper components.
+
+--
+Impact:
+Denial of Service (DoS)
+
+--
+Detailed Information:
+Microsoft Windows systems with Internet Connection Sharing turned on are susceptible to a DoS attack. The condition is present when the system attempts to parse a malformed DNS query.
+
+--
+Affected Systems:
+Microsoft Windows XP
+
+--
+Attack Scenarios:
+An attacker would need to send a malformed DNS request to a machine using Internet Connection Sharing.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+3-13891
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in sql_server_desktop_engine.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Buffer overflow in Microsoft SQL Server 7.0 SP4, 2000 SP4, 2005 SP2, Microsoft Data Engine (MSDE) 1.0 SP4, SQL Server 2000 Desktop Engine (MSDE 2000) SP4, and 2005 Express Edition SP2 allows remote authenticated users to execute arbitrary code via a crafted insert statement.
+
+--
+Affected Systems:
+Microsoft sql_server_desktop_engine 2000
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-0106:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-0106
+
+--

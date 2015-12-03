@@ -1,0 +1,62 @@
+Rule:
+
+--
+Sid:
+6436
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft systems using Microsoft Distributed Transaction Coordinator (MSDTC). In particular this rule generates an event when an attempt is made to exploit the function "dcerpc_request" via the "BuildContextW" component.
+
+--
+Impact:
+Serious. Denial of Service.
+
+--
+Detailed Information:
+Microsoft DTC is used to manage transactions between networked machines using the Microsoft Windows operating system.
+
+A vulnerability in the implementation of MSDTC exists due to a programming error which may present an attacker with the opportunity to deny service to legitimate users. The Distributed Transaction Coordinator fails to properly check the length of data supplied to the service before passing it along to a fixed length buffer. This vulnerability does not allow an attacker to run code of their choosing, but it will cause the MSDTC service to stop responding.
+
+Excess data in the values for uuidstring or guidin passed in a BuildContextW request may cause the MSDTC service to attempt to access memory it cannot use.  The MSDTC service will cease responding.
+
+--
+Affected Systems:
+Microsoft Windows Server 2003
+Microsoft Windows XP SP1 and SP2
+Microsoft Windows 2000 SP4
+
+--
+Attack Scenarios:
+An attacker can supply extra data in the request to the MSDTC process to cause the DoS to occur.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Turn off windows file and print services.
+
+Use Samba as an alternative file and print service.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+10465
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability with Microsoft Agent
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+Microsoft Agent is vulnerable to a buffer overflow condition that may be exploited by a remote attacker via a response from a web server to an affected host.
+
+The problem lies in the processing of malformed HTTP character files (.ACF), the agent incorrectly parses these files and exploitation of a buffer overflow condition may be possible.
+
+--
+Affected Systems:
+Microsoft, Windows 2000, Service Pack 4
+Microsoft, Windows XP, Service Pack 2
+Microsoft, Windows XP, Professional 64-bit
+Microsoft, Windows Server 2003
+Microsoft, Windows Server 2003, Service Pack 1
+Microsoft, Windows Server 2003, (Itanium)
+Microsoft, Windows Server 2003, SP1 (Itanium)
+Microsoft, Windows Server 2003, 64-bit
+
+--
+Attack Scenarios:
+An attacker would need to supply a malformed .acf file in a response from a web server for the agent to process.
+
+--
+Ease of Attack:
+Simple. Exploit code exists.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

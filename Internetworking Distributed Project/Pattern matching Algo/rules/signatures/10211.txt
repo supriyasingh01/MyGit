@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+10211
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Trend Micro ServerProtect.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+Trend Micro ServerProtect suffers from programming errors that may allow a remote attacker to cause one of many possible stack based buffer overflows to occur. This may lead to the attacker being able to execute code of their choosing on an affected host.
+
+--
+Affected Systems:
+Trend Micro ServerProtect for Windows 5.58
+Trend Micro ServerProtect for Network Appliance Filer 5.61 and 5.62
+Trend Micro ServerProtect for EMC 5.58
+
+--
+Attack Scenarios:
+An attacker needs to supply malformed data to the listening process.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

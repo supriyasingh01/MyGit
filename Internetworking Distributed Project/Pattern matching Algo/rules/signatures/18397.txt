@@ -1,0 +1,73 @@
+Rule
+
+--
+Sid
+18397
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in HP Discovery & Dependency mapping inventory.
+
+--
+Impact:
+ Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unspecified vulnerability in HP Discovery & Dependency Mapping Inventory (DDMI) 2.0.0 through 2.52, 7.50, and 7.51 on Windows allows remote attackers to access DDMI agents via unknown vectors.
+
+--
+Affected Systems:
+HP discovery & dependency mapping inventory 2.0.0
+HP discovery & dependency mapping inventory 2.0.1
+HP discovery & dependency mapping inventory 2.0.2
+HP discovery & dependency mapping inventory 2.0.3
+HP discovery & dependency mapping inventory 2.0.4
+HP discovery & dependency mapping inventory 2.1.0
+HP discovery & dependency mapping inventory 2.1.1
+HP discovery & dependency mapping inventory 2.1.2
+HP discovery & dependency mapping inventory 2.1.3
+HP discovery & dependency mapping inventory 2.20
+HP discovery & dependency mapping inventory 2.21
+HP discovery & dependency mapping inventory 2.22
+HP discovery & dependency mapping inventory 2.50
+HP discovery & dependency mapping inventory 2.51
+HP discovery & dependency mapping inventory 2.52
+HP discovery & dependency mapping inventory 7.50
+HP discovery & dependency mapping inventory 7.51
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-1419:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-1419
+  
+--

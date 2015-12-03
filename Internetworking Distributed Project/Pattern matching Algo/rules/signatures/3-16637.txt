@@ -1,0 +1,59 @@
+Rule
+
+--
+Sid
+3-16637
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Internet Explorer.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Microsoft Internet Explorer 5.01 SP4, 6, 6 SP1, 7, and 8 does not prevent rendering of non-HTML local files as HTML documents, which allows remote attackers to bypass intended access restrictions and read arbitrary files via vectors involving JavaScript exploit code that constructs a reference to a file://127.0.0.1 URL, aka the dynamic OBJECT tag vulnerability, as demonstrated by obtaining the data from an index.dat file, a variant of CVE-2009-1140 and related to CVE-2008-1448.
+
+--
+Affected Systems:
+Microsoft Internet Explorer5.01
+Microsoft Internet Explorer6
+Microsoft Internet Explorer7
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-0255:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0255
+  
+--

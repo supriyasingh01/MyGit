@@ -1,0 +1,63 @@
+Rule:
+
+--
+Sid:
+8454
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft systems using Server Message Block (SMB). In particular this rule generates an event when an attempt is made to exploit the rename function.
+
+--
+Impact:
+Serious. Execution of arbitrary code leading to unauthorized administrative access to the target host. Denial of Service (DoS) is also possible.
+
+--
+Detailed Information:
+SMB is a client - server protocol used in sharing resources such as files, printers, ports, named pipes and other things, between machines on a network.
+
+A vulnerability in the Microsoft implementation of SMB exists due to a programming error which may present an attacker with the opportunity to exploit the service and run code of their choosing on an affected system. The attacker may also cause a DoS condition in the service or possibly gain unauthorized access to the target host.
+
+In particular this rule generates an event when an attempt is made to exploit the rename function.
+
+--
+Affected Systems:
+Microsoft Windows 2000 SP4
+Microsoft Windows XP SP1 and SP2
+Microsoft Windows XP Pro x64
+Microsoft Windows 2003 Server
+
+--
+Attack Scenarios:
+An attacker can supply extra data in the message from the server containing code of their choosing to be run on the client.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Turn off windows file and print services.
+
+Use Samba as an alternative file and print service.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

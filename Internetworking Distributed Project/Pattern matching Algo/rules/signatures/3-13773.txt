@@ -1,0 +1,228 @@
+Rule
+
+--
+Sid
+3-13773
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the Linux Kernel.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+The snmp_trap_decode function in the SNMP NAT helper for Linux kernel before 2.6.16.18 allows remote attackers to cause a denial of service (crash) via unspecified remote attack vectors that cause failures in snmp_trap_decode that trigger (1) frees of random memory or (2) frees of previously-freed memory (double-free) by snmp_trap_decode as well as its calling function, as demonstrated via certain test cases of the PROTOS SNMP test suite.
+
+--
+Affected Systems:
+Linux Kernel 2.6.16.15
+Linux Kernel 2.6.16.14
+Linux Kernel 2.6.16.13
+Linux Kernel 2.6.16.12
+Linux Kernel 2.6.16 rc7
+Linux Kernel 2.6.16 rc6
+Linux Kernel 2.6.16 rc5
+Linux Kernel 2.6.16 rc4
+Linux Kernel 2.6.16 rc3
+Linux Kernel 2.6.16 rc2
+Linux Kernel 2.6.16 rc1
+Linux Kernel 2.6.16.9
+Linux Kernel 2.6.16.8
+Linux Kernel 2.6.16.7
+Linux Kernel 2.6.16.6
+Linux Kernel 2.6.16.5
+Linux Kernel 2.6.16.4
+Linux Kernel 2.6.16.3
+Linux Kernel 2.6.16.2
+Linux Kernel 2.6.16.1
+Linux Kernel 2.6.16
+Linux Kernel 2.6 test9 CVS
+Linux Kernel 2.6 test9
+Linux Kernel 2.6 test8
+Linux Kernel 2.6 test7
+Linux Kernel 2.6 test6
+Linux Kernel 2.6 test5
+Linux Kernel 2.6 test4
+Linux Kernel 2.6 test3
+Linux Kernel 2.6 test2
+Linux Kernel 2.6 test11
+Linux Kernel 2.6 test10
+Linux Kernel 2.6 test1
+Linux Kernel 2.6.9 rc4
+Linux Kernel 2.6.9 rc3
+Linux Kernel 2.6.9 rc2
+Linux Kernel 2.6.9 rc1
+Linux Kernel 2.6.9 final
+Linux Kernel 2.6.9
+Linux Kernel 2.6.8 rc4
+Linux Kernel 2.6.8 rc3
+Linux Kernel 2.6.8 rc2
+Linux Kernel 2.6.8 rc1
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1.5
+Linux Kernel 2.6.8.1
+Linux Kernel 2.6.8
+Linux Kernel 2.6.7 rc3
+Linux Kernel 2.6.7 rc2
+Linux Kernel 2.6.7 rc1
+Linux Kernel 2.6.7
+Linux Kernel 2.6.6 rc3
+Linux Kernel 2.6.6 rc2
+Linux Kernel 2.6.6 rc1
+Linux Kernel 2.6.6
+Linux Kernel 2.6.5 rc3
+Linux Kernel 2.6.5 rc2
+Linux Kernel 2.6.5 rc1
+Linux Kernel 2.6.5
+Linux Kernel 2.6.4 rc3
+Linux Kernel 2.6.4 rc2
+Linux Kernel 2.6.4 rc1
+Linux Kernel 2.6.4
+Linux Kernel 2.6.3 rc4
+Linux Kernel 2.6.3 rc3
+Linux Kernel 2.6.3 rc2
+Linux Kernel 2.6.3 rc1
+Linux Kernel 2.6.3
+Linux Kernel 2.6.2 rc3
+Linux Kernel 2.6.2 rc2
+Linux Kernel 2.6.2 rc1
+Linux Kernel 2.6.2
+Linux Kernel 2.6.1 rc3
+Linux Kernel 2.6.1 rc2
+Linux Kernel 2.6.1 rc1
+Linux Kernel 2.6.15 rc7
+Linux Kernel 2.6.15 rc6
+Linux Kernel 2.6.15 rc5
+Linux Kernel 2.6.15 rc4
+Linux Kernel 2.6.15 rc3
+Linux Kernel 2.6.14 rc2
+Linux Kernel 2.6.15 rc1
+Linux Kernel 2.6.15.7
+Linux Kernel 2.6.15.6
+Linux Kernel 2.6.15.5
+Linux Kernel 2.6.15.4
+Linux Kernel 2.6.15.3
+Linux Kernel 2.6.15.2
+Linux Kernel 2.6.15.1
+Linux Kernel 2.6.15
+Linux Kernel 2.6.14 rc5
+Linux Kernel 2.6.14 rc4
+Linux Kernel 2.6.14 rc3
+Linux Kernel 2.6.14 rc1
+Linux Kernel 2.6.14.7
+Linux Kernel 2.6.14.6
+Linux Kernel 2.6.14.5
+Linux Kernel 2.6.14.4
+Linux Kernel 2.6.14.3
+Linux Kernel 2.6.14.2
+Linux Kernel 2.6.14.1
+Linux Kernel 2.6.14
+Linux Kernel 2.6.13 rc7
+Linux Kernel 2.6.13 rc6
+Linux Kernel 2.6.13 rc5
+Linux Kernel 2.6.13 rc4
+Linux Kernel 2.6.13 rc3
+Linux Kernel 2.6.13 rc2
+Linux Kernel 2.6.13 rc1
+Linux Kernel 2.6.13.4
+Linux Kernel 2.6.13.3
+Linux Kernel 2.6.13.2
+Linux Kernel 2.6.13.1
+Linux Kernel 2.6.13
+Linux Kernel 2.6.12 rc6
+Linux Kernel 2.6.12 rc5
+Linux Kernel 2.6.12 rc4
+Linux Kernel 2.6.12 rc3
+Linux Kernel 2.6.12 rc2
+Linux Kernel 2.6.12 rc1
+Linux Kernel 2.6.12.6
+Linux Kernel 2.6.12.5
+Linux Kernel 2.6.12.4
+Linux Kernel 2.6.12.3
+Linux Kernel 2.6.12.2
+Linux Kernel 2.6.12.1
+Linux Kernel 2.6.12
+Linux Kernel 2.6.11 rc5
+Linux Kernel 2.6.11 rc4
+Linux Kernel 2.6.11 rc3
+Linux Kernel 2.6.11 rc2
+Linux Kernel 2.6.11 rc1 bk6
+Linux Kernel 2.6.11 rc1
+Linux Kernel 2.6.11.9
+Linux Kernel 2.6.11.8
+Linux Kernel 2.6.11.7
+Linux Kernel 2.6.11.6
+Linux Kernel 2.6.11.5
+Linux Kernel 2.6.11.4
+Linux Kernel 2.6.11.3
+Linux Kernel 2.6.11.2
+Linux Kernel 2.6.11.12
+Linux Kernel 2.6.11.11
+Linux Kernel 2.6.11.10
+Linux Kernel 2.6.11.1
+Linux Kernel 2.6.11
+Linux Kernel 2.6.11
+Linux Kernel 2.6.10 rc3
+Linux Kernel 2.6.10 rc2
+Linux Kernel 2.6.10 rc1
+Linux Kernel 2.6.10
+Linux Kernel 2.6.1
+Linux Kernel 2.6
+Linux Kernel 2.6
+Linux Kernel 2.6
+Linux Kernel 2.6.16.16
+Linux Kernel 2.6.16.11
+Linux Kernel 2.6.16.10
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2006-2444:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2006-2444
+
+--

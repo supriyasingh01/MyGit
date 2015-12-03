@@ -1,0 +1,3 @@
+tevc -e USC558L/tevc now cbr0 stop
+
+tevc –e USC558L/dynsched now link0 modify bandwidth=20000

@@ -1,0 +1,55 @@
+Rule
+
+--
+Sid
+9846
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in VideoLAN VLC Media Player.
+
+--
+Impact:
+Serious. Code execution is possible.
+
+--
+Detailed Information:
+VideoLAN VLC Media Player fails to correctly process user supplied input which may lead to an attacker being able to execute code of their choosing on an affected system.
+
+The problem exists in the application accepting format string specifiers in URIs.
+
+--
+Affected Systems:
+VideoLAN VLC media player 0.8.6 and prior
+
+--
+Attack Scenarios:
+An attacker could supply a malformed playlist to the player containing invalid URIs.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

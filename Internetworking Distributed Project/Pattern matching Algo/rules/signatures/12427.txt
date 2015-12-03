@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+12427
+
+--
+Summary:
+This event is generated when network traffic that indicates Ruckus encrypted authentication connection is being used.
+
+--
+Impact:
+Possible policy violation. The use of Ruckus may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the Ruckus p2p client is being used on the protected network.
+
+--
+Affected Systems:
+All systems using Ruckus
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Ruckus encrypted authentication connection has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Ruckus encrypted authentication connection on the protected network and enforce or implement an organization wide policy on the use of Ruckus encrypted authentication connection.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

@@ -1,0 +1,57 @@
+Rule:
+
+--
+Sid:
+4127
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a
+vulnerability associated with Novell eDirectory iMonitor server.
+
+--
+Impact:
+Serious. Execution of arbitrary commands may be possible.
+
+--
+Detailed Information:
+Novell iMonitor provides cross-platform monitoringdiagnostic solutionfor
+servers in the eDirectory tree.  A vulnerability exists in processing a
+malformed URL, possibly causing a denial of service attack or a buffer
+overflow. A buffer overflow can allow the subsequent execution of
+arbitrary code on a vulnerable server.
+
+--
+Affected Systems:
+	eDirectory iMonitor 8.7.3 and prior
+
+--
+Attack Scenarios:
+An attacker can send a malformed URL, causing a buffer overflow and the
+subsequent execution of arbitrary code on a vulnerable host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current nonaffected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+
+--
+Additional References:
+
+--

@@ -1,0 +1,26 @@
+
+
+index=0
+stepsize = int(math.floor(fsize / num_of_servers)) # 333 = (math.floor(1000/3) 	
+forward = (stepsize * index)  #forward=0
+if(index!=2)
+file.seek(forward+1) #go to 1
+file.read(stepsize) #read from 1 to 333
+
+
+
+index=1
+stepsize = int(math.floor(fsize / num_of_servers)) # 333 = (math.floor(1000/3) 	
+forward = (stepsize * index)  #forward= 333
+if(index!=3)
+file.seek(forward+1) #go to 334 
+file.read(stepsize) #read from 334 to 666
+
+
+
+index=2
+stepsize = int(math.floor(fsize / num_of_servers)) # 333 = (math.floor(1000/3) 	
+forward = (stepsize * index)  #forward=666 
+if(index!=3)
+file.seek(forward+1) #go to 667 
+file.read(filesize-(forward)) #read from 667 to end of file

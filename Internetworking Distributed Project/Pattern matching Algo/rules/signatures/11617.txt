@@ -1,0 +1,65 @@
+Rule:
+
+--
+Sid:
+11617
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Novell ZenWorks Remote Management Agent.
+
+--
+Impact:
+Serious. Execution of attacker supplied code leading to complete control of the vulnerable system. Denial of Service (DoS).
+
+--
+Detailed Information:
+Novell ZenWorks Remote Management Agent suffers from a programming error that may allow a remote and unauthenticated attacker to access memory space to the extent that it may be possible to execute code of their choosing and take control of a vulnerable system.
+
+The problem occurs because of insufficient checks on user supplied data prior to authentication. Excessive data may be supplied to the login process that is placed into a fixed length buffer, a classic buffer overflow condition is then met.
+
+Note:
+For this rule to generate an event correctly, port 1761 must be added to the stream4_reassemble line
+
+--
+Affected Systems:
+Novell ZENworks Server Management 6.5
+Novell ZENworks Remote Management
+Novell ZENworks for Servers 3.2
+Novell ZENworks for Desktops 4.0.1
+Novell ZENworks for Desktops 4.0
+Novell ZENworks for Desktops 3.2 SP2
+Novell ZENworks Desktop Management 6.5 
+
+--
+Attack Scenarios:
+An attacker can craft an overly large login request, causing a buffer overflow.
+
+--
+Ease of Attack:
+Simple.  Exploits are publicly available.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

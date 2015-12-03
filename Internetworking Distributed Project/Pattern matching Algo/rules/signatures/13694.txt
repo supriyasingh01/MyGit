@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+13694
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Helix Universal Server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple buffer overflows in RealNetworks Helix Universal Server 9.0 (9.0.2.768) allow remote attackers to execute arbitrary code via (1) a long Transport field in a SETUP RSTP request, (2) a DESCRIBE RSTP request with a long URL argument, or (3) two simultaneous HTTP GET requests with long arguments.
+
+--
+Affected Systems:
+RealNetworks Helix Universal Server 9.0
+RealNetworks Helix Universal Server 9.0.2.768
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2002-1643:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2002-1643
+
+--

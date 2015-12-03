@@ -1,0 +1,51 @@
+Rule
+
+--
+Sid
+23482
+
+--
+Summary:
+This event is generated when the JavaScript addEventListener method contains hex-escaped characters, in a likely obfuscation attempt.
+
+--
+Impact:
+Potential malicious content hosted on the web page being downloaded.
+
+--
+Detailed Information:
+Exploit kits have been observed in the wild using a combination of ASCII and hexadecimal encoded characters inside the addEventListener() JavaScript call, in order to hide their true intentions. While there are some legitimate pieces of JavaScript which use encoding routines to obfuscate their source code (and protect intellectual property concerns in the process), these are the exception, and not the rule. Upon examination, malicious intent can often be confirmed if the entire request's JavaScript is heavily obfuscated.
+
+--
+Affected Systems:
+All web browsers are potentially vulnerable to malicious obfuscated JavaScript.
+
+--
+Attack Scenarios:
+Clients would be lured into visiting exploit kits or other malicious sites via phishing emails, poisoned search results, etc.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+Some JavaScript authors will put hexadecimal characters into this call to obfuscate their source code from unlicensed copying online. Non-ASCII character sets are also likely to contain hexadecimal escapes.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Examine the packet for signs that the rest of the page contained malicious data. Check for other IDS or other tool events related to the TCP stream in question. Verify patch levels and antimalware solutions, such as FireAMP, on the endpoint host. If exploitation appears to have occurred, consider rebuilding the impacted machine.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+None. 
+--

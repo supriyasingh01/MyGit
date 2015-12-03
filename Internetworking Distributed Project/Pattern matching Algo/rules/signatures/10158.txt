@@ -1,0 +1,58 @@
+Rule:
+
+--
+Sid:
+10158
+
+--
+Summary:
+Certain versions of the DCE/RPC preprocessor included with Snort are vulnerable to a buffer overflow condition.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+The DCE/RPC preprocessor included with Snort is used to defragment DCE/RPC traffic before the main Snort detection engine processes the information.
+
+Older versions of this preprocessor suffer from a programming error that may allow a remote attacker to execute code of their choosing on a vulnerable host when this preprocessor attempts to process DCE/RPC traffic.
+
+This preprocessor can be disabled in the configuration file for Snort and the vulnerable code will not be loaded on startup.
+
+--
+Affected Systems:
+DCE/RPC preprocessor included with Snort versions 2.6.1.2 and earlier
+
+--
+Attack Scenarios:
+An attacker needs to supply a malformed dcerpc packet to the vulnerable preprocessor.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest version of the DCE/RPC preprocessor.
+
+Disable the preprocessor in snort.conf
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11000
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in E-Business Suite.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+The APPLSYS.FND_DM_NODES package in Oracle E-Business Suite does not check for valid sessions, which allows remote attackers to delete arbitrary nodes.  NOTE: due to lack of details from Oracle, it is not clear whether this issue is related to other CVE identifiers such as CVE-2007-2126, CVE-2007-2127, or CVE-2007-2128.
+
+--
+Affected Systems:
+Oracle E-Business Suite 
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

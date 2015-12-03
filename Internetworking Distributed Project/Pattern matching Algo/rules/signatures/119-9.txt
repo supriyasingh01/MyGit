@@ -1,0 +1,76 @@
+Rule: 
+
+--
+Sid: 
+119-9
+
+-- 
+Summary: 
+This event is generated when the pre-processor http_inspect detects network traffic that may constitute an attack.
+
+-- 
+Impact: 
+Unknown. This may be an attempt to obfuscate an attack or an attempt to evade an IDS. Information Disclosure on ASP.NET enabled servers.
+
+--
+Detailed Information:
+This event is generated when the pre-processor http_inspect detects a "\" character being used where a "/" is normally expected in a web request.
+
+This may be an attempt to obfuscate an attack or an attempt to evade an IDS.
+
+It may also be possible for an attacker to gain access to objects in the Application folder by supplying a direct path to the object in a URI.  This would not allow for code execution but may give the attacker access to information on the application that may be used in further attacks.
+
+This event is enabled by using 'iis_backslash yes' in the server configuration section of http_inspect.
+
+This event can be controlled using the ((http_inspect)) configuration options.
+
+--
+Affected Systems:
+Microsoft IIS web servers.
+Microsoft ASP.NET enabled servers.
+
+--
+Attack Scenarios: 
+An attacker merely needs to use a "\" character instead of a "/"' in a web request.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None Known.
+
+--
+False Negatives:
+None Known.
+
+-- 
+
+Corrective Action:
+Check the target host for signs of compromise.
+
+Apply any appropriate vendor supplied patches.
+
+--
+Contributors:
+Daniel Roelker <droelker@sourcefire.com> 
+Sourcefire Vulnerability Research Team
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+CVE-2006-1300
+http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1300
+
+Bugtraq
+http://www.securityfocus.com/bid/18920
+
+MS06-033
+http://www.microsoft.com/technet/security/bulletin/ms06-033.mspx
+
+HTTP IDS Evasions Revisited - Daniel Roelker
+http://docs.idsresearch.org/http_ids_evasions.pdf
+
+--

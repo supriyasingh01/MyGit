@@ -1,0 +1,53 @@
+Rule:
+
+--
+Sid:
+15439
+
+--
+Summary:
+This event is generated when network traffic that indicates QQ 2009 is being used and that the transaction has been negated.
+
+--
+Impact:
+Possible policy violation. The use of QQ 2009 may be prohibited by corporate policy in some network environments. 
+
+This event indicates that the content of a transaction using QQ 2009 has been replaced.
+
+--
+Detailed Information:
+This event indicates that the QQ 2009 is being used on the protected network.
+
+--
+Affected Systems:
+All systems using QQ 2009
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that QQ 2009 has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of QQ 2009 on the protected network and enforce or implement an organization wide policy on the use of QQ 2009.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

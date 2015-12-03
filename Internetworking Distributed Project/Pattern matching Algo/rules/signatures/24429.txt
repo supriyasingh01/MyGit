@@ -1,0 +1,104 @@
+Rule
+
+--
+Sid
+24429
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in adobe air.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Adobe Flash Player before 10.3.183.29 and 11.x before 11.4.402.287 on Windows and Mac OS X, before 10.3.183.29 and 11.x before 11.2.202.243 on Linux, before 11.1.111.19 on Android 2.x and 3.x, and before 11.1.115.20 on Android 4.x; Adobe AIR before 3.4.0.2710; and Adobe AIR SDK before 3.4.0.2710 allow attackers to execute arbitrary code or cause a denial of service (memory corruption) via unspecified vectors, a different vulnerability than other Flash Player memory corruption CVEs listed in APSB12-22.
+
+--
+Affected Systems:
+adobe adobe air 1.0
+adobe adobe air 1.0.1
+adobe adobe air 1.0.4990
+adobe adobe air 1.0.8.4990
+adobe adobe air 1.1
+adobe adobe air 1.1.0.5790
+adobe adobe air 1.5
+adobe adobe air 1.5.0.7220
+adobe adobe air 1.5.1
+adobe adobe air 1.5.1.8210
+adobe adobe air 1.5.2
+adobe adobe air 1.5.3
+adobe adobe air 1.5.3.9120
+adobe adobe air 1.5.3.9130
+adobe adobe air 2.0.2
+adobe adobe air 2.0.2.12610
+adobe adobe air 2.0.3
+adobe adobe air 2.0.3.13070
+adobe adobe air 2.0.4
+adobe adobe air 2.5.0.16600
+adobe adobe air 2.5.1.17730
+adobe adobe air 2.6
+adobe adobe air 2.6.0.19120
+adobe adobe air 2.6.0.19140
+adobe adobe air 2.7
+adobe adobe air 2.7.0.1948
+adobe adobe air 2.7.0.19480
+adobe adobe air 2.7.0.1953
+adobe adobe air 2.7.0.19530
+adobe adobe air 2.7.1
+adobe adobe air 2.7.1.19610
+adobe adobe air 3.0.0.408
+adobe adobe air 3.0.0.4080
+adobe adobe air 3.1.0.485
+adobe adobe air 3.1.0.488
+adobe adobe air 3.1.0.4880
+adobe adobe air 3.2.0.207
+adobe adobe air 3.2.0.2070
+adobe adobe air 3.3.0.3670
+adobe adobe air 3.4.0.2540
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2012-5271:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-5271
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

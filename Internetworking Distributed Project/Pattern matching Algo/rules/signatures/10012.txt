@@ -1,0 +1,57 @@
+Rule: 
+
+--
+Sid: 
+10012
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Outlook.
+
+-- 
+Impact: 
+Serious. Execution of code by an unauthorized attacker is possible.
+
+--
+Detailed Information:
+Microsoft Outlook fails to correctly process user supplied data in iCal calendar requests. iCal files may be used in meeting requests and can be sent to recipients using email. Included in an iCal request is time zone data that is used on the system to automatically populate the calendar in Outlook with the contents of the file.
+
+An error in the processing of data in a VEVENT record of an iCal file may allow a remote attacker to execute arbitrary code on a vulnerable system with the privileges of the current user. This may lead to the complete compromise of an affected host. 
+
+--
+Affected Systems:
+Microsoft Outlook 2000
+Microsoft Outlook 2002
+Microsoft Outlook 2003
+
+--
+Attack Scenarios: 
+An attacker would need to supply excess data to the DTSTART: parameter in an iCal file.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Lurene Grenier
+Brian Caswell
+Nigel Houghton
+
+-- 
+Additional References:
+
+--

@@ -1,0 +1,86 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\ftech\fcharset77 Symbol;\f2\fnil\fcharset0 Verdana;
+\f3\fmodern\fcharset0 Courier;\f4\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww20540\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\pardirnatural
+
+\f0\fs28 \cf0 Q) What is the RTT delay between the nodes now? What is the bandwidth delay product? 
+\f1 \
+
+\f0      Practically average RTT = 1.266ms\
+     Theoretically bandwidth-delay product is 100Mbps *  1.406ms /(8) = 
+\b  1179438 Bytes =1151 Kbytes\
+\
+
+\b0 Q) 
+\fs32 Explain briefly what the commands do?\
+    	sudo mkextrafs /mnt --This "mkextrafs" is a script 
+\f2\fs26 to make the remaining space on the root disk available to you, and command will 				        			create the filesystem, mount it on 
+\f3 /mnt
+\f2  and make an entry in 
+\f3 /etc/fstab
+\f2  so that the filesystem will be mounted on    	 			         		future reboots.\
+	
+\f0\fs32 cd /mnt -- Change current directory to mnt\
+         d if=/dev/urandom of=data.bin bs=1m count=200 --- This command writes some random data from file uranium to file named data.bin of size 												    200megabytes.\
+\
+Q) What transfer throughput do you get? \
+     11.1MB/s\
+     As the delay (RTT) increases (with 0% loss and default window size), throughput goes on decreasing because as throughput = data received / RTT, so it RTT increases throughput decreases.\
+\
+Q) Can you improve the performance by using kernel parameters?\
+     Transfer throughput (as above )remains same even if we increase/decrease the window size. The reason is that SCP uses SSH to copying files. SSH uses public -key 		  \
+     cryptography. So copying files, keys are exchanged between sender and recover that cause overheads, and so the throughput cannot increase even if we \
+     increase the window size.\
+	\
+Following throughput was at Max Window size of 2M\
+\
+	
+\b \ul RTT	(ms)
+\b0 \ulnone 		
+\b \ul Throughput      
+\b0 \ulnone            
+\b \ul  Bandwidth* delay \
+
+\b0 \ulnone \
+       1.406			 11.1Mbit/s			     17 Kbytes\
+	20			 6.1 Mbit/s                		  256 Kbytes\
+	40			 3.3Mbit/s				  512 Kbyes\
+	60			 2.3Mbit/s				  768 Kbytes\
+\
+Q) Does SCPhas some sort of limitations?\
+     SCP has limitation as it uses SSH. The reason is that SCP uses SSH to copying files. SSH uses public -key cryptography. So copying files, keys are \
+     exchanged between sender and recover that cause overheads
+\fs24 \
+\pard\pardeftab720\pardirnatural
+
+\f1\fs32 \cf0 \
+
+\f4 Q) 
+\f0 Graph throughput vs. loss. Discuss these results. Does this seem extreme? Can you explain why this happens.\
+      As the loss% increases throughput decreases to a very large extent.\
+	\
+	
+\b \ul % loss
+\b0 \ulnone 	
+\b \ul Throughput\
+	\
+	
+\b0 \ulnone  1		  7.1MB/s\
+	 3		  1.9MB/s\
+	 5		  769.9KB/s
+\f1 \
+\
+\pard\pardeftab720\pardirnatural
+
+\f0 \cf0  
+\f1 \
+
+\f0\b\fs28 \
+\
+\
+
+\b0 \
+}

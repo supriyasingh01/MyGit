@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+16390
+
+--
+Summary:
+This event is generated when network traffic that indicates Adobe PDF alternate file magic obfuscation is being used.
+
+--
+Impact:
+The use of Adobe PDF alternate file magic obfuscation may be an attempt to avoid detection.
+
+--
+Detailed Information:
+This event indicates that the Adobe PDF alternate file magic obfuscation is being used in a file on the protected network.
+
+--
+Affected Systems:
+All systems
+
+--
+Attack Scenarios:
+An attacker may use this obfuscation technique in an attempt to avoid detection.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Investigate the target host for signs of compromise.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

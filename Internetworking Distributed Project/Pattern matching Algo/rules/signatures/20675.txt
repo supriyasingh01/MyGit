@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+20675
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in windows server 2003.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Active Directory Federation Services (ADFS) in Microsoft Windows Server 2003 SP2 and Server 2008 Gold and SP2 does not properly validate headers in HTTP requests, which allows remote authenticated users to execute arbitrary code via a crafted request to an IIS web server, aka "Remote Code Execution in ADFS Vulnerability."
+
+--
+Affected Systems:
+microsoft windows server 2003 
+microsoft windows server 2003 
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-2509:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2509
+  
+--

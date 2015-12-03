@@ -1,0 +1,58 @@
+Rule: 
+
+--
+Sid: 
+8349
+
+-- 
+Summary: 
+This event is generated when an attempt is made to execute a cross site scripting attack using the Microsoft Internet Information Server with the Indexing Service accessible via the server.
+
+-- 
+Impact: 
+Unknown. Execution of code may be possible.
+
+--
+Detailed Information:
+Microsoft Indexing Service does not correctly sanitize user supplied input. This may allow an attacker to create a cross site scripting attack against users viewing web pages produced by a vulnerable server.
+
+--
+Affected Systems:
+Microsoft Windows XP SP2 and prior
+Microsoft Windows 2003 Server SP1 and prior
+Microsoft Windows 2000 SP4 and prior
+
+--
+Attack Scenarios: 
+Attacks using cross site scripting are varied and numerous, an attacker may use a number of methods to execute code on a victim machine.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the product.
+
+Apply the appropriate vendor supplied patches.
+
+The Indexing Service is not accessible via IIS by default, keep it that way.
+
+Use Apache.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+--

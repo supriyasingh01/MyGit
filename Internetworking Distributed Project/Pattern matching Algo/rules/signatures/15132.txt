@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+15132
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in sql_server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Heap-based buffer overflow in Microsoft SQL Server 2000 8.00.2050, 8.00.2039, and earlier allows remote authenticated users to cause a denial of service (access violation exception) or execute arbitrary code by calling the sp_replwritetovarbin extended stored procedure with a set of crafted parameters that trigger memory overwrite.
+
+--
+Affected Systems:
+microsoft sql_server 2000
+microsoft sql_server 2005
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-5416:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-5416
+  
+--

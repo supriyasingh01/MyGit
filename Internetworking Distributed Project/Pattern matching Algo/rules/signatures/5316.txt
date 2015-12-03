@@ -1,0 +1,65 @@
+Rule: 
+
+--
+Sid: 
+5316
+
+-- 
+Summary: 
+This event is generated when an attempt it made to exploit a known vulnerability in Computer Associates Message Queuing.
+
+-- 
+Impact: 
+Serious. Remote execution of code with system level privileges is possible.
+
+--
+Detailed Information:
+Multiple products from Computer Associates use a common messaging system. A programming error may permit an attacker to execute code of their choosing with system level privileges on a vulnerable system.
+
+The Computer Associates Message Queuing (CAM) system fails to properly check user supplied data. A long paramter passed to the log_security() function may allow an attacker to overflow a fixed length buffer and run code of their choosing on the target system.
+
+--
+Affected Systems:
+CA Unicenter prior to, and including 3.1
+CA eTrust Admin prior to, and including 8.1
+CA CleverPath Predictive Analysis Server prior to, and including 3.0
+CA CleverPath OLAP 5.1
+CA CleverPath ECM 3.5
+CA CleverPath Aion 10.0
+CA CAM prior to and including 1.11
+CA BrightStor SAN Manager  prior to and including 11.1
+CA BrightStor SAN Manager prior to and including 1.1 SP2
+CA BrightStor Portal 11.1
+CA AdviseIT 2.4
+CA Advantage Data Transport 3.0 
+
+--
+Attack Scenarios: 
+An attacker can supply a long argument to the log_security() function and overflow the buffer.
+
+-- 
+Ease of Attack: 
+Simple. Exploit software exists.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known
+
+-- 
+Corrective Action: 
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+
+--

@@ -1,0 +1,58 @@
+Rule: 
+
+--
+Sid: 
+8441
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in McAfee ePolicy Orchestrator or McAfee ProtectionPilot.
+
+-- 
+Impact: 
+Serious. Execution of code with system level privileges is possible.
+
+--
+Detailed Information:
+McAfee ePolicy Orchestrator suffers from poor programming that may allow an attacker to overflow a fixed length buffer and execute code of their choosing with system level privileges on an affected system.
+
+The HTTP server does not properly check user supplied input, a SOURCE header of more than 50 bytes will cause the application to crash.
+
+--
+Affected Systems:
+McAfee ePolicy Orchestrator 3.5.0 and prior
+McAfee ProtectionPilot 1.1.0 and prior
+
+--
+Attack Scenarios: 
+Exploit code exists in various forms, an attacker can use any one of the scripts to cause the overflow and execute code on the system.
+
+-- 
+Ease of Attack: 
+Simple. Exploit code is available.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Olney <matthew.olney@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+BackTrack Development Team:
+http://www.remote-exploit.org/advisories/mcafee-epo.pdf
+
+--

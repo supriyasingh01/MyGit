@@ -1,0 +1,98 @@
+Rule: 
+
+--
+Sid: 
+12706
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Lotus Notes.
+
+-- 
+Impact: 
+Serious.
+
+--
+Detailed Information:
+Adobe FrameMaker is a desktop publishing and word processing application. It uses the Maker Interchange Format (MIF), a proprietary markup language, to exchange information with other applications and older versions of FrameMaker. MIF files have common file extensions ".MIF".  The basic building block of MIF is called statement, which has the following basic syntax:
+
+<token data>
+
+where token is one of the MIF statement names, e.g., "Pgf"; and data can be one or more numbers, a string, a token, or nested statements. Comments in MIF files follow the number character (#). An small MIF example is given below:
+
+<MIFFile 7.00># The only required statement
+<Para
+<ParaLine
+<String \u2018Hello World\u2019>
+>
+>
+
+There exists several buffer overflow vulnerabilities in the Lotus Notes MIF viewer. Specifically, the vulnerable application fails to protect fixed size buffers when processing statements in MIF files.
+
+The first buffer overflow vulnerability is associated with the handling of comment text of the <MIFFile> statement. By specification, the <MIFFile> statement is required to be the first statement in MIF files.
+
+The vulnerable code copies the comment on this statement in to a fixed size buffer of 0x4C (76) bytes, regardless the actual length of supplied data. If overly long comment text is given, the destination buffer will be overrun.
+
+The second buffer overflow vulnerability is associated with the handling of statement names. The vulnerable code copies the token name into a fixed size buffer of 0x58 (88) bytes, regardless the actual length of supplied token. If an overly long token name is given, the destination buffer will be overrun.
+
+The third buffer overflow vulnerability is associated with the handling of statement data. Some of the data are numeric by definition, e.g., paragraph spacing and font size. An example is given below:
+
+<PgfSpBefore 5.0 pt>
+
+If the data is numeric by context, the vulnerable code copies the data part of that statement into a fixed size buffer of 0x50 (80) bytes, regardless the actual length of supplied data.  If overly long statement data is supplied, the destination buffer will be overrun.
+
+--
+Affected Systems:
+Lotus Notes prior to and including version 7.0.2
+Symantec Mail Security for SMTP 5.0.1
+Symantec Mail Security for SMTP 5.0
+Symantec Mail Security for Microsoft Exchange 5.0
+Symantec Mail Security for Microsoft Exchange 5.0.7.373
+Symantec Mail Security for Microsoft Exchange 5.0.6.368
+Symantec Mail Security for Microsoft Exchange 5.0.0.204
+Symantec Mail Security for Domino 7.5.0.19
+Symantec Mail Security for Domino 7.5
+Symantec Mail Security Appliance 5.0
+Symantec Mail Security Appliance 5.0.0.24
+Autonomy Keyview Viewer SDK 9
+Autonomy Keyview Viewer SDK 8
+Autonomy Keyview Viewer SDK 7
+Autonomy Keyview Filter SDK 9
+Autonomy Keyview Filter SDK 8
+Autonomy Keyview Filter SDK 7
+Autonomy Keyview Export SDK 9
+Autonomy Keyview Export SDK 8
+Autonomy Keyview Export SDK 7
+ActivePDF DocConverter 3.8.2 .5
+
+--
+Attack Scenarios: 
+An attacker would need to supply a malicious file to the user and entice them to open it.
+
+-- 
+Ease of Attack: 
+Simple
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+--
+

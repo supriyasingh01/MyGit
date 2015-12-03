@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+13316
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Windows Media Player.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Stack-based buffer overflow in mplayer2.exe in Microsoft Windows Media Player (WMP) 6.4, when used with the 3ivx 4.5.1 or 5.0.1 codec, allows remote attackers to execute arbitrary code via a certain .mp4 file, possibly a related issue to CVE-2007-6402.
+
+--
+Affected Systems:
+Microsoft Windows Media Player 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

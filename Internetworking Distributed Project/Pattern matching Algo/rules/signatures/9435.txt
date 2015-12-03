@@ -1,0 +1,62 @@
+Rule
+
+--
+Sid
+9435
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Ultravox.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+Ultravox is a proprietary media streaming format developed by AOL, similar to NullSoft's SHOUTcast protocol. It is implemented as a subset of HTTP, with Ultravox-specific messages beginning with "Ultravox-" (similar to "X-" headers in e-mail headers). The Ultravox-Max-Msg header, which is specified as an integer, is used by the client program to allocate blocks of memory, via the following formula:
+
+Size = 2 * Ultravox-Max-Msg + 0x1000
+
+A buffer overflow condition is present in the Ultravox application. This event indicates that an attempt has been made to exploit that condition. It may be possible for an attacker to use this vulnerability to execute code on the target host which could lead to further compromise and loss of data integrity on the host.
+
+Since the result is stored as a 32-bit integer, Ultravox-Max-Msg sizes in the range of 0x7FFFF800 to 0x7FFFFFFF (2,147,481,600 to 2,147,483,647) will trigger an integer overflow, and a very small buffer will be allocated, allowing for an overflow that will lead to a compromise. Values in this field should never even approach this size, as the length field of an Ultravox data frame is a 16-bit integer, thus capping their valid length at 65,535.
+
+--
+Affected Systems:
+NullSoft Winamp 5.3
+NullSoft Winamp 5.24
+
+--
+Attack Scenarios:
+An attacker needs to supply excess data in a transaction using the application. The attacker may then include code of their choosing to be executed on the host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

@@ -1,0 +1,53 @@
+Rule: 
+
+--
+Sid: 
+8413
+
+-- 
+Summary: 
+This event is generated when an attempt is made to access the file "uplddrvinfo.htm".
+
+-- 
+Impact: 
+Unknown.
+
+--
+Detailed Information:
+Microsoft Internet Explorer is able to handle links for the "Help and Support Center" (HCP) application, this feature may be abused by a malicious attacker to access ActiveX controls that interact with the system, thus leading to possible system compromise.
+
+--
+Affected Systems:
+Microsoft Windows XP
+
+--
+Attack Scenarios: 
+An attacker needs to supply supply a HCP link to a user and have them use that link to access the ActiveX controls and run commands of their choosing.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the product.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

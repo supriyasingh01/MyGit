@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11670
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Discovery.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Multiple buffer overflows in the CentennialIPTransferServer service (XFERWAN.EXE), as used by (1) Centennial Discovery 2006 Feature Pack 1, (2) Numara Asset Manager 8.0, and (3) Symantec Discovery 6.5, allow remote attackers to execute arbitrary code via long strings in a crafted TCP packet.
+
+--
+Affected Systems:
+Centennial Discovery 2006 FeaturePack1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

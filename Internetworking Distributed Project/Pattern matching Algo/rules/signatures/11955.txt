@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11955
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Samba-TNG.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Buffer overflow in the call_trans2open function in trans2.c for Samba 2.2.x before 2.2.8a, 2.0.10 and earlier 2.0.x versions, and Samba-TNG before 0.3.2, allows remote attackers to execute arbitrary code.
+
+--
+Affected Systems:
+Samba-TNG Samba-TNG 2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

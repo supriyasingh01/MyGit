@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+15260
+
+--
+Summary:
+This event is generated when a DNS root query response is detected on the network.
+
+--
+Impact:
+Denial of Service (DoS)
+
+--
+Detailed Information:
+This traffic indicates that a DDoS attack may be underway. A DNS amplification attack that merely queries nameservers for the "." domain will cause this event to be generated.
+
+The domain queried for is the root server domain, thus the response will be large. This response traffic is targeted at an endpoint that is not the real source of the query, the intent is to cause a DoS on the spoofed source.
+
+--
+Affected Systems:
+All DNS servers.
+
+--
+Attack Scenarios:
+An attacker would need to send a DNS query for "." to a server and spoof the address of the target server for the DoS attack. When done from many machines, this would constitute a DDoS attack.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+Legitimate queries for "." would cause this rule to fire, however the rule applies thresholding to mitigate the possibility of genuine queries triggering the rule.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Configure DNS Servers to globally deny queries and recursion and disallow queries for the "." domain.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12598
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Web Thunder.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Buffer overflow in a certain ActiveX control in Xunlei Web Thunder 5.6.9.344 allows remote attackers to execute arbitrary code via a long first argument to the DownURL2 method.  NOTE: some of these details are obtained from third party information.
+
+--
+Affected Systems:
+Xunlei Web Thunder 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

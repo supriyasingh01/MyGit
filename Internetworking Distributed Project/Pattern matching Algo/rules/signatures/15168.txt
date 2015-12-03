@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+15167
+
+--
+Summary:
+This event is generated when network traffic that indicates a suspicious .ru dns query was made.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+This event indicates that a suspicious .ru dns query was made from the protected network.
+
+--
+Affected Systems:
+All systems
+
+--
+Attack Scenarios:
+This event indicates that a dns query was made to the .ru tld.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Check the originating host for signs of compromise.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

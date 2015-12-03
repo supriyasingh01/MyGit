@@ -1,0 +1,73 @@
+
+Rule:
+
+--
+Sid:
+4258
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known
+vulnerability is the Microsoft Plug and Play subsystem on a host.
+
+--
+Impact:
+Serious. Execution of code is possible leading to full system
+compromise.
+
+--
+Detailed Information:
+A programming error in the Plug and Play (PnP) service used by
+Microsoft Windows machines can present a remote attacker with the
+opportunity to overflow a fixed length buffer, execute code on the
+vulnerable system and escalate privileges on the host to the extent
+that they could take complete control of the affected machine.
+
+Specifically this event is generated when the UMPNGMGR interface is
+targeted via the  function.
+
+--
+Affected Systems:
+  Microsoft Windows 2000
+  Microsoft Windows XP
+  Microsoft Windows 2003
+
+--
+Attack Scenarios:
+An attacker merely needs to send extra data to the PnP service to
+overflow the buffer and execute code of their choosing on the affected
+system.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Disallow access to ports 139 and 445 from sources external to the
+protected network.
+
+Consider disabling the use of those ports completely on Windows based
+networks.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matt Watchinski <matthew.watchinski@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

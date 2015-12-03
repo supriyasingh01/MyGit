@@ -1,0 +1,9 @@
+antenna1 30 25
+antenna2 25 40
+rover1 30 25
+rover2 20 25
+rover3 30 40
+rover4 35 25
+rover5 35 25
+rover6 35 25
+rover7 30 25

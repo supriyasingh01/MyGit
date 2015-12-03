@@ -1,0 +1,58 @@
+Rule:
+
+--
+Sid:
+3-8351
+
+--
+Summary:
+Hosts using the Microsoft Windows Operating System may be prone to a buffer overflow condition when processing Pragmatic General Multicast (PGM) messages.
+
+--
+Impact:
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+Hosts using the Microsoft Windows Operating System may be prone to a buffer overflow condition when processing Pragmatic General Multicast (PGM) messages.
+
+The error occurs when the operating system attempts to process PGM messages using the Microsoft Message Queueing Service (MSMQ). If the message contains more options than indicated in the packet header, a static buffer may be overflowed allowing an attacker to possibly execute
+code of their choosing on an affected host.
+
+--
+Affected Systems:
+Microsoft Windows XP SP2 and prior
+
+--
+Attack Scenarios:
+An attacker need only supply a malformed PGM message to cause the overflow condition to occur.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches and service packs.
+
+Uninstall the MSMQ component.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Lurene Grenier <lurene.grenier@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

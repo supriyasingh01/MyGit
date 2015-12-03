@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+9620
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in PAJAX.
+
+--
+Impact:
+Serious. Code execution is possible.
+
+--
+Detailed Information:
+By using PAJAX it is possible to write web applications that utilize PHP classes running on a remote server to perform operations. PAJAX is able to create a remote JavaScript interface object and a stub on the server for some PHP class. The JavaScript interface communicates with the stub on the server, which invokes the called methods on the remote object. To invoke methods on an object PHP's eval function is used.  The values used for this eval are not validated to ensure they do not contain PHP code that would be executed as part of the eval.
+
+/pajax/pajax_call_dispatcher.php contains the following code:
+
+ // Invoking the method with args
+ eval("\$ret = \$obj->$method(".$args.");"); 
+
+The $method and $args parameters consist of unchecked POST variables, which may contain harmful PHP code.
+
+--
+Affected Systems:
+PAJAX 0.5.1
+
+--
+Attack Scenarios:
+An attacker can supply code of their choosing to the $method and $args parameters.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Patrick Mullen <patrick.mullen@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

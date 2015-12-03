@@ -1,0 +1,64 @@
+Rule
+
+--
+Sid
+16709
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in helix server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+rmserver in RealNetworks Helix Server and Helix Mobile Server before 13.0.0 allows remote attackers to cause a denial of service (daemon exit) via multiple RTSP SET PARAMETER requests with empty DataConvertBuffer headers.
+
+--
+Affected Systems:
+RealNetworks helix server 12.0.0
+RealNetworks helix server 12.0.1
+
+--
+Attack Scenarios:
+Format string vulnerabilities can be very simple to attack. Any program that reads a format string as an input parameter can be exploited if the argument can be controlled by the attacker.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-2533:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2533
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/134.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

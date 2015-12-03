@@ -1,0 +1,75 @@
+Rule:
+
+--
+Sid:
+4144
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known
+vulnerability in Solaris Line Printer Daemon (LPD).
+
+--
+Impact:
+Serious. Unauthorized removal of files on the remote system.
+
+--
+Detailed Information:
+A vulnerability exists in the Solaris operating system that may allow an
+unprivileged use to remove any file on a system using the line printer
+daemon. This can be done via the Unlink command which can be used to
+unlink any file on a local or remote sytem accepting connections to lpd.
+
+Solaris offers a printer daemon in.lpd that allows network users to
+print jobs over the network.  The receive printer job function allows a
+user to supply job control information for the print job.  A flaw exists
+in code that checks the job control information for a supplied file name
+to be deleted. It does not make sure that the supplied file name is
+located in the default printer queue directory, permitting arbitrary
+files to be deleted.
+
+The 'U' command instructs the LPD to unlink a file on completion of a
+printing job. By supplying this command in an instruction to the LPD,
+an attacker is able to remove any file on the remote system.
+
+--
+Affected Systems:
+  Solaris 7,8,9 and 10
+
+--
+Attack Scenarios:
+An attacker merely needs to supply the 'unlink' command with a path to
+the file to be removed in an LPD request to the listening LPD daemon.
+
+For example, the command "U/opt/filename" will remove the file
+"filename" from /opt.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+Sunsolve:
+http://sunsolve.sun.com/search/document.do?assetkey=1-26-101842-1
+
+--

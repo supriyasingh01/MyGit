@@ -1,0 +1,20 @@
+ssh nodeA.dynsched.USC558L.isi.deterlab.net
+bash
+cd /tmp
+cat foo
+tevc -e USC558L/dynsched now prog0 start
+cd /tmp
+cat foo
+
+
+
+
+
+ssh to the delay node
+
+cd /local/logs
+ls
+tcpdump -r <filename>
+
+
+#$ns at 140.0 "$mylinks down

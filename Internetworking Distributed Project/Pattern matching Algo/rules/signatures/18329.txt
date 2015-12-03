@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+18329
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in WMI administrative tools.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The WBEMSingleView.ocx ActiveX control 1.50.1131.0 in Microsoft WMI Administrative Tools 1.1 and earlier allows remote attackers to execute arbitrary code via a crafted argument to the ReleaseContext method, a different vector than CVE-2010-3973, possibly an untrusted pointer dereference.
+
+--
+Affected Systems:
+Microsoft WMI administrative tools 1.1
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-4588:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-4588
+  
+--

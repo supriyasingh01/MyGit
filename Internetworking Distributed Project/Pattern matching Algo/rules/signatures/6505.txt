@@ -1,0 +1,53 @@
+Rule: 
+
+--
+Sid: 
+6505
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Apple Quicktime.
+
+-- 
+Impact: 
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+Apple Quicktime fails to properly check user supplied data which may allow a remote attacker to overflow a fixed length buffer and execute code of their choosing on the target host.
+
+The vulnerability lies in the processing of user supplied data to the structure of an FPX file.
+
+--
+Affected Systems:
+
+--
+Attack Scenarios: 
+An attacker can supply a malformed FPX file to be processed by Apple Quicktime causing the overflow to occur.
+
+-- 
+Ease of Attack: 
+Simple
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

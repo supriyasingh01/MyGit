@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11223
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Mini Search Appliance.
+
+--
+Impact:
+Medium
+
+--
+Detailed Information:
+The Saxon XSLT parser in Google Mini Search Appliance, and possibly Google Search Appliance, allows remote attackers to obtain sensitive information and execute arbitrary code via dangerous Java class methods in select attribute of xsl:value-of tags in XSLT style sheets, such as (1) system-property, (2) sys:getProperty, and (3) run:exec.
+
+--
+Affected Systems:
+Google Mini Search Appliance 
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

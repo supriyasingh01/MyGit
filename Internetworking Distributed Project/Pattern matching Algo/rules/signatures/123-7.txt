@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+123-7
+
+--
+Summary:
+This event is generated when the frag3 preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the frag3 preprocessor detects anomalous network traffic.
+
+In particular, the preprocessor has detected that the reassembled packet is larger than 64k.
+
+--
+Affected Systems:
+All networked systems.
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

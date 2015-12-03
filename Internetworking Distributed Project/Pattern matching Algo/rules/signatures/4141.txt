@@ -1,0 +1,60 @@
+Rule:
+
+--
+Sid:
+4141
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known
+vulnerability in tcpdump.
+
+--
+Impact:
+Serious. A Denial of Service (DoS) to tcpdump.
+
+--
+Detailed Information:
+A vulnerability exists in the way that tcpdump processes Label
+Distribution Protocol (LDP) packets. A malformed LDP packet will cause
+tcpdump to enter a DoS condition when it tries to process the
+information.
+
+--
+Affected Systems:
+  tcpdump 3.8.3 and prior
+
+--
+Attack Scenarios:
+An attacker would need to construct a malformed LDP packet and transmit
+across a network segment that is being monitored using tcpdump.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+LDP can be used in conjunction with md5 signatures to verify the source
+of the LDP conversation. If this option is used, it would be much more
+difficult for an attacker to exploit this condition.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

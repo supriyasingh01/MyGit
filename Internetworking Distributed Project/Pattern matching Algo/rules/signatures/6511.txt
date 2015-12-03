@@ -1,0 +1,51 @@
+Rule: 
+
+--
+Sid: 
+6511
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Alt-N WebAdmin.
+
+-- 
+Impact: 
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+Alt-N WebAdmin does not properly check user supplied data in the "user" parameter at login. This may allow a remote attacker to overflow a fixed length buffer and execute code of their choosing on an affected system.
+
+--
+Affected Systems:
+ 
+--
+Attack Scenarios: 
+An attacker can supply excess data to the "user" parameter to overflow the fixed length buffer and execute code of their choosing on the host.
+
+-- 
+Ease of Attack: 
+Simple
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

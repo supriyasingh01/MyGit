@@ -1,0 +1,51 @@
+Rule
+
+--
+Sid
+9091
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the Microsoft Windows Workstation Service.
+
+--
+Impact:
+Serious. Possible execution of code of the attackers choosing.
+
+--
+Detailed Information:
+The Microsoft Windows Workstation Service suffers from a buffer overflow condition that may allow a remote attacker to execute code of their choosing on an affected system.
+
+--
+Affected Systems:
+Microsoft Windows 2000 SP4
+Microsoft Windows XP SP2
+
+--
+Attack Scenarios:
+An attacker can supply extra data to the Workstation Service on an affected host to include code of their choosing to be executed in the context of the user running the service.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patch.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

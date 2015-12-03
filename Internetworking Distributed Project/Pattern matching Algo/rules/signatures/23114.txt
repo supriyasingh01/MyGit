@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+23114
+
+--
+Summary:
+This event is generated when a file is received from a web server which contains a known obfuscation routine.
+
+--
+Impact:
+Likely compromise of the machine fetching the file, depending on the mechanism being used to send the data to the end host.
+
+--
+Detailed Information:
+This rule looks for a known obfuscation routine used in attacks being circulated in the wild. Specifically, this looks for files which are declared as GIF images, but which contain executable PHP code. In order to understand whether the host receiving this data was compromised, you should look for related IDS events, as well as examine relevant logs to see if the attack being attempted may have been successful.
+
+--
+Affected Systems:
+Any machine receiving attacks in this form may be impacted.
+
+--
+Attack Scenarios:
+This has been used to obfuscate the payload of web shells being dropped on machines vulnerable to remote file inclusion attacks, as well as in exploit kits going after client-side vulnerabilities.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+http://vrt-blog.snort.org/2012/06/web-shell-poses-as-gif.html
+ 
+--

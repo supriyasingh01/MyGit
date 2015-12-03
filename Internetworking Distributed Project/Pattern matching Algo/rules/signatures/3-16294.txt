@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+3-16294
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the TCP implementation of various operating system network stacks.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+The TCP implementation in (1) Linux, (2) platforms based on BSD Unix, (3) Microsoft Windows, (4) Cisco products, and probably other operating systems allows remote attackers to cause a denial of service (connection queue exhaustion) via multiple vectors that manipulate information in the TCP state table, as demonstrated by sockstress.
+
+--
+Affected Systems:
+Microsoft Windows 2000
+Microsoft Windows XP
+Microsoft Windows 2003
+Microsoft Windows Server 2008
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-4609:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-4609
+  
+--

@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+15185
+
+--
+Summary:
+This event is generated when network traffic that indicates Nintendo Wii is being used.
+
+--
+Impact:
+Possible policy violation. The use of Nintendo Wii may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the Nintendo Wii is being used on the protected network.
+
+--
+Affected Systems:
+All systems using Nintendo Wii
+
+--
+Attack Scenarios:
+This is a possible policy violation.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Nintendo Wii on the protected network and enforce or implement an organization wide policy on the use of Nintendo Wii.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

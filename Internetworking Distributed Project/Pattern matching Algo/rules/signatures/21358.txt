@@ -1,0 +1,68 @@
+Rule
+
+--
+Sid
+21358
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in iplanet web server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Cross-site scripting (XSS) vulnerability in the Admin Server for iPlanet WebServer 4.x, up to SP11, allows remote attackers to execute web script or HTML as the iPlanet administrator by injecting the desired script into error logs, and possibly escalating privileges by using the XSS vulnerability in conjunction with another issue (CVE-2002-1316).
+
+--
+Affected Systems:
+iplanet iplanet web server 4.1
+iplanet iplanet web server 4.1 sp1
+iplanet iplanet web server 4.1 sp10
+iplanet iplanet web server 4.1 sp11
+iplanet iplanet web server 4.1 sp2
+iplanet iplanet web server 4.1 sp3
+iplanet iplanet web server 4.1 sp4
+iplanet iplanet web server 4.1 sp5
+iplanet iplanet web server 4.1 sp6
+iplanet iplanet web server 4.1 sp7
+iplanet iplanet web server 4.1 sp8
+iplanet iplanet web server 4.1 sp9
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2002-1315:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2002-1315
+  
+--

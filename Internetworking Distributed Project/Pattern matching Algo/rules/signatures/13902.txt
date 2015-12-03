@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+13902
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in IBM Lotus SameTime.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Stack-based buffer overflow in the Community Services Multiplexer (aka MUX or StMux.exe) in IBM Lotus Sametime 7.5.1 CF1 and earlier, and 8.x before 8.0.1, allows remote attackers to execute arbitrary code via a crafted URL.
+
+--
+Affected Systems:
+IBM Lotus SameTime 6.5.1_fp1
+IBM Lotus SameTime 7.0
+IBM Lotus SameTime 7.5.1_cf1
+IBM Lotus SameTime 8.0
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-2499:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-2499
+
+--

@@ -1,0 +1,52 @@
+Rule:
+
+--
+Sid:
+7316
+
+--
+Summary:
+This rule does not generate an event. It is used in conjunction with other rules to either reduce the possibility of false postives from occuring or to track the state of a connection.
+
+--
+Impact:
+None.
+
+--
+Detailed Information:
+This rule does not generate an event. It is used in conjunction with other rules to either reduce the possibility of false postives from occuring or to track the state of a connection.
+
+This rule is used by the sid(s) .
+
+--
+Affected Systems:
+NA
+
+--
+Attack Scenarios:
+NA
+
+--
+Ease of Attack:
+NA
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+NA
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

@@ -1,0 +1,104 @@
+Rule
+
+--
+Sid
+3-17192
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in shockwave player.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Adobe Shockwave Player before 11.5.8.612 does not properly validate offset values in the rcsL RIFF chunks of (1) .DIR and (2) .DCR Director movies, which allows remote attackers to cause a denial of service (heap memory corruption) or execute arbitrary code via a crafted movie.
+
+--
+Affected Systems:
+Adobe shockwave player 1.0
+Adobe shockwave player 10.0.0.210
+Adobe shockwave player 10.0.1.004
+Adobe shockwave player 10.1.0.011
+Adobe shockwave player 10.1.0.11
+Adobe shockwave player 10.1.1.016
+Adobe shockwave player 10.1.4.020
+Adobe shockwave player 10.2.0.021
+Adobe shockwave player 10.2.0.022
+Adobe shockwave player 10.2.0.023
+Adobe shockwave player 11.0.0.456
+Adobe shockwave player 11.0.3.471
+Adobe shockwave player 11.5.0.595
+Adobe shockwave player 11.5.0.596
+Adobe shockwave player 11.5.1.601
+Adobe shockwave player 11.5.2.602
+Adobe shockwave player 11.5.6.606
+Adobe shockwave player 11.5.7.609
+Adobe shockwave player 2.0
+Adobe shockwave player 3.0
+Adobe shockwave player 4.0
+Adobe shockwave player 5.0
+Adobe shockwave player 6.0
+Adobe shockwave player 8.0
+Adobe shockwave player 8.0.196
+Adobe shockwave player 8.0.196a
+Adobe shockwave player 8.0.204
+Adobe shockwave player 8.0.205
+Adobe shockwave player 8.5.1
+Adobe shockwave player 8.5.1.100
+Adobe shockwave player 8.5.1.103
+Adobe shockwave player 8.5.1.105
+Adobe shockwave player 8.5.1.106
+Adobe shockwave player 8.5.321
+Adobe shockwave player 8.5.323
+Adobe shockwave player 8.5.324
+Adobe shockwave player 8.5.325
+Adobe shockwave player 9
+Adobe shockwave player 9.0.383
+Adobe shockwave player 9.0.432
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-2873:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-2873
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+15572
+
+--
+Summary:
+This event is generated when an attempt is made to cause a Denial of Service (DoS) in Nokia and Symbian OS cell phones.
+
+--
+Impact:
+Denial of Service (DoS)
+
+--
+Detailed Information:
+Malformed messages sent via SMS/MMS to a Symbian OS powered cell phone, may cause a Denial of Service (DoS).
+
+--
+Affected Systems:
+Nokia and Symbian OS cell phones
+
+--
+Attack Scenarios:
+An attacker can send an SMS message to a phone, identify it as an IEM message. If this message has the format "someone@somewhere.com message" the DoS will occur.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

@@ -1,0 +1,54 @@
+Rule: 
+
+--
+Sid: 
+8089
+
+-- 
+Summary: 
+This event is generated when an attempt is made to execute a UNIX command via a known vulnerability in HP OpenView Network Node Manager (NNM).
+
+-- 
+Impact: 
+Serious. This is a command execution attempt.
+
+--
+Detailed Information:
+HP OpenView NNM suffers from poor programming that fails to properly check user supplied data to a number of scripts. This may be exploited easily by an attacker to run commands on an affected system.
+
+--
+Affected Systems:
+HP OpenView NNM 6.2
+HP OpenView NNM 6.4
+HP OpenView NNM 7.01
+HP OpenView NNM 7.5
+
+--
+Attack Scenarios: 
+An attacker can include various metacharacters in parameters sent to the application which will then allow the attacker to execute system commands.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

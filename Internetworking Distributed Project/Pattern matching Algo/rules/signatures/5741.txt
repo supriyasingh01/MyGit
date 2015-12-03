@@ -1,0 +1,52 @@
+Rule: 
+
+--
+Sid: 
+5741
+
+-- 
+Summary: 
+This event is generated when a malicious Microsoft Help file has been detected being downloaded by a client.
+
+-- 
+Impact: 
+Possible code execution.
+
+--
+Detailed Information:
+HTML Help Workshop fails to properly validate file contents before reading and putting information into a fixed length buffer. A malicious file may contain information that could overflow the buffer and execute code on the affected system.
+
+--
+Affected Systems:
+Microsoft HTML Help Workshop 4.74 and prior
+
+--
+Attack Scenarios: 
+An attacker could entice a user to download a malicious Help file (.hpp) and include code of their choosing to be executed on the host.
+
+-- 
+Ease of Attack: 
+Simple. Exploits exist.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+--

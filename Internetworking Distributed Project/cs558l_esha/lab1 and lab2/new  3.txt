@@ -1,0 +1,33 @@
+# This is a simple ns script. Comments start with #.
+set ns [new Simulator]                  : new instance of network simulator
+source tb_compat.tcl                    : source some header file
+
+// Declara all my nodes in topology
+
+set nodeA [$ns node]
+set nodeB [$ns node]
+set nodeC [$ns node]
+set nodeD [$ns node]
+
+set link0 [$ns duplex-link $nodeB $nodeA 30Mb 50ms DropTail] : set link between node A and node B
+tb-set-link-loss $link0 0.01 :									set link loss percentage
+
+set lan0 [$ns make-lan "$nodeD $nodeC $nodeB " 100Mb 0ms]   : set LAN between node D, C, and B
+
+# Set the OS on a couple.
+tb-set-node-os $nodeA FBSD-STD								: node A has FreeBSD linux
+tb-set-node-os $nodeC RHL-STD         						: node C has RedHat
+$ns rtproto Static											: Configure "static" routing
+
+# Go!
+$ns run                                 					: Start my network with above settings
+
+
+
+
+THis is how engineers work
+You do not use something till u know what it is
+You iu oklnoi
+
+
+you uploaded an "HTML" file to ns. There is no excuse for this.

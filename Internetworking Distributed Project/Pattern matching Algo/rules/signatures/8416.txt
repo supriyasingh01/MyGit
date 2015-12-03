@@ -1,0 +1,53 @@
+Rule: 
+
+--
+Sid: 
+8416
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Internet Explorer.
+
+-- 
+Impact: 
+Serious. Execution of code of the attackers choosing is possible.
+
+--
+Detailed Information:
+Microsoft Internet Explorer suffers from a buffer overflow condition that may allow an attacker to execute code of their choosing on an affected host. The condition is manifest when processing pages using Vector Markup Language. This vulnerability is being used as an attack vector for the Trojan Horse program Trojan.Vimalov.
+
+--
+Affected Systems:
+Microsoft Internet Explorer 6.0 and prior
+
+--
+Attack Scenarios: 
+An attacker need only specify the use of Vector Markup Language (VML) in the document to be viewed. The attacker can then include code of their choosing to overflow a fixed length buffer and execute the code on an affected system.
+
+-- 
+Ease of Attack: 
+Simple. Exploits exist.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patch.
+
+Use an alternative web browser such as Opera or Firefox. Note that this vulnerability may be exploited via the use of Outlook.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

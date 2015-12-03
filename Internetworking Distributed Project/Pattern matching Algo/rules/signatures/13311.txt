@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+13311
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Mod Proxy for Apache.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+The date handling code in modules/proxy/proxy_util.c (mod_proxy) in Apache 2.3.0, when using a threaded MPM, allows remote origin servers to cause a denial of service (caching forward proxy process crash) via crafted date headers that trigger a buffer over-read.
+
+--
+Affected Systems:
+Apache http_server 2.3.0
+
+--
+Attack Scenarios:
+An attacker need only send a long parameter for the "Last-Modified" header to the server running mod_proxy.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+Microsoft IIS servers may send a non-RFC compliant date in the Last-Modified header that may cause this rule to generate an event. See RFC 2616 section 3 for details on the format this header is supposed to take.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-3847:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-3847
+
+RFC 2616:
+http://www.ietf.org/rfc/rfc2616.txt
+
+--

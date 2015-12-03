@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+3-13972
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft Excel.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Microsoft Office Excel 2000 SP3, 2002 SP3, 2003 SP2 and SP3, and 2007 Gold and SP1; Office Excel Viewer 2003 Gold and SP3; Office Excel Viewer; Office Compatibility Pack 2007 Gold and SP1; Office SharePoint Server 2007 Gold and SP1; and Office 2004 and 2008 for Mac do not properly parse record values when loading Excel files, which allows remote attackers to execute arbitrary code via a crafted Excel file, aka the "Excel Record Parsing Vulnerability."
+
+--
+Affected Systems:
+  
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-3006:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-3006
+
+--

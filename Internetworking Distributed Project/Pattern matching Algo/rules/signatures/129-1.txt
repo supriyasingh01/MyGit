@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+129-1
+
+--
+Summary:
+This event is generated when the stream5 preprocessor detects anomalous network traffic.
+
+--
+Impact:
+Unknown. This is an indication of anomalous behaviour between networked assets.
+
+--
+Detailed Information:
+This event is generated when the stream5 preprocessor detects anomalous network traffic.
+
+In particular, the preprocessor has detected the SYN flag is set in an establised session.
+
+--
+Affected Systems:
+All networked systems.
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

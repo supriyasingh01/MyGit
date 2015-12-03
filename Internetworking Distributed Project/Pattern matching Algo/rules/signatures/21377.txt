@@ -1,0 +1,110 @@
+Rule
+
+--
+Sid
+21377
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in unified communications manager.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Multiple SQL injection vulnerabilities in xmldirectorylist.jsp in the embedded Apache HTTP Server component in Cisco Unified Communications Manager (aka CUCM, formerly CallManager) 6.x before 6.1(5)su3, 7.x before 7.1(5)su4, 8.0 before 8.0(3a)su2, and 8.5 before 8.5(1)su1 allow remote attackers to execute arbitrary SQL commands via the (1) f, (2) l, or (3) n parameter, aka Bug ID CSCtj42064.
+
+--
+Affected Systems:
+cisco unified communications manager 6.0
+cisco unified communications manager 6.1(1)
+cisco unified communications manager 6.1(1a)
+cisco unified communications manager 6.1(1b)
+cisco unified communications manager 6.1(2)
+cisco unified communications manager 6.1(2)su1
+cisco unified communications manager 6.1(2)su1a
+cisco unified communications manager 6.1(3)
+cisco unified communications manager 6.1(3a)
+cisco unified communications manager 6.1(3b)
+cisco unified communications manager 6.1(3b)su1
+cisco unified communications manager 6.1(4)
+cisco unified communications manager 6.1(4)su1
+cisco unified communications manager 6.1(4a)
+cisco unified communications manager 6.1(4a)su2
+cisco unified communications manager 6.1(5)
+cisco unified communications manager 6.1(5)su1
+cisco unified communications manager 6.1(5)su2
+cisco unified communications manager 7.0(1)su1
+cisco unified communications manager 7.0(1)su1a
+cisco unified communications manager 7.0(2)
+cisco unified communications manager 7.0(2a)
+cisco unified communications manager 7.0(2a)su1
+cisco unified communications manager 7.0(2a)su2
+cisco unified communications manager 7.1(2a)
+cisco unified communications manager 7.1(2a)su1
+cisco unified communications manager 7.1(2b)
+cisco unified communications manager 7.1(2b)su1
+cisco unified communications manager 7.1(3)
+cisco unified communications manager 7.1(3a)
+cisco unified communications manager 7.1(3a)su1
+cisco unified communications manager 7.1(3a)su1a
+cisco unified communications manager 7.1(3b)
+cisco unified communications manager 7.1(3b)su1
+cisco unified communications manager 7.1(3b)su2
+cisco unified communications manager 7.1(5)
+cisco unified communications manager 7.1(5)su1
+cisco unified communications manager 7.1(5)su1a
+cisco unified communications manager 7.1(5a)
+cisco unified communications manager 7.1(5b)
+cisco unified communications manager 7.1(5b)su2
+cisco unified communications manager 7.1(5b)su3
+cisco unified communications manager 8.0
+cisco unified communications manager 8.0(2c)
+cisco unified communications manager 8.0(2c)su1
+cisco unified communications manager 8.0(3)
+cisco unified communications manager 8.0(3a)
+cisco unified communications manager 8.0(3a)su1
+
+--
+Attack Scenarios:
+In an SQL injection attack, the attacker is able to coerce the application into running SQL queries of the attackers choosing. This can lead to a complete compromise of the data stored in the system as well as the attacker being able to gain administrative access to the application.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2011-1610:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-1610
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/89.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/66.html
+
+--

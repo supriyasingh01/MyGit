@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+10063
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Mozilla Firefox.
+
+--
+Impact:
+Medium
+
+--
+Detailed Information:
+Mozilla Firefox 1.5, Thunderbird 1.5 if Javascript is enabled in mail, and SeaMonkey before 1.0 might allow remote attackers to execute arbitrary code via the QueryInterface method of the built-in Location and Navigator objects, which leads to memory corruption.
+
+--
+Affected Systems:
+  1.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

@@ -1,0 +1,87 @@
+Rule
+
+--
+Sid
+3-16222
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Windows 7 or Adobe Acrobat.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Integer overflow in cdd.dll in the Canonical Display Driver (CDD) in Microsoft Windows Server 2008 R2 and Windows 7 on 64-bit platforms, when the Windows Aero theme is installed, allows context-dependent attackers to cause a denial of service (reboot) or possibly execute arbitrary code via a crafted image file that triggers incorrect data parsing after user-mode data is copied to kernel mode, as demonstrated using "Browse with Irfanview" and certain actions on a folder containing a large number of thumbnail images in Resample mode, possibly related to the ATI graphics driver or win32k.sys, aka "Canonical Display Driver Integer Overflow Vulnerability."
+
+Integer overflow in Adobe Acrobat 9.x before 9.2, 8.x before 8.1.7, and possibly 7.x through 7.1.4 might allow attackers to execute arbitrary code via unspecified vectors.
+
+--
+Affected Systems:
+Adobe Acrobat 7.0
+Adobe Acrobat 7.0.1
+Adobe Acrobat 7.0.2
+Adobe Acrobat 7.0.3
+Adobe Acrobat 7.0.4
+Adobe Acrobat 7.0.5
+Adobe Acrobat 7.0.6
+Adobe Acrobat 7.0.7
+Adobe Acrobat 7.0.8
+Adobe Acrobat 7.0.9
+Adobe Acrobat 7.1.0
+Adobe Acrobat 7.1.1
+Adobe Acrobat 7.1.3
+Adobe Acrobat 8.0.0
+Adobe Acrobat 8.1
+Adobe Acrobat 8.1.1
+Adobe Acrobat 8.1.2
+Adobe Acrobat 8.1.3
+Adobe Acrobat 8.1.4
+Adobe Acrobat 8.1.6
+Adobe Acrobat 9.0
+Adobe Acrobat 9.1.1
+Adobe Acrobat 9.1.2
+Adobe Acrobat 9.1.3
+Microsoft Windows 7
+Microsoft Windows Server 2008 R2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-2989:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2989
+
+NIST CVE-2009-3678:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-3678
+  
+--

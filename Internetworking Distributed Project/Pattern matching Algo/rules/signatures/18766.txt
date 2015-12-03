@@ -1,0 +1,128 @@
+Rule
+
+--
+Sid
+18766
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in openssl.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The Cryptographic Message Syntax (CMS) implementation in crypto/cms/cms_asn1.c in OpenSSL before 0.9.8o and 1.x before 1.0.0a does not properly handle structures that contain OriginatorInfo, which allows context-dependent attackers to modify invalid memory locations or conduct double-free attacks, and possibly execute arbitrary code, via unspecified vectors.
+
+--
+Affected Systems:
+openssl openssl 0.9.1c
+openssl openssl 0.9.2b
+openssl openssl 0.9.3
+openssl openssl 0.9.3a
+openssl openssl 0.9.4
+openssl openssl 0.9.5
+openssl openssl 0.9.5
+openssl openssl 0.9.5a
+openssl openssl 0.9.5a
+openssl openssl 0.9.6
+openssl openssl 0.9.6
+openssl openssl 0.9.6
+openssl openssl 0.9.6a
+openssl openssl 0.9.6a
+openssl openssl 0.9.6a
+openssl openssl 0.9.6b
+openssl openssl 0.9.6c
+openssl openssl 0.9.6d
+openssl openssl 0.9.6e
+openssl openssl 0.9.6f
+openssl openssl 0.9.6g
+openssl openssl 0.9.6h
+openssl openssl 0.9.6i
+openssl openssl 0.9.6j
+openssl openssl 0.9.6k
+openssl openssl 0.9.6l
+openssl openssl 0.9.6m
+openssl openssl 0.9.7
+openssl openssl 0.9.7
+openssl openssl 0.9.7
+openssl openssl 0.9.7
+openssl openssl 0.9.7
+openssl openssl 0.9.7
+openssl openssl 0.9.7a
+openssl openssl 0.9.7b
+openssl openssl 0.9.7c
+openssl openssl 0.9.7d
+openssl openssl 0.9.7e
+openssl openssl 0.9.7f
+openssl openssl 0.9.7g
+openssl openssl 0.9.7h
+openssl openssl 0.9.7i
+openssl openssl 0.9.7j
+openssl openssl 0.9.7k
+openssl openssl 0.9.7l
+openssl openssl 0.9.7m
+openssl openssl 0.9.8
+openssl openssl 0.9.8a
+openssl openssl 0.9.8b
+openssl openssl 0.9.8c
+openssl openssl 0.9.8d
+openssl openssl 0.9.8e
+openssl openssl 0.9.8f
+openssl openssl 0.9.8g
+openssl openssl 0.9.8h
+openssl openssl 0.9.8i
+openssl openssl 0.9.8j
+openssl openssl 0.9.8k
+openssl openssl 0.9.8l
+openssl openssl 0.9.8m
+openssl openssl 0.9.8n
+openssl openssl 1.0.0
+openssl openssl 1.0.0
+openssl openssl 1.0.0
+openssl openssl 1.0.0
+openssl openssl 1.0.0
+
+--
+Attack Scenarios:
+If an application does not correctly enforce access control, a remote attacker may be able to view resources and data that should be protected. Additionally, in the case of administrative user interfaces, the attacker may be able to elevate privileges and generate accounts by accessing functions that should be controllled by ACLs.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-0742:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0742
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/285.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/1.html
+
+--

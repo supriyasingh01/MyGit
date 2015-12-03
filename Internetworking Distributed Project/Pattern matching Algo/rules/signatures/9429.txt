@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+9429
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the Apple Quicktime browser plugin.
+
+--
+Impact:
+Serious.
+
+--
+Detailed Information:
+A vulnerability in the Apple Quicktime browser plugin may allow attackers to execute scripts at an privileged access level.
+
+In the quicktime plugin, xml data is in QML (quicktime movie links) to show how a resource should be loaded.  The file must be in QML format, however any file extension that is passed to the quicktim plugin for handling (for example, MOV or MP3) where the file is in QML format will be parsed as QML, regardless of the extension.  In order for the security bypass to occur, the attacking file must be resident in the local file system.  In the event that the target is convinced to download the magic media file and then drags or manually opens the file using the browser, then any script contained in the file will be executed at an eleveated privilige level. The script is inserted using the qtnext function, which tells the quicktime player which resource to load next.
+
+--
+Affected Systems:
+Apple QuickTime Plug-In 7.1.3
+
+--
+Attack Scenarios:
+An attacker would need to supply a link to a resource for the plugin to execute as a QML object.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matthew Olney <matthew.olney@sourcefire.com>
+
+--
+Additional References:
+
+
+--

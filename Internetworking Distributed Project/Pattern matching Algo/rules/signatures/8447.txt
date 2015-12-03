@@ -1,0 +1,43 @@
+Rule: 
+
+--
+Sid: 
+8447
+
+-- 
+Summary: 
+THIS RULE DOES NOT GENERATE AN EVENT
+
+-- 
+Impact: 
+
+--
+Detailed Information:
+THIS RULE DOES NOT GENERATE AN EVENT IT SETS A FLOWBIT FOR USE IN OTHER RULES
+
+--
+Affected Systems:
+
+--
+Attack Scenarios: 
+
+-- 
+Ease of Attack: 
+
+-- 
+False Positives:
+
+--
+False Negatives:
+
+-- 
+Corrective Action: 
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+--

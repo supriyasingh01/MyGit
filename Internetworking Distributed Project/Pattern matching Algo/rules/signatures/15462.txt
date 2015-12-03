@@ -1,0 +1,86 @@
+Rule
+
+--
+Sid
+15462
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in chrome.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Buffer overflow in the browser kernel in Google Chrome before 2.0.172.33 allows remote HTTP servers to cause a denial of service (application crash) or possibly execute arbitrary code via a crafted response.
+
+--
+Affected Systems:
+google chrome 0.2.149.29
+google chrome 0.2.149.30
+google chrome 0.2.152.1
+google chrome 0.2.153.1
+google chrome 0.3.154.0
+google chrome 0.3.154.3
+google chrome 0.4.154.18
+google chrome 0.4.154.22
+google chrome 0.4.154.31
+google chrome 0.4.154.33
+google chrome 1.0.154.36
+google chrome 1.0.154.39
+google chrome 1.0.154.42
+google chrome 1.0.154.43
+google chrome 1.0.154.46
+google chrome 1.0.154.52
+google chrome 1.0.154.53
+google chrome 1.0.154.59
+google chrome 2.0.156.1
+google chrome 2.0.157.0
+google chrome 2.0.157.2
+google chrome 2.0.158.0
+google chrome 2.0.159.0
+google chrome 2.0.172
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-2121:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-2121
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

@@ -1,0 +1,89 @@
+Rule
+
+--
+Sid
+16611
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in http server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Apache HTTP Server 2.0.x and 2.2.x does not sanitize the HTTP Method specifier header from an HTTP request when it is reflected back in a "413 Request Entity Too Large" error message, which might allow cross-site scripting (XSS) style attacks using web client components that can send arbitrary headers in requests, as demonstrated via an HTTP request containing an invalid Content-length value, a similar issue to CVE-2006-3918.
+
+--
+Affected Systems:
+Apache http server 2.0.46
+Apache http server 2.0.47
+Apache http server 2.0.48
+Apache http server 2.0.49
+Apache http server 2.0.50
+Apache http server 2.0.51
+Apache http server 2.0.52
+Apache http server 2.0.53
+Apache http server 2.0.54
+Apache http server 2.0.55
+Apache http server 2.0.57
+Apache http server 2.0.58
+Apache http server 2.0.59
+Apache http server 2.1.1
+Apache http server 2.1.2
+Apache http server 2.1.3
+Apache http server 2.1.4
+Apache http server 2.1.5
+Apache http server 2.1.6
+Apache http server 2.1.7
+Apache http server 2.1.8
+Apache http server 2.2.0
+Apache http server 2.2.2
+Apache http server 2.2.3
+Apache http server 2.2.4
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Difficult.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-6203:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-6203
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

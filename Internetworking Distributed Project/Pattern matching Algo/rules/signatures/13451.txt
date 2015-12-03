@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+13451
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in visual foxpro.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Insecure method vulnerability in the FPOLE.OCX 6.0.8450.0 ActiveX control in Microsoft Visual FoxPro 6.0 allows remote attackers to execute arbitrary programs by specifying them as an argument to the FoxDoCmd function.
+
+--
+Affected Systems:
+microsoft visual foxpro 6.0
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-5322:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-5322
+  
+--

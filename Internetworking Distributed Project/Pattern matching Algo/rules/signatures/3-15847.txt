@@ -1,0 +1,58 @@
+Rule:
+
+--
+Sid:
+3-15847
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the Telnet Service on Microsoft Windows systems.
+
+--
+Impact:
+A successful attack can cause a buffer overflow and the subsequent execution of arbitrary code with system level privileges on a vulnerable host.
+
+--
+Detailed Information:
+The Telnet service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP2, Vista Gold, SP1, and SP2, and Server 2008 Gold and SP2 allows remote Telnet servers to execute arbitrary code on a client machine by replaying the NTLM credentials of a client user, aka "Telnet Credential Reflection Vulnerability," a related issue to CVE-2000-0834.
+
+--
+Affected Systems:
+Microsoft Windows 2000 SP4
+Microsoft Windows XP SP2 and SP3
+Microsoft Windows Server 2003 SP2
+Microsoft Windows Vista Gold, SP1 and SP2
+Microsoft Windows Server 2008 Gold and SP2
+
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References
+
+--

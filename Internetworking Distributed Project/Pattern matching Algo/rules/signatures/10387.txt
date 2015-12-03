@@ -1,0 +1,55 @@
+Rule:
+
+--
+Sid:
+10387
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in McAfee ePolicy Orchestrator.
+
+--
+Impact:
+A successful attack can cause a buffer overflow and the subsequent execution of arbitrary code with system level privileges on a vulnerable host.
+
+--
+Detailed Information:
+A vulnerability exists in the way that the McAfee ePolicy Orchestrator SiteManager.dll ActiveX control handles user supplied input. This may allow a remote attacker to overflow a fixed length buffer and execute code of their choosing on an affected host.
+
+Invoking the object from a malicious website or HTML email may trigger these conditions. If the vulnerabilities were successfully exploited, this would corrupt process memory, resulting in arbitrary code execution in the context of the client application using the affected ActiveX control.
+
+--
+Affected Systems:
+McAfee ePolicy Orchestrator
+McAfee ProtectionPilot
+
+--
+Attack Scenarios:
+An attacker can pass malformed data to the ActiveX control to overflow the buffer and execute code.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the most current non-affected version of the product.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Patrick Mullen <patrick.mullen@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+12390
+
+--
+Summary:
+This event is generated when network traffic that indicates Yahoo Webmail client chat applet is being used.
+
+--
+Impact:
+Possible policy violation. The use of Yahoo Webmail client chat applet may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the Yahoo Webmail client chat applet is being used on the protected network.
+
+--
+Affected Systems:
+All systems using Yahoo Webmail client chat applet
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Yahoo Webmail client chat applet has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Yahoo Webmail client chat applet on the protected network and enforce or implement an organization wide policy on the use of Yahoo Webmail client chat applet.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

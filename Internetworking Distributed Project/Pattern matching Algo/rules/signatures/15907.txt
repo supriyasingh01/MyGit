@@ -1,0 +1,124 @@
+Rule
+
+--
+Sid
+15907
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the Linux kernel.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+Integer overflow in the dccp_setsockopt_change function in net/dccp/proto.c in the Datagram Congestion Control Protocol (DCCP) subsystem in the Linux kernel 2.6.17-rc1 through 2.6.26.2 allows remote attackers to cause a denial of service (panic) via a crafted integer value, related to Change L and Change R options without at least one byte in the dccpsf_val field.
+
+--
+Affected Systems:
+Linux kernel 2.6.19.4
+Linux kernel 2.6.19.5
+Linux kernel 2.6.19.6
+Linux kernel 2.6.19.7
+Linux kernel 2.6.20.16
+Linux kernel 2.6.20.17
+Linux kernel 2.6.20.18
+Linux kernel 2.6.20.19
+Linux kernel 2.6.20.20
+Linux kernel 2.6.20.21
+Linux kernel 2.6.21.5
+Linux kernel 2.6.21.6
+Linux kernel 2.6.21.7
+Linux kernel 2.6.22.10
+Linux kernel 2.6.22.11
+Linux kernel 2.6.22.12
+Linux kernel 2.6.22.13
+Linux kernel 2.6.22.14
+Linux kernel 2.6.22.15
+Linux kernel 2.6.22.17
+Linux kernel 2.6.22.18
+Linux kernel 2.6.22.19
+Linux kernel 2.6.22.2
+Linux kernel 2.6.22.8
+Linux kernel 2.6.22.9
+Linux kernel 2.6.23.10
+Linux kernel 2.6.23.11
+Linux kernel 2.6.23.12
+Linux kernel 2.6.23.13
+Linux kernel 2.6.23.15
+Linux kernel 2.6.23.16
+Linux kernel 2.6.23.17
+Linux kernel 2.6.23.8
+Linux kernel 2.6.23.9
+Linux kernel 2.6.24
+Linux kernel 2.6.24.1
+Linux kernel 2.6.24.2
+Linux kernel 2.6.24.3
+Linux kernel 2.6.24.4
+Linux kernel 2.6.24.5
+Linux kernel 2.6.24.6
+Linux kernel 2.6.24.7
+Linux kernel 2.6.25
+Linux kernel 2.6.25.1
+Linux kernel 2.6.25.10
+Linux kernel 2.6.25.11
+Linux kernel 2.6.25.12
+Linux kernel 2.6.25.13
+Linux kernel 2.6.25.14
+Linux kernel 2.6.25.15
+Linux kernel 2.6.25.2
+Linux kernel 2.6.25.3
+Linux kernel 2.6.25.4
+Linux kernel 2.6.25.5
+Linux kernel 2.6.25.6
+Linux kernel 2.6.25.7
+Linux kernel 2.6.25.8
+Linux kernel 2.6.25.9
+Linux kernel 2.6.26
+Linux kernel 2.6.26.2
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-3276:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-3276
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

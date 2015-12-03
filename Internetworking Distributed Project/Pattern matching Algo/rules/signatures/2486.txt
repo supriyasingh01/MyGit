@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+2486
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a denial of service (DoS) associated with tcpdump decoding of an isakmp payload.
+
+--
+Impact:
+A successful attack may cause a DoS of the host running tcpdump.
+
+--
+Detailed Information:
+The tcpdump decode of an isakmp packet with an identification payload may be susceptible to a DoS attack.  This occurs because the code does not properly convert the payload length field from network-to-host byte order. This may cause tcpdump to crash when specific values are supplied to the payload length.
+
+--
+Affected Systems:
+Hosts running tcpdump versions 3.8.1 and earlier
+
+--
+Attack Scenarios:
+An attacker can create and send a malformed isakmp packet that may cause a host running tcpdump and analyzing the packet to crash.
+
+--
+Ease of Attack:
+Simple. Exploit code exists.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+
+--
+Additional References
+
+--

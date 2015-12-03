@@ -1,0 +1,80 @@
+Rule
+
+--
+Sid
+14989
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in edirectory.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Heap-based buffer overflow in dhost.exe in Novell eDirectory 8.8 before 8.8.3, and 8.7.3 before 8.7.3.10 ftf1, allows remote attackers to execute arbitrary code via a SOAP request with a long Accept-Language header.
+
+--
+Affected Systems:
+novell edirectory 8.7.3
+novell edirectory 8.7.3.10
+novell edirectory 8.7.3.8
+novell edirectory 8.7.3.8_presp9
+novell edirectory 8.7.3.9
+novell edirectory 8.7.3.9
+novell edirectory 8.7.3.9
+novell edirectory 8.7.3.9
+novell edirectory 8.7.3.9
+novell edirectory 8.8
+novell edirectory 8.8
+novell edirectory 8.8
+novell edirectory 8.8
+novell edirectory 8.8
+novell edirectory 8.8.1
+novell edirectory 8.8.1
+novell edirectory 8.8.1
+novell edirectory 8.8.1
+novell edirectory 8.8.1
+novell edirectory 8.8.2
+novell edirectory 8.8.2
+novell edirectory 8.8.2
+novell edirectory 8.8.2
+novell edirectory 8.8.2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-4479:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-4479
+
+--

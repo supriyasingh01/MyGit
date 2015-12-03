@@ -1,0 +1,86 @@
+Rule
+
+--
+Sid
+14991
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in db2_universal_database.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Multiple stack-based buffer overflows in IBM DB2 9.1 before Fixpak 5 and 9.5 before Fixpak 1 allow remote attackers to cause a denial of service (system outage) via vectors related to (1) use of XQuery to issue statements; the (2) XMLQUERY, (3) XMLEXISTS, and (4) XMLTABLE statements; and the (5) sqlrlaka function.
+
+--
+Affected Systems:
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+ibm db2_universal_database 9.1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-3854:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-3854
+
+--

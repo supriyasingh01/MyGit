@@ -1,0 +1,65 @@
+Rule:
+
+--
+Sid:
+3-8092
+
+--
+Summary:
+Hosts using the Microsoft Windows Operating System may be prone to a Denial of Service (DoS) attack when handling IGMPv3 messages.
+
+--
+Impact:
+Denial of Service (DoS)
+
+--
+Detailed Information:
+Versions of the Microsoft Windows operating system are vulnerable to a DoS condition when processing malformed IGMPv3 messages. An unauthenticated attacker may be able to take advantage of this vulnerability to cause the DoS to occur.
+
+The error occurs when the operating system attempts to process IGMPv3 messages that contain no data or when certain header fields indicate zero data length.
+
+--
+Affected Systems:
+Microsoft Windows XP Tablet PC, SP2 and SP1
+Microsoft Windows XP Professional 64-bit, SP2 and SP1
+Microsoft Windows XP Professional
+Microsoft Windows XP Media Center, SP2 and SP1
+Microsoft Windows XP Home, SP1 and SP2
+Microsoft Windows XP Embedded and SP1
+Microsoft Windows XP 64-bit Version 2003 and SP1
+Microsoft Windows XP 64-bit and SP1
+Microsoft Windows Server 2003 Web and SP1
+Microsoft Windows Server 2003 Standard 64-bit
+Microsoft Windows Server 2003 Standard and SP1
+Microsoft Windows Server 2003 Enterprise 64-bit
+Microsoft Windows Server 2003 Enterprise and SP1
+Microsoft Windows Server 2003 Datacenter 64-bit and SP1
+Microsoft Windows Server 2003 Datacenter and SP1
+
+--
+Attack Scenarios:
+An attacker need only supply a malformed IGMPv3 message to cause the DoS to occur.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

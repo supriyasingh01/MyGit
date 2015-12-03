@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+3-14641
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in .
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Microsoft Excel 2000 SP3, 2002 SP3, 2003 SP2 and SP3, and 2007 Gold and SP1; Office Excel Viewer 2003 SP3; Office Excel Viewer; Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats Gold and SP1; Office 2004 and 2008 for Mac; and Open XML File Format Converter for Mac do not properly allocate memory when loading Excel objects during parsing of the Excel spreadsheet file format, which allows remote attackers to execute arbitrary code via a crafted BIFF file, aka "File Format Parsing Vulnerability."
+
+--
+Affected Systems:
+  
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-3471:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-3471
+
+--

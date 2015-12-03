@@ -1,0 +1,54 @@
+Rule:
+
+--
+Sid:
+9289
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Microsoft systems using the Client Service for Netware. In particular this rule generates an event when an attempt is made to exploit the function "v4 NwGetConnectionInformation".
+
+--
+Impact:
+Serious. Execution of arbitrary code leading to unauthorized administrative access to the target host.
+
+--
+Detailed Information:
+A vulnerability in the implementation of the Client Service for Netware exists due to a programming error which may present an attacker with the opportunity to exploit the service and run code of their choosing on an affected system.
+
+In particular this rule generates an event when an attempt is made to exploit the function "v4 NwGetConnectionInformation".
+
+--
+Affected Systems:
+Microsoft systems using the Client Service for Netware.
+
+--
+Attack Scenarios:
+An attacker can supply extra data in the message from the server containing code of their choosing to be run on the client.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

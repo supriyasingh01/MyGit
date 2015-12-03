@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+
+<TITLE>Project</TITLE>
+
+</HEAD>
+<BODY>
+
+
+
+<p><b>Concept -</b> We have used UDP as it is fast, so it gives a higher throughput. However, UDP is unreliable,
+so we have ensured that the file is transferred correctly and reliably over the link by implementing re-
+transmission and timeouts.
+</p>
+<p>
+
+<b>Design</b> - We have a multithreaded server (receiver) and client (sender) as follows -
+
+</p>
+<p>
+
+<b>Server</b> <a href="server_udp.c">Server source code </a>
+
+<p>
+The main thread accepts the packets and sends acknowledgements for the received packets. If after
+receiving packet n, it receives packet n+2, it realizes that packet n+1 is missing and it stores it in a
+missing packet queue. If it receives a repeat packet, an acknowledgement is still sent.
+</p>
+
+<p>Another thread on the server copies the data from the received packets into the file. It also takes care of
+the ordering of data.
+</p>
+
+<b>Client</b> <a href="client_udp.c">Client source code </a>
+
+<p>
+The main thread reads from the file and sends the packets. It adds the sent packets to the
+retransmission queue. Second thread receives acknowledgements sent by the server and removes the
+acknowledged packets from the retransmission queue. Third thread re-transmits packets from the re-
+transmission queue at timeout intervals.
+</p>
+
+<p>
+All the packets, acknowledgements and re-transmitted packets are sent by UDP.
+</p>
+<b>Analysis </b>
+<p align="justify">
+--We have used UDP for a higher throughput and then introduced mechanism to prevent packet
+loss.</br>
+
+--We have kept the packet size at 1466 bytes to avoid fragmentation while transmission.
+Throughput will decrease if the packet size is increased.
+</br>
+
+--Major factor is the re-transmission mechanism used. In this lab, we have experimented with
+selective repeat. We keep accepting packets as the sender sends them and we retransmit the
+unacknowledged &nbsp &nbsp &nbsp packets to ensure the correctness of the file.
+</br>
+
+--The rate at which the sender sends the packets is higher than the rate at which the receiver
+receives them, which is why there is packet loss even on lossless link. For Part B of this lab, we
+are planning to &nbsp &nbsp &nbsp &nbsp introduce a mechanism where there is an exponential change in the sender’s
+window size corresponding to the packet loss.
+
+</p>
+<a href="Flowcharts.pdf">Flowcharts </a>
+
+</BODY>
+<HTML>

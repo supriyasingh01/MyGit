@@ -1,0 +1,50 @@
+Rule:
+
+--
+Sid:
+17157
+
+--
+Summary:
+This event is generated when traffic that indicates malicious activity has been observed on the protected network.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+This event indicates that HP Intelligent Management Center database credentials information disclosure has been observed on the protected network.
+
+--
+Affected Systems:
+All
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Ensure the system is using an up to date version of the software and has had all vendor supplied patches applied.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

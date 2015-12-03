@@ -1,0 +1,60 @@
+Rule
+
+--
+Sid
+18464
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Coldfusion.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Multiple directory traversal vulnerabilities in the administrator console in Adobe Coldfusion 9.0.1 and earlier allow remote attackers to read arbitrary files via the locale parameter to (1) CFIDE/administrator/settings/mappings.cfm, (2) logging/settings.cfm, (3) datasources/index.cfm, (4) j2eepackaging/editarchive.cfm, and (5) enter.cfm in CFIDE/administrator/.
+
+--
+Affected Systems:
+Adobe Coldfusion 8.0
+Adobe Coldfusion 8.0.1
+Adobe Coldfusion 9.0
+Adobe Coldfusion 9.0.1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-2861:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-2861
+  
+--

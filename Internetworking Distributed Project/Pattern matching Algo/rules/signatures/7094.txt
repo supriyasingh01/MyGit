@@ -1,0 +1,60 @@
+Rule:
+
+--
+Sid:
+7094
+
+--
+Summary:
+This event is generated when activity relating to the "uprising screen control 1.0" Trojan Horse program is detected.
+
+--
+Impact:
+Possible theft of data and control of the targeted machine leading to a compromise of all resources the machine is connected to.
+
+--
+Detailed Information:
+Trojan horse programs can be used by an attacker to steal data from the infected machine, they can also be used to control the infected host. This event indicates that activity relating to the trojan horse program uprising screen control 1.0 has been detected in network traffic.
+
+
+
+--
+Affected Systems:
+Microsoft Windows systems
+
+--
+Attack Scenarios:
+This Trojan may be delivered to the target in a number of ways. This event is indicative of an existing infection being activated. Initial compromise can be in the form of a Win32 installation program that may use the extension ".jpg" or ".bmp" when delivered via e-mail for example.
+
+--
+Ease of Attack:
+This is Trojan activity, the target machine may already be compromised.
+
+--
+False Positives:
+None Known
+
+--
+False Negatives:
+None Known
+
+--
+Corrective Action:
+Updated virus definition files are essential in detecting this Trojan.
+
+Edit the system registry to remove the extra keys or restore a previously known good copy of the registry.
+
+Many trojans may hide the process from viewing in the Windows task manager.
+
+A reboot of the infected machine after cleaning is recommended.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <akirk.com>
+Nigel Houghton <nigel.houghton.com>
+
+--
+Additional References:
+
+--

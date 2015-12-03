@@ -1,0 +1,52 @@
+Rule:
+
+--
+Sid:
+5320
+
+--
+Summary:
+This event is generated when a Sober worm variant is detected.
+
+--
+Impact:
+A successful attack may result in the execution of code of the attackers choosing possibly leading to control of the target machine.
+
+--
+Detailed Information:
+The Sober worm is a mass mailer normally spread via email. This variant displays more indicators such as attempting to contact known servers after infection and checking the time via ntp.
+
+--
+Affected Systems:
+Microsoft Windows systems
+
+--
+Attack Scenarios:
+This is virus or worm activity.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Use antivirus products to detect infections and remove the malicious software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References
+
+--

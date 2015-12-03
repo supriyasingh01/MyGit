@@ -1,0 +1,51 @@
+Rule: 
+
+--
+Sid: 
+8445
+
+-- 
+Summary: 
+This event is generated when an attempt is made to download a Rich Text Format (RTF) file containing an embedded object package.
+
+-- 
+Impact: 
+Unknown. Execution of code may be possible.
+
+--
+Detailed Information:
+Versions of Microsoft Office are vulnerable to a buffer overflow condition when processing malformed RTF files.
+
+--
+Affected Systems:
+Microsoft Office
+
+--
+Attack Scenarios: 
+An attacker needs to supply a malformed .rtf file to be opened on a vulnerable system.
+
+-- 
+Ease of Attack: 
+Simple. Exploit code exists.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

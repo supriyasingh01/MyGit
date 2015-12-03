@@ -1,0 +1,18 @@
+1. How -w affects output
+2. How -b affects output
+3 How loss affects output
+
+By output, we mean "Mbps" bitrate
+
+
+Problem: Even without increasing kernel buffer limit, we near 100 Mbps on a 100 Mbps link
+
+
+1250000  bits/sec  
+
+
+100 00 bits  1250000 s
+
+
+emulab-iperf -s -p 5000 -w 312KB
+emulab-iperf -c nodeA -p 5000 -w 312KB

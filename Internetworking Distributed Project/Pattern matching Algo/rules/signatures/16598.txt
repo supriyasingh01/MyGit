@@ -1,0 +1,49 @@
+Rule: 
+
+--
+Sid: 
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in the Green Dam software.
+
+-- 
+Impact: 
+Complete control over the target machine.
+
+--
+Detailed Information:
+Green Dam contains a buffer overflow condition due to extremely poor communist programming techniques. It fails to properly handle long URLs. With a long URL an attacker can execute a stack based buffer overflow and execute code on a vulnerable machine.
+
+--
+Affected Systems:
+Green Dam
+
+--
+Attack Scenarios: 
+Exploits are publicly available.
+
+-- 
+Ease of Attack: 
+Simple. Exploits exist.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

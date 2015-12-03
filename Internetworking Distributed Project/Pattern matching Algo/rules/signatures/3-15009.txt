@@ -1,0 +1,77 @@
+Rule
+
+--
+Sid
+3-15009
+
+--
+Summary:
+This event is generated when an attempt is made to eXPloit a known vulnerability in Microsoft Windows systems.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Microsoft Windows 2000 Gold through SP4, XP Gold through SP3, Server 2003 SP1 and SP2, Vista Gold and SP1, and Server 2008 allows remote SMB servers to execute arbitrary code on a client machine by replaying the NTLM credentials of a client user, as demonstrated by backrush, aka "SMB Credential Reflection Vulnerability."  NOTE: some reliable sources report that this vulnerability exists because of an insufficient fix for CVE-2000-0834.
+
+--
+Affected Systems:
+Microsoft Windows 2000
+Microsoft Windows Server 2003
+Microsoft Windows Server 2003
+Microsoft Windows Server 2003
+Microsoft Windows Server 2003
+Microsoft Windows Server 2003
+Microsoft Windows Server 2003
+Microsoft Windows Server 2003
+Microsoft Windows Server 2008
+Microsoft Windows Server 2008
+Microsoft Windows Server 2008
+Microsoft Windows Server 2008
+Microsoft Windows Vista
+Microsoft Windows Vista
+Microsoft Windows Vista
+Microsoft Windows Vista
+Microsoft Windows XP
+Microsoft Windows XP
+Microsoft Windows XP
+Microsoft Windows XP
+Microsoft Windows XP
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-4037:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-4037
+  
+--

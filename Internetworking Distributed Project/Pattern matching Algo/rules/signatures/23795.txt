@@ -1,0 +1,51 @@
+Rule
+
+--
+Sid
+23795
+
+--
+Summary:
+This event is generated when a JavaScript function name observed in exploit kits in the wild is detected.
+
+--
+Impact:
+Likely malicious content hosted on the web page being downloaded.
+
+--
+Detailed Information:
+Heavily obfuscated exploit kits have been observed in the wild, and the string "function urchin()" has been a constant thread among them. Testing in production environments has shown this to be a reliable indicator of exploit kit activity, though it is possible that it may be used in legitimate code. True alerts can be easily distinguished by the level of obfuscation involved in the surrounding code.
+
+--
+Affected Systems:
+All web browsers are potentially vulnerable to malicious content hosted on sites like this.
+
+--
+Attack Scenarios:
+Clients would be lured into visiting an exploit kit via phishing emails, poisoned search results, etc.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known; however it is possible that this function name could be used in legitimate code.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Examine the packet for signs that the rest of the page contained maliciou data. Check for other IDS or other tool events related to the TCP stream in question. Verify patch levels and antimalware solutions, such as FireAMP, on the endpoint host. If exploitation appears to have occurred, consider rebuilding the impacted machine.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+None. 
+--

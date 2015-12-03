@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+3-13894
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in OWA for Exchange Server.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Cross-site scripting (XSS) vulnerability in Outlook Web Access (OWA) for Exchange Server 2003 SP2 and 2007 up to SP1 allows remote attackers to inject arbitrary web script or HTML via unspecified e-mail fields, a different vulnerability than CVE-2008-2248.
+
+--
+Affected Systems:
+Microsoft OWA for Exchange Server 2003 SP2
+Microsoft OWA for Exchange Server 2007 SP1 and prior
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-2247:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-2247
+
+--

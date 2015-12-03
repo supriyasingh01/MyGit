@@ -1,0 +1,61 @@
+Rule
+
+--
+Sid
+23732
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in windows media format runtime.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. Complete admin access.
+
+--
+Detailed Information:
+Heap-based buffer overflow in Windows Media Format Runtime 7.1, 9, 9.5, 9.5 x64 Edition, 11, and Windows Media Services 9.1 for Microsoft Windows 2000, XP, Server 2003, and Vista allows user-assisted remote attackers to execute arbitrary code via a crafted Advanced Systems Format (ASF) file.
+
+--
+Affected Systems:
+microsoft windows media format runtime 11
+microsoft windows media format runtime 7.1
+microsoft windows media format runtime 9
+microsoft windows media format runtime 9.5
+microsoft windows media format runtime 9.5
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-0064:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-0064
+  
+--

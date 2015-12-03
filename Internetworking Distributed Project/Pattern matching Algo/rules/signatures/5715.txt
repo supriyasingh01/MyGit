@@ -1,0 +1,56 @@
+Rule:
+
+--
+Sid:
+5715
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a denial of service or buffer overflow associated with the Apache web server.
+
+--
+Impact:
+A successful attack may permit a denial of service or buffer overflow that allows the execution of arbitrary code with system privileges of the vulnerable server.
+
+--
+Detailed Information:
+A vulnerability exists in the way Apache handles malformed IPv6 hostnames, possibly causing a denial of service or a buffer overflow.  This is caused by a failure to properly calculate the length of the hostname when a malformed hostname is supplied. It is possible for the length to be computed as a negative value that is subsequently cast into a very large unsigned integer in another function used to allocate memory.
+
+Specifically, the code looks for certain characters in the URI to signal the end of the hostname or start of the resource name.  The relative position of these characters is used to compute the length of the hostname. But, if one of these characters is maliciously or erroneously placed in the IPv6 hostname, it can trigger the overflow.
+
+--
+Affected Systems:
+Apache versions 2.0.35 - 2.0.50
+
+--
+Attack Scenarios:
+An attacker can send a malicious IPv6 hostname to an Apache server, possibly causing a denial of service or a buffer overflow and the subsequent execution of arbitrary code on the vulnerable server.  It should be noted that this attack can be successful against an Apache server on an IPv4 network because the vulnerability exists in the parsing of the hostname.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Judy Novak <judy.novak@sourcefire.com>
+Sourcefire Snort Team
+Daniel Roelker <droelker@sourcefire.com>
+
+--
+Additional References:
+
+--

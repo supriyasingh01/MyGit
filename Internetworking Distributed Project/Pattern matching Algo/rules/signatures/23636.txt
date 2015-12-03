@@ -1,0 +1,51 @@
+Rule
+
+--
+Sid
+23636
+
+--
+Summary:
+This event is generated when an obfuscation routine observed in exploit kits in the wild is detected.
+
+--
+Impact:
+Likely malicious content hosted on the web page being downloaded.
+
+--
+Detailed Information:
+The JavaScript built-in function parseInt(), which converts an integer into its equivalent in the ASCII character set, is a favorite of people who wish to encode or otherwise obfuscate their JavaScript. This rule looks for an obfuscated way of building the string "parseInt", which has been observed in the wild in exploit kits that later call the function. While legitimate encoder routines might use this technique, none have been observed to date in the field.
+
+--
+Affected Systems:
+All web browsers are potentially vulnerable to malicious content hosted on sites like this.
+
+--
+Attack Scenarios:
+Clients would be lured into visiting an exploit kit via phishing emails, poisoned search results, etc.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Examine the packet for signs that the rest of the page contained maliciou data. Check for other IDS or other tool events related to the TCP stream in question. Verify patch levels and antimalware solutions, such as FireAMP, on the endpoint host. If exploitation appears to have occurred, consider rebuilding the impacted machine.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+None. 
+--

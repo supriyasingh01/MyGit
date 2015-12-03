@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#touch killserver
+ps|grep "server.py"|awk '{print $1}'> killserver
+ps|grep "client.py"|awk '{print $1}'> killclient
+
+echo "dummy">>killserver
+echo "dummy">>killclient
+
+
+for i in `cat killserver`:
+do
+kill -9 $i
+done
+
+for i in `cat killclient`:
+do
+kill -9 $i
+done

@@ -1,0 +1,52 @@
+Rule:
+
+--
+Sid:
+8707
+
+--
+Summary:
+This event is generated when a remote user executes the SITE command in a session with an internal FTP server. This may indicate an attempt to exploit a vulnerability in the SITE command in wzd-ftpd.
+
+--
+Impact:
+Arbitrary code execution, leading to remote root compromise. The attacker must have a valid, non-anonymous FTP account on the server to attempt this exploit. 
+
+--
+Detailed Information:
+Wzdftpd is vulnerable to arbitrary command execution via the SITE command.
+
+--
+Affected Systems:
+Wzdftpd 0.5.4 and prior.
+
+--
+Attack Scenarios:
+An attacker logs into the system using a valid FTP account, and then executes the SITE command with extra commands to be run on the server.
+
+--
+Ease of Attack:
+Simple. 
+
+--
+False Positives:
+If a legitimate remote user uses the SITE command, this rule may generate an event.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

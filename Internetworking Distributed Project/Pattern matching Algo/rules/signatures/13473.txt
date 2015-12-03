@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+13473
+
+--
+Summary:
+This event is generated when network traffic that indicates a Publisher file download is being used.
+
+--
+Impact:
+Possible policy violation. Downloading Publisher files may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that downloading Publisher files is happening on the protected network.
+
+--
+Affected Systems:
+All systems downloading Publisher files
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that Publisher file download has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of Publisher file download on the protected network and enforce or implement an organization wide policy on the use of Publisher file download.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

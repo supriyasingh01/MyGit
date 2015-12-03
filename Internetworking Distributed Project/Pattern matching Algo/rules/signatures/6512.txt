@@ -1,0 +1,51 @@
+Rule: 
+
+--
+Sid: 
+6512
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Symantec Anti-Virus products. 
+
+-- 
+Impact: 
+Serious. Execution of code is possible.
+
+--
+Detailed Information:
+Symantec Anti-Virus Real Time Scan Service fails to properly process user supplied data to the log forwarding component. Excess data supplied to this component may allow an unauthenticated attacker to overflow a fixed length buffer and cause a stack overflow to occur.
+
+--
+Affected Systems:
+
+--
+Attack Scenarios: 
+An attacker can supply excess data to the log forwarding component of the Real Time Scan Service to cause the overflow to occur.
+
+-- 
+Ease of Attack: 
+Simple
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Kevin Shivers <kevin.shivers@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

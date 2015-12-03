@@ -1,0 +1,69 @@
+Rule
+
+--
+Sid
+9840
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Apple QuickTime.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+Apple QuickTime is prone to a scripting attack via the use of the HREFTrack parameter in a media file (.mov). A remote attacker could make use of this vulnerability to perform a cross site or cross zone scripting attack against a vulnerable machine.
+
+QuickTime files are composed of a number of tracks, each of which have some sort of (typically media) information in them. One possible track type is the HREF track, which allows a link in any file, web page, or piece of script to call a specific location in a movie.
+
+These tracks take the form in the file of:
+
+A<URL> T<frame>
+
+Where
+
+  * "A" is optional, and if present indicates that the URL is loaded automatically.
+  * <URL> is a valid URL of some sort, and may include a "script='foo'" parameter.
+  * " T" appears to be static and required
+  * <frame> may be blank, but is also required
+
+--
+Affected Systems:
+Apple, Quicktime Player 7.1.3 and prior
+Apple, Quicktime Player 3
+
+--
+Attack Scenarios:
+An attacker needs to supply a specially crafted .mov file to be viewed by the application.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Alex Kirk <alex.kirk@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+
+--

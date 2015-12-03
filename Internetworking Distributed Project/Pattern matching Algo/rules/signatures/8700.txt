@@ -1,0 +1,55 @@
+Rule: 
+
+--
+Sid: 
+8700
+
+-- 
+Summary: 
+This event is generated when an attempt is made to execute a cross site scripting attack by exploiting a known weakness in Microsoft .NET framework.
+
+-- 
+Impact: 
+Unknown.
+
+--
+Detailed Information:
+Microsoft .NET framework does not correctly sanitize user supplied input. This may allow an attacker to create a cross site scripting attack against users viewing web pages produced by a vulnerable server.
+
+--
+Affected Systems:
+Microsoft .NET Framework 2.0
+
+--
+Attack Scenarios: 
+Attacks using cross site scripting are varied and numerous, an attacker may use a number of methods to execute code on a victim machine.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the product.
+
+Apply the appropriate vendor supplied patches.
+
+Use Apache.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

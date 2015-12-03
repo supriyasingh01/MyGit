@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+15977
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Avaya integrated management.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The strip tags function in PHP 4.x up to 4.3.7, and 5.x up to 5.0.0RC3, does not filter null (\0) characters within tag names when restricting input to allowed tags, which allows dangerous tags to be processed by web browsers such as Internet Explorer and Safari, which ignore null characters and facilitate the exploitation of cross-site scripting (XSS) vulnerabilities.
+
+--
+Affected Systems:
+Avaya integrated management 
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2004-0595:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2004-0595
+  
+--

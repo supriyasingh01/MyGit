@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+19558
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in jboss enterprise application platform.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+JBoss Seam 2 (jboss-seam2), as used in JBoss Enterprise Application Platform 4.3.0 for Red Hat Linux, does not properly sanitize inputs for JBoss Expression Language (EL) expressions, which allows remote attackers to execute arbitrary code via a crafted URL.  NOTE: this is only a vulnerability when the Java Security Manager is not properly configured.
+
+--
+Affected Systems:
+redhat jboss enterprise application platform 4.3.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-1871:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-1871
+  
+--

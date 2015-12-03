@@ -1,0 +1,78 @@
+Rule:  
+
+--
+Sid:
+2436
+
+--
+Summary:
+This event is generated when an attempt is made to access a file type
+that may be subject to a known vulnerability in Microsoft Windows Explorer.
+
+--
+Impact:
+Denial of Service (DoS) possible execution of arbitrary code.
+
+--
+Detailed Information:
+When processing Windows Extended Metafile Format (.emf) files, Windows
+Explorer sets a buffer size based on information in the header for the
+file. If a malformed header is sent, it may be possible for an attacker
+to cause a DoS condition to occur. It may also be possible for an
+attacker to execute code of their choosing on a vulnerable host.
+
+WARNING
+In order to avoid potential evasion techniques, http_inspect should be configured with "flow_depth 0" so that all HTTP server response traffic is inspected.
+
+Setting flow_depth 0 will cause performance problems in some situations.
+WARNING
+This issue may also affect Microsoft Windows Metafile Format (.wmf)
+files also.
+
+--
+Affected Systems:
+	Microsoft Windows XP Home, Professional and Media Center Edition
+	Microsoft Windows XP Home and Professional SP-1
+
+--
+Attack Scenarios:
+An attacker might supply a specially crafted request for such a file
+that might cause the error condiion to occur.
+
+--
+Ease of Attack:
+Moderate/Difficult
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+Microsoft:
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Gaobot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sasser
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Korgo
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=win32/rbot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sdbot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Mytob
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Spybot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Wootbot
+
+--
+

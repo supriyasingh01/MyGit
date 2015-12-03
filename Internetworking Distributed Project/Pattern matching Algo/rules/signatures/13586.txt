@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+13586
+
+--
+Summary:
+This event is generated when network traffic that indicates an SSH server has been detected on a non-standard port.
+
+--
+Impact:
+Possible policy violation. The use of an SSH server a non-standard port may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that an SSH server was detected on a non-standard port on the protected network.
+
+--
+Affected Systems:
+All systems using SSH server
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that the SSH server is being used for non-legitimate purposes.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of SSH servers on non-standard ports on the protected network and enforce or implement an organization wide policy on the use of SSH servers.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

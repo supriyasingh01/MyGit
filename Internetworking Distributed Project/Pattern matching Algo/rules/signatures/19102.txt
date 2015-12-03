@@ -1,0 +1,101 @@
+Rule
+
+--
+Sid
+19102
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in antivirus.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Buffer overflow in the cliproxy.objects.1 ActiveX control in the Symantec Client Proxy (CLIproxy.dll) in Symantec AntiVirus 10.0.x, 10.1.x before MR9, and 10.2.x before MR4; and Symantec Client Security 3.0.x and 3.1.x before MR9 allows remote attackers to execute arbitrary code via a long argument to the SetRemoteComputerName function.
+
+--
+Affected Systems:
+symantec antivirus 10.0
+symantec antivirus 10.0.1
+symantec antivirus 10.0.1.1
+symantec antivirus 10.0.2
+symantec antivirus 10.0.2.1
+symantec antivirus 10.0.2.2
+symantec antivirus 10.0.3
+symantec antivirus 10.0.4
+symantec antivirus 10.0.5
+symantec antivirus 10.0.6
+symantec antivirus 10.0.7
+symantec antivirus 10.0.8
+symantec antivirus 10.0.9
+symantec antivirus 10.1
+symantec antivirus 10.1
+symantec antivirus 10.1
+symantec antivirus 10.1
+symantec antivirus 10.1
+symantec antivirus 10.1
+symantec antivirus 10.1
+symantec antivirus 10.1
+symantec antivirus 10.1
+symantec antivirus 10.1
+symantec antivirus 10.1.0.1
+symantec antivirus 10.1.0.1
+symantec antivirus 10.1.4
+symantec antivirus 10.1.4
+symantec antivirus 10.1.4.1
+symantec antivirus 10.1.4.1
+symantec antivirus 10.1.5
+symantec antivirus 10.1.5
+symantec antivirus 10.1.5.1
+symantec antivirus 10.1.5.1
+symantec antivirus 10.1.6
+symantec antivirus 10.1.6
+symantec antivirus 10.1.6.1
+symantec antivirus 10.1.6.1
+symantec antivirus 10.1.7
+symantec antivirus 10.1.7
+symantec antivirus 10.2
+symantec antivirus 10.2
+symantec antivirus 10.2
+symantec antivirus 10.2
+symantec antivirus 10.2
+symantec antivirus 10.2
+
+--
+Attack Scenarios:
+An attacker can host a web site that will return code of their choosing to the object when a victim clicks on a malicious link.
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-0108:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0108
+  
+--

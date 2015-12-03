@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12203
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in VMware.
+
+--
+Impact:
+  Loss of integrity. 
+
+--
+Detailed Information:
+Absolute path traversal vulnerability in a certain ActiveX control in vielib.dll 2.2.5.42958 in EMC VMware 6.0.0 allows remote attackers to execute arbitrary local programs via a full pathname in the first argument to the StartProcess method.
+
+--
+Affected Systems:
+EMC VMware 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

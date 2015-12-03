@@ -1,0 +1,54 @@
+Rule:
+
+--
+Sid:
+8550
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Oracle database systems.
+
+--
+Impact:
+Serious. SQL injection and code execution is possible.
+
+--
+Detailed Information:
+Certain Oracle functions and stored procedures may allow an attacker to execute code of their choosing on an affected host.
+
+This event is generated when an attempt is made to access the function dbms_mview.register_mview on a host using the Oracle database server.
+
+--
+Affected Systems:
+All Oracle installations, check vendor advisories for all products and solutions.
+
+--
+Attack Scenarios:
+An attacker could access the function dbms_mview.register_mview and inject SQL code of their choosing to be executed on the server.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

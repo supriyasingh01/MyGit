@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+10188
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in WS_FTP Server.
+
+--
+Impact:
+Medium
+
+--
+Detailed Information:
+Multiple buffer overflows in WS_FTP Server 5.05 before Hotfix 1, and possibly other versions down to 5.0, have unknown impact and remote authenticated attack vectors via the (1) XCRC, (2) XMD5, and (3) XSHA1 commands.  NOTE: in the early publication of this identifier on 20060926, the description was used for the wrong issue.
+
+--
+Affected Systems:
+  5.05
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

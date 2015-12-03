@@ -1,0 +1,51 @@
+Rule: 
+
+--
+Sid: 
+6413
+
+-- 
+Summary: 
+This event is generated when a Microsoft Windows Address Book is detected as the attachment to an email message.
+
+-- 
+Impact: 
+Unknown. A buffer overflow condition may be exploited under the right conditions.
+
+--
+Detailed Information:
+Microsoft Outlook Express is prone to a buffer overflow vulnerability that is manifest when Outlook Express tries to parse a malformed Windows Address Book (.wab) file.
+
+--
+Affected Systems:
+Microsoft Outlook Express
+
+--
+Attack Scenarios: 
+An attacker can send an email with a malformed .wab file as an attachment to an email message. When parsed by Outlook Express, code of the attackers choosing may be executed on the host system.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+
+--

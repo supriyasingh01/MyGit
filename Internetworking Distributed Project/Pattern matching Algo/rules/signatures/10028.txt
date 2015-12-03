@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+10028
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Computer Associates BrightStor ARCserve Backup.
+
+--
+Impact:
+Serious. Remote code execution and Denial of Service (Dos).
+
+--
+Detailed Information:
+Computer Associates BrightStor ARCserve Backup suffers from a remotely exploitable buffer overflow vulnerability.
+
+A remote and unauthenticated attacker may be able to execute code of their choosing with system level privileges on an affected system. Repeated attempts to exploit this vulnerability may also result in a Denial of Service (DoS) condition on the vulnerable service.
+
+--
+Affected Systems:
+BrightStor ARCserve Backup 11.5 and prior
+
+--
+Attack Scenarios:
+An attacker would need to send a specially crafted RPC request to the listening service.
+
+--
+Ease of Attack:
+Simple. Exploit code exits.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+Deny access to the service from resources external to the trusted network.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Brian Caswell <bmc@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

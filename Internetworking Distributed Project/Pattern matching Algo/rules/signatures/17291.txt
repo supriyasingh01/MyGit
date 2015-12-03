@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+17291
+
+--
+Summary:
+This event is generated when network traffic that indicates a base64-encoded uri data object found has been detected in network traffic.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+This event indicates that network traffic indicating that base64-encoded uri data object has been detected.
+
+--
+Affected Systems:
+All systems.
+
+--
+Attack Scenarios:
+Attackers may exploit systems by embedding certain filetypes within other files or by using encoding schemes.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Ensure that all systems and applications are kept up-to-date and are patched with the highest patch level available from the vendor.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

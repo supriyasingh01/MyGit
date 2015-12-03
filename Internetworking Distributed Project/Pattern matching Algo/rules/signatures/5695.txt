@@ -1,0 +1,57 @@
+Rule: 
+
+--
+Sid: 
+5695
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in RSA Authentication Agent for Web .
+
+-- 
+Impact: 
+Serious. Code execution is possible.
+
+--
+Detailed Information:
+RSA Authentication Agent for Web fails to properly check user supplied data before copying to a memory buffer. Thanks to this poor coding it is possible for an attacker to overflow a fixed length buffer and execute code of their choosing on an affected system.
+
+The vulnerability is present in IISWebAgentIF.dll and an attacker supplying more than 1024 bytes of information in the url parameter can overflow the fixed length buffer.
+
+--
+Affected Systems:
+RSA Authentication Agent for Web 5.0, 5.2 and 5.3.
+
+--
+Attack Scenarios: 
+An attacker can supply excessive data to the application and cause the overflow to take place.
+
+-- 
+Ease of Attack: 
+Simple. Exploit code is available.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Upgrade to the latest non-affected version of the software
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+
+--

@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+3-17242
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in windows server 2003.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The MPEG-4 codec in the Windows Media codecs in Microsoft Windows XP SP2 and SP3, Server 2003 SP2, Vista SP1 and SP2, and Server 2008 Gold and SP2 does not properly handle crafted media content with MPEG-4 video encoding, which allows remote attackers to execute arbitrary code via a file in an unspecified "supported format," aka "MPEG-4 Codec Vulnerability."
+
+--
+Affected Systems:
+microsoft windows server 2003 
+microsoft windows server 2003 
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-0818:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-0818
+  
+--

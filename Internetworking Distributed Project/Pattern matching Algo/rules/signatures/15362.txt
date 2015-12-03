@@ -1,0 +1,51 @@
+Rule
+
+--
+Sid
+15362
+
+--
+Summary:
+This event is generated when obfuscated javascript containing excessive fromCharCode is detected.
+
+--
+Impact:
+Unkown.
+
+--
+Detailed Information:
+This event is generated when obfuscated javascript containing excessive fromCharCode is detected.
+
+--
+Affected Systems:
+All systems.
+
+--
+Attack Scenarios:
+An attacker may place obfuscated javascript into a file in an attempt to evade detection by IPS/IDS systems or other anti-malware software.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Investigate the target system for signs of compromise.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+
+--

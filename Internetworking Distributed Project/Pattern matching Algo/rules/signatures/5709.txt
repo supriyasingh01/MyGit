@@ -1,0 +1,56 @@
+Rule:
+
+--
+Sid:
+5709
+
+--
+Summary:
+This event is generated when network traffic that indicates a file has been uploaded to a location inside the protected network via http using a vulnerbility in PHP.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+This event indicates that a file has been uploaded to a location inside the protected network via http. This may indicate that an attacker is trying to upload code that could be executed or used in conjunction with another attack.
+
+In particular, this event indicates that a vulnerbility in PHP is being leveraged as the attack vector. User supplied data in the Content-Dispostion parameter of a file upload is not properly checked or sanitized. As a result an attacker can craft an http POST request to an affected server and upload files of their choosing to the server.
+
+--
+Affected Systems:
+All systems using PHP
+	
+--
+Attack Scenarios:
+An attacker may upload code of their choosing to a webserver and then execute that code at a later date to further compromise the system. The attacker needs to supply a specially crafted Content-Disposition for the upload, this can take the form Content-Disposition: form-data; name="somefilename"; filename="../../../exploit.txt"
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Use secure coding techniques to verify upload parameters
+
+Use Perl;
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Judy Novak <judy.novak@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+--

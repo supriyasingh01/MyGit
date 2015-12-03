@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+15306
+
+--
+Summary:
+This rule generates events when a portable executable file is downloaded.
+
+--
+Impact:
+None.
+
+--
+Detailed Information:
+This event indicates that a portable executable file has been downloaded.
+
+
+--
+Affected Systems:
+All Windows systems
+
+--
+Attack Scenarios:
+NA
+
+--
+Ease of Attack:
+NA
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+NA
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

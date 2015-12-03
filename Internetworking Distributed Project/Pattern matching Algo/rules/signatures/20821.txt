@@ -1,0 +1,65 @@
+Rule
+
+--
+Sid
+20821
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in http server.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+Vulnerability in the apr_psprintf function in the Apache Portable Runtime (APR) library for Apache 2.0.37 through 2.0.45 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via long strings, as demonstrated using XML objects to mod_dav, and possibly other vectors.
+
+--
+Affected Systems:
+apache http server 2.0.37
+apache http server 2.0.38
+apache http server 2.0.39
+apache http server 2.0.40
+apache http server 2.0.41
+apache http server 2.0.42
+apache http server 2.0.43
+apache http server 2.0.44
+apache http server 2.0.45
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2003-0245:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2003-0245
+  
+--

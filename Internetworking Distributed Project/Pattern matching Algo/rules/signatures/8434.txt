@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+8434
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in an OpenSSL implementation.
+
+--
+Impact:
+Serious. Execution of code is possible. Denial of Service (DoS).
+
+--
+Detailed Information:
+OpenSSL libraries are prone to a buffer overflow condition when processing user input. The SSL_Get_Shared_Ciphers function reads data into a fixed length portion of memory, an attacker could utilize this vulnerability to execute code of their choosing on an affected system.
+
+Applications using the OpenSSL libraries may also be prone to a DoS condition.
+
+--
+Affected Systems:
+OpenSSL libraries prior to 0.9.8d
+OpenSSL libraries prior to 0.9.7l
+
+--
+Attack Scenarios:
+An attacker can supply excess data in the cipher exchange with a remote server to cause the overflow condition to be met.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected OpenSSL libraries and recompile any software that uses the libraries.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

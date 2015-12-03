@@ -1,0 +1,63 @@
+Rule
+
+--
+Sid
+17639
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in samba.
+
+--
+Impact:
+ Information disclosure.  
+
+--
+Detailed Information:
+Samba 3.2.0 through 3.2.6, when registry shares are enabled, allows remote authenticated users to access the root filesystem via a crafted connection request that specifies a blank share name.
+
+--
+Affected Systems:
+samba samba 3.2.0
+samba samba 3.2.1
+samba samba 3.2.2
+samba samba 3.2.3
+samba samba 3.2.4
+samba samba 3.2.5
+samba samba 3.2.6
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-0022:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-0022
+  
+--

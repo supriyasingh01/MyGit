@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+15578
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Apache HTTP Server.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+** DISPUTED **  The Apache HTTP Server, when accessed through a TCP connection with a large window size, allows remote attackers to cause a denial of service (network bandwidth consumption) via a Range header that specifies multiple copies of the same fragment.  NOTE: the severity of this issue has been disputed by third parties, who state that the large window size required by the attack is not normally supported or configured by the server, or that a DDoS-style attack would accomplish the same goal.
+
+--
+Affected Systems:
+Apache HTTP Server 
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2007-0086:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2007-0086
+  
+--

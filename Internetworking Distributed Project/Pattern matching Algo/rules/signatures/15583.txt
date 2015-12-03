@@ -1,0 +1,73 @@
+Rule
+
+--
+Sid
+15583
+
+--
+Summary:
+This event is generated when an attempt is made to execute a system command.
+
+--
+Impact:
+Unkown.
+
+--
+Detailed Information:
+This event is generated when an attempt is made to execute F-Secure AntiVirus library.
+
+Heap-based buffer overflow in multiple F-Secure Anti-Virus and Internet Security products allows remote attackers to execute arbitrary code via a crafted ARJ archive.
+
+--
+Affected Systems:
+F-Secure AntiVirus 2004
+F-Secure AntiVirus 2005
+F-Secure AntiVirus 4.60 samba servers
+F-Secure AntiVirus 5.5 citrix servers
+F-Secure Internet security:2004
+F-Secure Internet security:2005
+F-Secure Internet Gatekeeper 2.06 linux
+F-Secure AntiVirus 4.52 linux workstations and previous versions
+F-Secure AntiVirus 4.61 linux gateways and previous versions
+F-Secure AntiVirus 4.61 linux servers and previous versions
+F-Secure AntiVirus 5.01 linux client security and previous versions
+F-Secure AntiVirus 5.01 linux server security and previous versions
+F-Secure AntiVirus 5.43 workstations and previous versions
+F-Secure AntiVirus 5.5 windows servers and previous versions
+F-Secure AntiVirus 5.51 mimesweeper and previous versions
+F-Secure AntiVirus 5.55 client security and previous versions
+F-Secure AntiVirus 6.2 firewalls and previous versions
+F-Secure AntiVirus 6.31 ms exchange and previous versions
+F-Secure personal express 5.10 and previous versions
+F-Secure Internet Gatekeeper 6.41 and previous versions
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

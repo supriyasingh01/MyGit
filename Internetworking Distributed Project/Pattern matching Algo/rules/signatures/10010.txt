@@ -1,0 +1,54 @@
+Rule: 
+
+--
+Sid: 
+10010
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a known vulnerability in Putty.
+
+-- 
+Impact: 
+Serious. Execution of code by an unauthorized attacker is possible.
+
+--
+Detailed Information:
+Putty is vulnerable to a buffer overflow during the server key exchange initialization when performed as part of the server's "hello" packet.  This vulnerability causes a null pointer dereference in the basic case and arbitrary code execution in a more sophisticated attack.
+
+The vulnerability is triggered by sending more than 20232 bytes as part of the key exchange.
+
+--
+Affected Systems:
+PuTTy versions 0.53 and prior
+
+--
+Attack Scenarios: 
+An attacker would need to supply more than 20232 bytes to the client connecting to the server during the key exchange.
+
+-- 
+Ease of Attack: 
+Simple. Exploit code exists.
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Patrick Mullen
+Nigel Houghton
+
+-- 
+Additional References:
+
+--

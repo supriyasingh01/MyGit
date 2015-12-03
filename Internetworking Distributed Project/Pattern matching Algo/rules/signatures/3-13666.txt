@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+3-13666
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in .
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+Heap-based buffer overflow in GDI in Microsoft Windows 2000 SP4, XP SP2, Server 2003 SP1 and SP2, Vista, and Server 2008 allows remote attackers to execute arbitrary code via an EMF or WMF image file with a malformed header that triggers improper "integer calculations," aka "GDI Heap Overflow Vulnerability."
+
+--
+Affected Systems:
+  1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-1083:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-1083
+
+--

@@ -1,0 +1,142 @@
+Rule
+
+--
+Sid
+15514
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in ntp.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Stack-based buffer overflow in the crypto_recv function in ntp_crypto.c in ntpd in NTP before 4.2.4p7 and 4.2.5 before 4.2.5p74, when OpenSSL and autokey are enabled, allows remote attackers to execute arbitrary code via a crafted packet containing an extension field.
+
+--
+Affected Systems:
+ntp 4.2.4p0
+ntp 4.2.4p1
+ntp 4.2.4p2
+ntp 4.2.4p3
+ntp 4.2.4p4
+ntp 4.2.4p5
+ntp 4.2.4p6
+ntp 4.2.5p0
+ntp 4.2.5p1
+ntp 4.2.5p10
+ntp 4.2.5p11
+ntp 4.2.5p12
+ntp 4.2.5p13
+ntp 4.2.5p14
+ntp 4.2.5p15
+ntp 4.2.5p16
+ntp 4.2.5p17
+ntp 4.2.5p18
+ntp 4.2.5p19
+ntp 4.2.5p2
+ntp 4.2.5p20
+ntp 4.2.5p21
+ntp 4.2.5p23
+ntp 4.2.5p24
+ntp 4.2.5p25
+ntp 4.2.5p26
+ntp 4.2.5p27
+ntp 4.2.5p28
+ntp 4.2.5p29
+ntp 4.2.5p3
+ntp 4.2.5p30
+ntp 4.2.5p31
+ntp 4.2.5p32
+ntp 4.2.5p33
+ntp 4.2.5p35
+ntp 4.2.5p36
+ntp 4.2.5p37
+ntp 4.2.5p38
+ntp 4.2.5p39
+ntp 4.2.5p4
+ntp 4.2.5p40
+ntp 4.2.5p41
+ntp 4.2.5p42
+ntp 4.2.5p43
+ntp 4.2.5p44
+ntp 4.2.5p45
+ntp 4.2.5p46
+ntp 4.2.5p47
+ntp 4.2.5p48
+ntp 4.2.5p49
+ntp 4.2.5p5
+ntp 4.2.5p50
+ntp 4.2.5p51
+ntp 4.2.5p52
+ntp 4.2.5p53
+ntp 4.2.5p54
+ntp 4.2.5p55
+ntp 4.2.5p56
+ntp 4.2.5p57
+ntp 4.2.5p58
+ntp 4.2.5p59
+ntp 4.2.5p6
+ntp 4.2.5p60
+ntp 4.2.5p61
+ntp 4.2.5p62
+ntp 4.2.5p63
+ntp 4.2.5p64
+ntp 4.2.5p65
+ntp 4.2.5p66
+ntp 4.2.5p67
+ntp 4.2.5p68
+ntp 4.2.5p69
+ntp 4.2.5p7
+ntp 4.2.5p70
+ntp 4.2.5p71
+ntp 4.2.5p73
+ntp 4.2.5p8
+ntp 4.2.5p9
+
+--
+Attack Scenarios:
+Many types of buffer overflow exist, this is a generic term that may apply to many circumstances that result in an overflow of some kind. A parameter overflow for example, means that the attacker is able to supply data as a parameter to the execution of a program. When the program expands the supplied data, if the size of the parameter is not correctly checked, it may exceed a set limit allowing the attacker to overflow the buffer and write data into memory.
+In a stack overflow, the attacker has the opportunity to overwrite a return memory address which allows them to point the return address to a memory location containing code they wish to execute. This allows the attacker to run code with the full privileges of the program in use. The attacker may also supply the address for a known important call, for example the system() call, with the arguments to the call on the stack. The stack also contains the stack pointer and the frame pointer, overwriting these values may lead to a write-what-where condition.
+In a heap overflow, it is possible to overwrite function pointers that may be in memory. This may allow the attacker to execute code in memory by changing the function pointer to move to code of their choosing. This can occur even in programs that do not necessarily use function pointers since they may be left in memory at run time. The heap also contains user data which also becomes visible to the attacker.
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2009-1252:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2009-1252
+ 
+Common Weakness Enumeration:
+http://cwe.mitre.org/data/definitions/120.html
+ 
+Common Attack Pattern Enumeration and Classification:
+http://capec.mitre.org/data/definitions/100.html
+
+--

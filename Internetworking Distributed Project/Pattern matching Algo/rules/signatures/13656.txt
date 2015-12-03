@@ -1,0 +1,57 @@
+Rule
+
+--
+Sid
+13656
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in ACS for Windows.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Multiple buffer overflows in securecgi-bin/CSuserCGI.exe in User-Changeable Password (UCP) before 4.2 in Cisco Secure Access Control Server (ACS) for Windows and ACS Solution Engine allow remote attackers to execute arbitrary code via a long argument located immediately after the Logout argument, and possibly unspecified other vectors.
+
+--
+Affected Systems:
+Cisco ACS for Windows 1
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-0532:
+http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-0532
+
+--

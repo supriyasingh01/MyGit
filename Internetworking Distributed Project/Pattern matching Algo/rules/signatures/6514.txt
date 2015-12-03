@@ -1,0 +1,52 @@
+Rule: 
+
+--
+Sid: 
+6514
+
+-- 
+Summary: 
+This event is generated when an attempt is made to exploit a vulnerability in Asterisk IAX2.
+
+-- 
+Impact: 
+Serious. Code execution is possible.
+
+--
+Detailed Information:
+Asterisk IAX2 is prone to a buffer overflow condition that presents itself when the application copies user-supplied data into a fixed length buffer.
+
+Due to a programming error, user-supplied data is not properly checked.  An attacker may be able to exploit this condition to execute code of their choosing on the affected host.
+
+--
+Affected Systems:
+Asterisk IAX2
+
+--
+Attack Scenarios: 
+An attacker need only supply excess data to the application to overflow the buffer, code execution is then possible.
+
+-- 
+Ease of Attack: 
+Simple,
+
+-- 
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+-- 
+Corrective Action: 
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+-- 
+Additional References:
+
+--

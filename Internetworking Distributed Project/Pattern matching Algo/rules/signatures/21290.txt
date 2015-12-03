@@ -1,0 +1,58 @@
+Rule
+
+--
+Sid
+21290
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in windows server 2008.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Untrusted search path vulnerability in colorcpl.exe 6.0.6000.16386 in the Color Control Panel in Microsoft Windows Server 2008 SP2, R2, and R2 SP1 allows local users to gain privileges via a Trojan horse sti.dll file in the current working directory, as demonstrated by a directory that contains a .camp, .cdmp, .gmmp, .icc, or .icm file, aka "Color Control Panel Insecure Library Loading Vulnerability."
+
+--
+Affected Systems:
+microsoft windows server 2008 
+microsoft windows server 2008 -
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-5082:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-5082
+  
+--

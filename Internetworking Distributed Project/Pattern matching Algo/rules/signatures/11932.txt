@@ -1,0 +1,52 @@
+Rule
+
+--
+Sid
+11932
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Windows 2000.
+
+--
+Impact:
+High
+
+--
+Detailed Information:
+Buffer overflow in the Print Spooler service (Spoolsv.exe) for Microsoft Windows 2000, Windows XP, and Windows Server 2003 allows remote attackers to execute arbitrary code via a malicious message.
+
+--
+Affected Systems:
+Microsoft Windows 2000 SP4
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

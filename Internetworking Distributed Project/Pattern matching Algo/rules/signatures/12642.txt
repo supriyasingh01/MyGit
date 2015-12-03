@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+12642
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in windows.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+Unspecified vulnerability in the remote procedure call (RPC) component in Microsoft Windows XP SP2, XP Professional x64 Edition, Server 2003 SP1 and SP2, Server 2003 x64 Edition and x64 Edition SP2, and Vista and Vista x64 Edition allows remote attackers to cause a denial of service (RPCSS service stop and system restart) via a crafted RPC NTLMSSP authentication request.  NOTE: this also affects Windows 2000 SP4, although the impact is an information leak.
+
+--
+Affected Systems:
+Microsoft windows 9
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+--

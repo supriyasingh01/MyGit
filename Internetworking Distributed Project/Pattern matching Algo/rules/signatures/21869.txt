@@ -1,0 +1,66 @@
+Rule
+
+--
+Sid
+21869
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in jre.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+Unspecified vulnerability in the Java Runtime Environment (JRE) component in Oracle Java SE 7 Update 2 and earlier, 6 Update 30 and earlier, and 5.0 Update 33 and earlier allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors related to Concurrency.  NOTE: the previous information was obtained from the February 2012 Oracle CPU. Oracle has not commented on claims from a downstream vendor and third party researchers that this issue occurs because the AtomicReferenceArray class implementation does not ensure that the array is of the Object[] type, which allows attackers to cause a denial of service (JVM crash) or bypass Java sandbox restrictions.  NOTE: this issue was originally mapped to CVE-2011-3571, but that identifier was already assigned to a different issue.
+
+--
+Affected Systems:
+oracle jre 1.6.0
+oracle jre 1.6.0
+oracle jre 1.6.0
+oracle jre 1.6.0
+oracle jre 1.6.0
+oracle jre 1.6.0
+oracle jre 1.6.0
+oracle jre 1.6.0
+oracle jre 1.7.0
+oracle jre 1.7.0
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2012-0507:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-0507
+  
+--

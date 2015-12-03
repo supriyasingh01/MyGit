@@ -1,0 +1,54 @@
+Rule
+
+--
+Sid
+16353
+
+--
+Summary:
+This event is generated when an attempt is made to cause a Denial of Service (DoS) in FFmpeg.
+
+--
+Impact:
+Denial of Service (DoS)
+
+--
+Detailed Information:
+FFmpeg contains mulitple programming errors that may allow a remote attacker to cause a Denial of Service (DoS) against an application using the libraries. The problems occur due to multiple NULL pointer dereferences and references to invalid memory locations when processing specially crafted files.
+
+--
+Affected Systems:
+FFmpeg 0.x
+
+--
+Attack Scenarios:
+An attacker needs to supply a specially crafted file to trigger the vulnerable conditions and cause the DoS.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches.
+
+Upgrade to the latest non-affected version of the software.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+
+--

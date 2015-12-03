@@ -1,0 +1,164 @@
+Rule
+
+--
+Sid
+16667
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in Chrome.
+
+--
+Impact:
+Denial of Service. Information disclosure. Loss of integrity. 
+
+--
+Detailed Information:
+The Google URL Parsing Library (aka Google-url or GURL) in Google Chrome before 4.1.249.1064 allows remote attackers to bypass the Same Origin Policy via unspecified vectors.
+
+--
+Affected Systems:
+Google Chrome 0.2.149.27
+Google Chrome 0.2.149.29
+Google Chrome 0.2.149.30
+Google Chrome 0.2.152.1
+Google Chrome 0.2.153.1
+Google Chrome 0.3.154.0
+Google Chrome 0.3.154.3
+Google Chrome 0.4.154.18
+Google Chrome 0.4.154.22
+Google Chrome 0.4.154.31
+Google Chrome 0.4.154.33
+Google Chrome 1.0.154.36
+Google Chrome 1.0.154.39
+Google Chrome 1.0.154.42
+Google Chrome 1.0.154.43
+Google Chrome 1.0.154.46
+Google Chrome 1.0.154.48
+Google Chrome 1.0.154.52
+Google Chrome 1.0.154.53
+Google Chrome 1.0.154.59
+Google Chrome 1.0.154.64
+Google Chrome 1.0.154.65
+Google Chrome 2.0.156.1
+Google Chrome 2.0.157.0
+Google Chrome 2.0.157.2
+Google Chrome 2.0.158.0
+Google Chrome 2.0.159.0
+Google Chrome 2.0.169.0
+Google Chrome 2.0.169.1
+Google Chrome 2.0.170.0
+Google Chrome 2.0.172
+Google Chrome 2.0.172.2
+Google Chrome 2.0.172.27
+Google Chrome 2.0.172.28
+Google Chrome 2.0.172.30
+Google Chrome 2.0.172.31
+Google Chrome 2.0.172.33
+Google Chrome 2.0.172.37
+Google Chrome 2.0.172.38
+Google Chrome 2.0.172.8
+Google Chrome 3.0.182.2
+Google Chrome 3.0.190.2
+Google Chrome 3.0.193.2
+Google Chrome 3.0.195.2
+Google Chrome 3.0.195.21
+Google Chrome 3.0.195.24
+Google Chrome 3.0.195.25
+Google Chrome 3.0.195.27
+Google Chrome 3.0.195.32
+Google Chrome 3.0.195.33
+Google Chrome 3.0.195.36
+Google Chrome 3.0.195.37
+Google Chrome 3.0.195.38
+Google Chrome 4.1
+Google Chrome 4.1.249.0
+Google Chrome 4.1.249.1001
+Google Chrome 4.1.249.1004
+Google Chrome 4.1.249.1006
+Google Chrome 4.1.249.1007
+Google Chrome 4.1.249.1008
+Google Chrome 4.1.249.1009
+Google Chrome 4.1.249.1010
+Google Chrome 4.1.249.1011
+Google Chrome 4.1.249.1012
+Google Chrome 4.1.249.1013
+Google Chrome 4.1.249.1014
+Google Chrome 4.1.249.1015
+Google Chrome 4.1.249.1016
+Google Chrome 4.1.249.1017
+Google Chrome 4.1.249.1018
+Google Chrome 4.1.249.1019
+Google Chrome 4.1.249.1020
+Google Chrome 4.1.249.1021
+Google Chrome 4.1.249.1022
+Google Chrome 4.1.249.1023
+Google Chrome 4.1.249.1024
+Google Chrome 4.1.249.1025
+Google Chrome 4.1.249.1026
+Google Chrome 4.1.249.1027
+Google Chrome 4.1.249.1028
+Google Chrome 4.1.249.1029
+Google Chrome 4.1.249.1030
+Google Chrome 4.1.249.1031
+Google Chrome 4.1.249.1032
+Google Chrome 4.1.249.1033
+Google Chrome 4.1.249.1034
+Google Chrome 4.1.249.1035
+Google Chrome 4.1.249.1036
+Google Chrome 4.1.249.1042
+Google Chrome 4.1.249.1045
+Google Chrome 4.1.249.1046
+Google Chrome 4.1.249.1047
+Google Chrome 4.1.249.1048
+Google Chrome 4.1.249.1049
+Google Chrome 4.1.249.1050
+Google Chrome 4.1.249.1051
+Google Chrome 4.1.249.1052
+Google Chrome 4.1.249.1053
+Google Chrome 4.1.249.1054
+Google Chrome 4.1.249.1055
+Google Chrome 4.1.249.1056
+Google Chrome 4.1.249.1057
+Google Chrome 4.1.249.1058
+Google Chrome 4.1.249.1059
+Google Chrome 4.1.249.1060
+Google Chrome 4.1.249.1061
+Google Chrome 4.1.249.1062
+Google Chrome 4.1.249.1063
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Simple. Exploits exist.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2010-1663:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2010-1663
+  
+--

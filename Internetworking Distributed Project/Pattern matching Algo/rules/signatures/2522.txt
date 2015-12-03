@@ -1,0 +1,99 @@
+Rule:
+
+--
+Sid:
+2522
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known
+vulnerability in the Microsoft implementation of SSL Version 3.
+
+--
+Impact:
+Denial of Service (DoS).
+
+--
+Detailed Information:
+A vulnerability exists in the handling of SSL Version 3 requests that
+can be manipulated to cause a DoS condition in various software 
+implementations used on Microsoft operating systems.
+
+The condition exists because of poor error handling routines in the
+Microsoft Secure Sockets Layer (SSL) library. SSL requests containing an
+invalid field, sent to vulnerable systems can cause the affected host to stop 
+handling any further requests.
+
+--
+Affected Systems:
+	Microsoft Windows 2000, 2003 and XP systems using SSL
+
+--
+Attack Scenarios:
+An attcker needs to make an SSL request to an affected system that
+contains an invalid field.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+The no_stream keyword was added to this rule to fix a number of
+known false positives.  This however, introduces a false negative
+possibility.  If an attacker tcp segments the SSL Client Hello
+it will now no longer be reassembled.
+
+The reason for this change is the high number of false positives
+created by how the stream reassembler was assembling the first
+and second client packets during an SSL negotiation.
+
+Example.
+Packet 1 - Client Hello - 50 bytes
+Packet 2 - Server Hello (from server)
+Packet 3 - Key Exchange - 250 bytes
+Packet 4 - Key Exhcnage (from server)
+Packet 5 - Data from client
+
+In the normal case packet 1 is much larger than 50 bytes.  However,
+some SSL/VPN solutions send out very small Client Hello messages.
+This creates a situation where Packet 1 and Packet 3 are reassembled
+to create a 300 byte packet which is inspected by the detection engine
+This create the following problem:
+
+Packet 1 - Set the flow bit for client hello in this rule
+Packet 2 - Sets the flow bit for server hello in this rule.
+Packet 3 - Forces a reassemble to occur and the detection engine
+inspects Packet 1+3.  This causes the rule to fire as the flowbits
+are set and the reassembled packet looks like a second invalid 
+Client Hello message.
+
+--
+Corrective Action:
+Apply the appropriate vendor supplied patches
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Matt Watchinski <mwatchinski@sourcefire.com>
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+--
+Additional References:
+
+Microsoft:
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Gaobot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sasser
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Korgo
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=win32/rbot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Sdbot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Mytob
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Spybot
+http://www.microsoft.com/security/encyclopedia/details.aspx?name=Win32/Wootbot
+
+--
+

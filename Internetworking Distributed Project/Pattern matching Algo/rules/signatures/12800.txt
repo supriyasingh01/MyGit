@@ -1,0 +1,50 @@
+Rule
+
+--
+Sid
+12800
+
+--
+Summary:
+This event is generated when shellcode is detected in network traffic.
+
+--
+Impact:
+Unknown.
+
+--
+Detailed Information:
+This event indicates that shellcode has been detected in network traffic. In particular, this event is generated when base64 x86 NOOP is detected.
+
+--
+Affected Systems:
+All systems.
+
+--
+Attack Scenarios:
+An attacker may supply shellcode in the payload of an exploit attempt against a host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Check the destination host for signs of compromise.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+--
+Additional References:
+
+--

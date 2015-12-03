@@ -1,0 +1,51 @@
+Rule:
+
+--
+Sid:
+15293
+
+--
+Summary:
+This event is generated when network traffic that indicates the chat program QQ - version 2008 is being used.
+
+--
+Impact:
+Possible policy violation. The use of QQ - version 2008 may be prohibited by corporate policy in some network environments. 
+
+--
+Detailed Information:
+This event indicates that the chat program QQ - version 2008 is being used on the protected network. This application is a chat client and as such, it's use may violate corporate policy.
+
+--
+Affected Systems:
+All systems using QQ - version 2008
+
+--
+Attack Scenarios:
+This is a possible policy violation, it may be that QQ - version 2008 has been installated on a client host.
+
+--
+Ease of Attack:
+Simple.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Disallow the use of QQ - version 2008 on the protected network and enforce or implement an organization wide policy on the use of QQ - version 2008.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+
+
+--
+Additional References:
+
+--

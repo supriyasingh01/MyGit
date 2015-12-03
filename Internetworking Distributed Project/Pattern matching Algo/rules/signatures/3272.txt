@@ -1,0 +1,59 @@
+Rule: 
+
+--
+Sid: 
+3272
+
+-- 
+Summary: 
+This event is generated when activity relating to the mydoom trojan is
+detected in network data.
+
+-- 
+Impact: 
+Serious. This is an indication that a Trojan horse program is active on
+a system.
+
+--
+Detailed Information:
+The trojan is capable of allowing an attacker to take control of the
+system and execute commands of their choosing. The attacker can also
+upload files of their choosing to the victim host.
+
+--
+Affected Systems:
+	Windows 95/98/ME/NT/2000
+
+--
+Attack Scenarios: 
+The attacker would first need to install the trojan on the system
+via another attack vector. Once installed the attacker is able to
+control the system.
+
+-- 
+Ease of Attack: 
+Simple.
+
+-- 
+False Positives:
+None known
+
+--
+False Negatives:
+None known
+
+-- 
+Corrective Action: 
+Use the appropriate anti-virus application to remove the trojan from the
+system
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+Ricky Macatee <rmacatee@sourcefire.com> 
+Nigel Houghton <nigel.houghton@sourcefire.com>
+
+-- 
+Additional References:
+
+--

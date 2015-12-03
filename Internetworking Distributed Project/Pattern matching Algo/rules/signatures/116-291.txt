@@ -1,0 +1,63 @@
+Rule
+
+--
+Sid
+116-291
+
+--
+Summary:
+This event is generated when an attempt is made to exploit a known vulnerability in the Linux kernel.
+
+--
+Impact:
+Denial of Service.   
+
+--
+Detailed Information:
+Memory leak in the ipip6_rcv function in net/ipv6/sit.c in the Linux kernel 2.4 before 2.4.36.5 and 2.6 before 2.6.25.3 allows remote attackers to cause a denial of service (memory consumption) via network traffic to a Simple Internet Transition (SIT) tunnel interface, related to the pskb_may_pull and kfree_skb functions, and management of an skb reference count.
+
+This event indicates that IPV6 is being tunneled over IPv4, but the IPv6 header is truncated.
+
+This event can be controlled using the ((snort decode)) configuration options.
+
+--
+Affected Systems:
+Linux kernel 2.6.25
+Linux kernel 2.6.25.1
+Linux kernel 2.6.25.2
+
+--
+Attack Scenarios:
+
+
+--
+Ease of Attack:
+Medium.
+
+--
+False Positives:
+None known.
+
+--
+False Negatives:
+None known.
+
+--
+Corrective Action:
+Upgrade to the latest non-affected version of the software.
+
+Apply the appropriate vendor supplied patches.
+
+--
+Contributors:
+Sourcefire Vulnerability Research Team
+This document was generated from data supplied by the National Vulnerability Database. A product of the National Institute of Standards and Technology.
+For more information see http://nvd.nist.gov/
+
+--
+Additional References:
+
+NIST CVE-2008-2136:
+http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-2136
+  
+--
