@@ -1,0 +1,26 @@
+{
+  "name": "week 4",
+  "authors": [
+    "supriya singh <supriya.usc@gmail.com>"
+  ],
+  "description": "building bower json",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "Fusion",
+    "Restaurant"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0"
+  }
+}
